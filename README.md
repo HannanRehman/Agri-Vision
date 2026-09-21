@@ -1,221 +1,93 @@
-# 🌾 Agri Vision
+# Agri Vision: Federated Crop-Disease Detection
 
-### AI System for Crop Prediction and Disease Detection using YOLOv8 and Federated Learning
+This FYP prototype trains a **23-class YOLOv8n object detector** with [Flower](https://flower.ai/docs/framework/). Three local clients each train on a different image shard; a FedAvg server combines their model parameters after every round. Images stay on their client, but model parameters are exchanged. This is a research prototype, not a privacy guarantee or a deployed diagnosis system.
 
----
+## What is in the project
 
-## Overview
+| File | Purpose |
+| --- | --- |
+| `model.py` | Creates the common 23-class YOLOv8n model and converts its state to/from Flower arrays. |
+| `federated_client.py`, `client1.py`–`client3.py` | Train and validate each client; the three launchers only select the dataset. |
+| `server.py` | Runs FedAvg, sends epoch/batch/image-size settings, aggregates validation metrics, and saves global checkpoints. |
+| `split_dataset.py` | Checks for data leakage or rebuilds deterministic, non-overlapping shards. |
+| `evaluate.py`, `predict.py` | Test a global checkpoint and run image/video inference. |
+| `original_dataset/` | Source images and YOLO-format labels; its `test/` split is held out from training. |
+| `dataset/client1/`–`client3/` | Client-specific `train`, `valid`, and `test` splits plus `data.yaml`. |
+| `runs/`, `saved_models/` | Local training logs and aggregated global checkpoints. |
 
-Agri Vision is a Final Year Project (FYP) developed as part of the Bachelor of Software Engineering program. The project aims to leverage Artificial Intelligence to improve agricultural decision-making through intelligent crop disease detection while maintaining data privacy using Federated Learning.
+The old Faster R-CNN function in `model.py` was unrelated to the YOLO clients and has been replaced. `yolov8n.pt` is the common pretrained starting point, not the final trained FYP model.
 
-Traditional machine learning approaches require all training data to be centralized, which raises concerns regarding privacy, ownership, and scalability. Agri Vision addresses these challenges by implementing a decentralized learning framework where multiple clients collaboratively train a global model without sharing their local datasets.
+## Requirements
 
-The project combines the accuracy of **YOLOv8** for disease detection with the **Flower Federated Learning Framework** and **FedAvg** aggregation algorithm to create a scalable and privacy-preserving agricultural AI system.
+- A working Python 3.11 or 3.12 installation, enough disk space for a second dataset copy, and preferably an NVIDIA GPU with a compatible PyTorch install. CPU training is possible but slow.
+- Run all commands from the project root. On Windows, open PowerShell in `F:\Agri Vision`.
+- The committed `venv/` was created against an `E:\python.exe` installation and is broken if that Python standard library is unavailable. Create a fresh environment instead of relying on it.
 
----
-
-# Project Objectives
-
-* Develop an intelligent crop disease detection system.
-* Implement Federated Learning to preserve data privacy.
-* Improve disease detection performance using YOLOv8.
-* Simulate distributed learning across multiple clients.
-* Evaluate model performance using standard object detection metrics.
-* Demonstrate the feasibility of AI-driven smart agriculture.
-
----
-
-# Key Features
-
-* AI-based crop disease detection
-* Privacy-preserving Federated Learning
-* Distributed client-server architecture
-* YOLOv8 object detection model
-* Flower framework integration
-* FedAvg global model aggregation
-* Multi-client training simulation
-* Performance evaluation using industry-standard metrics
-* Modular project structure for future scalability
-
----
-
-# Technologies Used
-
-| Category             | Technology           |
-| -------------------- | -------------------- |
-| Programming Language | Python               |
-| Deep Learning        | YOLOv8 (Ultralytics) |
-| Federated Learning   | Flower Framework     |
-| Machine Learning     | PyTorch              |
-| Image Processing     | OpenCV               |
-| Numerical Computing  | NumPy                |
-| Data Handling        | Pillow               |
-| Visualization        | Matplotlib           |
-
----
-
-# System Architecture
-
-The project follows a Federated Learning architecture consisting of a central server and multiple distributed clients.
-
-1. Crop disease images are collected and preprocessed.
-2. The dataset is partitioned among multiple clients.
-3. Each client trains its own YOLOv8 model locally.
-4. Local model parameters are transmitted to the Flower server.
-5. The server aggregates client updates using the FedAvg algorithm.
-6. The updated global model is redistributed.
-7. The process repeats over multiple communication rounds.
-8. The final model is evaluated using standard object detection metrics.
-
----
-
-# Dataset
-
-The dataset is organized into multiple distributed clients to simulate a real Federated Learning environment.
-
-Each client contains:
-
-* Training data
-* Validation data
-* Testing data
-
-Every subset includes:
-
-* Images
-* YOLO annotation files
-
-This structure enables decentralized training while preserving data locality.
-
----
-
-# Performance Evaluation
-
-The project evaluates model performance using:
-
-* Precision
-* Recall
-* mAP@50
-* mAP@50-95
-* Training Loss
-* Validation Loss
-
-These metrics provide a comprehensive assessment of the global model's detection capability.
-
----
-
-# Repository Structure
-
-```text
-Agri Vision/
-│
-├── dataset/
-│   ├── client1/
-│   ├── client2/
-│   └── client3/
-│
-├── server/
-├── clients/
-├── models/
-├── runs/
-├── requirements.txt
-├── README.md
-└── ...
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -c "import torch, flwr, ultralytics; print(torch.cuda.is_available())"
 ```
 
----
+If you need CUDA, select the appropriate PyTorch installation command from the [official PyTorch installer](https://pytorch.org/get-started/locally/) before installing the remaining requirements. `False` in the final command means the code will default to CPU.
 
-# Installation
+## Prepare and check the data
 
-Clone the repository:
+**Do this before training.** The existing `dataset/client*` folders contain overlapping images from earlier runs of the old splitter. The server now refuses to train with this leakage.
 
-```bash
-git clone https://github.com/HannanRehman/HannanRehman4.git
+```powershell
+python split_dataset.py
+python split_dataset.py --rebuild --seed 42
+python split_dataset.py
 ```
 
-Move into the project directory:
+The first check should report an overlap error on the current data. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before running it. The same seed produces the same assignment. The final check should show no overlap and totals of 15,310 train, 4,374 validation, and 2,191 test images. Do not reuse the current overlapping shards for experiments.
 
-```bash
-cd HannanRehman4
+If copying is interrupted, the previous `dataset/` remains in place and a partial `dataset_staging_*` directory may remain. Inspect it before removing it; the script never automatically deletes a dataset or backup.
+
+Each client `data.yaml` must have the same 23 class IDs and names. YOLO labels use `class_id x_center y_center width height` with normalized coordinates.
+
+## Train
+
+Start the server, then start **all three clients** in separate terminals (activate `.venv` in each):
+
+```powershell
+# Terminal 1
+python server.py --rounds 5 --local-epochs 3 --batch 2 --imgsz 320
+
+# Terminal 2
+python client1.py
+
+# Terminal 3
+python client2.py
+
+# Terminal 4
+python client3.py
 ```
 
-Install the required dependencies:
+One round means every client receives the current global model, trains for `--local-epochs`, and sends updated parameters back. In the example, **each client can train for up to 15 local epochs** (5 rounds × 3 epochs), with aggregation after every 3. For a quick functional check, use `--rounds 1 --local-epochs 1`. You can raise `--rounds`, `--local-epochs`, `--batch`, or `--imgsz` when hardware allows; these settings do not guarantee better accuracy. Compare validation and test mAP and watch for overfitting. The old CPU run took roughly 1.4 hours for one client's single epoch, so plan runtime accordingly.
 
-```bash
-pip install -r requirements.txt
+By default the server listens on `0.0.0.0:8080`, while clients connect to `127.0.0.1:8080`. On separate machines, pass `--server HOST:8080` to each client and ensure the port is reachable. Pass `--device cpu` to clients without CUDA; on one GPU, three concurrent clients may exceed available VRAM, so lower batch size or use separate devices. `--batch` and `--imgsz` are set by the server for all clients.
+
+Local YOLO logs and best/last checkpoints go under `runs/federated/clientN/round_XXX/`. The server saves the **aggregated global model** after each successful round as `saved_models/global_round_XXX.pt`. This is a project checkpoint containing a PyTorch state dictionary, not a native Ultralytics `.pt` checkpoint; load it with the project scripts below. To continue from a completed global round in a new run, use `python server.py --initial-checkpoint saved_models/global_round_005.pt --rounds 5 ...` and restart the three clients. New output round numbers start at 1 for that run, so choose a new `--checkpoint-dir` to preserve previous files.
+
+Flower weights aggregation by the *actual number of client training images*. The server also averages client validation mAP50, mAP50-95, precision, and recall weighted by validation-image count. Flower's reported scalar “loss” is `1 - mAP50`, an error proxy, **not** YOLO's box/classification loss. Use the YOLO run logs for training losses.
+
+## Evaluate and predict
+
+After training, evaluate the final global model once on the held-out original test split:
+
+```powershell
+python evaluate.py --checkpoint saved_models/global_round_005.pt --device cpu
+python predict.py --checkpoint saved_models/global_round_005.pt --source path\to\image.jpg --device cpu
 ```
 
----
+`evaluate.py` prints test mAP50 and mAP50-95. `predict.py` saves annotated outputs under `runs/predictions/`. Keep the test split for final reporting; tune epochs and other choices using validation results, not repeated test-set trials. For your report, record the split seed, Python/package versions, model settings, hardware, per-round validation results, and final held-out test metrics. A centralized YOLOv8n baseline trained on the same training images would make the federated comparison much stronger.
 
-# Usage
+## Verification and limitations
 
-Start the Flower server.
+`python split_dataset.py` checks client overlap, coverage of the original images, and matching label files. It intentionally blocks the server when the current committed shards are invalid. The code can be syntax-checked without expensive training, but a full multi-client run still depends on a working Python environment, sufficient hardware, and data rebuilt as above. Better accuracy is an empirical outcome, not something the epoch count alone can promise.
 
-Launch each federated client.
-
-Run the training process.
-
-Monitor the aggregation rounds and evaluate the resulting global model.
-
-> The exact execution commands may vary depending on your local project configuration.
-
----
-
-# Future Improvements
-
-The project is designed to be extensible. Potential future enhancements include:
-
-* Real-time disease detection
-* Mobile application integration
-* Cloud deployment
-* Edge AI support
-* Additional crop and disease classes
-* Explainable AI (XAI)
-* Automated crop prediction module
-* Performance optimization for large-scale deployments
-
----
-
-# Team Members
-
-* **Hannan Rehman**
-* **Hasnain Ali**
-* **Fuzail Talpur**
-
-Bachelor of Software Engineering
-
-Final Year Project
-
----
-
-# Repository Status
-
-🚧 **This project is currently under active development.**
-
-Additional documentation, experimental results, screenshots, architecture diagrams, and performance analysis will be added as development progresses.
-
----
-
-# Acknowledgements
-
-We would like to express our sincere gratitude to our project supervisor, faculty members, and the open-source community whose tools and research have contributed significantly to the successful development of this project.
-
-Special thanks to the developers and contributors of:
-
-* Ultralytics YOLOv8
-* Flower Federated Learning Framework
-* PyTorch
-* OpenCV
-
-for providing powerful open-source technologies that made this research possible.
-
----
-
-# License
-
-This repository has been created for academic and research purposes as part of a Bachelor of Software Engineering Final Year Project.
-
----
-
-## Star the Repository
-
-If you find this project interesting or helpful, consider giving it a ⭐ on GitHub.
+The dependency-free partition tests can be run with `python -m unittest discover -s tests -v`. The existing `runs/detect/` files are from earlier local training, not proof that the updated federated workflow has completed.

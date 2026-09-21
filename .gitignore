@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+dataset_staging_*/
+dataset_backup_*/
+runs/federated/
+runs/predictions/
+saved_models/
+AgriVision_dataset.zip
+original_dataset_colab.zip
+structure.txt

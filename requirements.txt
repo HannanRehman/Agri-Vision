@@ -1,0 +1,5 @@
+flwr==1.29.0
+ultralytics==8.4.48
+torch>=2.2,<3
+PyYAML>=6,<7
+numpy>=1.26,<3
