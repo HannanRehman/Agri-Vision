@@ -1,6 +1,7 @@
 .venv/
 __pycache__/
 *.pyc
+*.cache
 dataset_staging_*/
 dataset_backup_*/
 runs/federated/

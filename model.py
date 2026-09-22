@@ -26,7 +26,7 @@ def class_names(config=CLASS_CONFIG):
 
 
 def create_model():
-    """Build the same 23-class architecture on every participant.
+    """Build the same dataset-specific architecture on every participant.
 
     YOLOv8n.pt has an 80-class COCO head. Training silently replaces that head;
     building it explicitly here keeps round-zero and later parameter shapes equal.

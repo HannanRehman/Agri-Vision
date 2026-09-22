@@ -1,12 +1,12 @@
 # Agri Vision: Federated Crop-Disease Detection
 
-This FYP prototype trains a **23-class YOLOv8n object detector** with [Flower](https://flower.ai/docs/framework/). Three local clients each train on a different image shard; a FedAvg server combines their model parameters after every round. Images stay on their client, but model parameters are exchanged. This is a research prototype, not a privacy guarantee or a deployed diagnosis system.
+This FYP prototype trains a **30-class YOLOv8n object detector** with [Flower](https://flower.ai/docs/framework/). Three local clients each train on a different image shard; a FedAvg server combines their model parameters after every round. Images stay on their client, but model parameters are exchanged. This is a research prototype, not a privacy guarantee or a deployed diagnosis system.
 
 ## What is in the project
 
 | File | Purpose |
 | --- | --- |
-| `model.py` | Creates the common 23-class YOLOv8n model and converts its state to/from Flower arrays. |
+| `model.py` | Creates the common 30-class YOLOv8n model and converts its state to/from Flower arrays. |
 | `federated_client.py`, `client1.py`–`client3.py` | Train and validate each client; the three launchers only select the dataset. |
 | `server.py` | Runs FedAvg, sends epoch/batch/image-size settings, aggregates validation metrics, and saves global checkpoints. |
 | `split_dataset.py` | Checks for data leakage or rebuilds deterministic, non-overlapping shards. |
@@ -35,19 +35,19 @@ If you need CUDA, select the appropriate PyTorch installation command from the [
 
 ## Prepare and check the data
 
-**Do this before training.** The existing `dataset/client*` folders contain overlapping images from earlier runs of the old splitter. The server now refuses to train with this leakage.
+**Do this before training.** The committed client shards are already non-overlapping, but run the checker after copying the project or changing any dataset files. The server refuses to train if leakage or invalid labels are detected.
 
 ```powershell
 python split_dataset.py
+# Only rebuild when the checker reports a partition problem:
 python split_dataset.py --rebuild --seed 42
-python split_dataset.py
 ```
 
-The first check should report an overlap error on the current data. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before running it. The same seed produces the same assignment. The final check should show no overlap and totals of 15,310 train, 4,374 validation, and 2,191 test images. Do not reuse the current overlapping shards for experiments.
+The check should show no overlap, 30 valid classes, and totals of 15,310 train, 4,374 validation, and 2,191 test images. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before rebuilding. The same seed produces the same assignment.
 
 If copying is interrupted, the previous `dataset/` remains in place and a partial `dataset_staging_*` directory may remain. Inspect it before removing it; the script never automatically deletes a dataset or backup.
 
-Each client `data.yaml` must have the same 23 class IDs and names. YOLO labels use `class_id x_center y_center width height` with normalized coordinates.
+Each client `data.yaml` must have the same 30 class IDs and names. YOLO labels use `class_id x_center y_center width height` with normalized coordinates. The checker rejects malformed coordinates and class IDs outside `0`–`29` before training.
 
 ## Train
 
@@ -88,6 +88,6 @@ python predict.py --checkpoint saved_models/global_round_005.pt --source path\to
 
 ## Verification and limitations
 
-`python split_dataset.py` checks client overlap, coverage of the original images, and matching label files. It intentionally blocks the server when the current committed shards are invalid. The code can be syntax-checked without expensive training, but a full multi-client run still depends on a working Python environment, sufficient hardware, and data rebuilt as above. Better accuracy is an empirical outcome, not something the epoch count alone can promise.
+`python split_dataset.py` checks client overlap, coverage of the original images, matching label files, class mappings, and every label value. It blocks the server when the shards are invalid. The code can be syntax-checked without expensive training, but a full multi-client run still depends on a working Python environment and sufficient hardware. Better accuracy is an empirical outcome, not something the epoch count alone can promise.
 
-The dependency-free partition tests can be run with `python -m unittest discover -s tests -v`. The existing `runs/detect/` files are from earlier local training, not proof that the updated federated workflow has completed.
+The partition tests can be run with `python -m unittest discover -s tests -v`. The existing `runs/detect/` files are from earlier local training, not proof that the updated federated workflow has completed.

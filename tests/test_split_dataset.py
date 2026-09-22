@@ -28,6 +28,7 @@ class PartitionTests(unittest.TestCase):
         (self.destination / "client1" / "data.yaml").write_text(
             "path: dataset/client1\ntrain: train/images\nval: valid/images\nnames:\n  0: disease\n"
         )
+        (self.source / "data.yaml").write_text("names:\n  0: disease\n")
 
     def test_rebuild_creates_disjoint_complete_shards_and_backup(self):
         with patch.object(split_dataset, "ROOT", self.root):
@@ -35,7 +36,7 @@ class PartitionTests(unittest.TestCase):
                 seed=42, destination=self.destination, source=self.source
             )
         self.assertTrue(backup.exists())
-        self.assertEqual(len(report), 3)
+        self.assertEqual(len(report), 4)
         self.assertEqual(
             report,
             split_dataset.check_partition(self.destination, self.source),
@@ -46,6 +47,8 @@ class PartitionTests(unittest.TestCase):
 
     def test_overlap_is_rejected(self):
         for client in split_dataset.CLIENTS:
+            (self.destination / client).mkdir(parents=True, exist_ok=True)
+            (self.destination / client / "data.yaml").write_text("names:\n  0: disease\n")
             for split in split_dataset.SPLITS:
                 images = self.destination / client / split / "images"
                 labels = self.destination / client / split / "labels"
@@ -55,6 +58,21 @@ class PartitionTests(unittest.TestCase):
                 (labels / f"{split}_0.txt").write_text("0 0.5 0.5 0.2 0.2\n")
         with self.assertRaisesRegex(ValueError, "multiple clients"):
             split_dataset.check_partition(self.destination, self.source)
+
+    def test_out_of_range_class_is_rejected(self):
+        split_dataset.validate_label(
+            self.source / "train" / "labels" / "train_0.txt", class_count=1
+        )
+        invalid = self.source / "train" / "labels" / "train_1.txt"
+        invalid.write_text("1 0.5 0.5 0.2 0.2\n")
+        with self.assertRaisesRegex(ValueError, "outside 0-0"):
+            split_dataset.validate_label(invalid, class_count=1)
+
+    def test_invalid_coordinates_are_rejected(self):
+        invalid = self.source / "train" / "labels" / "train_0.txt"
+        invalid.write_text("0 1.2 0.5 0.2 0.2\n")
+        with self.assertRaisesRegex(ValueError, "box center"):
+            split_dataset.validate_label(invalid, class_count=1)
 
 
 if __name__ == "__main__":

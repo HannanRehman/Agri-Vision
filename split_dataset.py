@@ -1,11 +1,14 @@
 """Check or reproducibly rebuild the three non-overlapping client datasets."""
 
 import argparse
+import math
 import random
 import shutil
 from datetime import datetime
 from pathlib import Path
 from uuid import uuid4
+
+import yaml
 
 
 ROOT = Path(__file__).resolve().parent
@@ -22,9 +25,51 @@ def image_names(directory):
     return {path.name for path in directory.iterdir() if path.is_file() and path.suffix.lower() in IMAGE_SUFFIXES}
 
 
+def class_names(config):
+    """Read consecutive YOLO class IDs from a dataset configuration."""
+    with Path(config).open(encoding="utf-8") as stream:
+        raw_names = yaml.safe_load(stream)["names"]
+    names = {int(index): str(name) for index, name in raw_names.items()}
+    if sorted(names) != list(range(len(names))):
+        raise ValueError(f"Class IDs must be consecutive and start at zero: {config}")
+    if len(set(names.values())) != len(names):
+        raise ValueError(f"Class names must be unique: {config}")
+    return names
+
+
+def validate_label(label_path, class_count):
+    """Reject labels that Ultralytics would otherwise silently ignore."""
+    for line_number, line in enumerate(label_path.read_text(encoding="utf-8").splitlines(), 1):
+        values = line.split()
+        if len(values) != 5:
+            raise ValueError(f"{label_path}:{line_number}: expected 5 values, found {len(values)}")
+        try:
+            class_id = int(values[0])
+            coordinates = [float(value) for value in values[1:]]
+        except ValueError as error:
+            raise ValueError(f"{label_path}:{line_number}: label values must be numeric") from error
+        if not 0 <= class_id < class_count:
+            raise ValueError(
+                f"{label_path}:{line_number}: class ID {class_id} is outside 0-{class_count - 1}"
+            )
+        if not all(math.isfinite(value) for value in coordinates):
+            raise ValueError(f"{label_path}:{line_number}: coordinates must be finite")
+        x_center, y_center, width, height = coordinates
+        if not (0 <= x_center <= 1 and 0 <= y_center <= 1):
+            raise ValueError(f"{label_path}:{line_number}: box center must be within 0-1")
+        if not (0 < width <= 1 and 0 < height <= 1):
+            raise ValueError(f"{label_path}:{line_number}: box size must be within 0-1")
+
+
 def check_partition(destination=DESTINATION, source=SOURCE):
-    """Raise on cross-client overlap, missing images, or missing labels."""
+    """Raise on overlap, missing data, inconsistent classes, or invalid labels."""
+    expected_names = class_names(source / "data.yaml")
     report = []
+    validated_labels = set()
+    for client in CLIENTS:
+        client_names = class_names(destination / client / "data.yaml")
+        if client_names != expected_names:
+            raise ValueError(f"{client}: class IDs/names do not match {source / 'data.yaml'}")
     for split in SPLITS:
         original = image_names(source / split / "images")
         seen = set()
@@ -43,9 +88,15 @@ def check_partition(destination=DESTINATION, source=SOURCE):
             missing_labels = [name for name in names if not (labels / f"{Path(name).stem}.txt").is_file()]
             if missing_labels:
                 raise ValueError(f"{client}/{split}: {len(missing_labels)} images have no label file")
+            for name in names:
+                label_path = labels / f"{Path(name).stem}.txt"
+                if label_path not in validated_labels:
+                    validate_label(label_path, len(expected_names))
+                    validated_labels.add(label_path)
         if seen != original:
             raise ValueError(f"{split}: client images do not match the original set ({len(seen)} vs {len(original)})")
         report.append(f"{split}: {len(original)} distinct images; client counts {counts}")
+    report.append(f"classes: {len(expected_names)} consecutive IDs; all labels valid")
     return report
 
 
