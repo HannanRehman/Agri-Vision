@@ -19,6 +19,29 @@ The old Faster R-CNN function in `model.py` was unrelated to the YOLO clients an
 
 ## Requirements
 
+### Run on Google Colab
+
+Open [AgriVision Colab](https://colab.research.google.com/github/HannanRehman/HannanRehman4/blob/main/AgriVision_Colab.ipynb).
+Upload `original_dataset_colab.zip` to `MyDrive/Agri Vision/`, select a GPU runtime,
+then choose **Run all** and authorize Drive. Edit the ZIP path in the first cell if needed.
+Keep existing Drive files; the notebook downloads current code and YAML from GitHub.
+It extracts the dataset locally and rebuilds disjoint client shards with seed 42.
+
+`colab_train.py` runs all three clients sequentially on one GPU as a local FedAvg
+simulation, without network workers. Every client starts from the same global weights;
+updates are weighted by training image count. This preserves the three-client round
+structure but is not a deployment across three independent devices.
+Defaults are one round, one epoch per client, batch 4 and image size 320.
+Completed global checkpoints, local client outputs, metrics and logs go to
+`MyDrive/Agri Vision/colab_results`. To continue, set `INITIAL_CHECKPOINT` to a saved
+global checkpoint and select the number of additional rounds. An interrupted partial
+round must restart. GPU execution must be verified in Colab; local unit tests alone
+do not establish Colab compatibility or training accuracy.
+
+The current 30-class names were reconstructed from label/file evidence; confirm them
+against the original export before reporting class-specific results. Numeric label
+validation cannot verify disease-name semantics.
+
 - A working Python 3.11 or 3.12 installation, enough disk space for a second dataset copy, and preferably an NVIDIA GPU with a compatible PyTorch install. CPU training is possible but slow.
 - Run all commands from the project root. On Windows, open PowerShell in `F:\Agri Vision`.
 - The committed `venv/` was created against an `E:\python.exe` installation and is broken if that Python standard library is unavailable. Create a fresh environment instead of relying on it.
