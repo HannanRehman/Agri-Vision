@@ -9,4 +9,5 @@ runs/predictions/
 saved_models/
 AgriVision_dataset.zip
 original_dataset_colab.zip
+agrivision_colab_code.zip
 structure.txt

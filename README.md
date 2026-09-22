@@ -22,9 +22,10 @@ The old Faster R-CNN function in `model.py` was unrelated to the YOLO clients an
 ### Run on Google Colab
 
 Open [AgriVision Colab](https://colab.research.google.com/github/HannanRehman/HannanRehman4/blob/main/AgriVision_Colab.ipynb).
-Upload `original_dataset_colab.zip` to `MyDrive/Agri Vision/`, select a GPU runtime,
+Upload `original_dataset_colab.zip` and `agrivision_colab_code.zip` to
+`MyDrive/Agri Vision/`, select a GPU runtime,
 then choose **Run all** and authorize Drive. Edit the ZIP path in the first cell if needed.
-Keep existing Drive files; the notebook downloads current code and YAML from GitHub.
+Keep existing Drive files; the small code bundle avoids requiring GitHub credentials.
 It extracts the dataset locally and rebuilds disjoint client shards with seed 42.
 
 `colab_train.py` runs all three clients sequentially on one GPU as a local FedAvg
