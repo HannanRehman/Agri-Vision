@@ -1,5 +1,3 @@
-path: dataset/client2
-
 train: train/images
 val: valid/images
 test: test/images
