@@ -45,6 +45,31 @@ class PartitionTests(unittest.TestCase):
             "path:", (self.destination / "client1" / "data.yaml").read_text()
         )
 
+    def test_rebuild_creates_client_yamls_from_source(self):
+        (self.destination / "client1" / "data.yaml").unlink()
+        with patch.object(split_dataset, "ROOT", self.root):
+            _, report = split_dataset.rebuild(
+                seed=42, destination=self.destination, source=self.source
+            )
+        self.assertEqual(len(report), 4)
+        for client in split_dataset.CLIENTS:
+            self.assertEqual(
+                split_dataset.class_names(self.destination / client / "data.yaml"),
+                {0: "disease"},
+            )
+
+    def test_rebuild_accepts_root_class_config_fallback(self):
+        (self.source / "data.yaml").unlink()
+        (self.root / "data.yaml").write_text("names:\n  0: disease\n")
+        with patch.object(split_dataset, "ROOT", self.root):
+            split_dataset.rebuild(
+                seed=42, destination=self.destination, source=self.source
+            )
+        self.assertEqual(
+            split_dataset.class_names(self.source / "data.yaml"),
+            {0: "disease"},
+        )
+
     def test_overlap_is_rejected(self):
         for client in split_dataset.CLIENTS:
             (self.destination / client).mkdir(parents=True, exist_ok=True)

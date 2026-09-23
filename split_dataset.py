@@ -104,13 +104,18 @@ def rebuild(seed=42, destination=DESTINATION, source=SOURCE):
     """Build separately, verify, then swap in; keep the old data as a backup."""
     if not (destination.parent.resolve() == ROOT.resolve() and source.parent.resolve() == ROOT.resolve()):
         raise ValueError("Dataset paths must stay directly under the project root")
-    template_path = destination / "client1" / "data.yaml"
+    source_config = source / "data.yaml"
+    template_path = source_config if source_config.is_file() else ROOT / "data.yaml"
     if not template_path.is_file():
-        raise FileNotFoundError(f"Class template missing: {template_path}")
+        raise FileNotFoundError(
+            f"Class configuration missing: expected {source_config} or {ROOT / 'data.yaml'}"
+        )
     yaml_text = "\n".join(
         line for line in template_path.read_text(encoding="utf-8").splitlines()
         if not line.strip().startswith("path:")
     ).strip() + "\n"
+    source_config.parent.mkdir(parents=True, exist_ok=True)
+    source_config.write_text(yaml_text, encoding="utf-8")
     stage = ROOT / f"dataset_staging_{uuid4().hex[:8]}"
     backup = ROOT / f"dataset_backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
     if stage.exists() or backup.exists():
