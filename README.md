@@ -32,11 +32,15 @@ It extracts the dataset locally and rebuilds disjoint client shards with seed 42
 simulation, without network workers. Every client starts from the same global weights;
 updates are weighted by training image count. This preserves the three-client round
 structure but is not a deployment across three independent devices.
-Defaults are one round, one epoch per client, batch 4 and image size 320.
+The Colab notebook defaults to ten rounds, one epoch per client, batch 16, image size
+320, and two data-loader workers. Per-client training validation is disabled because
+the aggregated global model is already validated on all three clients after each round.
 Completed global checkpoints, local client outputs, metrics and logs go to
 `MyDrive/Agri Vision/colab_results`. To continue, set `INITIAL_CHECKPOINT` to a saved
 global checkpoint and select the number of additional rounds. An interrupted partial
-round must restart. GPU execution must be verified in Colab; local unit tests alone
+round must restart. During training, a heartbeat is printed every minute and the current
+round, client, phase, and CUDA memory are written to `status.json` in the run folder.
+GPU execution must be verified in Colab; local unit tests alone
 do not establish Colab compatibility or training accuracy.
 
 The current 30-class names were reconstructed from label/file evidence; confirm them

@@ -4,6 +4,8 @@ import argparse
 import gc
 import json
 import shutil
+import threading
+from datetime import datetime, timezone
 from pathlib import Path
 
 import numpy as np
@@ -29,20 +31,77 @@ def release_gpu():
         torch.cuda.empty_cache()
 
 
+class RunMonitor:
+    """Persist visible progress and emit a heartbeat while long YOLO calls run."""
+
+    def __init__(self, output):
+        self.output = output
+        self.state = {'phase': 'starting'}
+        self.lock = threading.RLock()
+        self.stop_event = threading.Event()
+        self.thread = threading.Thread(target=self._run, daemon=True)
+        self._write()
+        self.thread.start()
+
+    def update(self, **values):
+        with self.lock:
+            self.state.update(values)
+        self._write()
+
+    def _snapshot(self):
+        with self.lock:
+            snapshot = dict(self.state)
+        snapshot['updated_at_utc'] = datetime.now(timezone.utc).isoformat()
+        if torch.cuda.is_available():
+            gib = 1024 ** 3
+            snapshot['cuda_allocated_gb'] = round(torch.cuda.memory_allocated() / gib, 3)
+            snapshot['cuda_reserved_gb'] = round(torch.cuda.memory_reserved() / gib, 3)
+        return snapshot
+
+    def _write(self):
+        with self.lock:
+            snapshot = self._snapshot()
+            temporary = self.output / 'status.tmp'
+            temporary.write_text(json.dumps(snapshot, indent=2))
+            temporary.replace(self.output / 'status.json')
+
+    def _run(self):
+        while not self.stop_event.wait(60):
+            self._write()
+            snapshot = self._snapshot()
+            print(
+                'HEARTBEAT: '
+                f"round={snapshot.get('round', '-')} "
+                f"client={snapshot.get('client', '-')} "
+                f"phase={snapshot['phase']} "
+                f"cuda_reserved={snapshot.get('cuda_reserved_gb', 0)}GB",
+                flush=True,
+            )
+
+    def close(self):
+        self.stop_event.set()
+        self.thread.join(timeout=2)
+        self.update(phase='complete')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--rounds', type=int, default=1)
     parser.add_argument('--local-epochs', type=int, default=1)
-    parser.add_argument('--batch', type=int, default=4)
+    parser.add_argument('--batch', type=int, default=16)
     parser.add_argument('--imgsz', type=int, default=320)
+    parser.add_argument('--workers', type=int, default=2)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--initial-checkpoint', type=Path)
     args = parser.parse_args()
     if min(args.rounds, args.local_epochs, args.batch, args.imgsz) < 1:
         parser.error('Training settings must be positive')
+    if args.workers < 0:
+        parser.error('workers cannot be negative')
     if not torch.cuda.is_available():
         raise RuntimeError('Select a GPU runtime in Colab before training')
     args.output.mkdir(parents=True, exist_ok=False)
+    monitor = RunMonitor(args.output)
     for line in check_partition():
         print(line, flush=True)
     model = create_model()
@@ -58,9 +117,10 @@ def main():
     (args.output / 'settings.json').write_text(json.dumps(metadata, default=str, indent=2))
     for round_number in range(start_round + 1, start_round + args.rounds + 1):
         config = {'server_round': round_number, 'local_epochs': args.local_epochs,
-                  'batch': args.batch, 'imgsz': args.imgsz}
+                  'batch': args.batch, 'imgsz': args.imgsz, 'workers': args.workers}
         updates = []
         for client_id in ('client1', 'client2', 'client3'):
+            monitor.update(round=round_number, client=client_id, phase='training')
             print(f'ROUND {round_number}: training {client_id}', flush=True)
             client = AgriVisionClient(client_id, '0')
             # Every client receives the SAME global parameters for this round.
@@ -69,7 +129,11 @@ def main():
                 raise ValueError(f'Non-finite update from {client_id}')
             updates.append((arrays, count))
             # Preserve completed local epochs for inspection, not partial-round resume.
-            shutil.copytree(client.run_dir, args.output / client_id, dirs_exist_ok=True)
+            monitor.update(round=round_number, client=client_id, phase='copying local results')
+            local_run = client.run_dir / f'round_{round_number:03d}'
+            if not local_run.is_dir():
+                raise FileNotFoundError(f'Expected local training output: {local_run}')
+            shutil.copytree(local_run, args.output / client_id / local_run.name)
             del client
             release_gpu()
         parameters = average_updates(updates)
@@ -80,9 +144,11 @@ def main():
         torch.save({'model_state_dict': model.model.state_dict(),
                     'class_names': class_names(), 'round': round_number}, temporary)
         temporary.replace(checkpoint)
+        monitor.update(round=round_number, client='-', phase='checkpoint saved')
         print(f'Saved global checkpoint to Drive: {checkpoint}', flush=True)
         results = []
         for client_id in ('client1', 'client2', 'client3'):
+            monitor.update(round=round_number, client=client_id, phase='validating global model')
             client = AgriVisionClient(client_id, '0')
             _, count, metrics = client.evaluate(parameters, config)
             results.append((count, metrics))
@@ -90,10 +156,12 @@ def main():
             release_gpu()
         metrics = weighted_metrics(results)
         (args.output / f'metrics_round_{round_number:03d}.json').write_text(json.dumps(metrics, indent=2))
+        monitor.update(round=round_number, client='-', phase='round complete', metrics=metrics)
         print(f'ROUND {round_number} validation: {metrics}', flush=True)
     # Verify that the saved global checkpoint can be loaded by the project model.
     saved = torch.load(checkpoint, map_location='cpu', weights_only=True)
     model.model.load_state_dict(saved['model_state_dict'], strict=True)
+    monitor.close()
     print(f'COMPLETE: {checkpoint}', flush=True)
 
 

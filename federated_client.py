@@ -37,8 +37,11 @@ class AgriVisionClient(fl.client.NumPyClient):
         epochs = int(config.get("local_epochs", 1))
         batch = int(config.get("batch", 2))
         imgsz = int(config.get("imgsz", 320))
+        workers = int(config.get("workers", 0))
         if min(epochs, batch, imgsz) < 1:
             raise ValueError("local_epochs, batch, and imgsz must be positive")
+        if workers < 0:
+            raise ValueError("workers cannot be negative")
         server_round = int(config.get("server_round", 0))
         self.model.train(
             data=str(self.data_yaml),
@@ -49,7 +52,9 @@ class AgriVisionClient(fl.client.NumPyClient):
             project=str(self.run_dir),
             name=f"round_{server_round:03d}",
             exist_ok=False,  # never overwrite an earlier local training run
-            workers=0,  # reliable on Windows when running multiple client processes
+            workers=workers,
+            val=False,  # the aggregated global model is validated after the round
+            plots=False,
         )
         return get_parameters(self.model), self.train_count, {}
 
@@ -61,7 +66,8 @@ class AgriVisionClient(fl.client.NumPyClient):
             imgsz=int(config.get("imgsz", 320)),
             batch=int(config.get("batch", 2)),
             device=self.device,
-            workers=0,
+            workers=int(config.get("workers", 0)),
+            plots=False,
         )
         map50 = float(metrics.box.map50)
         # Flower requires a scalar loss; this is an error proxy, not YOLO's training loss.
