@@ -32,10 +32,10 @@ It extracts the dataset locally and rebuilds disjoint client shards with seed 42
 simulation, without network workers. Every client starts from the same global weights;
 updates are weighted by training image count. This preserves the three-client round
 structure but is not a deployment across three independent devices.
-The Colab notebook is currently configured to continue the verified round-10 checkpoint
-for five additional rounds, using one epoch per client, batch 8, image size 640, and two
-data-loader workers. Upload `saved_models/global_round_010.pt` to
-`MyDrive/Agri Vision/global_round_010.pt` before running it. Per-client training
+The Colab notebook is currently configured to continue the verified round-15 checkpoint
+for five additional rounds (16-20), using one epoch per client, batch 8, image size 640,
+and two data-loader workers. Upload `saved_models/global_round_015.pt` to
+`MyDrive/Agri Vision/global_round_015.pt` before running it. Per-client training
 validation is disabled because
 the aggregated global model is already validated on all three clients after each round.
 Completed global checkpoints, local client outputs, metrics and logs go to
