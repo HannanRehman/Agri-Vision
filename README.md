@@ -10,6 +10,7 @@ This FYP prototype trains a **30-class YOLOv8n object detector** with [Flower](h
 | `federated_client.py`, `client1.py`–`client3.py` | Train and validate each client; the three launchers only select the dataset. |
 | `server.py` | Runs FedAvg, sends epoch/batch/image-size settings, aggregates validation metrics, and saves global checkpoints. |
 | `split_dataset.py` | Checks for data leakage or rebuilds deterministic, non-overlapping shards. |
+| `merge_chili_dataset.py` | Audits, de-duplicates, remaps, and adds the vetted chili dataset to training only. |
 | `evaluate.py`, `predict.py` | Test a global checkpoint and run image/video inference. |
 | `original_dataset/` | Source images and YOLO-format labels; its `test/` split is held out from training. |
 | `dataset/client1/`–`client3/` | Client-specific `train`, `valid`, and `test` splits plus `data.yaml`. |
@@ -74,7 +75,13 @@ python split_dataset.py
 python split_dataset.py --rebuild --seed 42
 ```
 
-The check should show no overlap, 30 valid classes, and totals of 15,310 train, 4,374 validation, and 2,191 test images. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before rebuilding. The same seed produces the same assignment.
+The check should show no overlap, 30 valid classes, and totals of 15,512 train, 4,374 validation, and 2,191 test images. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before rebuilding. The same seed produces the same assignment.
+
+The training split includes 202 additional chili images imported from the CC BY 4.0
+`PENYAKIT PADA CABAI` dataset. The importer retained one variant for each independent
+source image, removed sources already present, rejected empty annotations and conflicting
+labels, remapped the accepted labels to AgriVision IDs 13–18, and left validation/test
+unchanged. See `reports/chili_dataset_merge.md` for the audit trail.
 
 If copying is interrupted, the previous `dataset/` remains in place and a partial `dataset_staging_*` directory may remain. Inspect it before removing it; the script never automatically deletes a dataset or backup.
 

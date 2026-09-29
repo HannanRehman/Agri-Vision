@@ -19,12 +19,12 @@ Each count is the number of unique images containing that class. If one image co
 | 10 | Cauliflower bacterial spot | 52 / 13 / 8 | 34 / 11 / 5 | 32 / 10 / 3 | 118 | 34 | 16 | 168 |
 | 11 | Cauliflower downy mildew | 42 / 13 / 4 | 34 / 9 / 7 | 42 / 12 / 6 | 118 | 34 | 17 | 169 |
 | 12 | Cauliflower healthy | 52 / 13 / 8 | 36 / 16 / 6 | 57 / 12 / 6 | 145 | 41 | 20 | 206 |
-| 13 | Chili anthracnose | 59 / 17 / 6 | 48 / 12 / 6 | 30 / 10 / 7 | 137 | 39 | 19 | 195 |
-| 14 | Chili healthy | 114 / 37 / 14 | 122 / 33 / 21 | 125 / 32 / 16 | 361 | 102 | 51 | 514 |
-| 15 | Chili leaf curl | 9 / 6 / 2 | 19 / 3 / 3 | 22 / 5 / 2 | 50 | 14 | 7 | 71 |
-| 16 | Chili leaf spot | 14 / 5 / 6 | 18 / 5 / 1 | 26 / 6 / 2 | 58 | 16 | 9 | 83 |
+| 13 | Chili anthracnose | 106 / 17 / 6 | 95 / 12 / 6 | 75 / 10 / 7 | 276 | 39 | 19 | 334 |
+| 14 | Chili healthy | 121 / 37 / 14 | 130 / 33 / 21 | 132 / 32 / 16 | 383 | 102 | 51 | 536 |
+| 15 | Chili leaf curl | 11 / 6 / 2 | 21 / 3 / 3 | 23 / 5 / 2 | 55 | 14 | 7 | 76 |
+| 16 | Chili leaf spot | 17 / 5 / 6 | 20 / 5 / 1 | 30 / 6 / 2 | 67 | 16 | 9 | 92 |
 | 17 | Chili whitefly | 23 / 5 / 2 | 17 / 5 / 2 | 19 / 9 / 3 | 59 | 19 | 7 | 85 |
-| 18 | Chili yellowish | 12 / 5 / 3 | 14 / 1 / 2 | 20 / 7 / 2 | 46 | 13 | 7 | 66 |
+| 18 | Chili yellowish | 20 / 5 / 3 | 23 / 1 / 2 | 30 / 7 / 2 | 73 | 13 | 7 | 93 |
 | 19 | Groundnut early leaf spot | 212 / 117 / 48 | 247 / 101 / 59 | 243 / 123 / 63 | 702 | 341 | 170 | 1,213 |
 | 20 | Groundnut early rust | 346 / 108 / 53 | 340 / 100 / 46 | 344 / 86 / 48 | 1,030 | 294 | 147 | 1,471 |
 | 21 | Groundnut healthy | 93 / 25 / 14 | 85 / 26 / 14 | 108 / 31 / 13 | 286 | 82 | 41 | 409 |
@@ -41,9 +41,9 @@ Each count is the number of unique images containing that class. If one image co
 
 | Dataset | Train | Validation | Test | Total |
 |---|---:|---:|---:|---:|
-| Client 1 | 5,104 | 1,458 | 731 | 7,293 |
-| Client 2 | 5,103 | 1,458 | 730 | 7,291 |
-| Client 3 | 5,103 | 1,458 | 730 | 7,291 |
-| Original dataset | 15,310 | 4,374 | 2,191 | 21,875 |
+| Client 1 | 5,171 | 1,458 | 731 | 7,360 |
+| Client 2 | 5,171 | 1,458 | 730 | 7,359 |
+| Client 3 | 5,170 | 1,458 | 730 | 7,358 |
+| Original dataset | 15,512 | 4,374 | 2,191 | 22,077 |
 
 The three client totals reproduce the original dataset exactly; the client split did not discard images. Some per-class totals can exceed the physical image total when an image contains more than one class.
