@@ -6,6 +6,8 @@ dataset_staging_*/
 dataset_backup_*/
 runs/federated/
 runs/predictions/
+runs/detect/
+reports/dataset_class_distribution1.csv
 saved_models/
 AgriVision_dataset.zip
 original_dataset_colab.zip
