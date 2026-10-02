@@ -27,7 +27,7 @@ Upload `original_dataset_colab.zip` and `agrivision_colab_code.zip` to
 `MyDrive/Agri Vision/`, select a GPU runtime,
 then choose **Run all** and authorize Drive. Edit the ZIP path in the first cell if needed.
 Replace older copies of those two ZIPs, but keep existing result folders and checkpoints.
-The notebook verifies the two ZIPs and the round-20 checkpoint by SHA-256 before training;
+The notebook verifies the two ZIPs and the round-25 checkpoint by SHA-256 before training;
 the small code bundle avoids requiring GitHub credentials.
 It extracts the dataset locally and rebuilds disjoint client shards with seed 42.
 
@@ -35,10 +35,10 @@ It extracts the dataset locally and rebuilds disjoint client shards with seed 42
 simulation, without network workers. Every client starts from the same global weights;
 updates are weighted by training image count. This preserves the three-client round
 structure but is not a deployment across three independent devices.
-The Colab notebook is currently configured to continue the verified round-20 checkpoint
-for five additional rounds (21-25), using one epoch per client, batch 8, image size 640,
-and two data-loader workers. Upload `saved_models/global_round_020.pt` to
-`MyDrive/Agri Vision/global_round_020.pt` before running it. Per-client training
+The Colab notebook is currently configured to continue the verified round-25 checkpoint
+for ten additional rounds (26-35), using one epoch per client, batch 8, image size 640,
+and two data-loader workers. Upload `saved_models/global_round_025.pt` to
+`MyDrive/Agri Vision/global_round_025.pt` before running it. Per-client training
 validation is disabled because
 the aggregated global model is already validated on all three clients after each round.
 Completed global checkpoints, local client outputs, metrics and logs go to
