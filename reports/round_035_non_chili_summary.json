@@ -1,0 +1,33 @@
+{
+  "round": 35,
+  "split": "test",
+  "imgsz": 640,
+  "save_dir": "F:\\Agri Vision\\saved_models\\round_035_non_chili_analysis",
+  "method": "Macro averages of existing model's per-class scores; all original test images retained. Precision/recall use the evaluation operating point selected over all 30 classes.",
+  "groups": {
+    "all_30_classes": {
+      "classes": 30,
+      "instances": 4305,
+      "precision": 0.6371780759510207,
+      "recall": 0.5480879073653231,
+      "mAP50": 0.557190904530999,
+      "mAP50_95": 0.3725625771490942
+    },
+    "non_chili_24_classes": {
+      "classes": 24,
+      "instances": 4011,
+      "precision": 0.6980559602627082,
+      "recall": 0.6272582352131756,
+      "mAP50": 0.6516480671017286,
+      "mAP50_95": 0.43436898877644964
+    },
+    "chili_6_classes": {
+      "classes": 6,
+      "instances": 294,
+      "precision": 0.3936665387042709,
+      "recall": 0.23140659597391314,
+      "mAP50": 0.17936225424808006,
+      "mAP50_95": 0.12533693063967238
+    }
+  }
+}
