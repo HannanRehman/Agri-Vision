@@ -27,7 +27,7 @@ Upload `original_dataset_colab.zip` and `agrivision_colab_code.zip` to
 `MyDrive/Agri Vision/`, select a GPU runtime,
 then choose **Run all** and authorize Drive. Edit the ZIP path in the first cell if needed.
 Replace older copies of those two ZIPs, but keep existing result folders and checkpoints.
-The notebook verifies the two ZIPs and the round-25 checkpoint by SHA-256 before training;
+The notebook verifies the two ZIPs and the round-35 checkpoint by SHA-256 before training;
 the small code bundle avoids requiring GitHub credentials.
 It extracts the dataset locally and rebuilds disjoint client shards with seed 42.
 
@@ -35,10 +35,14 @@ It extracts the dataset locally and rebuilds disjoint client shards with seed 42
 simulation, without network workers. Every client starts from the same global weights;
 updates are weighted by training image count. This preserves the three-client round
 structure but is not a deployment across three independent devices.
-The Colab notebook is currently configured to continue the verified round-25 checkpoint
-for ten additional rounds (26-35), using one epoch per client, batch 8, image size 640,
-and two data-loader workers. Upload `saved_models/global_round_025.pt` to
-`MyDrive/Agri Vision/global_round_025.pt` before running it. Per-client training
+The Colab notebook is currently configured to continue the verified round-35 checkpoint
+for five additional rounds (36-40), using one epoch per client, batch 8, image size 640,
+and two data-loader workers. Upload `saved_models/global_round_035.pt` to
+`MyDrive/Agri Vision/global_round_035.pt` and replace the Drive code ZIP with the newly
+rebuilt `agrivision_colab_code.zip` before running it. The unchanged dataset ZIP can be
+reused. See `reports/rounds_036_040_upload_instructions.md` for the exact upload list.
+Training settings are retained to compare this continuation with earlier rounds.
+Per-client training
 validation is disabled because
 the aggregated global model is already validated on all three clients after each round.
 Completed global checkpoints, local client outputs, metrics and logs go to
@@ -48,6 +52,22 @@ round must restart. During training, a heartbeat is printed every minute and the
 round, client, phase, and CUDA memory are written to `status.json` in the run folder.
 GPU execution must be verified in Colab; local unit tests alone
 do not establish Colab compatibility or training accuracy.
+
+Each round also saves `metrics_clients_round_XXX.json` with the global model's
+individual-client validation metrics and validation-image counts. The combined
+`global_validation_metrics.csv` contains all fully validated rounds in that run.
+Package versions, starting/ending round numbers, and class names are recorded in
+`settings.json`. The notebook's final cell checks that rounds 36-40 completed and
+displays their CSV. Rebuild the bundle and notebook checksums with
+`python scripts/prepare_colab_rounds_036_040.py` if the upload code changes.
+
+The rounds 36-40 run has now completed. See
+[`reports/rounds_036_040_overview.md`](reports/rounds_036_040_overview.md)
+for the saved validation results and checkpoint comparison. The notebook remains
+configured to reproduce that continuation. The supervisor architecture review is
+available in [Word](reports/Agri_Vision_Non_YOLO_Architecture_Review.docx) and
+[PDF](reports/Agri_Vision_Non_YOLO_Architecture_Review.pdf), with the remaining
+submission schedule in [FIFTEEN_DAY_THESIS_PLAN.md](FIFTEEN_DAY_THESIS_PLAN.md).
 
 The current 30-class names were reconstructed from label/file evidence; confirm them
 against the original export before reporting class-specific results. Numeric label

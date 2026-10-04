@@ -1,7 +1,9 @@
 """Single-GPU, sequential three-client FedAvg simulation for Colab."""
 
 import argparse
+import csv
 import gc
+from importlib.metadata import version
 import json
 import shutil
 import threading
@@ -29,6 +31,29 @@ def release_gpu():
     gc.collect()
     if torch.cuda.is_available():
         torch.cuda.empty_cache()
+
+
+def save_round_metrics(output, round_number, results):
+    """Keep aggregation inputs and a CSV of every completed validation round."""
+    output = Path(output)
+    metrics = weighted_metrics([(item['validation_images'], item['metrics']) for item in results])
+    detail = {'round': round_number, 'split': 'val',
+              'aggregation': 'validation-image-weighted client metrics', 'clients': results}
+    for filename, value in [(f'metrics_clients_round_{round_number:03d}.json', detail),
+                            (f'metrics_round_{round_number:03d}.json', metrics)]:
+        target = output / filename
+        temporary = target.with_suffix('.tmp')
+        temporary.write_text(json.dumps(value, indent=2))
+        temporary.replace(target)
+    target = output / 'global_validation_metrics.csv'
+    temporary = target.with_suffix('.tmp')
+    with temporary.open('w', newline='') as stream:
+        writer = csv.DictWriter(stream, fieldnames=['round', 'precision', 'recall', 'mAP50', 'mAP50_95'])
+        writer.writeheader()
+        for path in sorted(output.glob('metrics_round_*.json')):
+            writer.writerow({'round': int(path.stem.rsplit('_', 1)[1]), **json.loads(path.read_text())})
+    temporary.replace(target)
+    return metrics
 
 
 class RunMonitor:
@@ -113,7 +138,10 @@ def main():
         model.model.load_state_dict(saved['model_state_dict'], strict=True)
         start_round = int(saved['round'])
     parameters = get_parameters(model)
-    metadata = {**vars(args), 'torch': torch.__version__, 'gpu': torch.cuda.get_device_name(0)}
+    metadata = {**vars(args), 'torch': torch.__version__, 'gpu': torch.cuda.get_device_name(0),
+                'start_round': start_round, 'end_round': start_round + args.rounds,
+                'class_names': class_names(),
+                'packages': {name: version(name) for name in ('ultralytics', 'flwr', 'numpy', 'PyYAML')}}
     (args.output / 'settings.json').write_text(json.dumps(metadata, default=str, indent=2))
     for round_number in range(start_round + 1, start_round + args.rounds + 1):
         config = {'server_round': round_number, 'local_epochs': args.local_epochs,
@@ -151,11 +179,10 @@ def main():
             monitor.update(round=round_number, client=client_id, phase='validating global model')
             client = AgriVisionClient(client_id, '0')
             _, count, metrics = client.evaluate(parameters, config)
-            results.append((count, metrics))
+            results.append({'client': client_id, 'validation_images': count, 'metrics': metrics})
             del client
             release_gpu()
-        metrics = weighted_metrics(results)
-        (args.output / f'metrics_round_{round_number:03d}.json').write_text(json.dumps(metrics, indent=2))
+        metrics = save_round_metrics(args.output, round_number, results)
         monitor.update(round=round_number, client='-', phase='round complete', metrics=metrics)
         print(f'ROUND {round_number} validation: {metrics}', flush=True)
     # Verify that the saved global checkpoint can be loaded by the project model.

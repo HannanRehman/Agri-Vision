@@ -1,0 +1,16 @@
+{
+  "start_round": 35,
+  "end_round": 40,
+  "additional_rounds": 5,
+  "hashes": {
+    "dataset": "a21b497dbced6a8797e3f10fa4af6baafad734533417b37fff6f149deabc0827",
+    "code": "2ae308f7191d7089064e49436496b9ad118fb558c62b911bb7143487d9817b89",
+    "checkpoint": "f4e81a54d184e00318e543a49a8bcc81539d1a592063cb19554ed55c6b88d487"
+  },
+  "files": {
+    "dataset": "original_dataset_colab.zip",
+    "code": "agrivision_colab_code.zip",
+    "checkpoint": "saved_models/global_round_035.pt",
+    "notebook": "AgriVision_Colab.ipynb"
+  }
+}

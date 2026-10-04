@@ -11,6 +11,7 @@ reports/dataset_class_distribution1.csv
 saved_models/
 global_round_*.pt
 reports/*.log
+reports/.document_preview/
 AgriVision_dataset.zip
 original_dataset_colab.zip
 agrivision_colab_code.zip
