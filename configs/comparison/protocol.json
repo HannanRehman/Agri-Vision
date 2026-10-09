@@ -1,0 +1,46 @@
+{
+  "status": "draft_not_consumed_by_existing_training_code",
+  "task": "object_detection",
+  "dataset_version": "non_chili_v1",
+  "manifest_directory": "manifests/non_chili_v1",
+  "dataset_ready": false,
+  "foreground_classes": 24,
+  "excluded_source_class_ids": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "regime": "sequential_three_client_fedavg",
+  "seed": 42,
+  "clients": [
+    "client1",
+    "client2",
+    "client3"
+  ],
+  "initial_round_budget": 10,
+  "local_epochs": 1,
+  "aggregation_weight": "client_training_image_count",
+  "checkpoint_selection": "pooled_validation_map_50_95",
+  "evaluation": {
+    "primary": "coco_box_map_50_95",
+    "also": [
+      "map50",
+      "per_class_ap",
+      "precision",
+      "recall",
+      "f1"
+    ],
+    "precision_recall_iou": 0.5,
+    "precision_recall_confidence": 0.25,
+    "max_detections_per_image": 100
+  },
+  "hardware": "same_GPU_type_for_all_runs_to_be_recorded",
+  "optimizer_and_normalization_policy": "finalize_after_pilots",
+  "runtime_profile_required": true,
+  "test_set_tuning": false,
+  "thesis_writing": "after_2026-10-17",
+  "submission_deadline": null
+}

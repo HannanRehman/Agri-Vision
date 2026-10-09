@@ -1,0 +1,16 @@
+{
+  "status": "planned_not_implemented",
+  "model_id": "ssd_mobilenetv3",
+  "shared_protocol": "configs/comparison/protocol.json",
+  "run_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01",
+  "display_name": "SSD MobileNetV3-Large (standard head)",
+  "implementation": "custom_torchvision_SSD_configuration_to_be_verified",
+  "initial_weights": "backbone_source_to_record_standard_head_has_no_assumed_pretrained_weights",
+  "input_size_candidate": 320,
+  "head": "standard_convolutional_SSD_head",
+  "output_classes_including_background": 25,
+  "limitation": "Head initialization differs from pretrained full-detector alternatives; disclose in comparison",
+  "results_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/results",
+  "checkpoints_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/checkpoints",
+  "logs_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/logs"
+}

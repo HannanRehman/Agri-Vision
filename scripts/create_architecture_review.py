@@ -1,4 +1,4 @@
-"""Create the supervisor-facing review (requires optional python-docx).
+"""Recreate the superseded historical review (requires optional python-docx).
 
 Install the document-only dependency with: python -m pip install python-docx
 No model work is performed.
@@ -10,7 +10,8 @@ from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT = ROOT / 'reports/Agri_Vision_Non_YOLO_Architecture_Review.docx'
+OUTPUT = ROOT / 'archive/documents/Agri_Vision_Non_YOLO_Architecture_Review.docx'
+OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 doc = Document()
 section = doc.sections[0]
 section.page_width, section.page_height = Inches(8.27), Inches(11.69)

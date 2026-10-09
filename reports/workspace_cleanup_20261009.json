@@ -1,0 +1,138 @@
+[
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch0_labels.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch0_labels.jpg",
+    "sha256": "ADAA432B3463F245DB7D4966A1FD922051A520EEF14059DD49F402528E2D4BB9",
+    "bytes": 657090
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch0_pred.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch0_pred.jpg",
+    "sha256": "C8AEC64891F67F15649EFE318A0CB971C6A3CC74320BF742F7A9875412B2B674",
+    "bytes": 621012
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch1_labels.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch1_labels.jpg",
+    "sha256": "21C22878ABCD6A9BCF79F4D3E7E3EA9ABD0DC48F8B2FB48686828C7AA983C4D5",
+    "bytes": 719752
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch1_pred.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch1_pred.jpg",
+    "sha256": "59ABA5035CBA9ED19A0B4F54CD5FE50558568FC1EAB13DE346CF4BE88AE8D4E4",
+    "bytes": 683145
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch2_labels.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch2_labels.jpg",
+    "sha256": "7A08DE2473E9426077E3D10B7909E1F322C3EE6DE6FE01316FB7557B3A41149C",
+    "bytes": 591663
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models\\test_evaluation_round_035-2\\val_batch2_pred.jpg",
+    "retained": "saved_models\\test_evaluation_round_035\\val_batch2_pred.jpg",
+    "sha256": "B93302B1EF46E0272FBB6CD3F4EB13649ED5E9565EA94C92592E43489DB87554",
+    "bytes": 595022
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "reports/dataset_class_distribution1.csv",
+    "retained": "reports/dataset_class_distribution.csv",
+    "sha256": "7CA4CC336CA7646746C36F4F4D4267206E4471DB2793159BA7C2A1532F7DF8E5",
+    "bytes": 2569
+  },
+  {
+    "action": "remove duplicate file",
+    "removed": "saved_models/dataset_class_distribution.csv",
+    "retained": "reports/dataset_class_distribution.csv",
+    "sha256": "7CA4CC336CA7646746C36F4F4D4267206E4471DB2793159BA7C2A1532F7DF8E5",
+    "bytes": 2569
+  },
+  {
+    "action": "move",
+    "source": "venv",
+    "destination": "archive/legacy_environment/venv"
+  },
+  {
+    "action": "move",
+    "source": "dataset_backup_20260922_173524",
+    "destination": "archive/legacy_datasets/dataset_backup_20260922_173524"
+  },
+  {
+    "action": "move",
+    "source": "dataset_backup_20260929_chili_archive",
+    "destination": "archive/legacy_datasets/dataset_backup_20260929_chili_archive"
+  },
+  {
+    "action": "move",
+    "source": "AgriVision_dataset.zip",
+    "destination": "archive/legacy_bundles/AgriVision_dataset.zip"
+  },
+  {
+    "action": "move",
+    "source": "structure.txt",
+    "destination": "archive/legacy_documents/structure.txt"
+  },
+  {
+    "action": "move",
+    "source": "FIFTEEN_DAY_THESIS_PLAN.md",
+    "destination": "archive/documents/FIFTEEN_DAY_THESIS_PLAN.md"
+  },
+  {
+    "action": "move",
+    "source": "reports/Agri_Vision_Non_YOLO_Architecture_Review.docx",
+    "destination": "archive/documents/Agri_Vision_Non_YOLO_Architecture_Review.docx"
+  },
+  {
+    "action": "move",
+    "source": "reports/Agri_Vision_Non_YOLO_Architecture_Review.pdf",
+    "destination": "archive/documents/Agri_Vision_Non_YOLO_Architecture_Review.pdf"
+  },
+  {
+    "action": "move",
+    "source": "reports/.document_preview/architecture_review_pages.png",
+    "destination": "archive/legacy_documents/architecture_review_pages.png"
+  },
+  {
+    "action": "move",
+    "source": "reports/analyze_rounds_026_035.py",
+    "destination": "scripts/analyze_rounds_026_035.py"
+  },
+  {
+    "action": "move",
+    "source": "reports/evaluate_round_035_non_chili.py",
+    "destination": "scripts/evaluate_round_035_non_chili.py"
+  },
+  {
+    "action": "move",
+    "source": "reports/create_architecture_review.py",
+    "destination": "scripts/create_architecture_review.py"
+  },
+  {
+    "action": "move",
+    "source": "PENYAKIT PADA CABAI.v1i.yolov8",
+    "destination": "archive\\imported_datasets\\PENYAKIT PADA CABAI.v1i.yolov8"
+  },
+  {
+    "action": "move",
+    "source": "PENYAKIT PADA CABAI.v1i.yolov8.zip",
+    "destination": "archive\\imported_datasets\\PENYAKIT PADA CABAI.v1i.yolov8.zip"
+  },
+  {
+    "action": "remove verified archived source folder",
+    "removed": "archive/imported_datasets/PENYAKIT PADA CABAI.v1i.yolov8",
+    "retained": "archive/imported_datasets/PENYAKIT PADA CABAI.v1i.yolov8.zip",
+    "sha256": "71a919bae1044c6f91f888bff4c81507b4bca2cbe92bd361eaf7fdb4b719247b",
+    "bytes": 42423870,
+    "files": 1557,
+    "authorization": "User requested deletion of unused extracted chili source",
+    "verification": "Each file matched its ZIP entry before removal"
+  }
+]

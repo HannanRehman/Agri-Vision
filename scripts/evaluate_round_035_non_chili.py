@@ -12,7 +12,7 @@ from model import class_names, create_model
 
 def main():
     torch.set_num_threads(4)
-    checkpoint = torch.load(ROOT / "global_round_035.pt", map_location="cpu", weights_only=True)
+    checkpoint = torch.load(ROOT / "saved_models/global_round_035.pt", map_location="cpu", weights_only=True)
     assert checkpoint["round"] == 35
     assert checkpoint["class_names"] == class_names()
     model = create_model()

@@ -1,0 +1,15 @@
+{
+  "status": "planned_not_implemented",
+  "model_id": "ssdlite",
+  "shared_protocol": "configs/comparison/protocol.json",
+  "run_directory": "experiments/ssdlite_non_chili_seed42_run01",
+  "display_name": "SSDLite320 MobileNetV3-Large",
+  "implementation": "torchvision_ssdlite320_mobilenet_v3_large",
+  "initial_weights": "COCO_pretrained_then_replace_class_head",
+  "input_size_candidate": 320,
+  "head": "lightweight_depthwise_separable_SSD_head",
+  "output_classes_including_background": 25,
+  "results_directory": "experiments/ssdlite_non_chili_seed42_run01/results",
+  "checkpoints_directory": "experiments/ssdlite_non_chili_seed42_run01/checkpoints",
+  "logs_directory": "experiments/ssdlite_non_chili_seed42_run01/logs"
+}

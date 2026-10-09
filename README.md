@@ -1,153 +1,133 @@
 # Agri Vision: Federated Crop-Disease Detection
 
-This FYP prototype trains a **30-class YOLOv8n object detector** with [Flower](https://flower.ai/docs/framework/). Three local clients each train on a different image shard; a FedAvg server combines their model parameters after every round. Images stay on their client, but model parameters are exchanged. This is a research prototype, not a privacy guarantee or a deployed diagnosis system.
+Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The completed experiment uses a **30-class YOLOv8n model** and three-client sample-weighted FedAvg. The Colab implementation simulates the clients sequentially on one GPU.
 
-## What is in the project
+## Current status — 9 October 2026
 
-| File | Purpose |
+| Work | Status |
 | --- | --- |
-| `model.py` | Creates the common 30-class YOLOv8n model and converts its state to/from Flower arrays. |
-| `federated_client.py`, `client1.py`–`client3.py` | Train and validate each client; the three launchers only select the dataset. |
-| `server.py` | Runs FedAvg, sends epoch/batch/image-size settings, aggregates validation metrics, and saves global checkpoints. |
-| `split_dataset.py` | Checks for data leakage or rebuilds deterministic, non-overlapping shards. |
-| `merge_chili_dataset.py` | Audits, de-duplicates, remaps, and adds the vetted chili dataset to training only. |
-| `evaluate.py`, `predict.py` | Test a global checkpoint and run image/video inference. |
-| `original_dataset/` | Source images and YOLO-format labels; its `test/` split is held out from training. |
-| `dataset/client1/`–`client3/` | Client-specific `train`, `valid`, and `test` splits plus `data.yaml`. |
-| `runs/`, `saved_models/` | Local training logs and aggregated global checkpoints. |
+| Historical YOLO training through round 40 | Completed; archived run files and reports retained |
+| Round-35 held-out test and non-chili class analysis | Completed on the original 30-class checkpoint |
+| Workspace organization | Separate experiment scaffolds, current file index and cleanup audit added |
+| Four-crop, 24-class dataset | Planned; original data has not yet been filtered or relabelled |
+| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | Planned; draft configurations exist, no new model training has started |
+| Seminar poster | Earlier A1 draft retained; revision to the supplied stacked layout is pending |
 
-The old Faster R-CNN function in `model.py` was unrelated to the YOLO clients and has been replaced. `yolov8n.pt` is the common pretrained starting point, not the final trained FYP model.
+The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The agreed alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration to implement and verify. Faster R-CNN is excluded. All models will be evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
 
-## Requirements
+Thesis writing begins **after 17 October**. That date is not a submission deadline or a forced end to training.
 
-### Run on Google Colab
+Start with the [workspace index](WORKSPACE_INDEX.md), [training plan](TRAINING_PLAN.md), [architecture comparison plan](ARCHITECTURE_COMPARISON_PLAN.md) and [organization record](WORKSPACE_ORGANIZATION_PLAN.md). Historical recommendations in `archive/documents/` are superseded by the current comparison plan.
 
-Open [AgriVision Colab](https://colab.research.google.com/github/HannanRehman/HannanRehman4/blob/main/AgriVision_Colab.ipynb).
-Upload `original_dataset_colab.zip` and `agrivision_colab_code.zip` to
-`MyDrive/Agri Vision/`, select a GPU runtime,
-then choose **Run all** and authorize Drive. Edit the ZIP path in the first cell if needed.
-Replace older copies of those two ZIPs, but keep existing result folders and checkpoints.
-The notebook verifies the two ZIPs and the round-35 checkpoint by SHA-256 before training;
-the small code bundle avoids requiring GitHub credentials.
-It extracts the dataset locally and rebuilds disjoint client shards with seed 42.
+## Workspace layout
 
-`colab_train.py` runs all three clients sequentially on one GPU as a local FedAvg
-simulation, without network workers. Every client starts from the same global weights;
-updates are weighted by training image count. This preserves the three-client round
-structure but is not a deployment across three independent devices.
-The Colab notebook is currently configured to continue the verified round-35 checkpoint
-for five additional rounds (36-40), using one epoch per client, batch 8, image size 640,
-and two data-loader workers. Upload `saved_models/global_round_035.pt` to
-`MyDrive/Agri Vision/global_round_035.pt` and replace the Drive code ZIP with the newly
-rebuilt `agrivision_colab_code.zip` before running it. The unchanged dataset ZIP can be
-reused. See `reports/rounds_036_040_upload_instructions.md` for the exact upload list.
-Training settings are retained to compare this continuation with earlier rounds.
-Per-client training
-validation is disabled because
-the aggregated global model is already validated on all three clients after each round.
-Completed global checkpoints, local client outputs, metrics and logs go to
-`MyDrive/Agri Vision/colab_results`. To continue, set `INITIAL_CHECKPOINT` to a saved
-global checkpoint and select the number of additional rounds. An interrupted partial
-round must restart. During training, a heartbeat is printed every minute and the current
-round, client, phase, and CUDA memory are written to `status.json` in the run folder.
-GPU execution must be verified in Colab; local unit tests alone
-do not establish Colab compatibility or training accuracy.
+| Location | Purpose |
+| --- | --- |
+| `model.py`, `federated_client.py`, `client1.py`–`client3.py`, `server.py` | Existing YOLO/Flower implementation |
+| `colab_train.py` | Existing sequential three-client Colab FedAvg runner |
+| `evaluate.py`, `predict.py` | Existing YOLO checkpoint evaluation and inference |
+| `split_dataset.py`, `merge_chili_dataset.py` | Historical data partitioning and audited chili import |
+| `original_dataset/`, `dataset/client1/`–`client3/` | Current 30-class source data and client partitions; paths retained for compatibility |
+| `configs/comparison/` | Shared experiment protocol and per-model draft specifications |
+| `manifests/non_chili_v1/` | Reserved location for audited 24-class image lists, class map and checksums |
+| `experiments/` | Separate new-model run folders, each with its own `results/`, `checkpoints/` and `logs/`; READMEs identify their planned status |
+| `saved_models/`, `runs/` | Historical checkpoints, result archives and local outputs |
+| `reports/` | Reviewed metrics, figures, reports and poster artifacts |
+| `scripts/` | Packaging, workspace audit, historical analysis and document tools |
+| `archive/` | Superseded documents, earlier bundle, dataset backups and old environment |
+| `.venv/` | Working local Python environment |
 
-Each round also saves `metrics_clients_round_XXX.json` with the global model's
-individual-client validation metrics and validation-image counts. The combined
-`global_validation_metrics.csv` contains all fully validated rounds in that run.
-Package versions, starting/ending round numbers, and class names are recorded in
-`settings.json`. The notebook's final cell checks that rounds 36-40 completed and
-displays their CSV. Rebuild the bundle and notebook checksums with
-`python scripts/prepare_colab_rounds_036_040.py` if the upload code changes.
+Model weights, raw datasets and runtime artifacts are excluded from Git where configured. The workspace index records the authoritative reports and the round ranges inside timestamped ZIPs. Do not delete source images shared by several data partitions merely because their bytes match.
 
-The rounds 36-40 run has now completed. See
-[`reports/rounds_036_040_overview.md`](reports/rounds_036_040_overview.md)
-for the saved validation results and checkpoint comparison. The notebook remains
-configured to reproduce that continuation. The supervisor architecture review is
-available in [Word](reports/Agri_Vision_Non_YOLO_Architecture_Review.docx) and
-[PDF](reports/Agri_Vision_Non_YOLO_Architecture_Review.pdf), with the remaining
-submission schedule in [FIFTEEN_DAY_THESIS_PLAN.md](FIFTEEN_DAY_THESIS_PLAN.md).
+## Historical results
 
-The current 30-class names were reconstructed from label/file evidence; confirm them
-against the original export before reporting class-specific results. Numeric label
-validation cannot verify disease-name semantics.
+- [Rounds 26–35 detailed report](reports/rounds_026_035_detailed_report.md) and [validation CSV](reports/rounds_026_035_global_metrics.csv).
+- [Rounds 36–40 overview](reports/rounds_036_040_overview.md) and [validation CSV](reports/rounds_036_040_global_metrics.csv).
+- [Round-35 non-chili analysis](reports/round_035_non_chili_report.md).
+- [Dataset class distribution](reports/dataset_class_distribution.md) and [primary CSV](reports/dataset_class_distribution.csv).
+- [Historical chili merge audit](reports/chili_dataset_merge.md).
 
-- A working Python 3.11 or 3.12 installation, enough disk space for a second dataset copy, and preferably an NVIDIA GPU with a compatible PyTorch install. CPU training is possible but slow.
-- Run all commands from the project root. On Windows, open PowerShell in `F:\Agri Vision`.
-- The committed `venv/` was created against an `E:\python.exe` installation and is broken if that Python standard library is unavailable. Create a fresh environment instead of relying on it.
+The round-35 non-chili analysis averages 24 classes of a **30-class checkpoint while retaining all original test images**. It does not establish the performance of a newly trained 24-class model. Historical global validation metrics are validation-image-weighted client averages; they are not pooled-prediction COCO AP. The new comparison will use a shared evaluator and explicitly labelled metrics.
+
+## Existing Colab workflow — historical rounds 36–40
+
+[AgriVision_Colab.ipynb](AgriVision_Colab.ipynb) remains configured to reproduce the completed round-35-to-40 continuation. It is **not configured for the new 24-class architecture comparison**. Running it starts historical YOLO training again.
+
+For intentional reproduction, see the [exact upload instructions](reports/rounds_036_040_upload_instructions.md). Required local artifacts are `original_dataset_colab.zip`, `agrivision_colab_code.zip` and `saved_models/global_round_035.pt`. Upload the checkpoint directly as `MyDrive/Agri Vision/global_round_035.pt`. The notebook verifies SHA-256 checksums, extracts data locally and builds non-overlapping client partitions with seed 42.
+
+The recorded continuation uses five rounds, one local epoch per client, batch 8, image size 640 and two loader workers. Results go into unique folders under `MyDrive/Agri Vision/colab_results/`. Completed checkpoints, per-client metrics, the combined validation CSV, settings and progress status are saved. An interrupted partial round must restart.
+
+If the bundled training code changes, regenerate the bundle and notebook checksums with:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -c "import torch, flwr, ultralytics; print(torch.cuda.is_available())"
+.\.venv\Scripts\python.exe scripts\prepare_colab_rounds_036_040.py
 ```
 
-If you need CUDA, select the appropriate PyTorch installation command from the [official PyTorch installer](https://pytorch.org/get-started/locally/) before installing the remaining requirements. `False` in the final command means the code will default to CPU.
+That command prepares artifacts; it does not train. New comparison notebooks and bundles should have distinct names and use the experiment IDs in `experiments/`.
 
-## Prepare and check the data
+## Local environment and checks
 
-**Do this before training.** The committed client shards are already non-overlapping, but run the checker after copying the project or changing any dataset files. The server refuses to train if leakage or invalid labels are detected.
+Run from `F:\Agri Vision` using `.venv`. Its currently recorded interpreter is **Python 3.14.4**. This does not establish compatibility for future detector packages or reproduce the Colab environment; record and pin the tested comparison environment when preparing it. The older `venv/`, referencing `E:\python.exe`, is archived under `archive/legacy_environment/` and is not the active environment.
 
 ```powershell
+.\.venv\Scripts\Activate.ps1
+python -c "import torch, flwr, ultralytics; print(torch.__version__, torch.cuda.is_available())"
 python split_dataset.py
-# Only rebuild when the checker reports a partition problem:
+```
+
+The partition checker validates the existing 30-class client data, not the future 24-class dataset. Expected totals are 15,512 training, 4,374 validation and 2,191 test images. It checks client overlap, coverage, class mappings and label values. Rebuild only when needed:
+
+```powershell
 python split_dataset.py --rebuild --seed 42
 ```
 
-The check should show no overlap, 30 valid classes, and totals of 15,512 train, 4,374 validation, and 2,191 test images. `--rebuild` copies the original dataset into a new, verified partition, swaps it into `dataset/`, and **keeps the previous `dataset/` as a timestamped `dataset_backup_*` directory**. It does not delete the original or the backup. Ensure sufficient free space before rebuilding. The same seed produces the same assignment.
+Rebuilding creates a new copy and keeps the previous partition as a timestamped backup. Confirm storage before running it. Existing archived backups remain available for recovery. Class names were reconstructed from label/file evidence; confirm disease-name semantics against source provenance, since numeric validation cannot establish them.
 
-The training split includes 202 additional chili images imported from the CC BY 4.0
-`PENYAKIT PADA CABAI` dataset. The importer retained one variant for each independent
-source image, removed sources already present, rejected empty annotations and conflicting
-labels, remapped the accepted labels to AgriVision IDs 13–18, and left validation/test
-unchanged. See `reports/chili_dataset_merge.md` for the audit trail.
+The unused extracted external chili source folder was deleted at the user's request after all 1,557 files were verified against its ZIP. The compressed ZIP is retained under `archive/imported_datasets/`. Current training reads the merged data in `original_dataset/` and `dataset/`; those images and labels were preserved. To reproduce the historical merge, restore the source ZIP into a separate folder and pass that folder with `--source`. The import script does not automatically recreate the deleted folder.
 
-If copying is interrupted, the previous `dataset/` remains in place and a partial `dataset_staging_*` directory may remain. Inspect it before removing it; the script never automatically deletes a dataset or backup.
+`requirements.txt` specifies the existing YOLO/Flower dependencies. New detector dependencies are not installed by the draft configurations. A fresh environment can be created using a Python version supported by the selected, tested PyTorch packages; use the [official PyTorch installer](https://pytorch.org/get-started/locally/) for CUDA installation.
 
-Each client `data.yaml` must have the same 30 class IDs and names. YOLO labels use `class_id x_center y_center width height` with normalized coordinates. The checker rejects malformed coordinates and class IDs outside `0`–`29` before training.
+## Existing local YOLO training
 
-## Train
-
-Start the server, then start **all three clients** in separate terminals (activate `.venv` in each):
+These commands run the current **30-class** pipeline and start training. They are retained for intentional historical use:
 
 ```powershell
-# Terminal 1
-python server.py --rounds 5 --local-epochs 3 --batch 2 --imgsz 320
-
-# Terminal 2
+# Separate terminals, each using .venv:
+python server.py --rounds 5 --local-epochs 1 --batch 8 --imgsz 640
 python client1.py
-
-# Terminal 3
 python client2.py
-
-# Terminal 4
 python client3.py
 ```
 
-One round means every client receives the current global model, trains for `--local-epochs`, and sends updated parameters back. In the example, **each client can train for up to 15 local epochs** (5 rounds × 3 epochs), with aggregation after every 3. For a quick functional check, use `--rounds 1 --local-epochs 1`. You can raise `--rounds`, `--local-epochs`, `--batch`, or `--imgsz` when hardware allows; these settings do not guarantee better accuracy. Compare validation and test mAP and watch for overfitting. The old CPU run took roughly 1.4 hours for one client's single epoch, so plan runtime accordingly.
+Each round sends identical global weights to all clients, trains each client locally and aggregates by training-image count. On one GPU, prefer the sequential Colab runner; concurrent clients can compete for VRAM. Local outputs go to `runs/federated/clientN/round_XXX/` and server checkpoints default to `saved_models/`. Use unique output locations to avoid confusing new runs with earlier results.
 
-By default the server listens on `0.0.0.0:8080`, while clients connect to `127.0.0.1:8080`. On separate machines, pass `--server HOST:8080` to each client and ensure the port is reachable. Pass `--device cpu` to clients without CUDA; on one GPU, three concurrent clients may exceed available VRAM, so lower batch size or use separate devices. `--batch` and `--imgsz` are set by the server for all clients.
-
-Local YOLO logs and best/last checkpoints go under `runs/federated/clientN/round_XXX/`. The server saves the **aggregated global model** after each successful round as `saved_models/global_round_XXX.pt`. This is a project checkpoint containing a PyTorch state dictionary, not a native Ultralytics `.pt` checkpoint; load it with the project scripts below. To continue from a completed global round in a new run, use `python server.py --initial-checkpoint saved_models/global_round_005.pt --rounds 5 ...` and restart the three clients. New output round numbers start at 1 for that run, so choose a new `--checkpoint-dir` to preserve previous files.
-
-Flower weights aggregation by the *actual number of client training images*. The server also averages client validation mAP50, mAP50-95, precision, and recall weighted by validation-image count. Flower's reported scalar “loss” is `1 - mAP50`, an error proxy, **not** YOLO's box/classification loss. Use the YOLO run logs for training losses.
-
-## Evaluate and predict
-
-After training, evaluate the final global model once on the held-out original test split:
+The project checkpoint contains `model_state_dict`, `class_names` and `round`; it is not a native Ultralytics checkpoint. Evaluate or predict with the project loader:
 
 ```powershell
-python evaluate.py --checkpoint saved_models/global_round_005.pt --device cpu
-python predict.py --checkpoint saved_models/global_round_005.pt --source path\to\image.jpg --device cpu
+python evaluate.py --checkpoint saved_models/global_round_035.pt --device cpu
+python predict.py --checkpoint saved_models/global_round_035.pt --source path\to\image.jpg --device cpu
 ```
 
-`evaluate.py` prints test mAP50 and mAP50-95. `predict.py` saves annotated outputs under `runs/predictions/`. Keep the test split for final reporting; tune epochs and other choices using validation results, not repeated test-set trials. For your report, record the split seed, Python/package versions, model settings, hardware, per-round validation results, and final held-out test metrics. A centralized YOLOv8n baseline trained on the same training images would make the federated comparison much stronger.
+Choose checkpoints/settings on validation, not repeated test-set trials. The historical Flower loss value is `1 - mAP50`, an error proxy, rather than the model's training loss.
+
+## Analysis and maintenance tools
+
+| Tool | Behavior |
+| --- | --- |
+| `scripts/audit_workspace.py --output reports/workspace_audit_latest.json` | Read-only inventory and duplicate detection; excludes datasets and runtime environments |
+| `scripts/analyze_rounds_026_035.py` | Reads the archived run and regenerates its report/figures; does not train |
+| `scripts/evaluate_round_035_non_chili.py` | Runs a real detector evaluation; invoke only when deliberately reevaluating |
+| `scripts/create_architecture_review.py` | Regenerates the superseded architecture review under `archive/documents/`; requires python-docx |
+| `scripts/organize_workspace.ps1` | One-time organization script already executed; not an idempotent routine to rerun |
+| `scripts/initialize_comparison_workspace.py` | Creates missing scaffold folders/files and preserves existing configurations; does not train |
+| `scripts/remove_verified_chili_source.ps1` | One-time, user-authorized removal already executed; verifies ZIP copies before deleting source files |
+
+The cleanup manifest records moved paths and SHA-256-verified duplicate deletions. Original datasets, unique checkpoints and run archives are retained. Matching ground-truth images or log content in distinct experiments may be retained to keep each experiment's record complete.
 
 ## Verification and limitations
 
-`python split_dataset.py` checks client overlap, coverage of the original images, matching label files, class mappings, and every label value. It blocks the server when the shards are invalid. The code can be syntax-checked without expensive training, but a full multi-client run still depends on a working Python environment and sufficient hardware. Better accuracy is an empirical outcome, not something the epoch count alone can promise.
+```powershell
+python -m unittest discover -s tests -v
+```
 
-The partition tests can be run with `python -m unittest discover -s tests -v`. The existing `runs/detect/` files are from earlier local training, not proof that the updated federated workflow has completed.
+Local tests and syntax checks do not establish GPU runtime, training convergence or model accuracy. FedAvg parameter exchange is not a formal privacy guarantee. The completed Colab experiment is a sequential client simulation, not a deployed network of independent devices.

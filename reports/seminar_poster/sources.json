@@ -1,0 +1,16 @@
+{
+  "test_metrics": "reports/round_035_non_chili_summary.json",
+  "validation_metrics": [
+    "reports/rounds_026_035_global_metrics.csv",
+    "reports/rounds_036_040_global_metrics.csv"
+  ],
+  "dataset_examples": [
+    "original_dataset\\test\\images\\sigatoka-794-_jpeg.rf.86c015db5501df3588751a4b00f25849.jpg",
+    "original_dataset\\test\\images\\Black-Rot-11-_jpeg.rf.b0ad96c41b1eb43d30080bd3b82425fc.jpg",
+    "original_dataset\\test\\images\\Anthracnose-186-_jpg.rf.fd2b7a00d806739bd6fb96f1957c7d81.jpg",
+    "original_dataset\\test\\images\\Early-Leaf-Spot-818-_jpg.rf.bf70e3ba056b64179ac0a53c1bc83e55.jpg",
+    "original_dataset\\test\\images\\Black-Leaf-Spot-483-_jpg.rf.509f411998b8ebf4a23e60fda7766d89.jpg"
+  ],
+  "header": "AI-generated botanical illustration; decorative only",
+  "format": "A1 portrait, 594 \u00d7 841 mm"
+}

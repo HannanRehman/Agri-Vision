@@ -45,7 +45,7 @@ with zipfile.ZipFile(ARCHIVE) as z:
         assert all(0 <= metrics[r][k] <= 1 for k in KEYS)
     assert status["phase"] == "complete" and status["round"] == 35
     assert status["metrics"] == metrics[35]
-    local_checkpoint = ROOT / "global_round_035.pt"
+    local_checkpoint = ROOT / "saved_models/global_round_035.pt"
     matching = local_checkpoint.exists() and hashlib.sha256(local_checkpoint.read_bytes()).digest() == hashlib.sha256(z.read(prefix + "global_round_035.pt")).digest()
     ck_size = z.getinfo(prefix + "global_round_035.pt").file_size
 
@@ -176,7 +176,7 @@ lines += ["", "![Local training losses](rounds_026_035_training_losses.png)", ""
     "- rounds_026_035_client_metrics.csv: all 30 local CSV rows with client and round identifiers.",
     "- rounds_026_035_validation.png / .pdf: global validation trends.",
     "- rounds_026_035_training_losses.png / .pdf: local loss curves.",
-    "- analyze_rounds_026_035.py: reproducible archive-only report generator.", "",
+    "- [scripts/analyze_rounds_026_035.py](../scripts/analyze_rounds_026_035.py): reproducible archive-only report generator.", "",
 ]
 (OUT / "rounds_026_035_detailed_report.md").write_text("\n".join(lines), encoding="utf-8")
 print(json.dumps({"report": str(OUT / 'rounds_026_035_detailed_report.md'), "best_rounds": best, "means": means, "round_35": metrics[35], "logged_epoch_minutes": logged_time/60, "estimated_wall_minutes": duration/60, "checkpoint_matches": matching}, indent=2))

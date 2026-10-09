@@ -20,7 +20,7 @@ from split_dataset import CLIENTS, IMAGE_SUFFIXES, check_partition, class_names,
 
 
 ROOT = Path(__file__).resolve().parent
-DEFAULT_SOURCE = ROOT / "PENYAKIT PADA CABAI.v1i.yolov8"
+DEFAULT_SOURCE = ROOT / "archive/imported_datasets/PENYAKIT PADA CABAI.v1i.yolov8"
 ORIGINAL = ROOT / "original_dataset"
 CLIENT_DATA = ROOT / "dataset"
 SOURCE_SPLITS = ("train", "valid", "test")
@@ -389,6 +389,12 @@ def main():
     args = parser.parse_args()
 
     source = args.source.resolve()
+    if not source.is_dir():
+        parser.error(
+            "Historical chili source folder is unavailable. Its unused extraction was removed "
+            "during workspace cleanup. To reproduce the old merge, extract the retained ZIP "
+            "from archive/imported_datasets and pass the restored folder with --source."
+        )
     result = audit(source)
     destination_names = class_names(ORIGINAL / "data.yaml")
     print_audit(result, destination_names)

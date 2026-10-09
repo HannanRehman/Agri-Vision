@@ -130,4 +130,4 @@ The final CUDA allocations are only a post-run snapshot (0.031 GB allocated/rese
 - rounds_026_035_client_metrics.csv: all 30 local CSV rows with client and round identifiers.
 - rounds_026_035_validation.png / .pdf: global validation trends.
 - rounds_026_035_training_losses.png / .pdf: local loss curves.
-- analyze_rounds_026_035.py: reproducible archive-only report generator.
+- [scripts/analyze_rounds_026_035.py](../scripts/analyze_rounds_026_035.py): reproducible archive-only report generator.

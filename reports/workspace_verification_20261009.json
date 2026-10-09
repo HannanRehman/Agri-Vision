@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-10-09T13:01:33.840406+00:00",
+  "status": "passed",
+  "failures": [],
+  "cleanup_actions": 23,
+  "removed_files": 1565,
+  "deleted_payload_bytes": 46296692,
+  "free_bytes": 15344279552,
+  "syntax_checked_files": 21,
+  "draft_configs_checked": 5,
+  "local_document_links_checked": 94,
+  "existing_tests": {
+    "passed": 13,
+    "command": ".venv/Scripts/python.exe -m unittest discover -s tests -v",
+    "basis": "Successful execution observed during 2026-10-09 organization; not rerun by this verifier"
+  },
+  "existing_partition_check": {
+    "passed": true,
+    "train": 15512,
+    "valid": 4374,
+    "test": 2191,
+    "classes": 30,
+    "basis": "Successful split_dataset.py execution observed during 2026-10-09 organization; not rerun by this verifier"
+  },
+  "environment": {
+    "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+    "packages": {
+      "torch": "2.14.0",
+      "torchvision": "0.29.0",
+      "ultralytics": "8.4.48",
+      "flwr": "1.29.0",
+      "numpy": "2.5.3",
+      "PyYAML": "6.0.3",
+      "python-pptx": "1.0.2",
+      "python-docx": "1.2.0"
+    }
+  },
+  "training_started": false,
+  "dataset_filtering_started": false,
+  "google_drive_changed": false
+}

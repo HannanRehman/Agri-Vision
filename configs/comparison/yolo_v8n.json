@@ -1,0 +1,14 @@
+{
+  "status": "planned_not_implemented",
+  "model_id": "yolo_v8n",
+  "shared_protocol": "configs/comparison/protocol.json",
+  "run_directory": "experiments/yolo_v8n_non_chili_seed42_run01",
+  "display_name": "YOLOv8n",
+  "implementation": "ultralytics_yolov8n",
+  "initial_weights": "yolov8n.pt",
+  "input_size_candidate": 640,
+  "head": "24_class_yolo_detection_head",
+  "results_directory": "experiments/yolo_v8n_non_chili_seed42_run01/results",
+  "checkpoints_directory": "experiments/yolo_v8n_non_chili_seed42_run01/checkpoints",
+  "logs_directory": "experiments/yolo_v8n_non_chili_seed42_run01/logs"
+}

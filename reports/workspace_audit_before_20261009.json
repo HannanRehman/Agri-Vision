@@ -1,0 +1,1412 @@
+{
+  "created_at_utc": "2026-10-09T10:51:09.294014+00:00",
+  "root": "F:\\Agri Vision",
+  "free_bytes": 15315931136,
+  "scope": "Artifact files only; data partitions, backups, Git, environments and caches excluded",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 388
+    },
+    {
+      "path": ".vscode/settings.json",
+      "bytes": 135
+    },
+    {
+      "path": "ARCHITECTURE_COMPARISON_PLAN.md",
+      "bytes": 18669
+    },
+    {
+      "path": "AgriVision_Colab.ipynb",
+      "bytes": 14430
+    },
+    {
+      "path": "AgriVision_dataset.zip",
+      "bytes": 927169057
+    },
+    {
+      "path": "FIFTEEN_DAY_THESIS_PLAN.md",
+      "bytes": 6017
+    },
+    {
+      "path": "PENYAKIT PADA CABAI.v1i.yolov8.zip",
+      "bytes": 42853258
+    },
+    {
+      "path": "README.md",
+      "bytes": 11869
+    },
+    {
+      "path": "WORKSPACE_ORGANIZATION_PLAN.md",
+      "bytes": 6456
+    },
+    {
+      "path": "agrivision_colab_code.zip",
+      "bytes": 5970819
+    },
+    {
+      "path": "client1.py",
+      "bytes": 99
+    },
+    {
+      "path": "client2.py",
+      "bytes": 99
+    },
+    {
+      "path": "client3.py",
+      "bytes": 99
+    },
+    {
+      "path": "colab_train.py",
+      "bytes": 8781
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 1307
+    },
+    {
+      "path": "federated_client.py",
+      "bytes": 3673
+    },
+    {
+      "path": "merge_chili_dataset.py",
+      "bytes": 14547
+    },
+    {
+      "path": "model.py",
+      "bytes": 2607
+    },
+    {
+      "path": "original_dataset_colab.zip",
+      "bytes": 983912669
+    },
+    {
+      "path": "predict.py",
+      "bytes": 1131
+    },
+    {
+      "path": "reports/.document_preview/architecture_review_pages.png",
+      "bytes": 854305
+    },
+    {
+      "path": "reports/Agri_Vision_Non_YOLO_Architecture_Review.docx",
+      "bytes": 46755
+    },
+    {
+      "path": "reports/Agri_Vision_Non_YOLO_Architecture_Review.pdf",
+      "bytes": 290721
+    },
+    {
+      "path": "reports/analyze_rounds_026_035.py",
+      "bytes": 17523
+    },
+    {
+      "path": "reports/chili_dataset_merge.md",
+      "bytes": 2507
+    },
+    {
+      "path": "reports/create_architecture_review.py",
+      "bytes": 26921
+    },
+    {
+      "path": "reports/dataset_class_distribution.csv",
+      "bytes": 2569
+    },
+    {
+      "path": "reports/dataset_class_distribution.md",
+      "bytes": 3950
+    },
+    {
+      "path": "reports/dataset_class_distribution1.csv",
+      "bytes": 2569
+    },
+    {
+      "path": "reports/evaluate_round_035_non_chili.py",
+      "bytes": 5909
+    },
+    {
+      "path": "reports/round_025_test_evaluation.md",
+      "bytes": 1730
+    },
+    {
+      "path": "reports/round_025_test_metrics.csv",
+      "bytes": 1625
+    },
+    {
+      "path": "reports/round_035_evaluation.log",
+      "bytes": 2404
+    },
+    {
+      "path": "reports/round_035_non_chili_evaluation.log",
+      "bytes": 83700
+    },
+    {
+      "path": "reports/round_035_non_chili_report.md",
+      "bytes": 3812
+    },
+    {
+      "path": "reports/round_035_non_chili_summary.json",
+      "bytes": 1044
+    },
+    {
+      "path": "reports/round_035_test_non_chili_per_class.csv",
+      "bytes": 2534
+    },
+    {
+      "path": "reports/round_035_test_per_class.csv",
+      "bytes": 3103
+    },
+    {
+      "path": "reports/rounds_026_035_client_metrics.csv",
+      "bytes": 4190
+    },
+    {
+      "path": "reports/rounds_026_035_detailed_report.md",
+      "bytes": 11379
+    },
+    {
+      "path": "reports/rounds_026_035_global_metrics.csv",
+      "bytes": 838
+    },
+    {
+      "path": "reports/rounds_026_035_training_losses.pdf",
+      "bytes": 22689
+    },
+    {
+      "path": "reports/rounds_026_035_training_losses.png",
+      "bytes": 183577
+    },
+    {
+      "path": "reports/rounds_026_035_validation.pdf",
+      "bytes": 23215
+    },
+    {
+      "path": "reports/rounds_026_035_validation.png",
+      "bytes": 258362
+    },
+    {
+      "path": "reports/rounds_036_040_client_validation_metrics.csv",
+      "bytes": 1460
+    },
+    {
+      "path": "reports/rounds_036_040_global_metrics.csv",
+      "bytes": 441
+    },
+    {
+      "path": "reports/rounds_036_040_overview.md",
+      "bytes": 1775
+    },
+    {
+      "path": "reports/rounds_036_040_upload_instructions.md",
+      "bytes": 3802
+    },
+    {
+      "path": "reports/rounds_036_040_upload_manifest.json",
+      "bytes": 551
+    },
+    {
+      "path": "reports/seminar_poster/Agri_Vision_Seminar_Poster_A1.pdf",
+      "bytes": 531536
+    },
+    {
+      "path": "reports/seminar_poster/Agri_Vision_Seminar_Poster_A1.pptx",
+      "bytes": 3027663
+    },
+    {
+      "path": "reports/seminar_poster/Agri_Vision_Seminar_Poster_A1_preview.png",
+      "bytes": 2031497
+    },
+    {
+      "path": "reports/seminar_poster/README.md",
+      "bytes": 2918
+    },
+    {
+      "path": "reports/seminar_poster/assets/crop_illustration.png",
+      "bytes": 2834626
+    },
+    {
+      "path": "reports/seminar_poster/build_poster.py",
+      "bytes": 8728
+    },
+    {
+      "path": "reports/seminar_poster/sources.json",
+      "bytes": 853
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 75
+    },
+    {
+      "path": "runs/detect/train-2/args.yaml",
+      "bytes": 1711
+    },
+    {
+      "path": "runs/detect/train-2/labels.jpg",
+      "bytes": 161833
+    },
+    {
+      "path": "runs/detect/train-2/train_batch0.jpg",
+      "bytes": 186222
+    },
+    {
+      "path": "runs/detect/train-2/train_batch1.jpg",
+      "bytes": 188107
+    },
+    {
+      "path": "runs/detect/train-2/train_batch2.jpg",
+      "bytes": 205104
+    },
+    {
+      "path": "runs/detect/train-3/args.yaml",
+      "bytes": 1711
+    },
+    {
+      "path": "runs/detect/train-3/labels.jpg",
+      "bytes": 165970
+    },
+    {
+      "path": "runs/detect/train-3/train_batch0.jpg",
+      "bytes": 166294
+    },
+    {
+      "path": "runs/detect/train-3/train_batch1.jpg",
+      "bytes": 201606
+    },
+    {
+      "path": "runs/detect/train-3/train_batch2.jpg",
+      "bytes": 193305
+    },
+    {
+      "path": "runs/detect/train-4/BoxF1_curve.png",
+      "bytes": 267545
+    },
+    {
+      "path": "runs/detect/train-4/BoxPR_curve.png",
+      "bytes": 199643
+    },
+    {
+      "path": "runs/detect/train-4/BoxP_curve.png",
+      "bytes": 332012
+    },
+    {
+      "path": "runs/detect/train-4/BoxR_curve.png",
+      "bytes": 255007
+    },
+    {
+      "path": "runs/detect/train-4/args.yaml",
+      "bytes": 1711
+    },
+    {
+      "path": "runs/detect/train-4/confusion_matrix.png",
+      "bytes": 392409
+    },
+    {
+      "path": "runs/detect/train-4/confusion_matrix_normalized.png",
+      "bytes": 462167
+    },
+    {
+      "path": "runs/detect/train-4/labels.jpg",
+      "bytes": 166160
+    },
+    {
+      "path": "runs/detect/train-4/results.csv",
+      "bytes": 573
+    },
+    {
+      "path": "runs/detect/train-4/results.png",
+      "bytes": 155828
+    },
+    {
+      "path": "runs/detect/train-4/train_batch0.jpg",
+      "bytes": 44334
+    },
+    {
+      "path": "runs/detect/train-4/train_batch1.jpg",
+      "bytes": 40910
+    },
+    {
+      "path": "runs/detect/train-4/train_batch2.jpg",
+      "bytes": 32104
+    },
+    {
+      "path": "runs/detect/train-4/val_batch0_labels.jpg",
+      "bytes": 133954
+    },
+    {
+      "path": "runs/detect/train-4/val_batch0_pred.jpg",
+      "bytes": 124613
+    },
+    {
+      "path": "runs/detect/train-4/val_batch1_labels.jpg",
+      "bytes": 117840
+    },
+    {
+      "path": "runs/detect/train-4/val_batch1_pred.jpg",
+      "bytes": 109638
+    },
+    {
+      "path": "runs/detect/train-4/val_batch2_labels.jpg",
+      "bytes": 138670
+    },
+    {
+      "path": "runs/detect/train-4/val_batch2_pred.jpg",
+      "bytes": 123058
+    },
+    {
+      "path": "runs/detect/train-4/weights/best.pt",
+      "bytes": 6211946
+    },
+    {
+      "path": "runs/detect/train-4/weights/last.pt",
+      "bytes": 6211946
+    },
+    {
+      "path": "runs/detect/train/args.yaml",
+      "bytes": 1707
+    },
+    {
+      "path": "runs/detect/train/labels.jpg",
+      "bytes": 166160
+    },
+    {
+      "path": "runs/detect/train/train_batch0.jpg",
+      "bytes": 224643
+    },
+    {
+      "path": "runs/detect/train/train_batch1.jpg",
+      "bytes": 207011
+    },
+    {
+      "path": "runs/detect/train/train_batch2.jpg",
+      "bytes": 245969
+    },
+    {
+      "path": "runs/detect/val-2/BoxF1_curve.png",
+      "bytes": 273287
+    },
+    {
+      "path": "runs/detect/val-2/BoxPR_curve.png",
+      "bytes": 201607
+    },
+    {
+      "path": "runs/detect/val-2/BoxP_curve.png",
+      "bytes": 333532
+    },
+    {
+      "path": "runs/detect/val-2/BoxR_curve.png",
+      "bytes": 257275
+    },
+    {
+      "path": "runs/detect/val-2/confusion_matrix.png",
+      "bytes": 402831
+    },
+    {
+      "path": "runs/detect/val-2/confusion_matrix_normalized.png",
+      "bytes": 477918
+    },
+    {
+      "path": "runs/detect/val-2/val_batch0_labels.jpg",
+      "bytes": 525070
+    },
+    {
+      "path": "runs/detect/val-2/val_batch0_pred.jpg",
+      "bytes": 500416
+    },
+    {
+      "path": "runs/detect/val-2/val_batch1_labels.jpg",
+      "bytes": 444280
+    },
+    {
+      "path": "runs/detect/val-2/val_batch1_pred.jpg",
+      "bytes": 432811
+    },
+    {
+      "path": "runs/detect/val-2/val_batch2_labels.jpg",
+      "bytes": 403043
+    },
+    {
+      "path": "runs/detect/val-2/val_batch2_pred.jpg",
+      "bytes": 385398
+    },
+    {
+      "path": "runs/detect/val-3/BoxF1_curve.png",
+      "bytes": 270958
+    },
+    {
+      "path": "runs/detect/val-3/BoxPR_curve.png",
+      "bytes": 208485
+    },
+    {
+      "path": "runs/detect/val-3/BoxP_curve.png",
+      "bytes": 343374
+    },
+    {
+      "path": "runs/detect/val-3/BoxR_curve.png",
+      "bytes": 262311
+    },
+    {
+      "path": "runs/detect/val-3/confusion_matrix.png",
+      "bytes": 404579
+    },
+    {
+      "path": "runs/detect/val-3/confusion_matrix_normalized.png",
+      "bytes": 475170
+    },
+    {
+      "path": "runs/detect/val-3/val_batch0_labels.jpg",
+      "bytes": 518466
+    },
+    {
+      "path": "runs/detect/val-3/val_batch0_pred.jpg",
+      "bytes": 492367
+    },
+    {
+      "path": "runs/detect/val-3/val_batch1_labels.jpg",
+      "bytes": 443441
+    },
+    {
+      "path": "runs/detect/val-3/val_batch1_pred.jpg",
+      "bytes": 423603
+    },
+    {
+      "path": "runs/detect/val-3/val_batch2_labels.jpg",
+      "bytes": 435891
+    },
+    {
+      "path": "runs/detect/val-3/val_batch2_pred.jpg",
+      "bytes": 425782
+    },
+    {
+      "path": "runs/detect/val-4/BoxF1_curve.png",
+      "bytes": 468684
+    },
+    {
+      "path": "runs/detect/val-4/BoxPR_curve.png",
+      "bytes": 269910
+    },
+    {
+      "path": "runs/detect/val-4/BoxP_curve.png",
+      "bytes": 472405
+    },
+    {
+      "path": "runs/detect/val-4/BoxR_curve.png",
+      "bytes": 400727
+    },
+    {
+      "path": "runs/detect/val-4/confusion_matrix.png",
+      "bytes": 445315
+    },
+    {
+      "path": "runs/detect/val-4/confusion_matrix_normalized.png",
+      "bytes": 447961
+    },
+    {
+      "path": "runs/detect/val-4/val_batch0_labels.jpg",
+      "bytes": 657090
+    },
+    {
+      "path": "runs/detect/val-4/val_batch0_pred.jpg",
+      "bytes": 597140
+    },
+    {
+      "path": "runs/detect/val-4/val_batch1_labels.jpg",
+      "bytes": 719752
+    },
+    {
+      "path": "runs/detect/val-4/val_batch1_pred.jpg",
+      "bytes": 671838
+    },
+    {
+      "path": "runs/detect/val-4/val_batch2_labels.jpg",
+      "bytes": 591663
+    },
+    {
+      "path": "runs/detect/val-4/val_batch2_pred.jpg",
+      "bytes": 583815
+    },
+    {
+      "path": "runs/detect/val-5/BoxF1_curve.png",
+      "bytes": 467936
+    },
+    {
+      "path": "runs/detect/val-5/BoxPR_curve.png",
+      "bytes": 260986
+    },
+    {
+      "path": "runs/detect/val-5/BoxP_curve.png",
+      "bytes": 442619
+    },
+    {
+      "path": "runs/detect/val-5/BoxR_curve.png",
+      "bytes": 405989
+    },
+    {
+      "path": "runs/detect/val-5/confusion_matrix.png",
+      "bytes": 448085
+    },
+    {
+      "path": "runs/detect/val-5/confusion_matrix_normalized.png",
+      "bytes": 447689
+    },
+    {
+      "path": "runs/detect/val-5/val_batch0_labels.jpg",
+      "bytes": 188942
+    },
+    {
+      "path": "runs/detect/val-5/val_batch0_pred.jpg",
+      "bytes": 187046
+    },
+    {
+      "path": "runs/detect/val-5/val_batch1_labels.jpg",
+      "bytes": 211973
+    },
+    {
+      "path": "runs/detect/val-5/val_batch1_pred.jpg",
+      "bytes": 206681
+    },
+    {
+      "path": "runs/detect/val-5/val_batch2_labels.jpg",
+      "bytes": 180925
+    },
+    {
+      "path": "runs/detect/val-5/val_batch2_pred.jpg",
+      "bytes": 167010
+    },
+    {
+      "path": "runs/detect/val/BoxF1_curve.png",
+      "bytes": 269202
+    },
+    {
+      "path": "runs/detect/val/BoxPR_curve.png",
+      "bytes": 204693
+    },
+    {
+      "path": "runs/detect/val/BoxP_curve.png",
+      "bytes": 336815
+    },
+    {
+      "path": "runs/detect/val/BoxR_curve.png",
+      "bytes": 257478
+    },
+    {
+      "path": "runs/detect/val/confusion_matrix.png",
+      "bytes": 406809
+    },
+    {
+      "path": "runs/detect/val/confusion_matrix_normalized.png",
+      "bytes": 483503
+    },
+    {
+      "path": "runs/detect/val/val_batch0_labels.jpg",
+      "bytes": 517280
+    },
+    {
+      "path": "runs/detect/val/val_batch0_pred.jpg",
+      "bytes": 496627
+    },
+    {
+      "path": "runs/detect/val/val_batch1_labels.jpg",
+      "bytes": 434489
+    },
+    {
+      "path": "runs/detect/val/val_batch1_pred.jpg",
+      "bytes": 433304
+    },
+    {
+      "path": "runs/detect/val/val_batch2_labels.jpg",
+      "bytes": 400739
+    },
+    {
+      "path": "runs/detect/val/val_batch2_pred.jpg",
+      "bytes": 368423
+    },
+    {
+      "path": "runs/federated/client1/round_001-2/args.yaml",
+      "bytes": 1783
+    },
+    {
+      "path": "runs/federated/client1/round_001-2/labels.jpg",
+      "bytes": 144668
+    },
+    {
+      "path": "runs/federated/client1/round_001-2/train_batch0.jpg",
+      "bytes": 22125
+    },
+    {
+      "path": "runs/federated/client1/round_001-2/train_batch1.jpg",
+      "bytes": 20481
+    },
+    {
+      "path": "runs/federated/client1/round_001-2/train_batch2.jpg",
+      "bytes": 23949
+    },
+    {
+      "path": "runs/federated/client1/round_001/args.yaml",
+      "bytes": 1779
+    },
+    {
+      "path": "runs/federated/client1/round_001/labels.jpg",
+      "bytes": 174138
+    },
+    {
+      "path": "runs/federated/client1/round_001/train_batch0.jpg",
+      "bytes": 19748
+    },
+    {
+      "path": "runs/federated/client1/round_001/train_batch1.jpg",
+      "bytes": 17927
+    },
+    {
+      "path": "runs/federated/client1/round_001/train_batch2.jpg",
+      "bytes": 21822
+    },
+    {
+      "path": "runs/federated/client2/round_001-2/args.yaml",
+      "bytes": 1783
+    },
+    {
+      "path": "runs/federated/client2/round_001-2/labels.jpg",
+      "bytes": 178183
+    },
+    {
+      "path": "runs/federated/client2/round_001-2/train_batch0.jpg",
+      "bytes": 14513
+    },
+    {
+      "path": "runs/federated/client2/round_001-2/train_batch1.jpg",
+      "bytes": 15513
+    },
+    {
+      "path": "runs/federated/client2/round_001-2/train_batch2.jpg",
+      "bytes": 16694
+    },
+    {
+      "path": "runs/federated/client2/round_001/args.yaml",
+      "bytes": 1779
+    },
+    {
+      "path": "runs/federated/client2/round_001/labels.jpg",
+      "bytes": 198601
+    },
+    {
+      "path": "runs/federated/client2/round_001/train_batch0.jpg",
+      "bytes": 10998
+    },
+    {
+      "path": "runs/federated/client2/round_001/train_batch1.jpg",
+      "bytes": 9184
+    },
+    {
+      "path": "runs/federated/client2/round_001/train_batch2.jpg",
+      "bytes": 16020
+    },
+    {
+      "path": "runs/federated/client3/round_001-2/args.yaml",
+      "bytes": 1783
+    },
+    {
+      "path": "runs/federated/client3/round_001-2/labels.jpg",
+      "bytes": 194928
+    },
+    {
+      "path": "runs/federated/client3/round_001-2/train_batch0.jpg",
+      "bytes": 15211
+    },
+    {
+      "path": "runs/federated/client3/round_001-2/train_batch1.jpg",
+      "bytes": 15555
+    },
+    {
+      "path": "runs/federated/client3/round_001-2/train_batch2.jpg",
+      "bytes": 18099
+    },
+    {
+      "path": "runs/federated/client3/round_001/args.yaml",
+      "bytes": 1779
+    },
+    {
+      "path": "runs/federated/client3/round_001/labels.jpg",
+      "bytes": 201723
+    },
+    {
+      "path": "runs/federated/client3/round_001/train_batch0.jpg",
+      "bytes": 17654
+    },
+    {
+      "path": "runs/federated/client3/round_001/train_batch1.jpg",
+      "bytes": 15937
+    },
+    {
+      "path": "runs/federated/client3/round_001/train_batch2.jpg",
+      "bytes": 19215
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client1.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client1.out.log",
+      "bytes": 545541
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client2.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client2.out.log",
+      "bytes": 545582
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client3.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/client3.out.log",
+      "bytes": 526218
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/server.err.log",
+      "bytes": 989
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923/server.out.log",
+      "bytes": 277
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client1.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client1.out.log",
+      "bytes": 264819
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client2.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client2.out.log",
+      "bytes": 260291
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client3.err.log",
+      "bytes": 1124
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/client3.out.log",
+      "bytes": 241541
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/server.err.log",
+      "bytes": 989
+    },
+    {
+      "path": "runs/federated/logs/local_round_20260923_fixed/server.out.log",
+      "bytes": 324
+    },
+    {
+      "path": "saved_models/20260924_211030_be5baa-20260924T215210Z-1-001.zip",
+      "bytes": 225467160
+    },
+    {
+      "path": "saved_models/20260924_221216_97ea11-20260925T011832Z-1-001.zip",
+      "bytes": 225426789
+    },
+    {
+      "path": "saved_models/20261002_121640_89aa17-20261003T102507Z-1-001.zip",
+      "bytes": 450738984
+    },
+    {
+      "path": "saved_models/20261004_200656_355a3a-20261004T205120Z-1-001.zip",
+      "bytes": 225325128
+    },
+    {
+      "path": "saved_models/colab_results-20260923T114114Z-1-001.zip",
+      "bytes": 584510972
+    },
+    {
+      "path": "saved_models/dataset_class_distribution.csv",
+      "bytes": 2569
+    },
+    {
+      "path": "saved_models/global_round_010.pt",
+      "bytes": 12230634
+    },
+    {
+      "path": "saved_models/global_round_015.pt",
+      "bytes": 12230634
+    },
+    {
+      "path": "saved_models/global_round_020.pt",
+      "bytes": 12230634
+    },
+    {
+      "path": "saved_models/global_round_025.pt",
+      "bytes": 12230634
+    },
+    {
+      "path": "saved_models/global_round_035.pt",
+      "bytes": 12230634
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/BoxF1_curve.png",
+      "bytes": 471184
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/BoxPR_curve.png",
+      "bytes": 262269
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/BoxP_curve.png",
+      "bytes": 455202
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/BoxR_curve.png",
+      "bytes": 393770
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/confusion_matrix.png",
+      "bytes": 445462
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/confusion_matrix_normalized.png",
+      "bytes": 448021
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch0_labels.jpg",
+      "bytes": 657090
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch0_pred.jpg",
+      "bytes": 621012
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch1_labels.jpg",
+      "bytes": 719752
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch1_pred.jpg",
+      "bytes": 683145
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch2_labels.jpg",
+      "bytes": 591663
+    },
+    {
+      "path": "saved_models/round_035_non_chili_analysis/val_batch2_pred.jpg",
+      "bytes": 595022
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/BoxF1_curve.png",
+      "bytes": 468684
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/BoxPR_curve.png",
+      "bytes": 269910
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/BoxP_curve.png",
+      "bytes": 472405
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/BoxR_curve.png",
+      "bytes": 400727
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/confusion_matrix.png",
+      "bytes": 445315
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/confusion_matrix_normalized.png",
+      "bytes": 447961
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/per_class_test_metrics.csv",
+      "bytes": 1325
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch0_labels.jpg",
+      "bytes": 657090
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch0_pred.jpg",
+      "bytes": 597140
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch1_labels.jpg",
+      "bytes": 719752
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch1_pred.jpg",
+      "bytes": 671838
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch2_labels.jpg",
+      "bytes": 591663
+    },
+    {
+      "path": "saved_models/test_evaluation_round_020/val_batch2_pred.jpg",
+      "bytes": 583815
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/BoxF1_curve.png",
+      "bytes": 467936
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/BoxPR_curve.png",
+      "bytes": 260986
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/BoxP_curve.png",
+      "bytes": 442619
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/BoxR_curve.png",
+      "bytes": 405989
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/confusion_matrix.png",
+      "bytes": 448085
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/confusion_matrix_normalized.png",
+      "bytes": 447689
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/per_class_test_metrics.csv",
+      "bytes": 1625
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch0_labels.jpg",
+      "bytes": 188942
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch0_pred.jpg",
+      "bytes": 187046
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch1_labels.jpg",
+      "bytes": 211973
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch1_pred.jpg",
+      "bytes": 206681
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch2_labels.jpg",
+      "bytes": 180925
+    },
+    {
+      "path": "saved_models/test_evaluation_round_025/val_batch2_pred.jpg",
+      "bytes": 167010
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch0_labels.jpg",
+      "bytes": 657090
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch0_pred.jpg",
+      "bytes": 621012
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch1_labels.jpg",
+      "bytes": 719752
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch1_pred.jpg",
+      "bytes": 683145
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch2_labels.jpg",
+      "bytes": 591663
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035-2/val_batch2_pred.jpg",
+      "bytes": 595022
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch0_labels.jpg",
+      "bytes": 657090
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch0_pred.jpg",
+      "bytes": 621012
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch1_labels.jpg",
+      "bytes": 719752
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch1_pred.jpg",
+      "bytes": 683145
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch2_labels.jpg",
+      "bytes": 591663
+    },
+    {
+      "path": "saved_models/test_evaluation_round_035/val_batch2_pred.jpg",
+      "bytes": 595022
+    },
+    {
+      "path": "scripts/audit_workspace.py",
+      "bytes": 3600
+    },
+    {
+      "path": "scripts/prepare_colab_rounds_036_040.py",
+      "bytes": 8144
+    },
+    {
+      "path": "server.py",
+      "bytes": 4484
+    },
+    {
+      "path": "split_dataset.py",
+      "bytes": 7619
+    },
+    {
+      "path": "structure.txt",
+      "bytes": 11482106
+    },
+    {
+      "path": "tests/test_colab_train.py",
+      "bytes": 2546
+    },
+    {
+      "path": "tests/test_merge_chili_dataset.py",
+      "bytes": 2005
+    },
+    {
+      "path": "tests/test_split_dataset.py",
+      "bytes": 4526
+    },
+    {
+      "path": "utils.py",
+      "bytes": 0
+    },
+    {
+      "path": "yolov8n.pt",
+      "bytes": 6549796
+    }
+  ],
+  "duplicate_groups": [
+    {
+      "bytes_each": 719752,
+      "sha256": "21c22878abcd6a9bcf79f4d3e7e3ea9abd0dc48f8b2fb48686828c7aa983c4d5",
+      "paths": [
+        "runs/detect/val-4/val_batch1_labels.jpg",
+        "saved_models/round_035_non_chili_analysis/val_batch1_labels.jpg",
+        "saved_models/test_evaluation_round_020/val_batch1_labels.jpg",
+        "saved_models/test_evaluation_round_035/val_batch1_labels.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch1_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 683145,
+      "sha256": "59aba5035cba9ed19a0b4f54cd5fe50558568fc1eab13de346cf4be88ae8d4e4",
+      "paths": [
+        "saved_models/round_035_non_chili_analysis/val_batch1_pred.jpg",
+        "saved_models/test_evaluation_round_035/val_batch1_pred.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch1_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 671838,
+      "sha256": "7e16976be55795063e025114491b3021e3596113c399a947053250d5d7e6540c",
+      "paths": [
+        "runs/detect/val-4/val_batch1_pred.jpg",
+        "saved_models/test_evaluation_round_020/val_batch1_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 657090,
+      "sha256": "adaa432b3463f245db7d4966a1fd922051a520eef14059dd49f402528e2d4bb9",
+      "paths": [
+        "runs/detect/val-4/val_batch0_labels.jpg",
+        "saved_models/round_035_non_chili_analysis/val_batch0_labels.jpg",
+        "saved_models/test_evaluation_round_020/val_batch0_labels.jpg",
+        "saved_models/test_evaluation_round_035/val_batch0_labels.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch0_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 621012,
+      "sha256": "c8aec64891f67f15649efe318a0cb971c6a3cc74320bf742f7a9875412b2b674",
+      "paths": [
+        "saved_models/round_035_non_chili_analysis/val_batch0_pred.jpg",
+        "saved_models/test_evaluation_round_035/val_batch0_pred.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch0_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 597140,
+      "sha256": "934460f44b9fa9703d4cae99872ba5cb68f1e7262fa6acafaa9fac4899907cb8",
+      "paths": [
+        "runs/detect/val-4/val_batch0_pred.jpg",
+        "saved_models/test_evaluation_round_020/val_batch0_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 595022,
+      "sha256": "b93302b1ef46e0272fbb6cd3f4eb13649ed5e9565ea94c92592e43489db87554",
+      "paths": [
+        "saved_models/round_035_non_chili_analysis/val_batch2_pred.jpg",
+        "saved_models/test_evaluation_round_035/val_batch2_pred.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch2_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 591663,
+      "sha256": "7a08de2473e9426077e3d10b7909e1f322c3ee6de6fe01316fb7557b3a41149c",
+      "paths": [
+        "runs/detect/val-4/val_batch2_labels.jpg",
+        "saved_models/round_035_non_chili_analysis/val_batch2_labels.jpg",
+        "saved_models/test_evaluation_round_020/val_batch2_labels.jpg",
+        "saved_models/test_evaluation_round_035/val_batch2_labels.jpg",
+        "saved_models/test_evaluation_round_035-2/val_batch2_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 583815,
+      "sha256": "e31b92d338c8bd6eae109677ce2777fb46dbdd3e1ad21cccd1ebb5eedbeb6a19",
+      "paths": [
+        "runs/detect/val-4/val_batch2_pred.jpg",
+        "saved_models/test_evaluation_round_020/val_batch2_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 472405,
+      "sha256": "cee43872448e5576ac75ac38034d9c11a185f4e0e6189542cb1fbe124457168a",
+      "paths": [
+        "runs/detect/val-4/BoxP_curve.png",
+        "saved_models/test_evaluation_round_020/BoxP_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 468684,
+      "sha256": "b54a74c83d54c55c9d4cd51d3cce530054893a4e6fc484e2c097c3f13cbf633a",
+      "paths": [
+        "runs/detect/val-4/BoxF1_curve.png",
+        "saved_models/test_evaluation_round_020/BoxF1_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 467936,
+      "sha256": "254cdabad07f254b04945da2d4bc1f518b5d30239888f075d7cf6cfe14f4ea56",
+      "paths": [
+        "runs/detect/val-5/BoxF1_curve.png",
+        "saved_models/test_evaluation_round_025/BoxF1_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 448085,
+      "sha256": "ed4a6edb4d72b2b4156cab17400656537d5b37bf9bcfa9d90fa1a98d320f2aa9",
+      "paths": [
+        "runs/detect/val-5/confusion_matrix.png",
+        "saved_models/test_evaluation_round_025/confusion_matrix.png"
+      ]
+    },
+    {
+      "bytes_each": 447961,
+      "sha256": "d2b70adfb5e9571758da5f44006c3c9f6c7c1fc142f8fa344513e52720015b8c",
+      "paths": [
+        "runs/detect/val-4/confusion_matrix_normalized.png",
+        "saved_models/test_evaluation_round_020/confusion_matrix_normalized.png"
+      ]
+    },
+    {
+      "bytes_each": 447689,
+      "sha256": "b20261a2a8c78fa05d1e1d0eff364cd31f6d3ff637d12c766c2c5694946e2247",
+      "paths": [
+        "runs/detect/val-5/confusion_matrix_normalized.png",
+        "saved_models/test_evaluation_round_025/confusion_matrix_normalized.png"
+      ]
+    },
+    {
+      "bytes_each": 445315,
+      "sha256": "a13aa0bc1630fe679d3e6af1267ed9d30e66d84776cbf3ed304442087482b842",
+      "paths": [
+        "runs/detect/val-4/confusion_matrix.png",
+        "saved_models/test_evaluation_round_020/confusion_matrix.png"
+      ]
+    },
+    {
+      "bytes_each": 442619,
+      "sha256": "c3241aec64bb65a10dc303af047842ad7494b27735ba5091a4b06da6261b4a89",
+      "paths": [
+        "runs/detect/val-5/BoxP_curve.png",
+        "saved_models/test_evaluation_round_025/BoxP_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 405989,
+      "sha256": "ee9eb3362bee87852c91b4a815afb3889effa97776cc9c5388e1149f2503e882",
+      "paths": [
+        "runs/detect/val-5/BoxR_curve.png",
+        "saved_models/test_evaluation_round_025/BoxR_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 400727,
+      "sha256": "a3478b2e388c4b22c3609ec14b1a6324e605bd4d6300fc209fa2eaa195e8e795",
+      "paths": [
+        "runs/detect/val-4/BoxR_curve.png",
+        "saved_models/test_evaluation_round_020/BoxR_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 269910,
+      "sha256": "dbe5cc01c4c9e5072b78009428b7d0f379b443ddfe2e8b6741708b27dbe02d0e",
+      "paths": [
+        "runs/detect/val-4/BoxPR_curve.png",
+        "saved_models/test_evaluation_round_020/BoxPR_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 260986,
+      "sha256": "d60b25f58a18bd8a5dd98f9d015b3c89f059148d89f5c162bf545d78ace163f8",
+      "paths": [
+        "runs/detect/val-5/BoxPR_curve.png",
+        "saved_models/test_evaluation_round_025/BoxPR_curve.png"
+      ]
+    },
+    {
+      "bytes_each": 211973,
+      "sha256": "850bdbbe131ecdc747d2b945b2ebeba3845196cc0e460975717dff963c0fa56b",
+      "paths": [
+        "runs/detect/val-5/val_batch1_labels.jpg",
+        "saved_models/test_evaluation_round_025/val_batch1_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 206681,
+      "sha256": "104eb040f35fb1a4e2ccd55bcaa4a098d9939d9947f6ffa0dbd62e2c7b60f2b3",
+      "paths": [
+        "runs/detect/val-5/val_batch1_pred.jpg",
+        "saved_models/test_evaluation_round_025/val_batch1_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 188942,
+      "sha256": "25f6ff1391b40bdd730c7c9ec45dcf159369bf306e2a626d2f8ae577c6928bce",
+      "paths": [
+        "runs/detect/val-5/val_batch0_labels.jpg",
+        "saved_models/test_evaluation_round_025/val_batch0_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 187046,
+      "sha256": "05dd8f1c131c6deb9b0b7e7cbdbde02328fc2b51c1746114f2fe043c5503bded",
+      "paths": [
+        "runs/detect/val-5/val_batch0_pred.jpg",
+        "saved_models/test_evaluation_round_025/val_batch0_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 180925,
+      "sha256": "1cef49dc2382f6473d0449b0abe122c7126fbae401ac1fe56ca189243d548a47",
+      "paths": [
+        "runs/detect/val-5/val_batch2_labels.jpg",
+        "saved_models/test_evaluation_round_025/val_batch2_labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 167010,
+      "sha256": "58f81891659b8dad5dd0aca460aabb193df07194e7bddd457adb0637b0d2343a",
+      "paths": [
+        "runs/detect/val-5/val_batch2_pred.jpg",
+        "saved_models/test_evaluation_round_025/val_batch2_pred.jpg"
+      ]
+    },
+    {
+      "bytes_each": 166160,
+      "sha256": "d24006028c1844ef481e25d1f1db6363d0a5a6d5c288c84f1ba9d679893f84ed",
+      "paths": [
+        "runs/detect/train/labels.jpg",
+        "runs/detect/train-4/labels.jpg"
+      ]
+    },
+    {
+      "bytes_each": 2569,
+      "sha256": "7ca4cc336ca7646746c36f4f4d4267206e4471db2793159ba7c2a1532f7df8e5",
+      "paths": [
+        "reports/dataset_class_distribution.csv",
+        "reports/dataset_class_distribution1.csv",
+        "saved_models/dataset_class_distribution.csv"
+      ]
+    },
+    {
+      "bytes_each": 1625,
+      "sha256": "835e7d17860c165ac5677653d20be85b4b07513e9a2ca32d87fa0e2bd3fda259",
+      "paths": [
+        "reports/round_025_test_metrics.csv",
+        "saved_models/test_evaluation_round_025/per_class_test_metrics.csv"
+      ]
+    },
+    {
+      "bytes_each": 989,
+      "sha256": "0adc99613e69d983e719f480f76693fa433033c0e27aafa2753789ab43c50d5a",
+      "paths": [
+        "runs/federated/logs/local_round_20260923/server.err.log",
+        "runs/federated/logs/local_round_20260923_fixed/server.err.log"
+      ]
+    }
+  ],
+  "round_035_evaluation_folder_comparison": {
+    "keep": "saved_models/test_evaluation_round_035",
+    "candidate": "saved_models/test_evaluation_round_035-2",
+    "identical": true,
+    "keep_files": {
+      "val_batch0_labels.jpg": {
+        "bytes": 657090,
+        "sha256": "adaa432b3463f245db7d4966a1fd922051a520eef14059dd49f402528e2d4bb9"
+      },
+      "val_batch0_pred.jpg": {
+        "bytes": 621012,
+        "sha256": "c8aec64891f67f15649efe318a0cb971c6a3cc74320bf742f7a9875412b2b674"
+      },
+      "val_batch1_labels.jpg": {
+        "bytes": 719752,
+        "sha256": "21c22878abcd6a9bcf79f4d3e7e3ea9abd0dc48f8b2fb48686828c7aa983c4d5"
+      },
+      "val_batch1_pred.jpg": {
+        "bytes": 683145,
+        "sha256": "59aba5035cba9ed19a0b4f54cd5fe50558568fc1eab13de346cf4be88ae8d4e4"
+      },
+      "val_batch2_labels.jpg": {
+        "bytes": 591663,
+        "sha256": "7a08de2473e9426077e3d10b7909e1f322c3ee6de6fe01316fb7557b3a41149c"
+      },
+      "val_batch2_pred.jpg": {
+        "bytes": 595022,
+        "sha256": "b93302b1ef46e0272fbb6cd3f4eb13649ed5e9565ea94c92592e43489db87554"
+      }
+    },
+    "candidate_files": {
+      "val_batch0_labels.jpg": {
+        "bytes": 657090,
+        "sha256": "adaa432b3463f245db7d4966a1fd922051a520eef14059dd49f402528e2d4bb9"
+      },
+      "val_batch0_pred.jpg": {
+        "bytes": 621012,
+        "sha256": "c8aec64891f67f15649efe318a0cb971c6a3cc74320bf742f7a9875412b2b674"
+      },
+      "val_batch1_labels.jpg": {
+        "bytes": 719752,
+        "sha256": "21c22878abcd6a9bcf79f4d3e7e3ea9abd0dc48f8b2fb48686828c7aa983c4d5"
+      },
+      "val_batch1_pred.jpg": {
+        "bytes": 683145,
+        "sha256": "59aba5035cba9ed19a0b4f54cd5fe50558568fc1eab13de346cf4be88ae8d4e4"
+      },
+      "val_batch2_labels.jpg": {
+        "bytes": 591663,
+        "sha256": "7a08de2473e9426077e3d10b7909e1f322c3ee6de6fe01316fb7557b3a41149c"
+      },
+      "val_batch2_pred.jpg": {
+        "bytes": 595022,
+        "sha256": "b93302b1ef46e0272fbb6cd3f4eb13649ed5e9565ea94c92592e43489db87554"
+      }
+    }
+  }
+}

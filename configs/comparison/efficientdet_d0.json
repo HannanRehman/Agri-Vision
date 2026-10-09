@@ -1,0 +1,14 @@
+{
+  "status": "planned_not_implemented",
+  "model_id": "efficientdet_d0",
+  "shared_protocol": "configs/comparison/protocol.json",
+  "run_directory": "experiments/efficientdet_d0_non_chili_seed42_run01",
+  "display_name": "EfficientDet-D0",
+  "implementation": "effdet_adapter_to_be_verified",
+  "initial_weights": "COCO_pretrained_D0_source_and_hash_to_record",
+  "input_size_candidate": 512,
+  "head": "EfficientDet_24_class_detection_head",
+  "results_directory": "experiments/efficientdet_d0_non_chili_seed42_run01/results",
+  "checkpoints_directory": "experiments/efficientdet_d0_non_chili_seed42_run01/checkpoints",
+  "logs_directory": "experiments/efficientdet_d0_non_chili_seed42_run01/logs"
+}

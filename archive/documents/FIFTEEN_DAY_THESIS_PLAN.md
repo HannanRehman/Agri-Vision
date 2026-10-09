@@ -1,5 +1,7 @@
 # Agri Vision: 15-Day Thesis and Final Presentation Plan
 
+> Historical document — superseded on 9 October 2026. Thesis writing starts after 17 October; that date is not a submission deadline. The active comparison uses YOLO, EfficientDet, SSDLite and SSD–MobileNetV3; Faster R-CNN is excluded. Use the [current comparison plan](../../ARCHITECTURE_COMPARISON_PLAN.md).
+
 Prepared on 5 October 2026.
 
 ## Main recommendation
@@ -95,8 +97,8 @@ Set a hard stop on model experimentation after day 6. A well-understood result a
 
 ## Supporting documents
 
-- [Architecture review — Word](reports/Agri_Vision_Non_YOLO_Architecture_Review.docx)
-- [Architecture review — PDF](reports/Agri_Vision_Non_YOLO_Architecture_Review.pdf)
-- [Rounds 26–35 detailed report](reports/rounds_026_035_detailed_report.md)
-- [Round-35 non-chili analysis](reports/round_035_non_chili_report.md)
-- [Rounds 36–40 Colab upload instructions](reports/rounds_036_040_upload_instructions.md)
+- [Architecture review — Word](Agri_Vision_Non_YOLO_Architecture_Review.docx)
+- [Architecture review — PDF](Agri_Vision_Non_YOLO_Architecture_Review.pdf)
+- [Rounds 26–35 detailed report](../../reports/rounds_026_035_detailed_report.md)
+- [Round-35 non-chili analysis](../../reports/round_035_non_chili_report.md)
+- [Rounds 36–40 Colab upload instructions](../../reports/rounds_036_040_upload_instructions.md)
