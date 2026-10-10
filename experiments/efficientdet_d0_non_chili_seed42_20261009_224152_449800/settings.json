@@ -1,0 +1,61 @@
+{
+  "config": {
+    "model": "efficientdet_d0",
+    "mode": "main",
+    "rounds": 10,
+    "local_epochs": 1,
+    "batch": 4,
+    "seed": 42,
+    "lr": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "max_train_batches": null,
+    "validation_limit": null,
+    "no_pretrained": false,
+    "dataset_checksums_sha256": "157b48390ecad0ffeb4e5d70ae4018398156593d28a77b3b55beca8c9f94c1aa",
+    "implementation_sha256": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+    "model_spec_sha256": "d4fb0e83424383525e81f41587c8253599b8ccccc1798d385d74fe2348eaccf5",
+    "normalization_policy": "freeze running BN stats on all models; train affine parameters",
+    "optimizer_state": "reset per client per round",
+    "learning_rate_schedule": "global-round cosine to 0.1 initial LR",
+    "augmentation": "shared training-only horizontal flip p=0.5; adapter resize/normalization",
+    "evaluator": "pooled pycocotools COCO bbox; P/R micro at conf .25 IoU .5",
+    "gradient_clip_norm": 10.0,
+    "amp": false,
+    "deterministic_algorithms": "seeded and cuDNN deterministic; not guaranteed bit-identical across hardware"
+  },
+  "config_hash": "3054ad7eda1874096d821a3dc0159e73f9a4804dc59023e6c3e2e76ea5895e58",
+  "model": {
+    "architecture": "tf_efficientdet_d0",
+    "input_size": 512,
+    "target_label_offset": 1,
+    "pretrained_source": "https://github.com/rwightman/efficientdet-pytorch/releases/download/v0.1/tf_efficientdet_d0_34-f153e0cf.pth",
+    "initialization": "COCO D0 and matching classification feature/BN tensors; new 24-class projection tensors",
+    "class_projection_init_std": 0.001,
+    "class_projection_prior": 0.01,
+    "nms_iou": 0.5,
+    "score_floor": 0.001,
+    "normalization": "frozen BN running statistics; affine parameters trainable"
+  },
+  "hardware": {
+    "gpu": "Tesla T4",
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "packages": {
+      "torchvision": "0.26.0+cu130",
+      "ultralytics": "8.4.48",
+      "pycocotools": "2.0.11",
+      "effdet": "0.4.1",
+      "timm": "1.0.27"
+    }
+  },
+  "parameter_count": 3841457,
+  "trainable_parameter_count": 3841457,
+  "input_size": 512,
+  "validation_images": 4157,
+  "diagnostic_only": false,
+  "created_at_utc": "2026-10-10T02:40:48.284022+00:00",
+  "initial_checkpoint_sha256": "593617f1f7ee55f0d55f80b820703fd18eab07caffe3d32811912c30d0a597ca",
+  "initial_state_sha256": "ea428216f454c3644d9be94e23a7f67f7bfbd1df3d9c09a43e35ce45e80af0b8"
+}

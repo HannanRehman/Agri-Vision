@@ -1,16 +1,42 @@
 {
-  "test_metrics": "reports/round_035_non_chili_summary.json",
-  "validation_metrics": [
-    "reports/rounds_026_035_global_metrics.csv",
-    "reports/rounds_036_040_global_metrics.csv"
-  ],
+  "format": "A1 portrait, 594 \u00d7 841 mm",
+  "layout_reference": "C:/Users/Hussaini Enterprise/Pictures/Screenshots/Screenshot 2026-10-09 115847.png",
+  "comparison_metrics": "reports/comparison/main_run_review_20261010/validation_summary.csv",
+  "historical_metrics": "reports/rounds_036_040_global_metrics.csv",
   "dataset_examples": [
-    "original_dataset\\test\\images\\sigatoka-794-_jpeg.rf.86c015db5501df3588751a4b00f25849.jpg",
-    "original_dataset\\test\\images\\Black-Rot-11-_jpeg.rf.b0ad96c41b1eb43d30080bd3b82425fc.jpg",
-    "original_dataset\\test\\images\\Anthracnose-186-_jpg.rf.fd2b7a00d806739bd6fb96f1957c7d81.jpg",
-    "original_dataset\\test\\images\\Early-Leaf-Spot-818-_jpg.rf.bf70e3ba056b64179ac0a53c1bc83e55.jpg",
-    "original_dataset\\test\\images\\Black-Leaf-Spot-483-_jpg.rf.509f411998b8ebf4a23e60fda7766d89.jpg"
+    {
+      "crop": "Banana",
+      "class_name": "Banana_sigatoka",
+      "image": "original_dataset_non_chili/valid/images/sigatoka-673-_jpeg.rf.2dd96f7c2f89eda7b07c37de5aed6319.jpg",
+      "label": "original_dataset_non_chili/valid/labels/sigatoka-673-_jpeg.rf.2dd96f7c2f89eda7b07c37de5aed6319.txt",
+      "ground_truth": true
+    },
+    {
+      "crop": "Cauliflower",
+      "class_name": "Cauliflower_black_rot",
+      "image": "original_dataset_non_chili/valid/images/Black-Rot-1-_jpeg.rf.2dd972a1b35648047e8dac35f66c81de.jpg",
+      "label": "original_dataset_non_chili/valid/labels/Black-Rot-1-_jpeg.rf.2dd972a1b35648047e8dac35f66c81de.txt",
+      "ground_truth": true
+    },
+    {
+      "crop": "Groundnut",
+      "class_name": "Groundnut_early_leaf_spot",
+      "image": "original_dataset_non_chili/valid/images/Early-Leaf-Spot-52-_jpg.rf.f8fe7a9f6d46cc23f0f6085200b14f38.jpg",
+      "label": "original_dataset_non_chili/valid/labels/Early-Leaf-Spot-52-_jpg.rf.f8fe7a9f6d46cc23f0f6085200b14f38.txt",
+      "ground_truth": true
+    },
+    {
+      "crop": "Radish",
+      "class_name": "Radish_black_leaf_spot",
+      "image": "original_dataset_non_chili/valid/images/Black-Leaf-Spot-419-_jpg.rf.f04b9e5bff3c8b51e64a766ee109eb6e.jpg",
+      "label": "original_dataset_non_chili/valid/labels/Black-Leaf-Spot-419-_jpg.rf.f04b9e5bff3c8b51e64a766ee109eb6e.txt",
+      "ground_truth": true
+    }
   ],
-  "header": "AI-generated botanical illustration; decorative only",
-  "format": "A1 portrait, 594 \u00d7 841 mm"
+  "examples_are_model_predictions": false,
+  "comparison_is_provisional": true,
+  "historical_yolo_common_24_class_evaluation": "pending",
+  "fresh_yolo_training": "on hold per user",
+  "university_logos": "not supplied; no institutional branding invented",
+  "snapshot_date": "2026-10-10"
 }

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "pages": 1,
+  "size_mm": [
+    593.98,
+    840.99
+  ],
+  "shapes_within_slide": true,
+  "text_overflow_checked_with_powerpoint": true,
+  "overflow_count": 0,
+  "ground_truth_examples": 4,
+  "historical_and_new_metrics_separated": true,
+  "comparison_results_provisional": true
+}

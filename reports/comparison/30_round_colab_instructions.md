@@ -2,6 +2,8 @@
 
 Prepared 10 October 2026. No GPU training was started during preparation. Local checks exercise synthetic checkpoint recovery, original checkpoint metadata and native inference. The actual GPU learning pilot and training must run in Colab; accuracy improvement is not established yet.
 
+User update: fresh 24-class YOLO is active again. The YOLO notebook, code bundle and all fourteen dataset parts plus manifest have been placed in the shared 19gmail Agri Vision folder. Use 19gmail when opening Colab and authorizing Drive. Ownership transfer was verified: 19gmail owns the notebook, code bundle, fourteen dataset parts and manifest (17 files). The connected 4gmail account retains writer access. GPU training has not been started by the assistant.
+
 ## New YOLO account
 
 1. In that account's Drive create `MyDrive/Agri Vision/`.
