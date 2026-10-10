@@ -39,6 +39,7 @@ non_chili_v1_colab_dataset.zip
 non_chili_v1_colab_dataset.zip.partial
 non_chili_v1_colab_dataset.zip.part*
 agrivision_comparison_code.zip
+agrivision_30_round_code.zip
 comparison_results*.zip
 experiments/*cpu_pilot*/
 manifests/non_chili_v1/inventory.jsonl

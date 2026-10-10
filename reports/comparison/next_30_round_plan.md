@@ -1,6 +1,6 @@
 # Agri Vision: account split and 30-round training plan
 
-Agreed 10 October 2026. This is a plan, not an executable training configuration. It supersedes the earlier main-run order and 10-round target in the training and architecture plans. No training is started by this update.
+Agreed 10 October 2026. Implementation now prepared: [native YOLO and alternative continuation instructions](30_round_colab_instructions.md). Local engineering checks are complete; GPU learning verification is performed by the new YOLO notebook before main training. This supersedes the earlier main-run order and 10-round target. No GPU training was started during preparation.
 
 ## Accounts and resume points
 
@@ -37,7 +37,7 @@ Keep the successful SSD/SSDLite checkpoints and existing EfficientDet progress. 
 
 Before execution, implement a documented continuation mechanism that validates the original configuration and checkpoint lineage, preserves rounds already completed, and records a separately specified learning-rate schedule for the extension. Choose the schedule using training/validation evidence before launching; avoid silently recomputing earlier learning rates as if the experiment had always targeted thirty rounds. Record optimizer reset behavior and original versus continuation settings. Test recovery using synthetic state without starting real training.
 
-For EfficientDet, decide and document whether to complete its original ten-round stage first and then extend, or explicitly transition from committed round 2. No schedule decision is implemented by this planning update.
+Implemented schedule: EfficientDet resumes from committed round 2, completes its original ten-round schedule, then extends with its terminal LR through round 30. SSDLite and SSD extend from their committed round 10 at their terminal LR. Separate linked continuation folders preserve the originals and record the new schedule.
 
 The final table must describe the alternatives as continued ten-round experiments and YOLO as a fresh thirty-round native-training experiment. Matching total rounds alone does not make training schedules or preprocessing identical; report practical detector configurations, resolutions, initialization and these differences. Show matching round checkpoints where useful.
 
@@ -50,6 +50,6 @@ The final table must describe the alternatives as continued ten-round experiment
 5. Run the YOLO learning pilot when GPU access returns, then launch its fresh thirty-round run. On the current account resume EfficientDet, then extend SSDLite and SSD sequentially according to the declared continuation policy.
 6. Save every completed round atomically; retain initial/best/latest recovery checkpoints and metrics. Clean intermediate Drive weights only after verified local backup, never before saving a resumable state.
 
-The current AgriVision_Comparison notebook still implements the original ten-round workflow. AgriVision_EfficientDet_Resume still restores the original EfficientDet run toward round 10. Neither is a ready-to-run implementation of this new thirty-round plan. Production comparison code and existing bundles remain unchanged by this update.
+AgriVision_Comparison now implements the three-model continuation workflow toward round 30; AgriVision_YOLO_Native_30Rounds runs the separate native YOLO experiment. The old comparison notebook is retained as AgriVision_Comparison_10Round. AgriVision_EfficientDet_Resume still restores the original EfficientDet run toward round 10. Original comparison implementation and original bundles remain unchanged; use the distinct agrivision_30_round_code.zip for the new workflows.
 
 Related evidence: [saved main-run review](main_run_review_20261010/README.md), [YOLO diagnosis](yolo_diagnosis_20261010/README.md), and [training plan](../../TRAINING_PLAN.md).

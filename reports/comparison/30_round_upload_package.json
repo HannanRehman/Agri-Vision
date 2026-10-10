@@ -1,0 +1,14 @@
+{
+  "code_bundle": "agrivision_30_round_code.zip",
+  "code_bytes": 37535,
+  "code_sha256": "a1fe67c876bb3a2e5da123e9f5820652e91189f8fe3b21cead34381c5422f579",
+  "dataset_bundle": "non_chili_v1_colab_dataset.zip",
+  "dataset_sha256": "7a2920e4a4e0405ee157e9b40ac6306b54d6933b20a306b44a4b7c6871f20868",
+  "notebooks": [
+    "AgriVision_YOLO_Native_30Rounds.ipynb",
+    "AgriVision_Comparison.ipynb",
+    "AgriVision_Alternatives_Continue_30Rounds.ipynb"
+  ],
+  "original_comparison_code_sha256": "12349ebd6c19ebd4c0b5d0ba9c9ed96f85e922658904ab51314cf63609d01774",
+  "gpu_training_started": false
+}

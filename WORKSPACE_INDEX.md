@@ -1,7 +1,7 @@
 # Agri Vision workspace index
 
 
-Current agreed training/account split: [thirty-round plan](reports/comparison/next_30_round_plan.md). Implementation is pending; existing notebooks retain their original ten-round behavior.
+Current agreed training/account split: [thirty-round plan](reports/comparison/next_30_round_plan.md). [Thirty-round notebooks and instructions](reports/comparison/30_round_colab_instructions.md) are prepared. The original ten-round notebook is preserved separately.
 Updated 10 October 2026. Use this index to find current plans, historical evidence and authoritative copies.
 
 ## Current work
