@@ -1,0 +1,11 @@
+# Preserve Colab's matching CUDA-enabled torch/torchvision pair; record their actual versions.
+# Tested locally with Python 3.14.4, torch 2.14.0+cpu, torchvision 0.29.0+cpu.
+# Colab GPU compatibility is validated by the notebook pilot, not claimed from CPU checks.
+ultralytics==8.4.48
+pycocotools==2.0.11
+effdet==0.4.1
+timm==1.0.27
+omegaconf==2.4.0
+PyYAML==6.0.3
+Pillow>=10,<13
+numpy>=1.26,<3

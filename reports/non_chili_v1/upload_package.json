@@ -1,0 +1,10 @@
+{
+  "created_at_utc": "2026-10-09T20:15:47.496187+00:00",
+  "filename": "non_chili_v1_colab_dataset.zip",
+  "bytes": 925784524,
+  "sha256": "7a2920e4a4e0405ee157e9b40ac6306b54d6933b20a306b44a4b7c6871f20868",
+  "dataset_files": 41559,
+  "dataset_images": 20762,
+  "zip_crc_check": "passed",
+  "training_code_included": false
+}

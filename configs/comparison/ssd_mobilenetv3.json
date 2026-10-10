@@ -1,5 +1,5 @@
 {
-  "status": "planned_not_implemented",
+  "status": "implemented_local_smoke_checked_gpu_pilot_pending",
   "model_id": "ssd_mobilenetv3",
   "shared_protocol": "configs/comparison/protocol.json",
   "run_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01",
@@ -12,5 +12,6 @@
   "limitation": "Head initialization differs from pretrained full-detector alternatives; disclose in comparison",
   "results_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/results",
   "checkpoints_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/checkpoints",
-  "logs_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/logs"
+  "logs_directory": "experiments/ssd_mobilenetv3_non_chili_seed42_run01/logs",
+  "adapter": "comparison/models.py"
 }

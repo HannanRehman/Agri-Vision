@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "images": 20762,
+  "split_counts": {
+    "train": 14514,
+    "valid": 4157,
+    "test": 2091
+  },
+  "client_counts": {
+    "client1": {
+      "train": 4837,
+      "valid": 1379,
+      "test": 698
+    },
+    "client2": {
+      "train": 4837,
+      "valid": 1395,
+      "test": 695
+    },
+    "client3": {
+      "train": 4840,
+      "valid": 1383,
+      "test": 698
+    }
+  },
+  "classes": 24,
+  "coordinate_tokens_preserved": true,
+  "retained_original_files_unchanged": true,
+  "exact_and_inferred_source_group_overlap": 0,
+  "near_duplicate_candidates": 104,
+  "visual_review": {
+    "pairs_reviewed": 104,
+    "same_source_pairs": 102,
+    "different_source_pairs": 2,
+    "decision_file": "visual_review.json",
+    "decision_sha256": "b3c7213c5eaa355f5268ff2f0220466fc945b7fbe086d41b3f1eef9dcbfddb68"
+  },
+  "near_duplicate_review": "Reviewed decisions enforced when present; this check does not certify semantic labels or exhaustively detect near duplicates.",
+  "training_started": false
+}

@@ -1,0 +1,85 @@
+{
+  "created_at_utc": "2026-10-09T20:32:10.017487+00:00",
+  "device": "CPU",
+  "pretrained": false,
+  "engineering_check_only": true,
+  "models": {
+    "ssd_mobilenetv3": {
+      "status": "passed",
+      "steps": 1,
+      "losses": [
+        15.459078788757324
+      ],
+      "predictions_per_image": [
+        100,
+        100
+      ],
+      "finite_gradients": true,
+      "frozen_bn_buffers": true,
+      "save_reload_prediction_consistency": true,
+      "state_sha256": "510c5c531adb2ba06d0bc98e5a9f7d1ff6e119e11d27e8ed088afab9e1dbda38",
+      "initialization": {
+        "architecture": "ssd_mobilenetv3",
+        "input_size": 320,
+        "background_id": 0,
+        "target_label_offset": 1,
+        "pretrained_source": null,
+        "initialization": "random all components",
+        "nms_iou": 0.55,
+        "score_floor": 0.001,
+        "trainable_backbone_layers": 6,
+        "normalization": "frozen BN running statistics; affine parameters trainable"
+      }
+    },
+    "yolo_v8n": {
+      "status": "passed",
+      "steps": 1,
+      "losses": [
+        12.703574180603027
+      ],
+      "predictions_per_image": [
+        0,
+        0
+      ],
+      "finite_gradients": true,
+      "frozen_bn_buffers": true,
+      "save_reload_prediction_consistency": true,
+      "state_sha256": "84ed81107f31d176c66e3584288cb3df0f2c7c4762844aca317099173832f835",
+      "initialization": {
+        "architecture": "YOLOv8n",
+        "input_size": 640,
+        "target_label_offset": 0,
+        "pretrained_source": null,
+        "initialization": "random all components",
+        "nms_iou": 0.55,
+        "score_floor": 0.001,
+        "normalization": "frozen BN running statistics; affine parameters trainable"
+      }
+    },
+    "efficientdet_d0": {
+      "status": "passed",
+      "steps": 1,
+      "losses": [
+        2.0757927894592285
+      ],
+      "predictions_per_image": [
+        100,
+        100
+      ],
+      "finite_gradients": true,
+      "frozen_bn_buffers": true,
+      "save_reload_prediction_consistency": true,
+      "state_sha256": "cfb9d70f41d25f4dc4d88469afefb53c81330637d6b218afcebeb7c253951dfc",
+      "initialization": {
+        "architecture": "tf_efficientdet_d0",
+        "input_size": 512,
+        "target_label_offset": 1,
+        "pretrained_source": null,
+        "initialization": "random all components",
+        "nms_iou": 0.5,
+        "score_floor": 0.001,
+        "normalization": "frozen BN running statistics; affine parameters trainable"
+      }
+    }
+  }
+}

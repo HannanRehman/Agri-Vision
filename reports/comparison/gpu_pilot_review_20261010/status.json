@@ -1,0 +1,10 @@
+{
+  "updated_at_utc": "2026-10-09T22:25:59.931504+00:00",
+  "phase": "complete",
+  "completed_rounds": 1,
+  "mode": "pilot",
+  "best_checkpoint": "checkpoints/global_round_001.pt",
+  "best_validation_map_50_95": 0.024888780744103115,
+  "diagnostic_only": true,
+  "peak_cuda_allocated_bytes": 10333696
+}

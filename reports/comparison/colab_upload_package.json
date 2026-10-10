@@ -1,0 +1,10 @@
+{
+  "code_bundle": "agrivision_comparison_code.zip",
+  "code_bytes": 25587,
+  "code_sha256": "12349ebd6c19ebd4c0b5d0ba9c9ed96f85e922658904ab51314cf63609d01774",
+  "dataset_bundle": "non_chili_v1_colab_dataset.zip",
+  "dataset_sha256": "7a2920e4a4e0405ee157e9b40ac6306b54d6933b20a306b44a4b7c6871f20868",
+  "notebook": "AgriVision_Comparison.ipynb",
+  "default_mode": "pilot",
+  "main_gpu_runs_completed": false
+}

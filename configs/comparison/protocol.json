@@ -1,9 +1,9 @@
 {
-  "status": "draft_not_consumed_by_existing_training_code",
+  "status": "implemented_local_checks_passed_colab_gpu_pilot_pending",
   "task": "object_detection",
   "dataset_version": "non_chili_v1",
   "manifest_directory": "manifests/non_chili_v1",
-  "dataset_ready": false,
+  "dataset_ready": true,
   "foreground_classes": 24,
   "excluded_source_class_ids": [
     13,
@@ -38,9 +38,24 @@
     "max_detections_per_image": 100
   },
   "hardware": "same_GPU_type_for_all_runs_to_be_recorded",
-  "optimizer_and_normalization_policy": "finalize_after_pilots",
+  "optimizer_and_normalization_policy": "candidate model-specific SGD/AdamW; global-round cosine; optimizer reset per client; frozen BN running stats",
   "runtime_profile_required": true,
   "test_set_tuning": false,
   "thesis_writing": "after_2026-10-17",
-  "submission_deadline": null
+  "submission_deadline": null,
+  "dataset_verification": "manifests/non_chili_v1/verification.json",
+  "dataset_checksums": "manifests/non_chili_v1/checksums.json",
+  "dataset_checksums_sha256": "157b48390ecad0ffeb4e5d70ae4018398156593d28a77b3b55beca8c9f94c1aa",
+  "dataset_yaml": "original_dataset_non_chili/data.yaml",
+  "client_dataset_yamls": {
+    "client1": "dataset_non_chili/client1/data.yaml",
+    "client2": "dataset_non_chili/client2/data.yaml",
+    "client3": "dataset_non_chili/client3/data.yaml"
+  },
+  "dataset_split_counts": {
+    "train": 14514,
+    "valid": 4157,
+    "test": 2091
+  },
+  "comparison_implementation": "comparison/runner.py"
 }

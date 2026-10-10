@@ -1,0 +1,20 @@
+{
+  "status": "initialization_and_forward_checks_passed",
+  "training_performed": false,
+  "optimizer_steps_performed": 0,
+  "performance_improvement_proven": false,
+  "hidden_classification_width": 80,
+  "output_classes": 24,
+  "preserved_classification_feature_and_bn_state_tensors": 36,
+  "new_class_projection_tensors": 6,
+  "scalar_forward_loss": 14.126246452331543,
+  "loss_components": {
+    "box": 1.033064365386963,
+    "classification": 10.945563316345215,
+    "dfl": 2.147618055343628
+  },
+  "model_state_unchanged": true,
+  "parameter_count": 3143592,
+  "implementation_hash": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "caveat": "Custom COCO-width classification branches; not identical to the canonical nc=24 width-64 graph. Record this explicitly if used in a new experiment."
+}

@@ -1,0 +1,1603 @@
+{
+  "training_performed": false,
+  "optimizer_steps_performed": 0,
+  "device": "cpu",
+  "versions": {
+    "torch": "2.14.0+cpu",
+    "ultralytics": "8.4.48"
+  },
+  "original_implementation_hash": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "recorded_implementation_hash": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "initial_checkpoint_hash_matches": true,
+  "final_checkpoint_hash_matches": true,
+  "checkpoint_integrity": [
+    {
+      "round": 0,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "dbc18f6101b03ff9f2e98b1b7ed835b8c82957c769c1e2b4ae0311bfd91a0e18",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 1,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "8cea52f7084507e0ba55be33231e0905b6a52d22745e04e90cdf80dc36c47a29",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 2,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "dd8c6e949ad050bf10ccf89f7c256426c21000db4dc11829470ce451061c3066",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 3,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "8a14d3594fe69205d563cb0b51c7872d84cc4cb4662c85359954578279a2e750",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 4,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "cbb7b1c2b90a8172a9aee9cf35f72e81bb111c44128b3b227c552d5b35988d9a",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 5,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "5d9820311b4230668e2517eb040af69c03dd7d21b978d91f339ba49fec4d455a",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 6,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "cc89a6ccdc075914278f755dfee137aa35bfb04e93db066f2396030bdbe6cc61",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 7,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "14348c824a1f3fc1debf8c20cff4dacfea8240e747d9b39a419cb41206523242",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 8,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "c09159b06a340df9a8f37c38797708efe922f09aea4460c159af668a49838f1e",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 9,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "7a373accd1c70ec71f81d1b7dd4bf0a2d2ba91a9fd4b7950767c1cc81d818b12",
+      "next_client_start_hash_matches": true,
+      "changed_bn_buffers": []
+    },
+    {
+      "round": 10,
+      "finite": true,
+      "metadata_matches": true,
+      "state_hash": "eb21607989722c3c9a244ca185f7869c0e9b86e9f6a63b4c2ed401a8d11f25f6",
+      "next_client_start_hash_matches": null,
+      "changed_bn_buffers": []
+    }
+  ],
+  "curves": [
+    {
+      "round": 1,
+      "map50": 0.0,
+      "map_50_95": 0.0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        70.99780851852704,
+        91.78158261033161,
+        35.50891754174497
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 2,
+      "map50": 0.0008898845883769976,
+      "map_50_95": 0.00011008904127199657,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        12.557390115023004,
+        12.432615439852876,
+        12.075213963532251
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 3,
+      "map50": 0.003326576540047023,
+      "map_50_95": 0.0008420360249454073,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        10.611513511834373,
+        10.602233929897306,
+        10.695370286358289
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 4,
+      "map50": 0.012124453750705443,
+      "map_50_95": 0.005042484096386711,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        9.84305039737647,
+        9.774479978213213,
+        9.851670441745727
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 5,
+      "map50": 0.0049202762299706436,
+      "map_50_95": 0.001994735276104967,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        9.62838977374443,
+        9.63480384590854,
+        9.585532011867555
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 6,
+      "map50": 0.003008320651643268,
+      "map_50_95": 0.0012060945739844782,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        9.174410285303015,
+        9.039681928720212,
+        9.136205517950136
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 7,
+      "map50": 0.010368189556099845,
+      "map_50_95": 0.0057010476467643486,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        8.833569130967515,
+        8.75916929522994,
+        8.901471979756
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 8,
+      "map50": 0.013954747404611686,
+      "map_50_95": 0.008026196489925993,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        8.588288137630315,
+        8.587698037796383,
+        8.705454730199389
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 9,
+      "map50": 0.010002231332075447,
+      "map_50_95": 0.004974823502267728,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        8.457003492103373,
+        8.459949479409676,
+        8.526217483488981
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    },
+    {
+      "round": 10,
+      "map50": 0.011239049722952041,
+      "map_50_95": 0.0057873023786391515,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210,
+      "client_losses": [
+        8.301887499884383,
+        8.336011742273834,
+        8.38952635300061
+      ],
+      "unique_training_images": 14514,
+      "identical_client_start": true
+    }
+  ],
+  "classification_transfer": [
+    {
+      "key": "model.22.cv3.0.0.conv.weight",
+      "coco_shape": [
+        80,
+        64,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.0.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.0.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.0.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.0.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.0.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.0.1.conv.weight",
+      "coco_shape": [
+        80,
+        80,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.1.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.1.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.1.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.1.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.1.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.0.2.weight",
+      "coco_shape": [
+        80,
+        80,
+        1,
+        1
+      ],
+      "crop_shape": [
+        24,
+        64,
+        1,
+        1
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.0.2.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        24
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.conv.weight",
+      "coco_shape": [
+        80,
+        128,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        128,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.0.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.1.1.conv.weight",
+      "coco_shape": [
+        80,
+        80,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.1.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.1.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.1.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.1.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.1.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.1.2.weight",
+      "coco_shape": [
+        80,
+        80,
+        1,
+        1
+      ],
+      "crop_shape": [
+        24,
+        64,
+        1,
+        1
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.1.2.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        24
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.conv.weight",
+      "coco_shape": [
+        80,
+        256,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        256,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.0.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.2.1.conv.weight",
+      "coco_shape": [
+        80,
+        80,
+        3,
+        3
+      ],
+      "crop_shape": [
+        64,
+        64,
+        3,
+        3
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.1.bn.weight",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.1.bn.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.1.bn.running_mean",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.1.bn.running_var",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        64
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.1.bn.num_batches_tracked",
+      "coco_shape": [],
+      "crop_shape": [],
+      "compatible": true,
+      "copied_identically": true
+    },
+    {
+      "key": "model.22.cv3.2.2.weight",
+      "coco_shape": [
+        80,
+        80,
+        1,
+        1
+      ],
+      "crop_shape": [
+        24,
+        64,
+        1,
+        1
+      ],
+      "compatible": false,
+      "copied_identically": false
+    },
+    {
+      "key": "model.22.cv3.2.2.bias",
+      "coco_shape": [
+        80
+      ],
+      "crop_shape": [
+        24
+      ],
+      "compatible": false,
+      "copied_identically": false
+    }
+  ],
+  "classification_transfer_summary": {
+    "total_state_tensors": 42,
+    "compatible": 6,
+    "incompatible": 36,
+    "coco_hidden_width": 80,
+    "crop_hidden_width": 64,
+    "fresh_bn_layers": 6,
+    "fresh_bn_means_zero": true,
+    "fresh_bn_variances_one": true
+  },
+  "saved_prediction_exports": [
+    {
+      "file": "validation_round_001.jsonl",
+      "images": 4157,
+      "valid_complete_ids": true,
+      "confidence": {
+        "count": 0,
+        "maximum": null,
+        "quantiles": {},
+        "above_025": 0,
+        "above_01": 0
+      }
+    },
+    {
+      "file": "validation_round_003.jsonl",
+      "images": 4157,
+      "valid_complete_ids": true,
+      "confidence": {
+        "count": 8314,
+        "maximum": 0.057554084807634354,
+        "quantiles": {
+          "0.5": 0.029412084841169417,
+          "0.9": 0.05755046382546425,
+          "0.99": 0.057551778852939606
+        },
+        "above_025": 0,
+        "above_01": 0
+      }
+    },
+    {
+      "file": "validation_round_004.jsonl",
+      "images": 4157,
+      "valid_complete_ids": true,
+      "confidence": {
+        "count": 16628,
+        "maximum": 0.06451858580112457,
+        "quantiles": {
+          "0.5": 0.028098639100790024,
+          "0.9": 0.06450919806957245,
+          "0.99": 0.06451153010129929
+        },
+        "above_025": 0,
+        "above_01": 0
+      }
+    },
+    {
+      "file": "validation_round_008.jsonl",
+      "images": 4157,
+      "valid_complete_ids": true,
+      "confidence": {
+        "count": 21803,
+        "maximum": 0.06323018670082092,
+        "quantiles": {
+          "0.5": 0.009208057075738907,
+          "0.9": 0.0631602331995964,
+          "0.99": 0.06320061534643173
+        },
+        "above_025": 0,
+        "above_01": 0
+      }
+    }
+  ],
+  "replayed_best_validation": {
+    "map_50_95": 0.008026196489925995,
+    "map50": 0.013954747404611686,
+    "coco_average_recall_100": 0.04621550301336461,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 7210,
+    "images": 4157,
+    "ground_truth_boxes": 7210,
+    "precision_recall_confidence": 0.25,
+    "precision_recall_iou": 0.5,
+    "precision_recall_aggregation": "micro pooled class-aware greedy matching",
+    "ap_confidence_filter": "adapter score floor 0.001; AP uses score sweep, not P/R cutoff",
+    "per_class": [
+      {
+        "class_id": 0,
+        "class_name": "Banana_bract_mosaic_virus",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 80
+      },
+      {
+        "class_id": 1,
+        "class_name": "Banana_cordana",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 482
+      },
+      {
+        "class_id": 2,
+        "class_name": "Banana_healthy",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 218
+      },
+      {
+        "class_id": 3,
+        "class_name": "Banana_insect_pest",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 359
+      },
+      {
+        "class_id": 4,
+        "class_name": "Banana_moko",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 103
+      },
+      {
+        "class_id": 5,
+        "class_name": "Banana_panama",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 335
+      },
+      {
+        "class_id": 6,
+        "class_name": "Banana_pestalotiopsis",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 373
+      },
+      {
+        "class_id": 7,
+        "class_name": "Banana_sigatoka",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 855
+      },
+      {
+        "class_id": 8,
+        "class_name": "Banana_yellow_and_black_sigatoka",
+        "map_50_95": 0.03153634446065339,
+        "map50": 0.07568388414780916,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 674
+      },
+      {
+        "class_id": 9,
+        "class_name": "Cauliflower_black_rot",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 19
+      },
+      {
+        "class_id": 10,
+        "class_name": "Cauliflower_bacterial_spot",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 34
+      },
+      {
+        "class_id": 11,
+        "class_name": "Cauliflower_downy_mildew",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 42
+      },
+      {
+        "class_id": 12,
+        "class_name": "Cauliflower_healthy",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 41
+      },
+      {
+        "class_id": 13,
+        "class_name": "Groundnut_early_leaf_spot",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 1202
+      },
+      {
+        "class_id": 14,
+        "class_name": "Groundnut_early_rust",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 296
+      },
+      {
+        "class_id": 15,
+        "class_name": "Groundnut_healthy",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 77
+      },
+      {
+        "class_id": 16,
+        "class_name": "Groundnut_late_leaf_spot",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 473
+      },
+      {
+        "class_id": 17,
+        "class_name": "Groundnut_nutrition_deficiency",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 391
+      },
+      {
+        "class_id": 18,
+        "class_name": "Groundnut_rust",
+        "map_50_95": 0.16109237129757045,
+        "map50": 0.2592300535628713,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 344
+      },
+      {
+        "class_id": 19,
+        "class_name": "Radish_black_leaf_spot",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 105
+      },
+      {
+        "class_id": 20,
+        "class_name": "Radish_downy_mildew",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 287
+      },
+      {
+        "class_id": 21,
+        "class_name": "Radish_flea_beetle",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 93
+      },
+      {
+        "class_id": 22,
+        "class_name": "Radish_healthy",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 121
+      },
+      {
+        "class_id": 23,
+        "class_name": "Radish_mosaic_virus",
+        "map_50_95": 0.0,
+        "map50": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "true_positives": 0,
+        "false_positives": 0,
+        "false_negatives": 206
+      }
+    ]
+  },
+  "replay_matches_original": true,
+  "threshold_sweep": [
+    {
+      "confidence": 0.25,
+      "precision": 0.0,
+      "recall": 0.0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210
+    },
+    {
+      "confidence": 0.1,
+      "precision": 0.0,
+      "recall": 0.0,
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 7210
+    },
+    {
+      "confidence": 0.05,
+      "precision": 0.09550156362761607,
+      "recall": 0.110124826629681,
+      "true_positives": 794,
+      "false_positives": 7520,
+      "false_negatives": 6416
+    },
+    {
+      "confidence": 0.01,
+      "precision": 0.09550156362761607,
+      "recall": 0.110124826629681,
+      "true_positives": 794,
+      "false_positives": 7520,
+      "false_negatives": 6416
+    },
+    {
+      "confidence": 0.005,
+      "precision": 0.06503087162216342,
+      "recall": 0.11248266296809986,
+      "true_positives": 811,
+      "false_positives": 11660,
+      "false_negatives": 6399
+    },
+    {
+      "confidence": 0.001,
+      "precision": 0.03852680823739852,
+      "recall": 0.11650485436893204,
+      "true_positives": 840,
+      "false_positives": 20963,
+      "false_negatives": 6370
+    }
+  ],
+  "inference_sample": [
+    {
+      "image_id": 14515,
+      "key": "valid/Bacterial-Spot_-134-_jpg.rf.2feecd94e265bafc1f3b60aa92c6bfce.jpg",
+      "labels": [
+        10
+      ]
+    },
+    {
+      "image_id": 14549,
+      "key": "valid/Black-Leaf-Spot-419-_jpg.rf.f04b9e5bff3c8b51e64a766ee109eb6e.jpg",
+      "labels": [
+        19
+      ]
+    },
+    {
+      "image_id": 14654,
+      "key": "valid/Black-Rot-1-_jpeg.rf.2dd972a1b35648047e8dac35f66c81de.jpg",
+      "labels": [
+        9
+      ]
+    },
+    {
+      "image_id": 14673,
+      "key": "valid/Bract-Mosaic-Virus-Disease-345-_jpg.rf.c0b656bd19b0a65e8397946574939102.jpg",
+      "labels": [
+        0
+      ]
+    },
+    {
+      "image_id": 14753,
+      "key": "valid/cordana-454-_jpeg.rf.15c8e5d8252fcaab0f846440f96ee6c0.jpg",
+      "labels": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "image_id": 14864,
+      "key": "valid/Downey-Mildew-467-_jpg.rf.e084b3d3beafde13405fcf662316a938.jpg",
+      "labels": [
+        20,
+        20
+      ]
+    },
+    {
+      "image_id": 14982,
+      "key": "valid/Downy-Mildew_-132-_jpg.rf.b81e9ea494994d200fa53cd0eab1d170.jpg",
+      "labels": [
+        11
+      ]
+    },
+    {
+      "image_id": 15016,
+      "key": "valid/Early-Leaf-Spot-511-_jpg.rf.da47368bebea0facd7b526fee0fd51a4.jpg",
+      "labels": [
+        13,
+        13,
+        13
+      ]
+    },
+    {
+      "image_id": 15356,
+      "key": "valid/Early-Rust-100-_jpg.rf.7780a938ef196546dbc4165dec9fe0c2.jpg",
+      "labels": [
+        14
+      ]
+    },
+    {
+      "image_id": 15649,
+      "key": "valid/Flea-Beetle-392-_jpg.rf.70f90cd16b7ab9a1513b4132be5a2a44.jpg",
+      "labels": [
+        21
+      ]
+    },
+    {
+      "image_id": 15742,
+      "key": "valid/IMG-186-_jpg.rf.a10ed63dbca858bd09f675f2ddbcb84c.jpg",
+      "labels": [
+        12
+      ]
+    },
+    {
+      "image_id": 15756,
+      "key": "valid/IMG-344-_jpg.rf.4c72f4e90f3a0450cb6bd8175d0ad208.jpg",
+      "labels": [
+        15
+      ]
+    },
+    {
+      "image_id": 15805,
+      "key": "valid/IMG-470-_jpg.rf.5a8a56d2c77c0c1e7421829c604c3f95.jpg",
+      "labels": [
+        22
+      ]
+    },
+    {
+      "image_id": 15808,
+      "key": "valid/IMG-473-_jpg.rf.7a383c61df794aea1d6fb9f8b4fff2be.jpg",
+      "labels": [
+        2
+      ]
+    },
+    {
+      "image_id": 16197,
+      "key": "valid/Insect-Pest-525-_jpg.rf.8f7711ea37d6b314bb2867e0cfa695dd.jpg",
+      "labels": [
+        3
+      ]
+    },
+    {
+      "image_id": 16336,
+      "key": "valid/Late-Leaf-Spot-1-_jpg.rf.6fb6f608ca732e193723f37edc2727fc.jpg",
+      "labels": [
+        16
+      ]
+    },
+    {
+      "image_id": 16732,
+      "key": "valid/Moko-360-_jpg.rf.d6c08d44c6fbb292809398e6b887a56f.jpg",
+      "labels": [
+        4
+      ]
+    },
+    {
+      "image_id": 16820,
+      "key": "valid/Mosaic-Virus-389-_jpg.rf.671d37b20754a6aa00df2b0da4335780.jpg",
+      "labels": [
+        23
+      ]
+    },
+    {
+      "image_id": 16927,
+      "key": "valid/Nutirtion-Deficiency-545-_jpg.rf.0ffdbed08e1d5756b207e21d2614556a.jpg",
+      "labels": [
+        17
+      ]
+    },
+    {
+      "image_id": 17259,
+      "key": "valid/Panama-68-_jpg.rf.b76dad10ed76078adf4e98cdc25a30a6.jpg",
+      "labels": [
+        5
+      ]
+    },
+    {
+      "image_id": 17483,
+      "key": "valid/pestalotiopsis-435-_jpeg.rf.271a8a025a3e4864e5bff4a37f8e543a.jpg",
+      "labels": [
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    {
+      "image_id": 17597,
+      "key": "valid/Rust-1-_jpg.rf.27c6f6b27757a3ac7a5deb6985c27cfe.jpg",
+      "labels": [
+        18
+      ]
+    },
+    {
+      "image_id": 17941,
+      "key": "valid/sigatoka-648-_jpeg.rf.6794fc1b0306cd7d76c6c9afd9fe1fe7.jpg",
+      "labels": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7,
+        7
+      ]
+    },
+    {
+      "image_id": 18114,
+      "key": "valid/Yellow-and-Black-Sigatoka-1001-_jpg.rf.737164d66bca0767bb921bdce7d1f165.jpg",
+      "labels": [
+        8,
+        8
+      ]
+    }
+  ],
+  "checkpoint_sample_inference": [
+    {
+      "round": 0,
+      "confidence": {
+        "count": 0,
+        "maximum": null,
+        "quantiles": {},
+        "above_025": 0,
+        "above_01": 0
+      },
+      "inference_changed_state": false
+    },
+    {
+      "round": 1,
+      "confidence": {
+        "count": 0,
+        "maximum": null,
+        "quantiles": {},
+        "above_025": 0,
+        "above_01": 0
+      },
+      "inference_changed_state": false
+    },
+    {
+      "round": 8,
+      "confidence": {
+        "count": 125,
+        "maximum": 0.06319528073072433,
+        "quantiles": {
+          "0.5": 0.009211946278810501,
+          "0.9": 0.06315671503543854,
+          "0.99": 0.06319309204816818
+        },
+        "above_025": 0,
+        "above_01": 0
+      },
+      "inference_changed_state": false
+    },
+    {
+      "round": 10,
+      "confidence": {
+        "count": 278,
+        "maximum": 0.07463186234235764,
+        "quantiles": {
+          "0.5": 0.0025729958433657885,
+          "0.9": 0.0732024721801281,
+          "0.99": 0.07432613268494606
+        },
+        "above_025": 0,
+        "above_01": 0
+      },
+      "inference_changed_state": false
+    }
+  ],
+  "native_predictor_comparison": [
+    {
+      "image_id": 14515,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 9.685754776000977e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 14549,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.1175870895385742e-07,
+      "maximum_box_difference_pixels": 0.000152587890625
+    },
+    {
+      "image_id": 14654,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 3.725290298461914e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 14673,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 4.0978193283081055e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 14753,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 6.705522537231445e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 14864,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.4901161193847656e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 14982,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 6.705522537231445e-08,
+      "maximum_box_difference_pixels": 7.62939453125e-05
+    },
+    {
+      "image_id": 15016,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 7.078051567077637e-08,
+      "maximum_box_difference_pixels": 0.00018310546875
+    },
+    {
+      "image_id": 15356,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 5.960464477539063e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 15649,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.1920928955078125e-07,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 15742,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.043081283569336e-07,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 15756,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.1920928955078125e-07,
+      "maximum_box_difference_pixels": 0.00018310546875
+    },
+    {
+      "image_id": 15805,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 2.9802322387695312e-08,
+      "maximum_box_difference_pixels": 0.0001373291015625
+    },
+    {
+      "image_id": 15808,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.30385160446167e-07,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 16197,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.862645149230957e-07,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 16336,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 6.705522537231445e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 16732,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 6.705522537231445e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 16820,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 3.725290298461914e-08,
+      "maximum_box_difference_pixels": 0.00018310546875
+    },
+    {
+      "image_id": 16927,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.4156103134155273e-07,
+      "maximum_box_difference_pixels": 0.0001373291015625
+    },
+    {
+      "image_id": 17259,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 1.1920928955078125e-07,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 17483,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 5.21540641784668e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 17597,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 5.21540641784668e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    },
+    {
+      "image_id": 17941,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 2.9802322387695312e-08,
+      "maximum_box_difference_pixels": 6.103515625e-05
+    },
+    {
+      "image_id": 18114,
+      "same_count": true,
+      "same_labels": true,
+      "maximum_score_difference": 7.450580596923828e-08,
+      "maximum_box_difference_pixels": 0.0001220703125
+    }
+  ],
+  "original_implementation_hash_after": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "checkpoints_unchanged": true,
+  "checkpoint_names_match": true,
+  "non_classifier_pretrained_transfer": {
+    "tensors": 313,
+    "shape_compatible": 313,
+    "exact_values": 313
+  },
+  "validation_dimensions": {
+    "640x640": 4157
+  }
+}

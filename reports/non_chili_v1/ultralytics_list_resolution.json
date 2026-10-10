@@ -1,0 +1,11 @@
+{
+  "client1/train": 4837,
+  "client1/valid": 1379,
+  "client1/test": 698,
+  "client2/train": 4837,
+  "client2/valid": 1395,
+  "client2/test": 695,
+  "client3/train": 4840,
+  "client3/valid": 1383,
+  "client3/test": 698
+}

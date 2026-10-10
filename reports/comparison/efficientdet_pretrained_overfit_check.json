@@ -1,0 +1,39 @@
+{
+  "created_at_utc": "2026-10-09T20:41:42.379432+00:00",
+  "device": "cpu",
+  "pretrained": true,
+  "engineering_check_only": true,
+  "models": {
+    "efficientdet_d0": {
+      "status": "passed",
+      "steps": 5,
+      "losses": [
+        1.537409782409668,
+        1.489852786064148,
+        1.4659096002578735,
+        1.5197272300720215,
+        1.421831727027893
+      ],
+      "predictions_per_image": [
+        100,
+        100
+      ],
+      "finite_gradients": true,
+      "frozen_bn_buffers": true,
+      "save_reload_prediction_consistency": true,
+      "state_sha256": "1b9998124f495c079b6b76399bc8098616e0ac6a3389dbfd88d33dc1edb51b3d",
+      "initialization": {
+        "architecture": "tf_efficientdet_d0",
+        "input_size": 512,
+        "target_label_offset": 1,
+        "pretrained_source": "https://github.com/rwightman/efficientdet-pytorch/releases/download/v0.1/tf_efficientdet_d0_34-f153e0cf.pth",
+        "initialization": "COCO D0 and matching classification feature/BN tensors; new 24-class projection tensors",
+        "class_projection_init_std": 0.001,
+        "class_projection_prior": 0.01,
+        "nms_iou": 0.5,
+        "score_floor": 0.001,
+        "normalization": "frozen BN running statistics; affine parameters trainable"
+      }
+    }
+  }
+}

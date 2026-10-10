@@ -1,6 +1,8 @@
 # Agri Vision: training and evaluation plan
 
-Prepared 9 October 2026. **Status: planning; no new training has started.** The workspace and separate output folders are ready. Data preparation, detector adapters and the comparison runner still need implementation. Thesis writing starts after 17 October; that is not a submission deadline.
+Updated 10 October 2026. **Current agreed plan:** fresh native-Ultralytics YOLO rounds 1?30 on a separate Colab account; continue SSDLite and SSD from round 10 and EfficientDet from its last verified round 2 on the current account/Drive, sequentially, toward round 30. See [the account split and continuation plan](reports/comparison/next_30_round_plan.md). The sections below preserve the original ten-round design and preparation history; their pending-run status, training order and budget are superseded. The thirty-round runners and continuation schedule still need implementation.
+
+Original implementation record, 10 October 2026. **Status: separate 24-class data and comparison pipeline implemented; local engineering checks passed; GPU pilot and main runs pending.** Four adapters, pooled evaluator, recoverable FedAvg runner and final-evaluation/table tools now exist in `comparison/`. A limited CPU SSDLite pilot is diagnostic, not a main result. Use [the new Colab instructions](reports/comparison/colab_instructions.md). Thesis writing starts after 17 October; that is not a submission deadline. Dataset evidence is in [the preparation report](reports/non_chili_v1/dataset_preparation_report.md) and [verification record](manifests/non_chili_v1/verification.json).
 
 ## What we will compare
 
@@ -27,11 +29,11 @@ SSDLite and SSD–MobileNetV3 will be distinct models, not the same model traine
 
 **Pass condition:** four crops, 24 contiguous class IDs, valid boxes, reproducible client assignments, a recorded leakage audit and frozen manifests. The final retained image counts will be measured, not guessed from class totals.
 
-The deleted external chili source folder does not remove chili from the merged datasets. Actual non-chili preparation is still required.
+Completed 10 October: built the separate `non_chili_v1` data with 14,514 train, 4,157 validation and 2,091 test images. Excluded 1,216 chili images, one empty-label image and 98 lower-priority copies of visually confirmed cross-split source variants. All 24 classes remain in every pooled split. Original merged datasets still contain chili and are preserved for historical reproduction. Near-duplicate screening has documented limitations; see the preparation report.
 
 ## 2. Build the shared training and evaluation pipeline
 
-The current runner is YOLO-specific. Build separate adapters for the new models and a common interface for initialization, local training, prediction, state exchange, saving and resume.
+The historical root runner remains YOLO-specific. The new `comparison/` implementation supplies separate adapters and a common interface for initialization, local training, prediction, state exchange, saving and resume. Local checks now cover gradients, save/reload, pooled metrics, integer-buffer handling and interrupted-round recovery; GPU validation is next.
 
 - Canonical dataset IDs: 0–23. TorchVision SSD/SSDLite foreground targets: 1–24, with background 0. Verify EfficientDet's conventions explicitly.
 - Convert YOLO normalized boxes to each model's required coordinates and preserve correct boxes through augmentations and resizing.
@@ -54,7 +56,7 @@ Initialize each model from its recorded pretrained source and save the weight ha
 
 ## 4. Start with an SSDLite pilot
 
-SSDLite is the recommended first pilot because a documented pretrained detector is available and it provides the MobileNetV3 data/feature pipeline needed for the later standard-head experiment.
+SSDLite is the first GPU pilot. Its CPU gradient, overfit, save/reload and limited three-client round checks passed. The separate standard-head SSD and EfficientDet/YOLO adapters also passed pretrained local checks. The new notebook defaults to the SSDLite GPU pilot and checks all four adapters before main training.
 
 Pilot sequence:
 

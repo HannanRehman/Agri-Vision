@@ -1,0 +1,1048 @@
+{
+  "reviewed_at": "2026-10-10",
+  "review_method": "Assistant visual comparison of all 104 candidate pairs in 18 annotation sheets; source identity judgments, not expert disease diagnosis.",
+  "scope": "Same crop, 64-bit dHash distance <=2, across retained splits; bounded bucket search. Candidates require visual review.",
+  "initial_audit_sha256": "daaca7ccaee2c841e79161fbe644882fce0fae333d4f15f673a7c06333631816",
+  "decisions": [
+    {
+      "pair": [
+        "test/Black-Rot-7-_jpeg.rf.8b7fce4f3d2c09d4f2f7d0e26b8b456f.jpg",
+        "train/Black-Rot-36-_jpeg.rf.c9d7afae0fe6f6630fd0a4b2fad4bb01.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Black-Rot-7-_jpeg.rf.8b7fce4f3d2c09d4f2f7d0e26b8b456f.jpg",
+        "valid/Black-Rot-58-_jpeg.rf.1b5f01404696817273147ed9a6bc9df1.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Early-Leaf-Spot-891-_jpg.rf.ecfc4ed22ae3812a82e2742b34f55043.jpg",
+        "valid/Early-Leaf-Spot-887-_jpg.rf.9b0ff82626c3802c37ddfdc5911d4a8c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Early-Rust-90-_jpg.rf.d70b61ef229098de0234c7f87a1e1a53.jpg",
+        "train/Early-Rust-55-_jpg.rf.e3afeca0469c0349f1d0bc9dec6cdee8.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Early-Rust-94-_jpg.rf.c4dba542988068d887829d840b515f3a.jpg",
+        "train/Early-Rust-15-_jpg.rf.c0b5bfee2c4971bb8a797e54779b863b.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/IMG-387-_jpg.rf.f0d4ee6bedbafe350dc14c0fa342d249.jpg",
+        "train/IMG-355-_jpg.rf.0c04c4b205ecc243b1fa8ed93ac1eeba.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_001.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/IMG-60-_jpg.rf.5c2123477c2630f55ca005f83d43aba8.jpg",
+        "valid/IMG-65-_jpg.rf.d6756b6c45a1a241f2b96ddea281f5d3.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/IMG-7-_jpg.rf.350f82103ee6269da06518ba5e401cfe.jpg",
+        "valid/IMG-81-_jpg.rf.d2a4157f37ecd0c5b1dada0b1838413f.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/IMG-73-_jpg.rf.6710823067bdf9076d50358765675eda.jpg",
+        "train/IMG-122-_jpg.rf.a6a7593d32f36ae5c193d8cca66ad306.jpg"
+      ],
+      "decision": "different_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 3,
+      "note": "Similar healthy radish outline, but different leaf edge, stem and background folds."
+    },
+    {
+      "pair": [
+        "test/IMG-78-_jpg.rf.ebe68449f5ec0b8e1472f837b3e00a28.jpg",
+        "train/IMG-29-_jpg.rf.d75a5239bd5f36044903fe58fb9901ea.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Mosaic-Virus-529-_jpg.rf.0151a0d28eb6df1e6edb5fd72ec07a6a.jpg",
+        "valid/Mosaic-Virus-525-_jpg.rf.d8e81fabcb964ef766d515ff3b412164.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Mosaic-Virus-548-_jpg.rf.c347dedde2f76a6c4bf74a78b6c245eb.jpg",
+        "valid/Mosaic-Virus-543-_jpg.rf.c4aaade6c1433b282a1c080c4678203b.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_002.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Mosaic-Virus-69-_jpg.rf.1a0d4e9ce53b4f706f7e672f94ad1499.jpg",
+        "valid/Mosaic-Virus-67-_jpg.rf.47c595225eddfaa3242ce21127188165.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Nutirtion-Deficiency-849-_jpg.rf.14c4209d2cdc3262628d8b17a912ff73.jpg",
+        "valid/Nutirtion-Deficiency-847-_jpg.rf.66b4b037e1218a2e5cdbc288a92eeabe.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Nutirtion-Deficiency-87-_jpg.rf.8e8b59d4afb97d17528095eb364da46b.jpg",
+        "train/Nutirtion-Deficiency-1178-_jpg.rf.a9a8a8bb4767450d5d72d747b3a65391.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Panama-993-_jpg.rf.1f3f103a00564a4b2a795570e501bc13.jpg",
+        "train/IMG-395-_jpg.rf.608ed0388f0f35ded15d43636ef4a0c3.jpg"
+      ],
+      "decision": "different_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 4,
+      "note": "Different banana photos and symptom patterns: Panama versus healthy leaf."
+    },
+    {
+      "pair": [
+        "test/Rust-87-_jpg.rf.002cc2170de43ca322e10ea130ca05c7.jpg",
+        "train/Rust-25-_jpg.rf.dad84c70ce251ffbc6cb77cd72790744.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Rust-90-_jpg.rf.0c2942b88479e4c72327b98e309a2a4e.jpg",
+        "valid/Rust-7-_jpg.rf.d892aafc00f833ebb0751dddbee32bdb.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_003.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Rust-927-_jpg.rf.08038d58b878f6f73b8bba9d5f367265.jpg",
+        "train/Rust-1688-_jpg.rf.f719b8853440ec4ef2d53745f3960e09.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/Rust-95-_jpg.rf.f90838150118fed968b0daa4aa869fd4.jpg",
+        "train/Rust-16-_jpg.rf.bfe89dfe4728b50f3548a086b90d74c0.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/cordana-61-_jpeg.rf.38081e440ef619caad04606490e951f1.jpg",
+        "train/cordana-387-_jpeg.rf.906458e80e33a35cc977ceb0e62649d3.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/cordana-63-_jpeg.rf.051bddfe47beecb8e3b30f80b4226f24.jpg",
+        "train/cordana-434-_jpeg.rf.a04ebff6a8531f38419dee4f7c103d8e.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/cordana-71-_jpeg.rf.867cc85b6884f62c1bfd63db6dbda06c.jpg",
+        "train/cordana-392-_jpeg.rf.dd1e08b7be96032f7735a7f918fe663a.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/cordana-77-_jpeg.rf.1ac2c510aad6f380d53d0d033d50328a.jpg",
+        "train/cordana-401-_jpeg.rf.9efcb60564214f3cb8cb0883c076ed21.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_004.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-57-_jpeg.rf.2e862dd72027465b1e61bb60a100f4c0.jpg",
+        "train/pestalotiopsis-330-_jpeg.rf.9c033505b95ba5ca04c9aded2a3496aa.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-63-_jpeg.rf.4e36d9907b4722a4d2ae8f6d361b576d.jpg",
+        "train/pestalotiopsis-349-_jpeg.rf.f6614de1f7221b62c78e2b017f48183b.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-78-_jpeg.rf.8c43be3b0fad15c0b7e3e3689ad6c2f8.jpg",
+        "train/pestalotiopsis-221-_jpeg.rf.d3b54d4a808dc9bdf26c544cd3bada68.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-81-_jpeg.rf.bcfd9ea3ab7e0adba12b32460508c31a.jpg",
+        "train/pestalotiopsis-375-_jpeg.rf.da22d7991fb99904c06276d24f926feb.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-84-_jpeg.rf.4a03a3dc8acafe9012d72d8e0c5baa36.jpg",
+        "train/pestalotiopsis-225-_jpeg.rf.b298542b881d9ec19b174db49e83d731.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-88-_jpeg.rf.72c4a2150ec5fc43d8bd689bbc211e20.jpg",
+        "train/pestalotiopsis-227-_jpeg.rf.e2757636284d4edbc8d7d35a52fba356.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_005.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/pestalotiopsis-89-_jpeg.rf.9d91ae185cf17885456960905b072fd1.jpg",
+        "train/pestalotiopsis-391-_jpeg.rf.d093fbb5a0568cc87f474b718eeec82f.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/sigatoka-803-_jpeg.rf.26433c7b258e0cc0cfad3b185dfddadb.jpg",
+        "train/sigatoka-622-_jpeg.rf.22247766b9d5f8aeb2c5648c2b08d262.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/sigatoka-807-_jpeg.rf.b3dd0e5bef8548343a9d2d815bc39246.jpg",
+        "train/sigatoka-636-_jpeg.rf.ec8100d1237b6ab03031299d41261383.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "test/sigatoka-817-_jpeg.rf.d8e1958e89c60e04378887d2b9cb0fe2.jpg",
+        "valid/sigatoka-652-_jpeg.rf.9dc280cb6e77c581fad14310123dc7dc.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Leaf-Spot-426-_jpg.rf.d6f34cff66adeacde65c2454adaf1238.jpg",
+        "valid/Black-Leaf-Spot-428-_jpg.rf.b4425c0dabe7ee0db13cdbf47c8fc102.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Leaf-Spot-426-_jpg.rf.d6f34cff66adeacde65c2454adaf1238.jpg",
+        "valid/Black-Leaf-Spot-434-_jpg.rf.9346b480608987ca36262b0d4a8d7e75.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_006.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Leaf-Spot-432-_jpg.rf.9766e1df9794a95458a70d21e632a46e.jpg",
+        "valid/Black-Leaf-Spot-449-_jpg.rf.1b87be4b659d1cdf5e6b521acd2bb9cb.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-12-_jpeg.rf.e6729498e30171a6306f8150d68f82db.jpg",
+        "valid/Black-Rot-18-_jpeg.rf.071be6ca7c4ea495651b2eb9ea24d868.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-22-_jpeg.rf.2b3be59b3b960d0ba02f6c0b57aa31bb.jpg",
+        "valid/Black-Rot-34-_jpeg.rf.f540658c96643ce71d233f2d0ddb9925.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-25-_jpeg.rf.58d8a44e742c25f033a5fffceacf1061.jpg",
+        "valid/Black-Rot-26-_jpeg.rf.22467ab23d7b054edec24c246e981c25.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-33-_jpeg.rf.b6c6044371d12fdb011279d89965e666.jpg",
+        "valid/Black-Rot-20-_jpeg.rf.f04434ef3ae7bd68398c63998a729a64.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-33-_jpeg.rf.b6c6044371d12fdb011279d89965e666.jpg",
+        "valid/Black-Rot-55-_jpeg.rf.95204f3ce2c883298466869aab8f2b17.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_007.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-48-_jpeg.rf.e1e5fcefe2ba3444bd5925f5b1ffdb86.jpg",
+        "valid/Black-Rot-17-_jpeg.rf.1a20f014f07a9dbe18021e5fb2a3e2b2.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-54-_jpeg.rf.5a917d1b962381e278849d8e36675c1d.jpg",
+        "valid/Black-Rot-53-_jpeg.rf.888ee34ecb27323425aaf76b69665dd2.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-57-_jpeg.rf.87f4a1245feae74f87fbd5354706d8ef.jpg",
+        "valid/Black-Rot-13-_jpeg.rf.edf875617691689dbd2e21dd2696fee4.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Black-Rot-59-_jpeg.rf.ad82353690386ff9a2d8a7bb4c331028.jpg",
+        "valid/Black-Rot-47-_jpeg.rf.fe09c192f08b5301b7faa6eba4215203.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Downey-Mildew-2-_jpg.rf.0a1a946fc5fdca5842ddd9a7f7fa1456.jpg",
+        "valid/Downey-Mildew-8-_jpg.rf.ecd09f34ab16113ad3224fd3d5c02fe2.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Downey-Mildew-469-_jpg.rf.c583b1bb91c469164db9a3eada472f5d.jpg",
+        "valid/Downey-Mildew-471-_jpg.rf.65d70d77d0de2c83fa483d56147d1099.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_008.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Leaf-Spot-578-_jpg.rf.54020d8a2484686d904fdb8d944da1bc.jpg",
+        "valid/Early-Leaf-Spot-573-_jpg.rf.58be22c0ca5089077342b4dbac89be95.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-1428-_jpg.rf.23f5c279018f4488d19b535efc3e7446.jpg",
+        "valid/Early-Rust-621-_jpg.rf.2ef600c9baa3391f6c8c95a409bd4be6.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-1430-_jpg.rf.be897ad4d795f1ef3edc5ef784f0889f.jpg",
+        "valid/Early-Rust-656-_jpg.rf.96e163ba94b6c60ed7050de6a7cfa31c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-15-_jpg.rf.c0b5bfee2c4971bb8a797e54779b863b.jpg",
+        "valid/Early-Rust-72-_jpg.rf.23069c5f12766681db1e7610fd942a48.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-16-_jpg.rf.e9c5321b142838f07bbb9c166133f163.jpg",
+        "valid/Early-Rust-80-_jpg.rf.4fd55438fbb973d2099f12c4def8fa5e.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-29-_jpg.rf.cbc0f0639616bd822060a0a94b4af29f.jpg",
+        "valid/Early-Rust-66-_jpg.rf.7d8d376ab18d992a62a8ac550713a97c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_009.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-31-_jpg.rf.694049ed6359c68790bae5be3020cb29.jpg",
+        "valid/Early-Rust-63-_jpg.rf.46317c841423b8ea961fe940de1d2de0.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Early-Rust-37-_jpg.rf.74e6824d15841b5d9491d2045f0c8ef2.jpg",
+        "valid/Early-Rust-71-_jpg.rf.2cd42662a7b886dfd073c44847dd553b.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-1-_jpg.rf.9d1bc7167e26ed11817ef7a26485d727.jpg",
+        "valid/IMG-51-_jpg.rf.db373cbeee1bb15e3f3b690709a6c091.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-104-_jpg.rf.64105e7a2680f52eb658c544118566ff.jpg",
+        "valid/IMG-93-_jpg.rf.08e30c204f985d8bc85311ad9672a2f0.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-32-_jpg.rf.a28a59fddc772354c9e7f2af73a9a3c4.jpg",
+        "valid/IMG-9-_jpg.rf.21f46f6fe384e1e4e00b836e6c1e08de.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-330-_jpg.rf.669311a8a8eac81105da937e41236c9f.jpg",
+        "valid/IMG-356-_jpg.rf.6aef89ce8eddcab408d9cb4197ace82c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_010.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-332-_jpg.rf.deaeef501666b4e9d1fff948ef7548a6.jpg",
+        "valid/IMG-364-_jpg.rf.0b18c2e28e899b9a2b53827a864adc15.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-355-_jpg.rf.0c04c4b205ecc243b1fa8ed93ac1eeba.jpg",
+        "valid/IMG-373-_jpg.rf.12f737cb9e82846348b8190d154625fb.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-355-_jpg.rf.0c04c4b205ecc243b1fa8ed93ac1eeba.jpg",
+        "valid/IMG-397-_jpg.rf.fb21351de6b20387f7559de72b9b9a52.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-355-_jpg.rf.0c04c4b205ecc243b1fa8ed93ac1eeba.jpg",
+        "valid/IMG-407-_jpg.rf.5808f454cda088053e4794aba67f5efa.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-376-_jpg.rf.b8749e80be9c490920ac466d60e66971.jpg",
+        "valid/IMG-374-_jpg.rf.20f2a6de0717a089820e0c8888e8daf6.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-376-_jpg.rf.b8749e80be9c490920ac466d60e66971.jpg",
+        "valid/IMG-390-_jpg.rf.4c44bb91181493d1dfe59af2a74ad9a5.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_011.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/IMG-75-_jpg.rf.6e7fefefaf9a9520284b49b602fd3559.jpg",
+        "valid/IMG-76-_jpg.rf.8e4a03eedc5809d0f13629560110cf8a.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-36-_jpg.rf.f7402b33a91edfe71fd2f474f485d62e.jpg",
+        "valid/Late-Leaf-Spot-474-_jpg.rf.f6d41e9b521fd4ecfb43334c3a5fcbc4.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-447-_jpg.rf.586f3be3bb082aa7d1c84983eb5a1b5c.jpg",
+        "valid/Late-Leaf-Spot-485-_jpg.rf.1a73639e400ec96c898a2430d58102aa.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-448-_jpg.rf.9fb4d6cc5db4977e273b38ef21d43897.jpg",
+        "valid/Late-Leaf-Spot-461-_jpg.rf.0c361734890ed65930c7d6020f49a702.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-450-_jpg.rf.6e6dc3276710e18db83f195b9ee50874.jpg",
+        "valid/Late-Leaf-Spot-498-_jpg.rf.f640eef99f28752feed84c04a78b0cfc.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-457-_jpg.rf.a47ee1b7bf45759d673015388398e926.jpg",
+        "valid/Late-Leaf-Spot-496-_jpg.rf.90a47022a9a3c855c1734079774ddd43.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_012.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-469-_jpg.rf.921e609d77997718a8915ff6903da9d7.jpg",
+        "valid/Late-Leaf-Spot-465-_jpg.rf.d360960d6baa91e34cdfd93b75272e16.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Late-Leaf-Spot-469-_jpg.rf.921e609d77997718a8915ff6903da9d7.jpg",
+        "valid/Late-Leaf-Spot-524-_jpg.rf.e4bf934f2e4c6cdcd4d432241abac316.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Mosaic-Virus-47-_jpg.rf.539733a39eeee2b2269fd10ab9609d91.jpg",
+        "valid/Mosaic-Virus-48-_jpg.rf.f1705d0e0cb4416a2c4de220faab6864.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Nutirtion-Deficiency-1127-_jpg.rf.f73fe5573cf3f5dd9c739a375ab7b852.jpg",
+        "valid/Nutirtion-Deficiency-80-_jpg.rf.07b069d2a7538b6753e8a6c901b00cb8.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Rust-1668-_jpg.rf.b3beb252912bbb3393550f19f81c9c43.jpg",
+        "valid/Rust-592-_jpg.rf.c5c2f015b99f1d4e74074b4564db9f25.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Rust-1676-_jpg.rf.563d7ca9d92b3bef5097204a18cabd27.jpg",
+        "valid/Rust-767-_jpg.rf.a36c31eecb3f08304ec820025e632a9c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_013.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Rust-40-_jpg.rf.c03e27d34d776d29e32c8e996d35f252.jpg",
+        "valid/Rust-71-_jpg.rf.a8f5b5515ee885bff30f13fb13e477c7.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Rust-41-_jpg.rf.08abef833ec83bf035f9a80795263b4c.jpg",
+        "valid/Rust-68-_jpg.rf.f250c340f13a0f85660caf657fa75694.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Rust-52-_jpg.rf.f276653e4f3a00dd6e0b9c76149e8e8d.jpg",
+        "valid/Rust-80-_jpg.rf.04912733f9379271121e27cf1abb0918.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/Yellow-and-Black-Sigatoka-2732-_jpg.rf.a8d42221b0483ee1560e5d5487acc836.jpg",
+        "valid/Yellow-and-Black-Sigatoka-3092-_jpg.rf.c30e67d7f0830b34af2aa3f07dfdc54c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-115-_jpeg.rf.b47c85e492922b53e0eeff2b769a19f6.jpg",
+        "valid/cordana-52-_jpeg.rf.295504c0086d9779c551583f41a0ec1f.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-161-_jpeg.rf.dc6bcd5addcdbd60cf38a76d6bf8d424.jpg",
+        "valid/cordana-511-_jpeg.rf.85db700eaa2782b1aa434402288e8f6c.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_014.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-163-_jpeg.rf.0e0bb2c7038aaadec3335c35a00bb444.jpg",
+        "valid/cordana-535-_jpeg.rf.661d2f46a586da24cbad9923d4895c5d.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-167-_jpeg.rf.4eea1dcb83529b87cebbe5f2bf72fa72.jpg",
+        "valid/cordana-539-_jpeg.rf.6da737ae5ed6d7e80f6b79c2ade5f029.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-183-_jpeg.rf.bae1c28a92dabdb1b11331584885c5be.jpg",
+        "valid/cordana-523-_jpeg.rf.3091c43072ca151c2ba70b8bdd096710.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-25-_jpeg.rf.adfdac16613d7fdffd87b887a98bd1ff.jpg",
+        "valid/cordana-486-_jpeg.rf.1bd1cd896bc8fb2ee22b7255446b70bf.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-31-_jpeg.rf.522302ae8dd65c989d51052edf78c45b.jpg",
+        "valid/cordana-494-_jpeg.rf.311e4aa7351bdef4d85d5ac584db14e5.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/cordana-4-_jpeg.rf.da372b0f2bbe75f02309b2c5e03c34f6.jpg",
+        "valid/cordana-91-_jpeg.rf.9eeb40c012f69c65783ba2e188957cc6.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_015.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-115-_jpeg.rf.50d15c61b6c84c92dc9a8edcf59888e6.jpg",
+        "valid/pestalotiopsis-436-_jpeg.rf.b0988726726ad566013b25b2779e16b9.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-135-_jpeg.rf.9eb3c627e183adf3a2e5e85e4cc632d5.jpg",
+        "valid/pestalotiopsis-471-_jpeg.rf.728f2f81c353ac55bae2ea6c6b23020a.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-151-_jpeg.rf.f05d75bb684721129a743ed8342933d2.jpg",
+        "valid/pestalotiopsis-505-_jpeg.rf.225e72a3154e647f7d50face2a437d05.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-167-_jpeg.rf.8c4de72cc13fb64942d1ef1ebd60d6b0.jpg",
+        "valid/pestalotiopsis-537-_jpeg.rf.bfe5ad35ef27bb503f0fc361966dcf77.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-169-_jpeg.rf.8901955d6cf3ca898e6405a382c0908d.jpg",
+        "valid/pestalotiopsis-537-_jpeg.rf.bfe5ad35ef27bb503f0fc361966dcf77.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-191-_jpeg.rf.ddfe39efb8aaa395fc497010e41489ea.jpg",
+        "valid/pestalotiopsis-566-_jpeg.rf.8f0bb306818d942d76812bc5c5f72282.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_016.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/pestalotiopsis-336-_jpeg.rf.2832281f58ae8e4c2218e56f9edecbd9.jpg",
+        "valid/pestalotiopsis-59-_jpeg.rf.e7671a08e421d1fbc66b05f7bc488575.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-147-_jpeg.rf.8446eaf05df7c69376e45d5ac9d21633.jpg",
+        "valid/sigatoka-744-_jpeg.rf.5428d3d1cd22bf669cbc0e41cd268a81.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-149-_jpeg.rf.911dec962556070239a9ddeb13d23ed3.jpg",
+        "valid/sigatoka-748-_jpeg.rf.e631d53c7d4170dc0c71b9d106804df5.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 3,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-163-_jpeg.rf.f9f21e2302d9d920b711c1f92d362456.jpg",
+        "valid/sigatoka-766-_jpeg.rf.c66ffb0c19770b08e62c6620fe56318e.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 4,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-17-_jpeg.rf.e1aa7f02ea806a55ae4146fcf89420fe.jpg",
+        "valid/sigatoka-760-_jpeg.rf.d162d6e7f50202502773ea4d3ba6f883.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 5,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-484-_jpeg.rf.801d7074148176f0d4819881e291d766.jpg",
+        "valid/sigatoka-659-_jpeg.rf.21412c7961c3533e5102b3412c99d6eb.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_017.jpg",
+      "evidence_row": 6,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-494-_jpeg.rf.a6b62de10ac4cc61432d54fdef6aca21.jpg",
+        "valid/sigatoka-671-_jpeg.rf.23e469fcf2bbbdb6493c294fae2f045f.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_018.jpg",
+      "evidence_row": 1,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    },
+    {
+      "pair": [
+        "train/sigatoka-544-_jpeg.rf.f92f89be2d3c38b58df460f22ae01109.jpg",
+        "valid/sigatoka-73-_jpeg.rf.918e70a557ec0054d97dc329af087728.jpg"
+      ],
+      "decision": "same_source",
+      "evidence_sheet": "near_duplicate_review_018.jpg",
+      "evidence_row": 2,
+      "note": "Matching leaf veins, lesions, silhouette and background; brightness/export or box annotation variation."
+    }
+  ]
+}

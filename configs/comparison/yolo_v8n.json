@@ -1,5 +1,5 @@
 {
-  "status": "planned_not_implemented",
+  "status": "implemented_local_smoke_checked_gpu_pilot_pending",
   "model_id": "yolo_v8n",
   "shared_protocol": "configs/comparison/protocol.json",
   "run_directory": "experiments/yolo_v8n_non_chili_seed42_run01",
@@ -10,5 +10,6 @@
   "head": "24_class_yolo_detection_head",
   "results_directory": "experiments/yolo_v8n_non_chili_seed42_run01/results",
   "checkpoints_directory": "experiments/yolo_v8n_non_chili_seed42_run01/checkpoints",
-  "logs_directory": "experiments/yolo_v8n_non_chili_seed42_run01/logs"
+  "logs_directory": "experiments/yolo_v8n_non_chili_seed42_run01/logs",
+  "adapter": "comparison/models.py"
 }

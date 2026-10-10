@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-10-09T22:24:53.815355+00:00",
+  "device": "cuda",
+  "pretrained": true,
+  "engineering_check_only": true,
+  "models": {
+    "ssdlite": {
+      "status": "passed",
+      "steps": 8,
+      "losses": [
+        16.670562744140625,
+        16.195016860961914,
+        15.657316207885742,
+        15.114530563354492,
+        14.695773124694824,
+        14.363516807556152,
+        13.970514297485352,
+        13.620016098022461
+      ],
+      "predictions_per_image": [
+        100,
+        100
+      ],
+      "finite_gradients": true,
+      "frozen_bn_buffers": true,
+      "save_reload_prediction_consistency": true,
+      "state_sha256": "ad9610f36448c6cca654ed5828653c500e76af2c526b1adbeb27c5d70388cdf5",
+      "initialization": {
+        "architecture": "ssdlite",
+        "input_size": 320,
+        "background_id": 0,
+        "target_label_offset": 1,
+        "pretrained_source": "https://download.pytorch.org/models/ssdlite320_mobilenet_v3_large_coco-a79551df.pth",
+        "initialization": "COCO backbone/extra features/regression head and compatible classification feature/BN tensors; new 25-class projection tensors",
+        "nms_iou": 0.55,
+        "score_floor": 0.001,
+        "trainable_backbone_layers": 6,
+        "normalization": "frozen BN running statistics; affine parameters trainable"
+      }
+    }
+  }
+}

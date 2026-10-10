@@ -1,0 +1,61 @@
+{
+  "config": {
+    "model": "ssdlite",
+    "mode": "pilot",
+    "rounds": 1,
+    "local_epochs": 1,
+    "batch": 8,
+    "seed": 42,
+    "lr": 0.001,
+    "optimizer": "sgd",
+    "weight_decay": 0.0005,
+    "max_train_batches": 2,
+    "validation_limit": 24,
+    "no_pretrained": false,
+    "dataset_checksums_sha256": "157b48390ecad0ffeb4e5d70ae4018398156593d28a77b3b55beca8c9f94c1aa",
+    "implementation_sha256": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+    "model_spec_sha256": "5e4f419d785b3f357bd2cb9bf077c1514f16b407b8628130e69077805222b2bd",
+    "normalization_policy": "freeze running BN stats on all models; train affine parameters",
+    "optimizer_state": "reset per client per round",
+    "learning_rate_schedule": "global-round cosine to 0.1 initial LR",
+    "augmentation": "shared training-only horizontal flip p=0.5; adapter resize/normalization",
+    "evaluator": "pooled pycocotools COCO bbox; P/R micro at conf .25 IoU .5",
+    "gradient_clip_norm": 10.0,
+    "amp": false,
+    "deterministic_algorithms": "seeded and cuDNN deterministic; not guaranteed bit-identical across hardware"
+  },
+  "config_hash": "27918a8a323dab44e357110fe12c411e0cb4e3e0260b1793b5b9e39eaa71a36c",
+  "model": {
+    "architecture": "ssdlite",
+    "input_size": 320,
+    "background_id": 0,
+    "target_label_offset": 1,
+    "pretrained_source": "https://download.pytorch.org/models/ssdlite320_mobilenet_v3_large_coco-a79551df.pth",
+    "initialization": "COCO backbone/extra features/regression head and compatible classification feature/BN tensors; new 25-class projection tensors",
+    "nms_iou": 0.55,
+    "score_floor": 0.001,
+    "trainable_backbone_layers": 6,
+    "normalization": "frozen BN running statistics; affine parameters trainable"
+  },
+  "hardware": {
+    "gpu": "Tesla T4",
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "packages": {
+      "torchvision": "0.26.0+cu130",
+      "ultralytics": "8.4.48",
+      "pycocotools": "2.0.11",
+      "effdet": "0.4.1",
+      "timm": "1.0.27"
+    }
+  },
+  "parameter_count": 2525300,
+  "trainable_parameter_count": 2525300,
+  "input_size": 320,
+  "validation_images": 24,
+  "diagnostic_only": true,
+  "created_at_utc": "2026-10-09T22:25:47.886348+00:00",
+  "initial_checkpoint_sha256": "0ad96ea0d298ad5eb5fce28ba10459b5f08aaa83a5b12814af9fb55af65ea06b",
+  "initial_state_sha256": "31ef5fd0d188ee4895481756ead08a6994bed5c18a5c7f4694c330ab6e6b8f73"
+}

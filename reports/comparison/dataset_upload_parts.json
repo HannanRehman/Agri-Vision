@@ -1,0 +1,76 @@
+{
+  "parts": [
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part01",
+      "bytes": 67108864,
+      "sha256": "484fc00374474bc990452d942138ca41194a0209b0e12a5d0bdbeaad5843360e"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part02",
+      "bytes": 67108864,
+      "sha256": "f1a0d969e6bb3072afb4b9c958c8abfbff42cf48ed0d3b6c29e23ec68a011319"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part03",
+      "bytes": 67108864,
+      "sha256": "d1400172e8ff6a8360929c723e7474a7a50f0a3b32a6d7b343712ef7f5e1bdd1"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part04",
+      "bytes": 67108864,
+      "sha256": "cbe0a1f8a2dc9f10677ee199f6b9713d03a004995c2fca64b4b9f08b32c41540"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part05",
+      "bytes": 67108864,
+      "sha256": "5c124628f4bbe8939e33acc757c85f3508b2a0425193698d785ec6694f63b1b8"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part06",
+      "bytes": 67108864,
+      "sha256": "caf730724e7f3ef62fd1acd5dea02fbb0f68e65cec2cb71ca70a2b3bcce35ee0"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part07",
+      "bytes": 67108864,
+      "sha256": "b5401ea46e2086bcddb49eafd74ec63ee8a446cf8b8d3aeb3c05cfc015d05b5f"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part08",
+      "bytes": 67108864,
+      "sha256": "b7abf4a466544f5e7d127ede546657bccf22cad654428931cd2d97960c76fc43"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part09",
+      "bytes": 67108864,
+      "sha256": "465015d1ed74469db0ef3d8d77bd551a804125f92b8c84dd5e2138f1814b5bec"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part10",
+      "bytes": 67108864,
+      "sha256": "f8cad09efbf90a4ebd0956eb1da521986a82f1742ba3eee92c9837c8988bc389"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part11",
+      "bytes": 67108864,
+      "sha256": "686f0c664058a6d155f4a52384ca5e0edcead8b9656c24965f8f437b2f077844"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part12",
+      "bytes": 67108864,
+      "sha256": "85f779685de3389a0bb84d1b2ce52f1ca320ff2335e4c175c6b7490705cef338"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part13",
+      "bytes": 67108864,
+      "sha256": "e0e109f3fdba62bd7d4d1284b5412720566ff64a8242969dd6f88e2080266f44"
+    },
+    {
+      "name": "non_chili_v1_colab_dataset.zip.part14",
+      "bytes": 53369292,
+      "sha256": "725eaa6ebbb95c4a28693d359948b59613dc58bffb0cd324a348b31f49f5bec9"
+    }
+  ],
+  "joined_sha256": "7a2920e4a4e0405ee157e9b40ac6306b54d6933b20a306b44a4b7c6871f20868",
+  "joined_bytes": 925784524
+}

@@ -2,15 +2,15 @@
 
 Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The completed experiment uses a **30-class YOLOv8n model** and three-client sample-weighted FedAvg. The Colab implementation simulates the clients sequentially on one GPU.
 
-## Current status — 9 October 2026
+## Current status — 10 October 2026
 
 | Work | Status |
 | --- | --- |
 | Historical YOLO training through round 40 | Completed; archived run files and reports retained |
 | Round-35 held-out test and non-chili class analysis | Completed on the original 30-class checkpoint |
 | Workspace organization | Separate experiment scaffolds, current file index and cleanup audit added |
-| Four-crop, 24-class dataset | Planned; original data has not yet been filtered or relabelled |
-| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | Planned; draft configurations exist, no new model training has started |
+| Four-crop, 24-class dataset | Built separately: 14,514 train / 4,157 validation / 2,091 test images; see the preparation report and verification record |
+| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | GPU pilot passed; YOLO, SSDLite and SSD–MobileNetV3 completed 10 rounds; EfficientDet committed round 2 before a Colab interruption; YOLO results require investigation |
 | Seminar poster | Earlier A1 draft retained; revision to the supplied stacked layout is pending |
 
 The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The agreed alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration to implement and verify. Faster R-CNN is excluded. All models will be evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
@@ -29,8 +29,11 @@ Start with the [workspace index](WORKSPACE_INDEX.md), [training plan](TRAINING_P
 | `split_dataset.py`, `merge_chili_dataset.py` | Historical data partitioning and audited chili import |
 | `original_dataset/`, `dataset/client1/`–`client3/` | Current 30-class source data and client partitions; paths retained for compatibility |
 | `configs/comparison/` | Shared experiment protocol and per-model draft specifications |
-| `manifests/non_chili_v1/` | Reserved location for audited 24-class image lists, class map and checksums |
-| `experiments/` | Separate new-model run folders, each with its own `results/`, `checkpoints/` and `logs/`; READMEs identify their planned status |
+| `comparison/`, `requirements-comparison.txt` | New shared dataset/evaluator, four detector adapters, FedAvg runner, final evaluation and comparison table |
+| `original_dataset_non_chili/`, `dataset_non_chili/` | Shared 24-class images/labels and portable client configurations; originals preserved |
+| `manifests/non_chili_v1/` | Frozen image lists, class map, exclusions, source-group decisions and checksums |
+| `reports/non_chili_v1/` | Dataset preparation report, annotation review sheets, verification and upload-package records |
+| `experiments/` | Separate model scaffolds, local diagnostic pilots and downloaded GPU main-run checkpoints, metrics and logs |
 | `saved_models/`, `runs/` | Historical checkpoints, result archives and local outputs |
 | `reports/` | Reviewed metrics, figures, reports and poster artifacts |
 | `scripts/` | Packaging, workspace audit, historical analysis and document tools |
@@ -38,6 +41,32 @@ Start with the [workspace index](WORKSPACE_INDEX.md), [training plan](TRAINING_P
 | `.venv/` | Working local Python environment |
 
 Model weights, raw datasets and runtime artifacts are excluded from Git where configured. The workspace index records the authoritative reports and the round ranges inside timestamped ZIPs. Do not delete source images shared by several data partitions merely because their bytes match.
+
+## Separate 24-class dataset
+
+See the [dataset preparation report](reports/non_chili_v1/dataset_preparation_report.md) and [frozen manifests](manifests/non_chili_v1/README.md). Preparation excluded 1,216 chili images, one empty-label image and 98 lower-priority copies of visually confirmed source-photo repeats across splits. Original data is preserved. All 24 classes remain in every pooled split; disease-label provenance and undetected augmented variants remain limitations.
+
+The shared images/labels are in `original_dataset_non_chili/`. Client YAMLs under `dataset_non_chili/clientN/` reference portable lists stored beside the shared split folders. Verify with:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\verify_non_chili_dataset.py
+```
+
+The dataset upload bundle is `non_chili_v1_colab_dataset.zip`; its size and SHA-256 are recorded in `reports/non_chili_v1/upload_package.json`. The shared adapter/evaluator and comparison runner are implemented. The GPU pilot passed and full-dataset main runs started. See the [saved validation results and backup review](reports/comparison/main_run_review_20261010/README.md) for the completed models and interrupted EfficientDet run. CPU pilot metrics remain diagnostic.
+
+## Agreed next training plan
+
+[The thirty-round account split plan](reports/comparison/next_30_round_plan.md) schedules fresh native-Ultralytics YOLO on a separate account and sequential continuation of the three alternatives on the current account/Drive. SSDLite and SSD resume at round 11; EfficientDet resumes at round 3 unless a newer committed checkpoint is verified. An explicit continuation learning-rate schedule and separate native-YOLO runner must be implemented before launch. Existing notebooks below retain their original ten-round behavior; changing the round count alone is not a supported resume. No training is started by this documentation update.
+
+## Existing ten-round comparison workflow
+
+Open [AgriVision_Comparison.ipynb](AgriVision_Comparison.ipynb) in Colab and follow the [new upload and training instructions](reports/comparison/colab_instructions.md). Upload the dataset ZIP plus `agrivision_comparison_code.zip`. The notebook defaults to the GPU SSDLite pilot and requires its pass record before the main runs. Initial main budget: 10 global rounds, one local epoch per client, seed 42; all four models use the same frozen partitions and pooled evaluator.
+
+The pipeline saves checkpoints, initialization and settings hashes, per-client training logs, pooled/per-client validation metrics, predictions and CSVs to separate run folders. Interrupted partial rounds restart from the last committed global state. Final held-out evaluation is explicit and records per-class metrics, model size and batch-1 latency. The local installation is CPU-only; the Colab Tesla T4 pilot passed. See [local validation evidence](reports/comparison/local_validation.json).
+
+For the current interruption, use [AgriVision_EfficientDet_Resume.ipynb](AgriVision_EfficientDet_Resume.ipynb) and the [resume instructions](reports/comparison/main_run_review_20261010/resume_instructions.md). It selects EfficientDet alone, repeats incomplete round 3 from the committed round-2 checkpoint and retains the original 10-round budget. Initial, best and final checkpoints remain on Drive; locally verified intermediate checkpoints from completed models were removed from Drive to reclaim space. All saved checkpoints and metrics remain in their local experiment folders. The Colab termination cause is unconfirmed.
+
+The [read-only YOLO diagnosis](reports/comparison/yolo_diagnosis_20261010/README.md) explains the change from historical round-40 training, verifies saved predictions against native inference, and identifies fresh classification features with frozen BatchNorm as a leading concern. An isolated alternative initializer passes forward checks, but improved training performance remains unproven; the production runner is unchanged for EfficientDet recovery.
 
 ## Historical results
 
@@ -75,7 +104,7 @@ python -c "import torch, flwr, ultralytics; print(torch.__version__, torch.cuda.
 python split_dataset.py
 ```
 
-The partition checker validates the existing 30-class client data, not the future 24-class dataset. Expected totals are 15,512 training, 4,374 validation and 2,191 test images. It checks client overlap, coverage, class mappings and label values. Rebuild only when needed:
+The partition checker validates the existing 30-class client data, not the separate 24-class dataset. Expected original totals are 15,512 training, 4,374 validation and 2,191 test images. It checks client overlap, coverage, class mappings and label values. Rebuild only when needed:
 
 ```powershell
 python split_dataset.py --rebuild --seed 42

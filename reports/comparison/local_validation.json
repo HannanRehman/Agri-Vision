@@ -1,0 +1,43 @@
+{
+  "created_at_utc": "2026-10-09T20:47:13.161526+00:00",
+  "status": "local_checks_passed_gpu_pending",
+  "implementation_sha256": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "project_tests": 31,
+  "comparison_tests": 10,
+  "dependency_check": "pip check passed",
+  "pretrained_adapters_checked": [
+    "ssdlite",
+    "ssd_mobilenetv3",
+    "yolo_v8n",
+    "efficientdet_d0"
+  ],
+  "ssdlite_overfit_steps": 8,
+  "efficientdet_overfit_steps": 5,
+  "pilot": {
+    "model": "ssdlite",
+    "device": "CPU",
+    "mode": "diagnostic_only",
+    "completed_rounds": 1,
+    "training_images_per_client": [
+      2,
+      2,
+      2
+    ],
+    "validation_images": 6,
+    "identical_client_start_verified": true,
+    "checkpoint_saved": true,
+    "pooled_and_client_metrics_saved": true,
+    "predictions_saved": true,
+    "csv_saved": true,
+    "completed_resume_without_retraining": true,
+    "interrupted_resume_test": "passed; recovered tensor state equals uninterrupted run",
+    "run_directory": "experiments/ssdlite_non_chili_cpu_pilot_final_20261010"
+  },
+  "main_training_started": false,
+  "colab_gpu_pilot_completed": false,
+  "limitations": [
+    "CPU smoke checks do not establish CUDA compatibility, convergence or final model quality.",
+    "Candidate settings require GPU pilots before main runs.",
+    "Standard SSD has a newly initialized regression head unlike SSDLite; practical comparison has initialization differences."
+  ]
+}

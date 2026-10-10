@@ -1,5 +1,5 @@
 {
-  "status": "planned_not_implemented",
+  "status": "implemented_local_smoke_checked_gpu_pilot_pending",
   "model_id": "ssdlite",
   "shared_protocol": "configs/comparison/protocol.json",
   "run_directory": "experiments/ssdlite_non_chili_seed42_run01",
@@ -11,5 +11,6 @@
   "output_classes_including_background": 25,
   "results_directory": "experiments/ssdlite_non_chili_seed42_run01/results",
   "checkpoints_directory": "experiments/ssdlite_non_chili_seed42_run01/checkpoints",
-  "logs_directory": "experiments/ssdlite_non_chili_seed42_run01/logs"
+  "logs_directory": "experiments/ssdlite_non_chili_seed42_run01/logs",
+  "adapter": "comparison/models.py"
 }

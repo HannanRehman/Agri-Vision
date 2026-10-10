@@ -1,6 +1,8 @@
 # Agri Vision workspace index
 
-Updated 9 October 2026. Use this index to find current plans, historical evidence and authoritative copies.
+
+Current agreed training/account split: [thirty-round plan](reports/comparison/next_30_round_plan.md). Implementation is pending; existing notebooks retain their original ten-round behavior.
+Updated 10 October 2026. Use this index to find current plans, historical evidence and authoritative copies.
 
 ## Current work
 
@@ -12,7 +14,7 @@ Updated 9 October 2026. Use this index to find current plans, historical evidenc
 - [Four separate planned experiments](experiments/README.md)
 - [24-class manifest preparation status](manifests/non_chili_v1/README.md)
 
-The planned detectors are YOLOv8n, EfficientDet-D0, SSDLite–MobileNetV3 and SSD–MobileNetV3 with a standard head. The new data and training pipeline are not implemented yet. Thesis writing starts after 17 October; no final submission deadline is specified.
+The detectors are YOLOv8n, EfficientDet-D0, SSDLite–MobileNetV3 and SSD–MobileNetV3 with a standard head. The separate 24-class dataset and shared pipeline are implemented; local engineering checks passed and GPU main results are pending. See [the dataset preparation report](reports/non_chili_v1/dataset_preparation_report.md) and [comparison Colab instructions](reports/comparison/colab_instructions.md). Thesis writing starts after 17 October; no final submission deadline is specified.
 
 ## Working code and environment
 
@@ -24,6 +26,7 @@ Existing training code remains at the project root. The working environment is [
 | --- | --- |
 | Original 30-class dataset | [original_dataset](original_dataset) |
 | Existing client partitions | [dataset](dataset) |
+| Separate 24-class data | [original_dataset_non_chili](original_dataset_non_chili), [client configurations](dataset_non_chili), [manifests](manifests/non_chili_v1/README.md) |
 | Data class distribution | [reports/dataset_class_distribution.csv](reports/dataset_class_distribution.csv) and [report](reports/dataset_class_distribution.md) |
 | Historical chili provenance | [merge audit](reports/chili_dataset_merge.md); compressed source ZIP under `archive/imported_datasets/`; unused extracted folder deleted after byte verification |
 | Rounds 26–35 metrics | [validation CSV](reports/rounds_026_035_global_metrics.csv), [client CSV](reports/rounds_026_035_client_metrics.csv), [report](reports/rounds_026_035_detailed_report.md) |

@@ -1,0 +1,10 @@
+{
+  "unique_training_images": 16,
+  "image_presentations": 16,
+  "optimizer_steps": 2,
+  "mean_loss": 17.282665252685547,
+  "learning_rate": 0.001,
+  "seconds": 1.8274274460000015,
+  "client": "client1",
+  "round_start_sha256": "31ef5fd0d188ee4895481756ead08a6994bed5c18a5c7f4694c330ab6e6b8f73"
+}

@@ -1,0 +1,7 @@
+{
+  "gpu": "Tesla T4",
+  "code_hash": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+  "pilot_dir": "/content/drive/MyDrive/Agri Vision/comparison_results/ssdlite_gpu_pilot_20261009_222449_348274",
+  "phase": "passed",
+  "local_epochs": 1
+}
