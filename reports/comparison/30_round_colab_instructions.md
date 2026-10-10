@@ -4,6 +4,10 @@ Prepared 10 October 2026. No GPU training was started during preparation. Local 
 
 User update: fresh 24-class YOLO is active again. The YOLO notebook, code bundle and all fourteen dataset parts plus manifest have been placed in the shared 19gmail Agri Vision folder. Use 19gmail when opening Colab and authorizing Drive. Ownership transfer was verified: 19gmail owns the notebook, code bundle, fourteen dataset parts and manifest (17 files). The connected 4gmail account retains writer access. GPU training has not been started by the assistant.
 
+## Current 4gmail run: EfficientDet only to round 15
+
+User update: run `AgriVision_Comparison.ipynb` (also saved as `AgriVision_EfficientDet_Continue_15Rounds.ipynb`) on 4gmail. This notebook selects only EfficientDet-D0 and stops at global round 15. It resumes the original committed round 2, so round 3 is next. Existing code and dataset uploads are sufficient. Results go into a separate `_to15` folder; original model runs remain unchanged. Run all automatically resumes this continuation after interruptions and starts no other detector. The earlier three-model thirty-round workflow remains available as `AgriVision_Alternatives_Continue_30Rounds.ipynb` for later use; it is not the current run. Do not change a saved continuation's target in place.
+
 ## New YOLO account
 
 1. In that account's Drive create `MyDrive/Agri Vision/`.

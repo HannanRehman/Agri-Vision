@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import shutil
 import zipfile
+from copy import deepcopy
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -28,6 +29,34 @@ def notebook(name, cells):
                 metadata=dict(kernelspec=dict(display_name='Python 3',language='python',name='python3'),
                               language_info=dict(name='python'),colab=dict(name=name),accelerator='GPU'))
     (ROOT/name).write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8')
+
+
+def efficientdet_only_notebook(alternative):
+    """Make the current 4gmail workflow stop at 15 without changing trainer code."""
+    cells = deepcopy(alternative)
+    cells[0] = cell('''# Agri Vision: EfficientDet-D0 only, through round 15
+
+Use **4gmail**, select a **T4 GPU**, and **Run all**. Only EfficientDet runs; SSDLite, SSD-MobileNetV3 and YOLO are excluded. The original EfficientDet checkpoint last verified at round 2 resumes at round 3, and training stops after round 15 is committed.
+
+The existing code ZIP and 14 dataset parts are reused. The original run remains untouched; continued results are saved in a separate `_to15` folder. Original learning rates are preserved through round 10; rounds 11-15 use the original terminal learning rate. Rerunning resumes the last completed round in `_to15`; an incomplete round repeats. No new pilot is run.
+''')
+    source = ''.join(cells[1]['source'])
+    source = source.replace('TARGET_ROUNDS = 30', 'TARGET_ROUNDS = 15')
+    source = source.replace('MODELS = ["efficientdet_d0", "ssdlite", "ssd_mobilenetv3"]', 'MODELS = ["efficientdet_d0"]')
+    source = source.replace('_to30"', '_to15"')
+    cells[1] = cell(source, True)
+    cells[4] = cell('''## Validate the EfficientDet source before training
+The original dataset, code, model settings, package versions, GPU and checkpoint hashes must match. No other detector source is required for this notebook.
+''')
+    cells[-1] = cell('''## Results and automatic resume
+Results are written to `comparison_results/efficientdet_d0_non_chili_seed42_20261009_224152_449800_to15/`. Check `latest.json` for the committed round and `status.json` for progress. The pooled CSV and per-round JSONs retain all completed metrics; initial, best and latest checkpoints are preserved.
+
+If interrupted, reopen this same notebook on 4gmail, select T4 and Run all. Completed rounds are skipped and an unfinished round repeats. Once round 15 is saved, the notebook finishes without starting another model. Keep the uploaded bundle, original source and continuation settings unchanged. Extending this run later requires a reviewed continuation setup; do not simply edit this notebook's target.
+
+The held-out test is reserved for final evaluation after checkpoint selection.
+''')
+    notebook('AgriVision_Comparison.ipynb', cells)
+    notebook('AgriVision_EfficientDet_Continue_15Rounds.ipynb', deepcopy(cells))
 
 
 def main():
@@ -135,8 +164,8 @@ An interruption repeats the incomplete round. Reopen this notebook on the curren
 
 These are continued ten-round experiments. The thesis must report their schedules separately from the fresh native-YOLO thirty-round experiment. Final held-out evaluation is deferred until configuration/checkpoint selection.
 ''')]
-    notebook('AgriVision_Comparison.ipynb',alternative)
     notebook('AgriVision_Alternatives_Continue_30Rounds.ipynb',alternative)
+    efficientdet_only_notebook(alternative)
     report=dict(code_bundle=bundle.name,code_bytes=bundle.stat().st_size,code_sha256=sha(bundle),
                 dataset_bundle=dataset['filename'],dataset_sha256=dataset['sha256'],
                 notebooks=['AgriVision_YOLO_Native_30Rounds.ipynb','AgriVision_Comparison.ipynb','AgriVision_Alternatives_Continue_30Rounds.ipynb'],
