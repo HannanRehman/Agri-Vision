@@ -35,18 +35,18 @@ Improvements follow a working baseline as separately named validation-only exper
 
 Keep the successful SSD/SSDLite checkpoints and existing EfficientDet progress. Their original run settings declared ten rounds and a global-round cosine learning-rate schedule. Merely changing --rounds to 30 changes the configuration and is not supported by the current strict resume checks.
 
-Before execution, implement a documented continuation mechanism that validates the original configuration and checkpoint lineage, preserves rounds already completed, and records a separately specified learning-rate schedule for the extension. Choose the schedule using training/validation evidence before launching; avoid silently recomputing earlier learning rates as if the experiment had always targeted thirty rounds. Record optimizer reset behavior and original versus continuation settings. Test recovery using synthetic state without starting real training.
+The implemented continuation mechanism validates the original configuration and checkpoint lineage, preserves rounds already completed, and records the terminal-LR schedule for the extension. Earlier learning rates are not silently recomputed as if the experiment had always targeted thirty rounds. Optimizer reset behavior and original versus continuation settings are recorded. Recovery was tested using synthetic state without detector training; improvement from continuation remains to be measured.
 
 Implemented schedule: EfficientDet resumes from committed round 2, completes its original ten-round schedule, then extends with its terminal LR through round 30. SSDLite and SSD extend from their committed round 10 at their terminal LR. Separate linked continuation folders preserve the originals and record the new schedule.
 
 The final table must describe the alternatives as continued ten-round experiments and YOLO as a fresh thirty-round native-training experiment. Matching total rounds alone does not make training schedules or preprocessing identical; report practical detector configurations, resolutions, initialization and these differences. Show matching round checkpoints where useful.
 
-## Preparation order
+## Preparation status and execution order
 
-1. Preserve the current bundles, notebooks, source implementation and checkpoint hashes for recovery.
-2. Implement and verify the separate native-YOLO 24-class runner, common-evaluator export and learning pilot notebook.
-3. Implement and verify explicit alternative-model continuation without weakening existing resume checks.
-4. Prepare one notebook per model, dedicated output paths and account-specific dataset access; verify Drive storage before launch.
+1. Completed: preserved the original bundles, ten-round notebook, source implementation and checkpoint hashes for recovery.
+2. Completed locally: separate native-YOLO 24-class runner, common-evaluator export and learning pilot notebook; actual GPU learning gate runs in Colab.
+3. Completed locally: explicit alternative-model continuation and recovery checks, preserving original resume checks.
+4. Completed: separate YOLO notebook and a three-alternative serial continuation notebook with dedicated output paths. New-account dataset/code access must be set up by the user; verify available Drive storage before launch.
 5. Run the YOLO learning pilot when GPU access returns, then launch its fresh thirty-round run. On the current account resume EfficientDet, then extend SSDLite and SSD sequentially according to the declared continuation policy.
 6. Save every completed round atomically; retain initial/best/latest recovery checkpoints and metrics. Clean intermediate Drive weights only after verified local backup, never before saving a resumable state.
 
