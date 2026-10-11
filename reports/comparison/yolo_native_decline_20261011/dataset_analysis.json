@@ -1,0 +1,436 @@
+{
+  "class_names": {
+    "0": "Banana_bract_mosaic_virus",
+    "1": "Banana_cordana",
+    "2": "Banana_healthy",
+    "3": "Banana_insect_pest",
+    "4": "Banana_moko",
+    "5": "Banana_panama",
+    "6": "Banana_pestalotiopsis",
+    "7": "Banana_sigatoka",
+    "8": "Banana_yellow_and_black_sigatoka",
+    "9": "Cauliflower_black_rot",
+    "10": "Cauliflower_bacterial_spot",
+    "11": "Cauliflower_downy_mildew",
+    "12": "Cauliflower_healthy",
+    "13": "Groundnut_early_leaf_spot",
+    "14": "Groundnut_early_rust",
+    "15": "Groundnut_healthy",
+    "16": "Groundnut_late_leaf_spot",
+    "17": "Groundnut_nutrition_deficiency",
+    "18": "Groundnut_rust",
+    "19": "Radish_black_leaf_spot",
+    "20": "Radish_downy_mildew",
+    "21": "Radish_flea_beetle",
+    "22": "Radish_healthy",
+    "23": "Radish_mosaic_virus"
+  },
+  "client_class_images": {
+    "train": {
+      "client2": {
+        "10": 34,
+        "19": 141,
+        "9": 21,
+        "0": 91,
+        "1": 112,
+        "20": 138,
+        "11": 34,
+        "13": 246,
+        "7": 370,
+        "14": 337,
+        "21": 103,
+        "12": 36,
+        "2": 247,
+        "22": 145,
+        "15": 83,
+        "3": 175,
+        "16": 503,
+        "4": 115,
+        "23": 113,
+        "17": 385,
+        "5": 250,
+        "6": 116,
+        "18": 405,
+        "8": 655
+      },
+      "client3": {
+        "10": 32,
+        "19": 116,
+        "9": 22,
+        "0": 99,
+        "1": 144,
+        "20": 127,
+        "11": 42,
+        "13": 243,
+        "7": 365,
+        "14": 343,
+        "21": 118,
+        "12": 57,
+        "2": 248,
+        "15": 106,
+        "22": 121,
+        "3": 169,
+        "16": 427,
+        "4": 127,
+        "23": 130,
+        "17": 376,
+        "5": 267,
+        "6": 138,
+        "18": 388,
+        "8": 651
+      },
+      "client1": {
+        "10": 52,
+        "19": 109,
+        "9": 16,
+        "0": 89,
+        "1": 123,
+        "20": 146,
+        "11": 42,
+        "13": 212,
+        "7": 362,
+        "14": 342,
+        "21": 106,
+        "22": 159,
+        "15": 89,
+        "2": 260,
+        "12": 51,
+        "3": 134,
+        "16": 452,
+        "4": 122,
+        "23": 139,
+        "17": 401,
+        "5": 268,
+        "6": 133,
+        "18": 404,
+        "8": 647
+      }
+    },
+    "valid": {
+      "client2": {
+        "10": 11,
+        "19": 39,
+        "9": 6,
+        "0": 29,
+        "1": 42,
+        "20": 33,
+        "11": 9,
+        "13": 101,
+        "14": 100,
+        "21": 25,
+        "12": 16,
+        "15": 25,
+        "22": 48,
+        "2": 72,
+        "3": 44,
+        "16": 138,
+        "4": 34,
+        "23": 38,
+        "17": 116,
+        "5": 71,
+        "6": 40,
+        "18": 131,
+        "7": 51,
+        "8": 181
+      },
+      "client3": {
+        "10": 10,
+        "19": 27,
+        "9": 5,
+        "0": 24,
+        "1": 35,
+        "20": 40,
+        "11": 12,
+        "13": 123,
+        "14": 86,
+        "21": 41,
+        "12": 12,
+        "15": 27,
+        "2": 72,
+        "22": 38,
+        "3": 36,
+        "16": 123,
+        "4": 30,
+        "23": 31,
+        "17": 109,
+        "5": 83,
+        "6": 36,
+        "18": 119,
+        "7": 60,
+        "8": 206
+      },
+      "client1": {
+        "10": 13,
+        "19": 39,
+        "9": 8,
+        "0": 27,
+        "1": 34,
+        "20": 45,
+        "11": 13,
+        "13": 116,
+        "14": 107,
+        "21": 27,
+        "12": 13,
+        "15": 25,
+        "2": 72,
+        "22": 35,
+        "3": 59,
+        "16": 135,
+        "4": 34,
+        "23": 38,
+        "17": 107,
+        "5": 70,
+        "6": 38,
+        "18": 94,
+        "7": 62,
+        "8": 171
+      }
+    }
+  },
+  "box_area": {
+    "train": {
+      "10": {
+        "boxes": 118,
+        "median_normalized_area": 0.872825927734375,
+        "fraction_below_1percent": 0.0
+      },
+      "19": {
+        "boxes": 366,
+        "median_normalized_area": 0.1970745849609375,
+        "fraction_below_1percent": 0.0
+      },
+      "9": {
+        "boxes": 59,
+        "median_normalized_area": 0.96875,
+        "fraction_below_1percent": 0.0
+      },
+      "0": {
+        "boxes": 279,
+        "median_normalized_area": 0.852451171875,
+        "fraction_below_1percent": 0.0
+      },
+      "1": {
+        "boxes": 1573,
+        "median_normalized_area": 0.02807861328125,
+        "fraction_below_1percent": 0.19834710743801653
+      },
+      "20": {
+        "boxes": 775,
+        "median_normalized_area": 0.02822265625,
+        "fraction_below_1percent": 0.08903225806451613
+      },
+      "11": {
+        "boxes": 122,
+        "median_normalized_area": 0.95,
+        "fraction_below_1percent": 0.0
+      },
+      "13": {
+        "boxes": 4324,
+        "median_normalized_area": 0.01290802001953125,
+        "fraction_below_1percent": 0.36609620721554115
+      },
+      "7": {
+        "boxes": 5306,
+        "median_normalized_area": 0.02614990234375,
+        "fraction_below_1percent": 0.12306822465133811
+      },
+      "14": {
+        "boxes": 1226,
+        "median_normalized_area": 0.6401275634765624,
+        "fraction_below_1percent": 0.00734094616639478
+      },
+      "21": {
+        "boxes": 338,
+        "median_normalized_area": 0.1321441650390625,
+        "fraction_below_1percent": 0.0
+      },
+      "12": {
+        "boxes": 145,
+        "median_normalized_area": 0.7326635742187501,
+        "fraction_below_1percent": 0.006896551724137931
+      },
+      "2": {
+        "boxes": 755,
+        "median_normalized_area": 0.91969482421875,
+        "fraction_below_1percent": 0.0
+      },
+      "22": {
+        "boxes": 425,
+        "median_normalized_area": 0.4072265625,
+        "fraction_below_1percent": 0.0
+      },
+      "15": {
+        "boxes": 278,
+        "median_normalized_area": 0.7465057373046875,
+        "fraction_below_1percent": 0.0
+      },
+      "3": {
+        "boxes": 642,
+        "median_normalized_area": 0.683277587890625,
+        "fraction_below_1percent": 0.06230529595015576
+      },
+      "16": {
+        "boxes": 2089,
+        "median_normalized_area": 0.40160827636718754,
+        "fraction_below_1percent": 0.013403542364767831
+      },
+      "4": {
+        "boxes": 498,
+        "median_normalized_area": 0.704598388671875,
+        "fraction_below_1percent": 0.014056224899598393
+      },
+      "23": {
+        "boxes": 589,
+        "median_normalized_area": 0.103623046875,
+        "fraction_below_1percent": 0.04074702886247878
+      },
+      "17": {
+        "boxes": 1276,
+        "median_normalized_area": 0.750743408203125,
+        "fraction_below_1percent": 0.001567398119122257
+      },
+      "5": {
+        "boxes": 1117,
+        "median_normalized_area": 0.6355078124999999,
+        "fraction_below_1percent": 0.03670546105640107
+      },
+      "6": {
+        "boxes": 1141,
+        "median_normalized_area": 0.085977783203125,
+        "fraction_below_1percent": 0.08501314636283962
+      },
+      "18": {
+        "boxes": 1223,
+        "median_normalized_area": 0.8054754638671875,
+        "fraction_below_1percent": 0.0008176614881439084
+      },
+      "8": {
+        "boxes": 2894,
+        "median_normalized_area": 0.42757690429687495,
+        "fraction_below_1percent": 0.02902557014512785
+      }
+    },
+    "valid": {
+      "10": {
+        "boxes": 34,
+        "median_normalized_area": 0.8477474975585937,
+        "fraction_below_1percent": 0.0
+      },
+      "19": {
+        "boxes": 105,
+        "median_normalized_area": 0.13869506835937498,
+        "fraction_below_1percent": 0.0
+      },
+      "9": {
+        "boxes": 19,
+        "median_normalized_area": 0.945091552734375,
+        "fraction_below_1percent": 0.0
+      },
+      "0": {
+        "boxes": 80,
+        "median_normalized_area": 0.940625,
+        "fraction_below_1percent": 0.0
+      },
+      "1": {
+        "boxes": 482,
+        "median_normalized_area": 0.023040771484375,
+        "fraction_below_1percent": 0.15560165975103735
+      },
+      "20": {
+        "boxes": 287,
+        "median_normalized_area": 0.025390625,
+        "fraction_below_1percent": 0.059233449477351915
+      },
+      "11": {
+        "boxes": 42,
+        "median_normalized_area": 0.943338623046875,
+        "fraction_below_1percent": 0.0
+      },
+      "13": {
+        "boxes": 1202,
+        "median_normalized_area": 0.01628143310546875,
+        "fraction_below_1percent": 0.19717138103161397
+      },
+      "14": {
+        "boxes": 296,
+        "median_normalized_area": 0.6434014892578125,
+        "fraction_below_1percent": 0.0
+      },
+      "21": {
+        "boxes": 93,
+        "median_normalized_area": 0.16529296875,
+        "fraction_below_1percent": 0.0
+      },
+      "12": {
+        "boxes": 41,
+        "median_normalized_area": 0.7977148437500001,
+        "fraction_below_1percent": 0.0
+      },
+      "15": {
+        "boxes": 77,
+        "median_normalized_area": 0.8133642578124999,
+        "fraction_below_1percent": 0.0
+      },
+      "22": {
+        "boxes": 121,
+        "median_normalized_area": 0.3988812255859375,
+        "fraction_below_1percent": 0.0
+      },
+      "2": {
+        "boxes": 218,
+        "median_normalized_area": 0.8843136596679688,
+        "fraction_below_1percent": 0.009174311926605505
+      },
+      "3": {
+        "boxes": 359,
+        "median_normalized_area": 0.06760986328125,
+        "fraction_below_1percent": 0.09192200557103064
+      },
+      "16": {
+        "boxes": 473,
+        "median_normalized_area": 0.6656066894531251,
+        "fraction_below_1percent": 0.0021141649048625794
+      },
+      "4": {
+        "boxes": 103,
+        "median_normalized_area": 0.99375,
+        "fraction_below_1percent": 0.0
+      },
+      "23": {
+        "boxes": 206,
+        "median_normalized_area": 0.057985839843750005,
+        "fraction_below_1percent": 0.03398058252427184
+      },
+      "17": {
+        "boxes": 391,
+        "median_normalized_area": 0.658021240234375,
+        "fraction_below_1percent": 0.0
+      },
+      "5": {
+        "boxes": 335,
+        "median_normalized_area": 0.5251513671875,
+        "fraction_below_1percent": 0.07164179104477612
+      },
+      "6": {
+        "boxes": 373,
+        "median_normalized_area": 0.052384643554687506,
+        "fraction_below_1percent": 0.058981233243967826
+      },
+      "18": {
+        "boxes": 344,
+        "median_normalized_area": 0.8123684692382813,
+        "fraction_below_1percent": 0.0
+      },
+      "7": {
+        "boxes": 855,
+        "median_normalized_area": 0.047778320312500004,
+        "fraction_below_1percent": 0.07719298245614035
+      },
+      "8": {
+        "boxes": 674,
+        "median_normalized_area": 0.628515625,
+        "fraction_below_1percent": 0.001483679525222552
+      }
+    }
+  }
+}

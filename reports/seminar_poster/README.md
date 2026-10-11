@@ -1,21 +1,17 @@
-# Agri Vision: revised seminar poster
+# Agri Vision seminar materials
 
-Updated 10 October 2026. A1 portrait, 594 ? 841 mm. The supplied screenshot determines the layout: white header, blue title band, stacked Abstract / Problem Statement / Aim and Objectives / Methodology / Results sections, four crop-image cards, and a two-column Technologies Used / Summary footer.
+This folder contains only the latest seminar deliverables. Older exports, archived poster versions and intermediate page previews were deleted at the user's request on 12 October 2026.
 
-- [Print-ready A1 PDF](Agri_Vision_Seminar_Poster_A1.pdf)
-- [Editable PowerPoint](Agri_Vision_Seminar_Poster_A1.pptx)
-- [Preview](Agri_Vision_Seminar_Poster_A1_preview.png)
-- [Sources and image provenance](sources.json)
-- [Export verification](validation.json)
+- [A1 poster PDF](Agri_Vision_Seminar_Poster_A1.pdf)
+- [Editable poster PowerPoint](Agri_Vision_Seminar_Poster_A1.pptx)
+- [Poster preview](Agri_Vision_Seminar_Poster_A1_preview.png)
+- [Eight-page detection demonstration](Agri_Vision_Detection_Demonstration.pdf)
+- [Sources and verification](SOURCES_AND_VALIDATION.md)
 
-Team: Hannan Rehman, Fuzail Talpur, Ali. Supervisor: Dr Rabeea Jaffari. University, department and logos were not provided; no institutional branding has been invented. This is a local deliverable; the earlier Canva project has not been edited. Import the PPTX into Canva if needed and check its A1 size, fonts, table and line breaks after import.
+The poster uses the supplied A1 portrait layout, crop greens and Dr. Rabeea Jaffari. Team order is Hannan Rehman on the left, Fuzail Hussain Talpur in the middle and Hasnain Ali Issani on the right. Technology symbols include VS Code. Visible documents omit round numbers, drafting notes and dataset-revision/exclusion wording. Poster crop images are actual verified model predictions.
 
-## Current project content
+All three Drive documents were updated in place on 19gmail. The QR links to the publicly viewable [demonstration PDF](https://drive.google.com/file/d/1-KmOBK5M1OJGyhUtk9fB3hayTWpxio0x/view?usp=drivesdk). The [poster PDF](https://drive.google.com/file/d/1eGPppeTQe3e6q8bQ-DXLkCuaSVYIi5XW/view?usp=drivesdk) retains its existing sharing.
 
-The study now covers banana, cauliflower, groundnut and radish across 24 classes, using 14,514 training, 4,157 validation and 2,091 test images. The poster reflects the earlier decision to retain YOLOv8n as the historical round-40 baseline. Since this poster export, the user has approved a fresh 24-class native YOLO run on 19gmail; the training instructions contain the current plan. The exported poster has not yet been revised for that subsequent decision. SSDLite, SSD?MobileNetV3 with a standard head and EfficientDet-D0 are separate one-stage detector experiments, planned to continue toward round 30.
+`build_poster.py` and `build_detection_demo.py` are the current builders. `poster_layout.py` and `prediction_assets.py` contain their supporting helpers. `assets/` retains only the current prediction pictures, technology symbols, QR, metrics and provenance needed to reproduce the documents. Checkpoint files remain in `saved_models/`.
 
-The alternative-model table contains saved best validation metrics: SSDLite and SSD at round 10, EfficientDet at round 2. These are provisional pooled-validation scores, not final held-out test results. The historical YOLO block uses 30-class, validation-image-weighted native client summaries and is deliberately separated from the new results. Its common 24-class evaluation remains pending. The poster does not claim a final architecture winner or comparable historical/new precision definitions.
-
-Four photo cards show real labelled validation examples, not an implemented phone app or model predictions. Yellow rectangles are ground-truth boxes. Photographs are cropped proportionally within editable PPTX frames; displayed boxes are transformed and clipped to those frames. Original image files remain unchanged. The method is a sequential three-client single-GPU simulation, not an already deployed multi-device network or a formal privacy guarantee.
-
-The previous 30-class draft and its builder/sources are preserved under `archive/documents/seminar_poster_30class/`. Run `python reports/seminar_poster/build_poster.py` to regenerate the current editable PPTX. Export using PowerPoint to PDF and check the render before printing.
+Regenerate with `.venv/Scripts/python.exe reports/seminar_poster/build_poster.py` or `build_detection_demo.py`. Export the poster PowerPoint to PDF with PowerPoint, then check the render. No model retraining is needed to rebuild the existing documents.

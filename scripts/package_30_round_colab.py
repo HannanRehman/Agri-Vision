@@ -59,6 +59,24 @@ The held-out test is reserved for final evaluation after checkpoint selection.
     notebook('AgriVision_EfficientDet_Continue_15Rounds.ipynb', deepcopy(cells))
 
 
+def ssd_pair_notebook(alternative):
+    """Separate-account workflow for the two saved SSD experiments."""
+    cells = deepcopy(alternative)
+    cells[0] = cell('''# Agri Vision: SSDLite and SSD-MobileNetV3, rounds 11-30
+
+Use the separate account assigned to these two detectors, choose **T4 GPU**, and **Run all**. Only **SSDLite followed by SSD-MobileNetV3** runs, sequentially on this GPU. YOLO and EfficientDet run on their own accounts.
+
+The copied original source folders, code ZIP and dataset parts must be under `MyDrive/Agri Vision/`. Both source runs last committed round 10; the next round is 11. The original sources remain untouched, with separate `_to30` result folders for each detector. Rounds 11-30 use each source's original terminal learning rate. No new pilot is required for these unchanged, validated continuations.
+''')
+    cells[1] = cell(''.join(cells[1]['source']).replace(
+        'MODELS = ["efficientdet_d0", "ssdlite", "ssd_mobilenetv3"]',
+        'MODELS = ["ssdlite", "ssd_mobilenetv3"]'), True)
+    cells[4] = cell('''## Validate both copied SSD sources before training
+This checks the original code, dataset, T4 GPU, package versions, settings and checkpoint hashes. A different Gmail is acceptable; the source bytes and recorded environment must match. EfficientDet files are not required.
+''')
+    notebook('AgriVision_SSD_Pair_Continue_30Rounds.ipynb', cells)
+
+
 def main():
     original = ROOT/'AgriVision_Comparison_10Round.ipynb'
     if not original.exists():shutil.copy2(ROOT/'AgriVision_Comparison.ipynb',original)
@@ -166,6 +184,7 @@ These are continued ten-round experiments. The thesis must report their schedule
 ''')]
     notebook('AgriVision_Alternatives_Continue_30Rounds.ipynb',alternative)
     efficientdet_only_notebook(alternative)
+    ssd_pair_notebook(alternative)
     report=dict(code_bundle=bundle.name,code_bytes=bundle.stat().st_size,code_sha256=sha(bundle),
                 dataset_bundle=dataset['filename'],dataset_sha256=dataset['sha256'],
                 notebooks=['AgriVision_YOLO_Native_30Rounds.ipynb','AgriVision_Comparison.ipynb','AgriVision_Alternatives_Continue_30Rounds.ipynb'],

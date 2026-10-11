@@ -1,0 +1,296 @@
+{
+  "best_round": 12,
+  "latest_round": 21,
+  "checks": {
+    "completed_rounds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "images": [
+      4157
+    ],
+    "ground_truth_boxes": [
+      7210
+    ],
+    "all_transfers_verified": true,
+    "client_starts_match": true,
+    "actual_optimizers": [
+      "AdamW"
+    ],
+    "final_learning_rates": [
+      [
+        0.00011880330578512397,
+        0.00011880330578512397,
+        0.00011880330578512397
+      ]
+    ]
+  },
+  "checkpoint_audit": {
+    "12": {
+      "round": 12,
+      "sha256": "582ab27c24cd1b2c01c6359926971413d99f54feefb14685a613d7e41e36b17c",
+      "config_hash": "002c366c5f5e2dab65e1d6453d026f69be7766ee5f3ef1973d96cb741e78bcfc",
+      "classes": 24,
+      "all_floating_finite": true,
+      "bn_variance_min": 0.0003062876348849386,
+      "bn_variance_max": 13.445297241210938
+    },
+    "21": {
+      "round": 21,
+      "sha256": "c25c95199d3e3cf4c234a63ff44b7ba0bf6a8428baa45ef5b03075384ed62409",
+      "config_hash": "002c366c5f5e2dab65e1d6453d026f69be7766ee5f3ef1973d96cb741e78bcfc",
+      "classes": 24,
+      "all_floating_finite": true,
+      "bn_variance_min": 0.00030604860512539744,
+      "bn_variance_max": 13.468735694885254
+    }
+  },
+  "losses": [
+    {
+      "round": 3,
+      "train/box_loss": 1.1979333333333333,
+      "train/cls_loss": 2.3647033333333334,
+      "train/dfl_loss": 1.57602,
+      "val/box_loss": 1.4168966666666667,
+      "val/cls_loss": 1.9691866666666666,
+      "val/dfl_loss": 1.96583
+    },
+    {
+      "round": 9,
+      "train/box_loss": 0.9770033333333333,
+      "train/cls_loss": 1.5150433333333333,
+      "train/dfl_loss": 1.4066166666666666,
+      "val/box_loss": 1.46427,
+      "val/cls_loss": 1.80533,
+      "val/dfl_loss": 2.0290133333333333
+    },
+    {
+      "round": 12,
+      "train/box_loss": 0.8999766666666666,
+      "train/cls_loss": 1.3060933333333333,
+      "train/dfl_loss": 1.3482433333333332,
+      "val/box_loss": 1.48577,
+      "val/cls_loss": 1.8298066666666666,
+      "val/dfl_loss": 2.12564
+    },
+    {
+      "round": 15,
+      "train/box_loss": 0.8419966666666667,
+      "train/cls_loss": 1.1518566666666668,
+      "train/dfl_loss": 1.3043833333333332,
+      "val/box_loss": 1.5096633333333334,
+      "val/cls_loss": 1.8513866666666665,
+      "val/dfl_loss": 2.2022466666666665
+    },
+    {
+      "round": 18,
+      "train/box_loss": 0.7912766666666666,
+      "train/cls_loss": 1.03031,
+      "train/dfl_loss": 1.2666666666666666,
+      "val/box_loss": 1.5773233333333334,
+      "val/cls_loss": 1.87834,
+      "val/dfl_loss": 2.2670766666666666
+    },
+    {
+      "round": 21,
+      "train/box_loss": 0.7472,
+      "train/cls_loss": 0.9346166666666667,
+      "train/dfl_loss": 1.2325300000000001,
+      "val/box_loss": 1.5822100000000001,
+      "val/cls_loss": 1.7881466666666668,
+      "val/dfl_loss": 2.29327
+    }
+  ],
+  "class_changes": [
+    {
+      "class_name": "Cauliflower_healthy",
+      "ap_best": 0.7719005043866477,
+      "ap_latest": 0.5591683225424406,
+      "delta_pp": -21.273218184420706,
+      "validation_boxes": 41
+    },
+    {
+      "class_name": "Cauliflower_bacterial_spot",
+      "ap_best": 0.5391835022415611,
+      "ap_latest": 0.4251518370376134,
+      "delta_pp": -11.40316652039477,
+      "validation_boxes": 34
+    },
+    {
+      "class_name": "Radish_black_leaf_spot",
+      "ap_best": 0.3942543117705585,
+      "ap_latest": 0.30194773027752986,
+      "delta_pp": -9.230658149302862,
+      "validation_boxes": 105
+    },
+    {
+      "class_name": "Groundnut_healthy",
+      "ap_best": 0.8188498640496503,
+      "ap_latest": 0.7346050882623225,
+      "delta_pp": -8.42447757873278,
+      "validation_boxes": 77
+    },
+    {
+      "class_name": "Banana_moko",
+      "ap_best": 0.5974257181902557,
+      "ap_latest": 0.5338145182372792,
+      "delta_pp": -6.361119995297648,
+      "validation_boxes": 103
+    },
+    {
+      "class_name": "Banana_bract_mosaic_virus",
+      "ap_best": 0.7662278376159891,
+      "ap_latest": 0.7238516086336457,
+      "delta_pp": -4.2376228982343385,
+      "validation_boxes": 80
+    },
+    {
+      "class_name": "Groundnut_late_leaf_spot",
+      "ap_best": 0.48965771205563713,
+      "ap_latest": 0.44992804636150346,
+      "delta_pp": -3.9729665694133667,
+      "validation_boxes": 473
+    },
+    {
+      "class_name": "Banana_sigatoka",
+      "ap_best": 0.17615977448647852,
+      "ap_latest": 0.1433357888086215,
+      "delta_pp": -3.282398567785702,
+      "validation_boxes": 855
+    },
+    {
+      "class_name": "Radish_healthy",
+      "ap_best": 0.6711904574212186,
+      "ap_latest": 0.6416250037236572,
+      "delta_pp": -2.9565453697561472,
+      "validation_boxes": 121
+    },
+    {
+      "class_name": "Banana_healthy",
+      "ap_best": 0.699165022161653,
+      "ap_latest": 0.6732593528076082,
+      "delta_pp": -2.5905669354044814,
+      "validation_boxes": 218
+    },
+    {
+      "class_name": "Radish_downy_mildew",
+      "ap_best": 0.17091470413392962,
+      "ap_latest": 0.14743357812040297,
+      "delta_pp": -2.348112601352664,
+      "validation_boxes": 287
+    },
+    {
+      "class_name": "Radish_mosaic_virus",
+      "ap_best": 0.1750428158739363,
+      "ap_latest": 0.15273582282470935,
+      "delta_pp": -2.2306993049226955,
+      "validation_boxes": 206
+    },
+    {
+      "class_name": "Groundnut_early_rust",
+      "ap_best": 0.5610456310644107,
+      "ap_latest": 0.5396167915108436,
+      "delta_pp": -2.1428839553567114,
+      "validation_boxes": 296
+    },
+    {
+      "class_name": "Banana_insect_pest",
+      "ap_best": 0.15406785987010016,
+      "ap_latest": 0.13373928180704084,
+      "delta_pp": -2.032857806305932,
+      "validation_boxes": 359
+    },
+    {
+      "class_name": "Banana_panama",
+      "ap_best": 0.23952403724050003,
+      "ap_latest": 0.22174213116748917,
+      "delta_pp": -1.7781906073010862,
+      "validation_boxes": 335
+    },
+    {
+      "class_name": "Groundnut_early_leaf_spot",
+      "ap_best": 0.07567993434618418,
+      "ap_latest": 0.06155685072060536,
+      "delta_pp": -1.4123083625578818,
+      "validation_boxes": 1202
+    },
+    {
+      "class_name": "Banana_cordana",
+      "ap_best": 0.3077089623035112,
+      "ap_latest": 0.29661448878688923,
+      "delta_pp": -1.109447351662196,
+      "validation_boxes": 482
+    },
+    {
+      "class_name": "Groundnut_rust",
+      "ap_best": 0.7030973412641727,
+      "ap_latest": 0.6920074493787601,
+      "delta_pp": -1.108989188541254,
+      "validation_boxes": 344
+    },
+    {
+      "class_name": "Groundnut_nutrition_deficiency",
+      "ap_best": 0.49380861986880553,
+      "ap_latest": 0.4856691970266796,
+      "delta_pp": -0.8139422842125932,
+      "validation_boxes": 391
+    },
+    {
+      "class_name": "Banana_pestalotiopsis",
+      "ap_best": 0.06303751330546851,
+      "ap_latest": 0.05742548963393184,
+      "delta_pp": -0.5612023671536674,
+      "validation_boxes": 373
+    },
+    {
+      "class_name": "Banana_yellow_and_black_sigatoka",
+      "ap_best": 0.396247012482203,
+      "ap_latest": 0.3921467345010092,
+      "delta_pp": -0.4100277981193834,
+      "validation_boxes": 674
+    },
+    {
+      "class_name": "Cauliflower_black_rot",
+      "ap_best": 0.8282920407956522,
+      "ap_latest": 0.8592617682820913,
+      "delta_pp": 3.0969727486439114,
+      "validation_boxes": 19
+    },
+    {
+      "class_name": "Radish_flea_beetle",
+      "ap_best": 0.27271807627744266,
+      "ap_latest": 0.31598408238871445,
+      "delta_pp": 4.326600611127179,
+      "validation_boxes": 93
+    },
+    {
+      "class_name": "Cauliflower_downy_mildew",
+      "ap_best": 0.515766332098608,
+      "ap_latest": 0.579787779966997,
+      "delta_pp": 6.402144786838903,
+      "validation_boxes": 42
+    }
+  ],
+  "top_four_decline_contribution_pp": 2.09714668470213,
+  "changed_training": false,
+  "optimizer_steps": 0
+}

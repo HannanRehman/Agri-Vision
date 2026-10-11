@@ -1,42 +1,17 @@
 {
-  "format": "A1 portrait, 594 \u00d7 841 mm",
+  "format": "A1 portrait, 594 × 841 mm",
+  "snapshot": "2026-10-12",
   "layout_reference": "C:/Users/Hussaini Enterprise/Pictures/Screenshots/Screenshot 2026-10-09 115847.png",
-  "comparison_metrics": "reports/comparison/main_run_review_20261010/validation_summary.csv",
-  "historical_metrics": "reports/rounds_036_040_global_metrics.csv",
-  "dataset_examples": [
-    {
-      "crop": "Banana",
-      "class_name": "Banana_sigatoka",
-      "image": "original_dataset_non_chili/valid/images/sigatoka-673-_jpeg.rf.2dd96f7c2f89eda7b07c37de5aed6319.jpg",
-      "label": "original_dataset_non_chili/valid/labels/sigatoka-673-_jpeg.rf.2dd96f7c2f89eda7b07c37de5aed6319.txt",
-      "ground_truth": true
-    },
-    {
-      "crop": "Cauliflower",
-      "class_name": "Cauliflower_black_rot",
-      "image": "original_dataset_non_chili/valid/images/Black-Rot-1-_jpeg.rf.2dd972a1b35648047e8dac35f66c81de.jpg",
-      "label": "original_dataset_non_chili/valid/labels/Black-Rot-1-_jpeg.rf.2dd972a1b35648047e8dac35f66c81de.txt",
-      "ground_truth": true
-    },
-    {
-      "crop": "Groundnut",
-      "class_name": "Groundnut_early_leaf_spot",
-      "image": "original_dataset_non_chili/valid/images/Early-Leaf-Spot-52-_jpg.rf.f8fe7a9f6d46cc23f0f6085200b14f38.jpg",
-      "label": "original_dataset_non_chili/valid/labels/Early-Leaf-Spot-52-_jpg.rf.f8fe7a9f6d46cc23f0f6085200b14f38.txt",
-      "ground_truth": true
-    },
-    {
-      "crop": "Radish",
-      "class_name": "Radish_black_leaf_spot",
-      "image": "original_dataset_non_chili/valid/images/Black-Leaf-Spot-419-_jpg.rf.f04b9e5bff3c8b51e64a766ee109eb6e.jpg",
-      "label": "original_dataset_non_chili/valid/labels/Black-Leaf-Spot-419-_jpg.rf.f04b9e5bff3c8b51e64a766ee109eb6e.txt",
-      "ground_truth": true
-    }
-  ],
-  "examples_are_model_predictions": false,
-  "comparison_is_provisional": true,
-  "historical_yolo_common_24_class_evaluation": "pending",
-  "fresh_yolo_training": "on hold per user",
-  "university_logos": "not supplied; no institutional branding invented",
-  "snapshot_date": "2026-10-10"
+  "identities_source": "22SW132_X-139_144.pptx, slide 2",
+  "supervisor": "Dr. Rabeea Jaffari",
+  "theme": "green",
+  "theme_pending_confirmation": false,
+  "qr_url": "https://drive.google.com/file/d/1-KmOBK5M1OJGyhUtk9fB3hayTWpxio0x/view?usp=drivesdk",
+  "qr_status": "QR linked and decoded; Anyone reader access verified",
+  "metrics_source": "assets/predictions.json",
+  "examples_are_annotations": false,
+  "genuine_model_predictions": "Agri_Vision_Detection_Demonstration.pdf",
+  "flower_status": "planned integration; completed comparison uses custom FedAvg",
+  "validation_not_test": true,
+  "institutional_logos": "not supplied"
 }
