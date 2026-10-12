@@ -51,3 +51,11 @@ agrivision_colab_code.zip
 structure.txt
 PENYAKIT PADA CABAI.v1i.yolov8.zip
 PENYAKIT PADA CABAI.v1i.yolov8/
+
+# Keep presentation files local rather than in source control.
+*.ppt
+*.pptx
+*.pptm
+
+# New seminar poster material is maintained locally and on Drive.
+/reports/seminar_poster/

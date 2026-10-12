@@ -1,0 +1,7 @@
+{
+  "round": 15,
+  "checkpoint": "checkpoints/global_round_015.pt",
+  "checkpoint_sha256": "3815ef3cc290b35d529ecd6b2d626a61f1a3ec66ae56e0fd7f2991681c5e391d",
+  "best_map": 0.5969939459611054,
+  "best_checkpoint": "checkpoints/global_round_011.pt"
+}
