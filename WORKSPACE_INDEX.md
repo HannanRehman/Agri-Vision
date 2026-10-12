@@ -34,7 +34,8 @@ Existing training code remains at the project root. The working environment is [
 | Round-35 test/non-chili analysis | [report](reports/round_035_non_chili_report.md), [summary](reports/round_035_non_chili_summary.json), [per-class CSV](reports/round_035_test_per_class.csv) |
 | Round-35 evaluation samples | [test_evaluation_round_035](saved_models/test_evaluation_round_035); the identical `-2` folder was removed |
 | Original non-chili analysis outputs | [round_035_non_chili_analysis](saved_models/round_035_non_chili_analysis) |
-| Seminar poster | [artifact notes](reports/seminar_poster/README.md); historical draft, stacked-layout revision pending |
+| Current comparison evidence | [validation CSVs](reports/comparison/validation_metrics_20261012/README.md), [EfficientDet completion](reports/comparison/efficientdet_round15_review_20261012/README.md), [extension assessment](reports/comparison/five_round_extension_review_20261012.md) |
+| Seminar poster | Local files under `reports/seminar_poster/`, including artifact notes and editable poster; excluded from Git and hosted on Drive |
 
 Some ground-truth samples and exported tables repeat across separate experiment records. Those copies retain context and are not removed indiscriminately. The current class names require provenance confirmation before class-specific claims.
 

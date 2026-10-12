@@ -1,8 +1,0 @@
-{
-  "python": "https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg",
-  "pytorch": "https://pytorch.org/wp-content/uploads/2024/10/logo.svg",
-  "ultralytics": "https://raw.githubusercontent.com/ultralytics/assets/main/logo/Ultralytics-logomark-color.png",
-  "colab": "https://colab.research.google.com/img/colab_favicon_256px.png",
-  "drive": "https://ssl.gstatic.com/images/branding/product/2x/drive_2020q4_96dp.png",
-  "vscode": "https://code.visualstudio.com/assets/branding/code-stable.png"
-}

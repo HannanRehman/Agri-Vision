@@ -11,7 +11,7 @@ Agri Vision is an FYP prototype for locating crop-disease and pest symptoms usin
 | Workspace organization | Separate experiment scaffolds, current file index and cleanup audit added |
 | Four-crop, 24-class dataset | Built separately: 14,514 train / 4,157 validation / 2,091 test images; see the preparation report and verification record |
 | YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | GPU pilot passed; YOLO, SSDLite and SSD–MobileNetV3 completed 10 rounds; EfficientDet committed round 2 before a Colab interruption; YOLO results require investigation |
-| Seminar poster | Revised A1 poster matches the supplied stacked layout, with current four-crop scope and clearly labelled provisional/historical results; see reports/seminar_poster |
+| Seminar poster | Maintained locally under `reports/seminar_poster/` and on Drive; poster files and PowerPoint presentations are excluded from Git |
 
 The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The agreed alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration to implement and verify. Faster R-CNN is excluded. All models will be evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
 

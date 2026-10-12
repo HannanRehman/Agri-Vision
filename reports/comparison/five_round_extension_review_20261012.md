@@ -52,9 +52,9 @@ The two possible SSD extensions total about 1 h 21 min if executed serially, exc
 
 ## Sources
 
-- [YOLO saved pooled validation](../seminar_poster/assets/metrics/yolo.csv)
-- [SSDLite saved pooled validation](../seminar_poster/assets/metrics/ssdlite.csv)
-- [SSD–MobileNetV3 saved pooled validation](../seminar_poster/assets/metrics/ssd.csv)
+- [YOLO saved pooled validation](validation_metrics_20261012/yolo_v8n.csv)
+- [SSDLite saved pooled validation](validation_metrics_20261012/ssdlite.csv)
+- [SSD–MobileNetV3 saved pooled validation](validation_metrics_20261012/ssd_mobilenetv3.csv)
 - [EfficientDet saved pooled validation through round 15](efficientdet_round15_review_20261012/global_validation_metrics.csv)
 - [EfficientDet completion and checkpoint review](efficientdet_round15_review_20261012/README.md)
 - [Existing YOLO loss and implementation analysis](yolo_native_decline_20261011/README.md)
