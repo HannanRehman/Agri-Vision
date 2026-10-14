@@ -1,8 +1,8 @@
 # Agri Vision: Federated Crop-Disease Detection
 
-Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The completed experiment uses a **30-class YOLOv8n model** and three-client sample-weighted FedAvg. The Colab implementation simulates the clients sequentially on one GPU.
+Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The current comparison uses **24 classes across four crops** and four one-stage detectors with three-client sample-weighted FedAvg. The historical 30-class YOLOv8n experiment is retained separately. The Colab implementation simulates the clients sequentially on one GPU.
 
-## Current status — 10 October 2026
+## Current status — 15 October 2026
 
 | Work | Status |
 | --- | --- |
@@ -10,10 +10,10 @@ Agri Vision is an FYP prototype for locating crop-disease and pest symptoms usin
 | Round-35 held-out test and non-chili class analysis | Completed on the original 30-class checkpoint |
 | Workspace organization | Separate experiment scaffolds, current file index and cleanup audit added |
 | Four-crop, 24-class dataset | Built separately: 14,514 train / 4,157 validation / 2,091 test images; see the preparation report and verification record |
-| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | GPU pilot passed; YOLO, SSDLite and SSD–MobileNetV3 completed 10 rounds; EfficientDet committed round 2 before a Colab interruption; YOLO results require investigation |
+| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | YOLOv8n, SSDLite and SSD–MobileNetV3 completed 30 rounds; EfficientDet-D0 completed 15; its separate round-16-to-30 continuation is prepared for 4gmail |
 | Seminar poster | Maintained locally under `reports/seminar_poster/` and on Drive; poster files and PowerPoint presentations are excluded from Git |
 
-The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The agreed alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration to implement and verify. Faster R-CNN is excluded. All models will be evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
+The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The implemented alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration. Faster R-CNN is excluded. All four models are evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
 
 Thesis writing begins **after 17 October**. That date is not a submission deadline or a forced end to training.
 
@@ -56,7 +56,7 @@ The dataset upload bundle is `non_chili_v1_colab_dataset.zip`; its size and SHA-
 
 ## Agreed next training plan
 
-[The thirty-round account split plan](reports/comparison/next_30_round_plan.md) schedules fresh native-Ultralytics YOLO on a separate account and sequential continuation of the three alternatives on the current account/Drive. SSDLite and SSD resume at round 11; EfficientDet resumes at round 3 unless a newer committed checkpoint is verified. The [new Colab workflows](reports/comparison/30_round_colab_instructions.md) are prepared: native YOLO on its separate account, and the updated comparison notebook continuing the three alternatives in linked folders. Local checks passed; the YOLO notebook runs its GPU learning gate before the main run. No GPU training was started during preparation. The original ten-round workflow is retained in AgriVision_Comparison_10Round.ipynb.
+At the user's request, [AgriVision_Comparison.ipynb](AgriVision_Comparison.ipynb) now runs **EfficientDet-D0 rounds 16–30 on 4gmail**, also saved locally as [AgriVision_EfficientDet_Continue_30Rounds.ipynb](AgriVision_EfficientDet_Continue_30Rounds.ipynb). The verified round-15 checkpoint seeds a separate `_to30_from15` folder, preserving previous results and best-checkpoint selection. Reuse the uploaded code and dataset parts, select T4, and Run all. No GPU training was started during preparation. See the [current instructions](reports/comparison/30_round_colab_instructions.md) and [resume verification](reports/comparison/efficientdet_resume_16_30_20261015/README.md). The earlier [account split plan](reports/comparison/next_30_round_plan.md) and ten-/fifteen-round notebooks remain historical references.
 
 ## Existing ten-round comparison workflow
 
@@ -64,7 +64,7 @@ For the original ten-round setup, open [AgriVision_Comparison_10Round.ipynb](Agr
 
 The pipeline saves checkpoints, initialization and settings hashes, per-client training logs, pooled/per-client validation metrics, predictions and CSVs to separate run folders. Interrupted partial rounds restart from the last committed global state. Final held-out evaluation is explicit and records per-class metrics, model size and batch-1 latency. The local installation is CPU-only; the Colab Tesla T4 pilot passed. See [local validation evidence](reports/comparison/local_validation.json).
 
-For the current interruption, use [AgriVision_EfficientDet_Resume.ipynb](AgriVision_EfficientDet_Resume.ipynb) and the [resume instructions](reports/comparison/main_run_review_20261010/resume_instructions.md). It selects EfficientDet alone, repeats incomplete round 3 from the committed round-2 checkpoint and retains the original 10-round budget. Initial, best and final checkpoints remain on Drive; locally verified intermediate checkpoints from completed models were removed from Drive to reclaim space. All saved checkpoints and metrics remain in their local experiment folders. The Colab termination cause is unconfirmed.
+The historical ten-round recovery is saved as [AgriVision_EfficientDet_Resume.ipynb](AgriVision_EfficientDet_Resume.ipynb), with its [original resume instructions](reports/comparison/main_run_review_20261010/resume_instructions.md). It selects EfficientDet alone, repeats incomplete round 3 from the committed round-2 checkpoint and retains the original 10-round budget. Use the current round-16-to-30 notebook above for further training. Initial, best and final checkpoints remain on Drive; locally verified intermediate checkpoints from completed models were removed from Drive to reclaim space. All saved checkpoints and metrics remain in their local experiment folders. The historical Colab termination cause is unconfirmed.
 
 The [read-only YOLO diagnosis](reports/comparison/yolo_diagnosis_20261010/README.md) explains the change from historical round-40 training, verifies saved predictions against native inference, and identifies fresh classification features with frozen BatchNorm as a leading concern. An isolated alternative initializer passes forward checks, but improved training performance remains unproven; the production runner is unchanged for EfficientDet recovery.
 

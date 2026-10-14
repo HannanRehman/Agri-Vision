@@ -1,0 +1,62 @@
+{
+  "fetched_date": "2026-10-13",
+  "scope": "final completed global round; pooled validation",
+  "training_started": false,
+  "fresh_evaluation_started": false,
+  "metric_scale": "0 to 1; multiply by 100 for percentages",
+  "ground_truth_boxes": "derived per class as true_positives + false_negatives",
+  "runs": [
+    {
+      "model": "yolo_v8n",
+      "round": 30,
+      "class_rows": 24,
+      "csv": "yolo_v8n_round_030_per_class.csv",
+      "source": "sources/yolo_v8n_round_030.json",
+      "source_drive_url": "https://drive.google.com/file/d/1YLkn0B-rKZu3mCbmlpQay5Owzy8jmShI/view",
+      "saved_source_sha256": "413251e22e6ce0a41b4feb828626978430256c61600b7db2f0fc9299b132e4b4",
+      "csv_sha256": "a73c82f732e2d1f5bb9501aab2dd58a679ef16149bc92f67747c6dd47902427c",
+      "validation_images": 4157,
+      "precision_recall_confidence": 0.25,
+      "precision_recall_iou": 0.5
+    },
+    {
+      "model": "ssdlite",
+      "round": 30,
+      "class_rows": 24,
+      "csv": "ssdlite_round_030_per_class.csv",
+      "source": "sources/ssdlite_round_030.json",
+      "source_drive_url": "https://drive.google.com/file/d/13O2JpB0a0BRFBIK_0dqRXOkhVrTpjZfi/view",
+      "saved_source_sha256": "abb06c6d69a50bb06de59f4523f469adaba1c5ad26981dc9ffb4666870df83ff",
+      "csv_sha256": "ef064fd874cad0fcf4bc51ad296849b57bacdfd8718f1de71771d8e6fd98e608",
+      "validation_images": 4157,
+      "precision_recall_confidence": 0.25,
+      "precision_recall_iou": 0.5
+    },
+    {
+      "model": "ssd_mobilenetv3",
+      "round": 30,
+      "class_rows": 24,
+      "csv": "ssd_mobilenetv3_round_030_per_class.csv",
+      "source": "sources/ssd_mobilenetv3_round_030.json",
+      "source_drive_url": "https://drive.google.com/file/d/1QNb-q_fFRhlXcdGJckdGAjl_KPM0W_78/view",
+      "saved_source_sha256": "c0e2beaef610c2e096c595ef845fff6e60c262d6d995003975d0a717f4a21ef8",
+      "csv_sha256": "0f2e7d6d4047ee43203bbd84978c50c93ff28656db3f5b5a8ccc0dc2dbda3684",
+      "validation_images": 4157,
+      "precision_recall_confidence": 0.25,
+      "precision_recall_iou": 0.5
+    },
+    {
+      "model": "efficientdet_d0",
+      "round": 15,
+      "class_rows": 24,
+      "csv": "efficientdet_d0_round_015_per_class.csv",
+      "source": "sources/efficientdet_d0_round_015.json",
+      "source_drive_url": "https://drive.google.com/file/d/10JHDqnTAJHRNCqGqwTsqbbDNrObjaHS0/view",
+      "saved_source_sha256": "658de223462b195a6e316cef7c714e06fd58c2663efb6f25b00454261c3e77fa",
+      "csv_sha256": "2ca16eef515452cb9f89565a696f83f2b6ec3976c15b9511632530a7174afc3b",
+      "validation_images": 4157,
+      "precision_recall_confidence": 0.25,
+      "precision_recall_iou": 0.5
+    }
+  ]
+}

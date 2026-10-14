@@ -24,7 +24,10 @@ def cell(text, code=False):
 def notebook(name, cells):
     for index,item in enumerate(cells):
         item['id'] = f'run30-{index:02d}'
-        if item['cell_type']=='code':ast.parse(''.join(item['source']))
+        if item['cell_type']=='code':
+            ast.parse(''.join(item['source']))
+            item['outputs'] = []
+            item['execution_count'] = None
     result=dict(nbformat=4,nbformat_minor=5,cells=cells,
                 metadata=dict(kernelspec=dict(display_name='Python 3',language='python',name='python3'),
                               language_info=dict(name='python'),colab=dict(name=name),accelerator='GPU'))
@@ -32,7 +35,7 @@ def notebook(name, cells):
 
 
 def efficientdet_only_notebook(alternative):
-    """Make the current 4gmail workflow stop at 15 without changing trainer code."""
+    """Retain the historical 15-round notebook and prepare the current extension."""
     cells = deepcopy(alternative)
     cells[0] = cell('''# Agri Vision: EfficientDet-D0 only, through round 15
 
@@ -55,8 +58,66 @@ If interrupted, reopen this same notebook on 4gmail, select T4 and Run all. Comp
 
 The held-out test is reserved for final evaluation after checkpoint selection.
 ''')
-    notebook('AgriVision_Comparison.ipynb', cells)
     notebook('AgriVision_EfficientDet_Continue_15Rounds.ipynb', deepcopy(cells))
+    efficientdet_round16_to30_notebook(cells)
+
+
+def efficientdet_round16_to30_notebook(template):
+    """Continue the verified completed 15-round branch, using the unchanged runner."""
+    cells = deepcopy(template)
+    cells[0] = cell('''# Agri Vision: EfficientDet-D0, rounds 16–30
+
+Use **4gmail**, select a **T4 GPU**, and **Run all**. This notebook continues only EfficientDet-D0 from the saved round-15 checkpoint through round 30. The round-15 source and its validation-best round-11 checkpoint were verified on 15 October 2026. No new pilot is needed.
+
+Reuse the existing code ZIP and dataset parts. Results go into a separate `_to30_from15` folder. Original training settings are retained: 24 classes, three clients, one local epoch, batch 4, 512-pixel inputs, AdamW and seed 42. Rounds 16–30 retain the existing terminal learning rate of 0.00001; optimizer state resets per client as in the completed run. This is a continuation of the existing schedule.
+''')
+    settings = ''.join(cells[1]['source'])
+    settings = settings.replace('TARGET_ROUNDS = 15', 'TARGET_ROUNDS = 30')
+    settings = settings.replace('f"{model}_non_chili_seed42_{STAMP}"',
+                                'f"{model}_non_chili_seed42_{STAMP}_to15"')
+    settings = settings.replace('RUNS = {model: SOURCE_ROOT / f"{model}_non_chili_seed42_{STAMP}_to15"',
+                                'RUNS = {model: SOURCE_ROOT / f"{model}_non_chili_seed42_{STAMP}_to30_from15"')
+    settings += '''EXPECTED_SOURCE_ROUND = 15
+EXPECTED_SOURCE_CONFIG_HASH = "5bac396d04beaeab8c865b095b691522fcceba3f4e147d839142a1199be70089"
+EXPECTED_SOURCE_CHECKPOINT_SHA256 = "3815ef3cc290b35d529ecd6b2d626a61f1a3ec66ae56e0fd7f2991681c5e391d"
+'''
+    cells[1] = cell(settings, True)
+    cells[4] = cell('''## Verify the completed round-15 source and resume position
+Preflight verifies the source weights, configuration, data, original implementation, T4 GPU and recorded package versions. A missing or mismatched round-15 source stops execution before training. After interruption, the new branch resumes from its own latest committed round.
+''')
+    cells[5] = cell('''from scripts.continue_comparison import validate_source
+for model in MODELS:
+    settings, latest, protocol = validate_source(WORKSPACE, SOURCES[model], torch.device("cuda:0"))
+    config = settings["config"]
+    assert config["model"] == model and config["seed"] == SEED and config["local_epochs"] == 1
+    assert config["rounds"] == EXPECTED_SOURCE_ROUND and latest["round"] == EXPECTED_SOURCE_ROUND, "Expected the completed round-15 source"
+    assert settings["config_hash"] == EXPECTED_SOURCE_CONFIG_HASH, "Source configuration differs"
+    assert latest["checkpoint_sha256"] == EXPECTED_SOURCE_CHECKPOINT_SHA256, "Wrong round-15 checkpoint"
+    assert config["batch"] == 4 and config["optimizer"] == "adamw" and settings["input_size"] == 512
+    assert config["lr"] == 0.0001 and config["continuation"]["original_rounds"] == 10
+    assert len(protocol["clients"]) == 3 and settings["validation_images"] == 4157
+    source_status = json.loads((SOURCES[model] / "status.json").read_text())
+    assert source_status["phase"] == "complete" and source_status["completed_rounds"] == 15
+    committed = latest["round"]
+    if RUNS[model].exists():
+        branch = json.loads((RUNS[model] / "latest.json").read_text())
+        committed = branch["round"]
+        assert EXPECTED_SOURCE_ROUND <= committed <= TARGET_ROUNDS, "Invalid continuation commit"
+    if committed == TARGET_ROUNDS:
+        print(model, "already completed round 30; no rounds will repeat.")
+    else:
+        print(model, "resume from committed round:", committed, "next training round:", committed + 1, "target:", TARGET_ROUNDS)
+print("Round-15 source and environment preflight checks passed.")
+''', True)
+    cells[-1] = cell('''## Results and automatic resume
+The new run is saved under `comparison_results/efficientdet_d0_non_chili_seed42_20261009_224152_449800_to30_from15/`. On its first run, the runner copies metrics for rounds 1–15 and the initial, latest and validation-best checkpoints, then begins round 16. The `_to15` source is retained unchanged.
+
+The runner saves pooled and per-class validation metrics, client logs, and best/latest checkpoints after each round. Check `status.json` for the active phase and `latest.json` for the last fully committed round. The complete history is `results/metrics/global_validation_metrics.csv`; per-class results are in each `round_NNN.json` under `pooled_validation.per_class`. The round-11 best remains selected unless a later round improves pooled mAP50–95. Intermediate new-branch weights are pruned after commits to conserve Drive space; metrics remain.
+
+If Colab stops, reopen this same notebook on 4gmail, select T4 and Run all. Completed rounds are skipped; an unfinished round repeats from the last committed global checkpoint. Training stops after round 30 and starts no other model. Keep both source and continuation folders, code bundle and package versions unchanged. Held-out test evaluation remains separate.
+''')
+    notebook('AgriVision_EfficientDet_Continue_30Rounds.ipynb', cells)
+    notebook('AgriVision_Comparison.ipynb', deepcopy(cells))
 
 
 def ssd_pair_notebook(alternative):

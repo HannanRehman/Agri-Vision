@@ -59,3 +59,8 @@ PENYAKIT PADA CABAI.v1i.yolov8/
 
 # New seminar poster material is maintained locally and on Drive.
 /reports/seminar_poster/
+
+# Keep downloaded notebook snapshots and reproducible result bundles local.
+/reports/comparison/efficientdet_resume_*/drive_*.ipynb
+/reports/comparison/efficientdet_resume_*/drive_*.zip
+/reports/comparison/final_round_per_class_*/*.zip

@@ -1,0 +1,75 @@
+{
+  "config": {
+    "model": "efficientdet_d0",
+    "mode": "main",
+    "rounds": 15,
+    "local_epochs": 1,
+    "batch": 4,
+    "seed": 42,
+    "lr": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "max_train_batches": null,
+    "validation_limit": null,
+    "no_pretrained": false,
+    "dataset_checksums_sha256": "157b48390ecad0ffeb4e5d70ae4018398156593d28a77b3b55beca8c9f94c1aa",
+    "implementation_sha256": "c6d295dc79d706a18d73090edf91532cda74fee23a9f4d3e737e0470915fff71",
+    "model_spec_sha256": "d4fb0e83424383525e81f41587c8253599b8ccccc1798d385d74fe2348eaccf5",
+    "normalization_policy": "freeze running BN stats on all models; train affine parameters",
+    "optimizer_state": "reset per client per round",
+    "learning_rate_schedule": "original cosine through original budget; constant terminal LR thereafter",
+    "augmentation": "shared training-only horizontal flip p=0.5; adapter resize/normalization",
+    "evaluator": "pooled pycocotools COCO bbox; P/R micro at conf .25 IoU .5",
+    "gradient_clip_norm": 10.0,
+    "amp": false,
+    "deterministic_algorithms": "seeded and cuDNN deterministic; not guaranteed bit-identical across hardware",
+    "continuation": {
+      "original_rounds": 10,
+      "source_config_hash": "3054ad7eda1874096d821a3dc0159e73f9a4804dc59023e6c3e2e76ea5895e58",
+      "source_commit": {
+        "round": 2,
+        "checkpoint": "checkpoints/global_round_002.pt",
+        "checkpoint_sha256": "8af8c5103ca02e3861fb096d5a2232f79b007c1c2f5445d34d69848701298fd1",
+        "best_map": 0.46680539864550774,
+        "best_checkpoint": "checkpoints/global_round_002.pt"
+      },
+      "source_settings_sha256": "5243d3ef729b6c7953c32767f2df6556433476f303663b87901fa6dacfdac7f1",
+      "continuation_script_sha256": "e78e2e2a031cb3c860d2dc3078f6eb9a6fc79a3b6cf7327fe0723ad50ba2eed9"
+    }
+  },
+  "config_hash": "5bac396d04beaeab8c865b095b691522fcceba3f4e147d839142a1199be70089",
+  "model": {
+    "architecture": "tf_efficientdet_d0",
+    "input_size": 512,
+    "target_label_offset": 1,
+    "pretrained_source": "https://github.com/rwightman/efficientdet-pytorch/releases/download/v0.1/tf_efficientdet_d0_34-f153e0cf.pth",
+    "initialization": "COCO D0 and matching classification feature/BN tensors; new 24-class projection tensors",
+    "class_projection_init_std": 0.001,
+    "class_projection_prior": 0.01,
+    "nms_iou": 0.5,
+    "score_floor": 0.001,
+    "normalization": "frozen BN running statistics; affine parameters trainable"
+  },
+  "hardware": {
+    "gpu": "Tesla T4",
+    "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+    "torch": "2.11.0+cu130",
+    "cuda": "13.0",
+    "packages": {
+      "torchvision": "0.26.0+cu130",
+      "ultralytics": "8.4.48",
+      "pycocotools": "2.0.11",
+      "effdet": "0.4.1",
+      "timm": "1.0.27"
+    }
+  },
+  "parameter_count": 3841457,
+  "trainable_parameter_count": 3841457,
+  "input_size": 512,
+  "validation_images": 4157,
+  "diagnostic_only": false,
+  "created_at_utc": "2026-10-11T08:19:11.721687+00:00",
+  "initial_checkpoint_sha256": "a0baf7eb0d07b94f2bbf6d184f9b43051a10e81d2eb1ac8f84b7462d70ba7c5c",
+  "initial_state_sha256": "ea428216f454c3644d9be94e23a7f67f7bfbd1df3d9c09a43e35ce45e80af0b8",
+  "source_run": "/content/drive/MyDrive/Agri Vision/comparison_results/efficientdet_d0_non_chili_seed42_20261009_224152_449800"
+}
