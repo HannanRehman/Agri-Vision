@@ -2,7 +2,7 @@
 
 Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The current comparison uses **24 classes across four crops** and four one-stage detectors with three-client sample-weighted FedAvg. The historical 30-class YOLOv8n experiment is retained separately. The Colab implementation simulates the clients sequentially on one GPU.
 
-## Current status — 15 October 2026
+## Current status — 17 October 2026
 
 | Work | Status |
 | --- | --- |
@@ -10,7 +10,8 @@ Agri Vision is an FYP prototype for locating crop-disease and pest symptoms usin
 | Round-35 held-out test and non-chili class analysis | Completed on the original 30-class checkpoint |
 | Workspace organization | Separate experiment scaffolds, current file index and cleanup audit added |
 | Four-crop, 24-class dataset | Built separately: 14,514 train / 4,157 validation / 2,091 test images; see the preparation report and verification record |
-| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | YOLOv8n, SSDLite and SSD–MobileNetV3 completed 30 rounds; EfficientDet-D0 completed 15; its separate round-16-to-30 continuation is prepared for 4gmail |
+| YOLO / EfficientDet / SSDLite / SSD–MobileNetV3 comparison | All four baseline models completed 30 rounds; best checkpoints selected using pooled validation mAP50–95 |
+| Hyperparameter tuning | Separate four-parameter, 16-configuration-per-model grid prepared; five-round screening, two ten-round finalists, then a fresh selected-configuration 30-round run |
 | Seminar poster | Maintained locally under `reports/seminar_poster/` and on Drive; poster files and PowerPoint presentations are excluded from Git |
 
 The new comparison excludes all six chili classes and retains banana, cauliflower, groundnut and radish. The implemented alternatives are **EfficientDet-D0**, **SSDLite with MobileNetV3-Large**, and **SSD with MobileNetV3-Large using a standard detection head**. The latter is a separate custom configuration. Faster R-CNN is excluded. All four models are evaluated as one-stage object detectors; standalone MobileNetV3 classification is not this experiment.
@@ -55,6 +56,8 @@ The shared images/labels are in `original_dataset_non_chili/`. Client YAMLs unde
 The dataset upload bundle is `non_chili_v1_colab_dataset.zip`; its size and SHA-256 are recorded in `reports/non_chili_v1/upload_package.json`. The shared adapter/evaluator and comparison runner are implemented. The GPU pilot passed and full-dataset main runs started. See the [saved validation results and backup review](reports/comparison/main_run_review_20261010/README.md) for the completed models and interrupted EfficientDet run. CPU pilot metrics remain diagnostic.
 
 ## Agreed next training plan
+
+Current supervisor-requested work is the [four-model grid search](GRID_SEARCH_PLAN.md), using separate `AgriVision_GridSearch_YOLO.ipynb`, `AgriVision_GridSearch_EfficientDet.ipynb` and `AgriVision_GridSearch_SSD_Pair.ipynb` notebooks. The completed baselines are retained. The grid searches learning rate, weight decay, actual batch size and actual input resolution, with automatic state recovery and separate outputs. The preparation itself starts no GPU training. The EfficientDet continuation below is now historical reproduction.
 
 At the user's request, [AgriVision_Comparison.ipynb](AgriVision_Comparison.ipynb) now runs **EfficientDet-D0 rounds 16–30 on 4gmail**, also saved locally as [AgriVision_EfficientDet_Continue_30Rounds.ipynb](AgriVision_EfficientDet_Continue_30Rounds.ipynb). The verified round-15 checkpoint seeds a separate `_to30_from15` folder, preserving previous results and best-checkpoint selection. Reuse the uploaded code and dataset parts, select T4, and Run all. No GPU training was started during preparation. See the [current instructions](reports/comparison/30_round_colab_instructions.md) and [resume verification](reports/comparison/efficientdet_resume_16_30_20261015/README.md). The earlier [account split plan](reports/comparison/next_30_round_plan.md) and ten-/fifteen-round notebooks remain historical references.
 

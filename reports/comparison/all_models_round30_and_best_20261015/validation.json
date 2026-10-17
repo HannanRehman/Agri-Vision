@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-15",
+  "split": "pooled validation",
+  "score_scale": "percent 0-100, rounded to two decimals",
+  "best_selection": "highest unrounded pooled mAP50-95 among completed rounds 1-30; first occurrence breaks ties",
+  "summary_rows": 8,
+  "per_class_rows": 96,
+  "classes_per_model": 24,
+  "validation_images": 4157,
+  "ground_truth_boxes": 7210,
+  "precision_recall_confidence": 0.25,
+  "precision_recall_iou": 0.5,
+  "source_round30_json_matches_history": true,
+  "class_counts_match_pooled": true,
+  "training_started": false,
+  "fresh_evaluation_started": false,
+  "sources": [
+    {
+      "model": "YOLOv8n",
+      "final_round": 30,
+      "best_round": 12,
+      "history": "sources/yolo_v8n_history.csv",
+      "history_sha256": "d081093737ce19edb3888b1ef56cc5349849feb716848b576be80ba8cbe09915",
+      "detail": "sources/yolo_v8n_round_030.json",
+      "detail_sha256": "413251e22e6ce0a41b4feb828626978430256c61600b7db2f0fc9299b132e4b4"
+    },
+    {
+      "model": "SSDLite",
+      "final_round": 30,
+      "best_round": 30,
+      "history": "sources/ssdlite_history.csv",
+      "history_sha256": "eadea4cc350108af360c341568da62db16e448f13e730ad3e4d3bd69a17512f2",
+      "detail": "sources/ssdlite_round_030.json",
+      "detail_sha256": "abb06c6d69a50bb06de59f4523f469adaba1c5ad26981dc9ffb4666870df83ff"
+    },
+    {
+      "model": "SSD-MobileNetV3",
+      "final_round": 30,
+      "best_round": 30,
+      "history": "sources/ssd_mobilenetv3_history.csv",
+      "history_sha256": "a676d786055a877c4143f4f7d5dfa48b9f28130fbb81ff37c580aee783a1ce1d",
+      "detail": "sources/ssd_mobilenetv3_round_030.json",
+      "detail_sha256": "c0e2beaef610c2e096c595ef845fff6e60c262d6d995003975d0a717f4a21ef8"
+    },
+    {
+      "model": "EfficientDet-D0",
+      "final_round": 30,
+      "best_round": 21,
+      "history": "sources/efficientdet_d0_history.csv",
+      "history_sha256": "3bd0b0c74b4703e3c3708c808f82f69a9b70da4ef935acb45ea68b54f7d4458a",
+      "detail": "sources/efficientdet_d0_round_030.json",
+      "detail_sha256": "c10e4a706760959bb2795e7dd460c5597cd789e28538f36c9ff06293e1930f63"
+    }
+  ],
+  "outputs": [
+    {
+      "file": "All_Models_Round30_and_Best.csv",
+      "sha256": "835da73d80ce411ba8ae0cbdeaf400389df55ba9f7653993b428a3fb973780aa"
+    },
+    {
+      "file": "All_Models_Round30_Per_Class.csv",
+      "sha256": "da614cc2ddd9b99f2d12627056e2a8e2be48e1b22a94e3c926a0d77d6cabdccb"
+    }
+  ]
+}

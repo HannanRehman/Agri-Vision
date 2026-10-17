@@ -1,0 +1,9 @@
+﻿model,selection,round,precision_percent,recall_percent,f1_percent,map50_percent,map50_95_percent,validation_images
+YOLOv8n,round_30,30,56.62,56.85,56.74,67.44,42.69,4157
+YOLOv8n,best_round,12,60.41,55.99,58.12,69.47,45.34,4157
+SSDLite,round_30,30,68.28,55.84,61.44,65.88,45.2,4157
+SSDLite,best_round,30,68.28,55.84,61.44,65.88,45.2,4157
+SSD-MobileNetV3,round_30,30,55.52,55.01,55.26,57.57,35.2,4157
+SSD-MobileNetV3,best_round,30,55.52,55.01,55.26,57.57,35.2,4157
+EfficientDet-D0,round_30,30,65.39,76.71,70.6,84.3,59,4157
+EfficientDet-D0,best_round,21,64.53,77.36,70.37,85.1,59.75,4157

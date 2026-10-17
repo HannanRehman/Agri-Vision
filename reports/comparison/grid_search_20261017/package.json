@@ -1,0 +1,37 @@
+{
+  "code_bundle": "agrivision_grid_search_v1_code.zip",
+  "code_bytes": 46660,
+  "code_sha256": "5453a56a97c2aca78224cec346c259e5f8a0a5eda2a93eb17b3677f06689c049",
+  "dataset_sha256": "7a2920e4a4e0405ee157e9b40ac6306b54d6933b20a306b44a4b7c6871f20868",
+  "notebooks": [
+    {
+      "account": "19gmail",
+      "models": [
+        "yolo_v8n"
+      ],
+      "file": "AgriVision_GridSearch_YOLO.ipynb",
+      "bytes": 9356,
+      "sha256": "41f3adb7cffe765dbf26221d0e9f6ea529565fae03b41b83cdba74ea9ba33746"
+    },
+    {
+      "account": "4gmail",
+      "models": [
+        "efficientdet_d0"
+      ],
+      "file": "AgriVision_GridSearch_EfficientDet.ipynb",
+      "bytes": 9377,
+      "sha256": "4e08456972fd48c408b5f57ecbf3c26a091c844e11b47b48e6ecb9f7aafb072f"
+    },
+    {
+      "account": "40gmail",
+      "models": [
+        "ssdlite",
+        "ssd_mobilenetv3"
+      ],
+      "file": "AgriVision_GridSearch_SSD_Pair.ipynb",
+      "bytes": 9394,
+      "sha256": "e2a72c7f7f8921ec84c89ed8f1cb2c13920430c6ecf870a5079daaebb5935ca4"
+    }
+  ],
+  "gpu_training_started": false
+}

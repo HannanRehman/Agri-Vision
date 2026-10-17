@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-17",
+  "local_unit_tests_passed": 8,
+  "synthetic_recovery_and_orchestration_checked": true,
+  "cpu_adapter_forward_backward_prediction_checks": 6,
+  "cpu_native_yolo_resolution_prediction_checks": 2,
+  "true_internal_resolution_checked": true,
+  "notebook_code_syntax_valid": true,
+  "notebook_outputs_cleared": true,
+  "notebooks": [
+    "AgriVision_GridSearch_YOLO.ipynb",
+    "AgriVision_GridSearch_EfficientDet.ipynb",
+    "AgriVision_GridSearch_SSD_Pair.ipynb"
+  ],
+  "code_zip_matches_local_sources": true,
+  "full_zip_and_split_dataset_extraction_checked": true,
+  "dataset_reuse_checked": true,
+  "baseline_comparison_implementation_unchanged": true,
+  "gpu_preflight": "pending; executes automatically in Colab",
+  "gpu_training_started": false,
+  "trials_per_model": 16,
+  "total_screening_trials": 64,
+  "screen_rounds": 5,
+  "finalists_per_model": 2,
+  "finalist_rounds": 10,
+  "fresh_final_rounds": 30,
+  "held_out_test_used": false,
+  "drive_upload_readback_verified": true,
+  "drive_files_metadata_verified": 6,
+  "drive_files_exact_bytes_verified": 5,
+  "dataset_parts_present_all_three_drives": true
+}

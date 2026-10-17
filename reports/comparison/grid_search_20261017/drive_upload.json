@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-17",
+  "files": [
+    {
+      "account": "19gmail",
+      "name": "agrivision_grid_search_v1_code.zip",
+      "id": "1bayOc4kPhOzg_h68nvLxsdn-M2LkgzuO",
+      "url": "https://drive.google.com/file/d/1bayOc4kPhOzg_h68nvLxsdn-M2LkgzuO/view?usp=drivesdk",
+      "parent": "18ath0ZIrihYILUQz-jKvIv9uvyXfj905",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": true
+    },
+    {
+      "account": "19gmail",
+      "name": "AgriVision_GridSearch_YOLO.ipynb",
+      "id": "10kuNzfnmQa4GQuFU5xT30IzUIkp8ZpwH",
+      "url": "https://drive.google.com/file/d/10kuNzfnmQa4GQuFU5xT30IzUIkp8ZpwH/view?usp=drivesdk",
+      "parent": "18ath0ZIrihYILUQz-jKvIv9uvyXfj905",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": true
+    },
+    {
+      "account": "4gmail",
+      "name": "agrivision_grid_search_v1_code.zip",
+      "id": "1hCmDyuus-jjlNIwq_wCz6P4K9kreELvx",
+      "url": "https://drive.google.com/file/d/1hCmDyuus-jjlNIwq_wCz6P4K9kreELvx/view?usp=drivesdk",
+      "parent": "184rhFqHPIlVfo2zWUT-ecrZwv-xa9QGQ",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": true
+    },
+    {
+      "account": "4gmail",
+      "name": "AgriVision_GridSearch_EfficientDet.ipynb",
+      "id": "1pGof6759Gz7gMMw1mlDeN6ngxBaZgECv",
+      "url": "https://drive.google.com/file/d/1pGof6759Gz7gMMw1mlDeN6ngxBaZgECv/view?usp=drivesdk",
+      "parent": "184rhFqHPIlVfo2zWUT-ecrZwv-xa9QGQ",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": true
+    },
+    {
+      "account": "40gmail",
+      "name": "agrivision_grid_search_v1_code.zip",
+      "id": "1_BpZ9fosEoJQepVPz06lji-pAsghMcD-",
+      "url": "https://drive.google.com/file/d/1_BpZ9fosEoJQepVPz06lji-pAsghMcD-/view?usp=drivesdk",
+      "parent": "1RrjYico-7MMe6voKuHtFISPLtTPuXYt7",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": false
+    },
+    {
+      "account": "40gmail",
+      "name": "AgriVision_GridSearch_SSD_Pair.ipynb",
+      "id": "1jleucVFS-mQnh6H3HazL-zQVBagFFort",
+      "url": "https://drive.google.com/file/d/1jleucVFS-mQnh6H3HazL-zQVBagFFort/view?usp=drivesdk",
+      "parent": "1RrjYico-7MMe6voKuHtFISPLtTPuXYt7",
+      "metadata_readback_verified": true,
+      "byte_readback_verified": true
+    }
+  ],
+  "dataset_parts_metadata": [
+    {
+      "account": "4gmail",
+      "folder": "184rhFqHPIlVfo2zWUT-ecrZwv-xa9QGQ",
+      "parts": 14,
+      "part_sizes_verified": true
+    },
+    {
+      "account": "19gmail",
+      "folder": "18ath0ZIrihYILUQz-jKvIv9uvyXfj905",
+      "parts": 14,
+      "part_sizes_verified": true
+    },
+    {
+      "account": "40gmail",
+      "folder": "1RrjYico-7MMe6voKuHtFISPLtTPuXYt7",
+      "parts": 14,
+      "part_sizes_verified": true
+    }
+  ],
+  "all_upload_metadata_verified": true,
+  "byte_readback_verified_files": 5,
+  "note": "40gmail code ZIP size and parent verified; remote raw download stalled. Notebook verifies its SHA256 before extracting or running.",
+  "gpu_training_started": false
+}

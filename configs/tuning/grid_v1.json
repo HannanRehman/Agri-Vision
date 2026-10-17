@@ -1,0 +1,16 @@
+{
+  "version": "grid_v1_20261017",
+  "seed": 42,
+  "schedule_rounds": 30,
+  "screen_rounds": 5,
+  "finalist_rounds": 10,
+  "finalists": 2,
+  "local_epochs": 1,
+  "selection_metric": "map_50_95",
+  "models": {
+    "yolo_v8n": {"lr": [0.000357, 0.0001785], "weight_decay": [0.0005, 0.001], "batch": [4, 8], "resolution": [512, 640], "optimizer": "AdamW"},
+    "ssdlite": {"lr": [0.001, 0.0005], "weight_decay": [0.0005, 0.001], "batch": [4, 8], "resolution": [320, 512], "optimizer": "sgd"},
+    "ssd_mobilenetv3": {"lr": [0.001, 0.0005], "weight_decay": [0.0005, 0.001], "batch": [4, 8], "resolution": [320, 512], "optimizer": "sgd"},
+    "efficientdet_d0": {"lr": [0.0001, 0.00005], "weight_decay": [0.0001, 0.0005], "batch": [2, 4], "resolution": [512, 640], "optimizer": "adamw"}
+  }
+}

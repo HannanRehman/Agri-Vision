@@ -1,0 +1,48 @@
+{
+  "device": "CPU",
+  "data": "one synthetic image; no real dataset training",
+  "checks": [
+    {
+      "model": "ssdlite",
+      "resolution": 320,
+      "synthetic_loss": 15.969002723693848,
+      "backward_finite": true,
+      "predict_finite": true
+    },
+    {
+      "model": "ssdlite",
+      "resolution": 512,
+      "synthetic_loss": 16.3817081451416,
+      "backward_finite": true,
+      "predict_finite": true
+    },
+    {
+      "model": "ssd_mobilenetv3",
+      "resolution": 320,
+      "synthetic_loss": 15.969002723693848,
+      "backward_finite": true,
+      "predict_finite": true
+    },
+    {
+      "model": "ssd_mobilenetv3",
+      "resolution": 512,
+      "synthetic_loss": 16.3817081451416,
+      "backward_finite": true,
+      "predict_finite": true
+    },
+    {
+      "model": "efficientdet_d0",
+      "resolution": 512,
+      "synthetic_loss": 2.0152292251586914,
+      "backward_finite": true,
+      "predict_finite": true
+    },
+    {
+      "model": "efficientdet_d0",
+      "resolution": 640,
+      "synthetic_loss": 2.246335983276367,
+      "backward_finite": true,
+      "predict_finite": true
+    }
+  ]
+}

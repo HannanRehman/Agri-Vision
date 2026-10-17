@@ -1,0 +1,24 @@
+{
+  "device": "CPU",
+  "inference_only": true,
+  "checks": [
+    {
+      "model": "yolo_v8n",
+      "resolution": 512,
+      "prediction_finite": true,
+      "native_imgsz": [
+        512,
+        512
+      ]
+    },
+    {
+      "model": "yolo_v8n",
+      "resolution": 640,
+      "prediction_finite": true,
+      "native_imgsz": [
+        640,
+        640
+      ]
+    }
+  ]
+}
