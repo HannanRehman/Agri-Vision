@@ -1,5 +1,7 @@
 # Agri Vision: Federated Crop-Disease Detection
 
+Local web demo: run `./Start_AgriVision_Web.ps1` from PowerShell and open http://127.0.0.1:8000. The single page uses an existing provisional 24-class EfficientDet checkpoint for real image-upload inference while tuning continues. See [web demo instructions](web_demo/README.md) and [implementation plan](WEB_DEMO_PLAN.md).
+
 Agri Vision is an FYP prototype for locating crop-disease and pest symptoms using bounding boxes and class predictions. The current comparison uses **24 classes across four crops** and four one-stage detectors with three-client sample-weighted FedAvg. The historical 30-class YOLOv8n experiment is retained separately. The Colab implementation simulates the clients sequentially on one GPU.
 
 ## Current status — 17 October 2026

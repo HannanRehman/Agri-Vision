@@ -1,0 +1,25 @@
+{
+  "local_cpu_tests_passed": 6,
+  "real_efficientdet_loss_and_update_equivalence_checked": true,
+  "nonfinite_loss_and_gradient_rejection_checked": true,
+  "original_training_modules_unchanged": true,
+  "gpu_benchmark_run": false,
+  "remote_notebook_and_bundle_bytes_verified": true,
+  "uploads": [
+    {
+      "name": "efficientdet_fp32_benchmark_v1.zip",
+      "id": "1wqaijbF_CBsLL6awGs40-BimqQlpAY17",
+      "url": "https://drive.google.com/file/d/1wqaijbF_CBsLL6awGs40-BimqQlpAY17/view?usp=drivesdk"
+    },
+    {
+      "name": "AgriVision_EfficientDet_FP32_Benchmark_71gmail.ipynb",
+      "id": "1nVbtJwS_pEBFBrXrNpfbG_JKRFMcaAW6",
+      "url": "https://drive.google.com/file/d/1nVbtJwS_pEBFBrXrNpfbG_JKRFMcaAW6/view?usp=drivesdk"
+    },
+    {
+      "name": "BENCHMARK_README.md",
+      "id": "1jTaUh8-dXrvp5y8g0JxfABN6lIQQnmxP",
+      "url": "https://drive.google.com/file/d/1jTaUh8-dXrvp5y8g0JxfABN6lIQQnmxP/view?usp=drivesdk"
+    }
+  ]
+}

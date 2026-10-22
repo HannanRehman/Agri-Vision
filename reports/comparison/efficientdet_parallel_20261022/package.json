@@ -1,0 +1,21 @@
+{
+  "bundle": "efficientdet_parallel_screening_v1.zip",
+  "sha256": "767df7be2bbbeeb6100830352d7b5715d5a32fc4b0445f3896087365f59d575f",
+  "notebooks": [
+    {
+      "account": "4gmail",
+      "file": "AgriVision_GridSearch_EfficientDet.ipynb",
+      "first": 12,
+      "last": 16,
+      "sha256": "f53e3d30280ed2248c74271956ec1e29b75dea0170abd4c468f1e41b43272544"
+    },
+    {
+      "account": "71gmail",
+      "file": "AgriVision_EfficientDet_Trials01_11_71gmail.ipynb",
+      "first": 1,
+      "last": 11,
+      "sha256": "1a7b109edc06e12a496425577dd2770ecec7adb3ee092fe029af2ab1b9279526"
+    }
+  ],
+  "training_started": false
+}

@@ -1,0 +1,189 @@
+{
+  "account": "hannanrehman78@gmail.com",
+  "root": "https://drive.google.com/drive/folders/1vXsEdrG2cusUxU9Ka1DNSc1jiiIAQKXv",
+  "notebook": {
+    "accepted_input": "file_uri",
+    "success": true,
+    "id": "1RiM-kLmlFz6ZYnrdiDJz30ylhOrOMWjr",
+    "title": "AgriVision_GridSearch_SSD_MobileNetV3_78gmail.ipynb",
+    "file_name": "AgriVision_GridSearch_SSD_MobileNetV3_78gmail.ipynb",
+    "mime_type": "application/x-ipynb+json",
+    "url": "https://drive.google.com/file/d/1RiM-kLmlFz6ZYnrdiDJz30ylhOrOMWjr/view?usp=drivesdk",
+    "parent_id": "1vXsEdrG2cusUxU9Ka1DNSc1jiiIAQKXv",
+    "structuredContent": {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1RiM-kLmlFz6ZYnrdiDJz30ylhOrOMWjr",
+      "title": "AgriVision_GridSearch_SSD_MobileNetV3_78gmail.ipynb",
+      "file_name": "AgriVision_GridSearch_SSD_MobileNetV3_78gmail.ipynb",
+      "mime_type": "application/x-ipynb+json",
+      "url": "https://drive.google.com/file/d/1RiM-kLmlFz6ZYnrdiDJz30ylhOrOMWjr/view?usp=drivesdk",
+      "parent_id": "1vXsEdrG2cusUxU9Ka1DNSc1jiiIAQKXv"
+    }
+  },
+  "code": {
+    "success": true,
+    "id": "1nQT__BgyEwAnCJaMhtqtGTuF_HCgJWDn",
+    "title": "agrivision_grid_search_v1_code.zip",
+    "mimeType": "application/zip",
+    "url": "https://drive.google.com/file/d/1nQT__BgyEwAnCJaMhtqtGTuF_HCgJWDn/view?usp=drivesdk",
+    "made_private": false
+  },
+  "parts": [
+    {
+      "source": "1DatsjEJaCQLwlvxnfQaZpatehZp0wVeC",
+      "title": "non_chili_v1_colab_dataset.zip.part01",
+      "size": "67108864",
+      "success": true,
+      "id": "1uTx_QG6znN5xD--N_uLttWanMgGkNgaZ",
+      "mimeType": "application/x-zip",
+      "url": "https://drive.google.com/file/d/1uTx_QG6znN5xD--N_uLttWanMgGkNgaZ/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1db6emjTzaDXF4l_aYasb_OJdFHN5jwm9",
+      "title": "non_chili_v1_colab_dataset.zip.part02",
+      "size": "67108864",
+      "success": true,
+      "id": "1eHK60rCSWYwhbQ2BCzvIQTNUYwTI3gWE",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1eHK60rCSWYwhbQ2BCzvIQTNUYwTI3gWE/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1wfM5wkIPorUZnUhjHlerjarZTMSbiCno",
+      "title": "non_chili_v1_colab_dataset.zip.part03",
+      "size": "67108864",
+      "success": true,
+      "id": "1OCXv_lFUCV41C8UXsrIRIxsRUKHbypTM",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1OCXv_lFUCV41C8UXsrIRIxsRUKHbypTM/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1uWacojZFBM_WY-1HUJANgwaYl5m0OcAD",
+      "title": "non_chili_v1_colab_dataset.zip.part04",
+      "size": "67108864",
+      "success": true,
+      "id": "1_XQLBZ-HuCQZP9XuqyJygHFBTicY_SaH",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1_XQLBZ-HuCQZP9XuqyJygHFBTicY_SaH/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1Kpsu5TP8dimjUS9eKXNWTsD8WqsTEUOL",
+      "title": "non_chili_v1_colab_dataset.zip.part05",
+      "size": "67108864",
+      "success": true,
+      "id": "1RcncU07blkRKRAdSZRvYpo-LacnHFV-Q",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1RcncU07blkRKRAdSZRvYpo-LacnHFV-Q/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1wl_0mGlpCVL5RLH8DGRffhbc2LKPkr5-",
+      "title": "non_chili_v1_colab_dataset.zip.part06",
+      "size": "67108864",
+      "success": true,
+      "id": "1ouuOScJsooUn9Tjv9NAnDcJzaWwxzH4q",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1ouuOScJsooUn9Tjv9NAnDcJzaWwxzH4q/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "17lXHH4sFqxbJS8tgrFj4doxsCrnusFR9",
+      "title": "non_chili_v1_colab_dataset.zip.part07",
+      "size": "67108864",
+      "success": true,
+      "id": "1BZ4c8VGyPBQqlWwm0Xp532H_wMtEnozl",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1BZ4c8VGyPBQqlWwm0Xp532H_wMtEnozl/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1x1FxkQvOowBdUF3dEueueFQKL1ObWh2I",
+      "title": "non_chili_v1_colab_dataset.zip.part08",
+      "size": "67108864",
+      "success": true,
+      "id": "1eylleomTtKkXxTDftURbpws4MJ_gDSCO",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1eylleomTtKkXxTDftURbpws4MJ_gDSCO/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1YWfrugtJnYViMNxblZKi7-9n8wD3QOth",
+      "title": "non_chili_v1_colab_dataset.zip.part09",
+      "size": "67108864",
+      "success": true,
+      "id": "1puXibDZtsPOfSqOjm_1AwhpfkJS5oFsl",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1puXibDZtsPOfSqOjm_1AwhpfkJS5oFsl/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1xRlDnqRTK7U76ZUWct5Tja1aAbtTFO7g",
+      "title": "non_chili_v1_colab_dataset.zip.part10",
+      "size": "67108864",
+      "success": true,
+      "id": "1dCAKWP19WOBKYUoOeQWf5SJQua19yqYK",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1dCAKWP19WOBKYUoOeQWf5SJQua19yqYK/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1rHmrPIBpkemgMe0VbdiDfAm-eENVaTCf",
+      "title": "non_chili_v1_colab_dataset.zip.part11",
+      "size": "67108864",
+      "success": true,
+      "id": "1ixdbH5oSwZ1Cjd-pOlT1jODv9ZxNbfdr",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1ixdbH5oSwZ1Cjd-pOlT1jODv9ZxNbfdr/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1G60h9TpWSZ5RLeaslh3zpluNIYysESpg",
+      "title": "non_chili_v1_colab_dataset.zip.part12",
+      "size": "67108864",
+      "success": true,
+      "id": "1d44BdqSpMYJqGnKnRAWeDPbCbamiFhn4",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1d44BdqSpMYJqGnKnRAWeDPbCbamiFhn4/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1ewo3ZPsA_WFM4eut6rFglHdryr1SGpqX",
+      "title": "non_chili_v1_colab_dataset.zip.part13",
+      "size": "67108864",
+      "success": true,
+      "id": "1-RS1SyAAs5JGK-1CEf0jua1JVousNgrG",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1-RS1SyAAs5JGK-1CEf0jua1JVousNgrG/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1VEEWQbUppquNEk3HoIW1_EWYTwRdn93z",
+      "title": "non_chili_v1_colab_dataset.zip.part14",
+      "size": "53369292",
+      "success": true,
+      "id": "1r-WbQ3O0nNE4csjfYb2T9Rmh0taRw47q",
+      "mimeType": "application/octet-stream",
+      "url": "https://drive.google.com/file/d/1r-WbQ3O0nNE4csjfYb2T9Rmh0taRw47q/view?usp=drivesdk",
+      "made_private": false
+    },
+    {
+      "source": "1sCCGhvdjAMiDavaRGbtc848fpamscwVT",
+      "title": "parts.json",
+      "size": "2674",
+      "success": true,
+      "id": "1xjqit9FybmTTyrU8f16LNCeyNd5Qzsc_",
+      "mimeType": "application/json",
+      "url": "https://drive.google.com/file/d/1xjqit9FybmTTyrU8f16LNCeyNd5Qzsc_/view?usp=drivesdk",
+      "made_private": false
+    }
+  ],
+  "verified_part_sizes": true,
+  "models": [
+    "ssd_mobilenetv3"
+  ],
+  "gpu_training_started": false
+}

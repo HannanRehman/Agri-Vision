@@ -1,0 +1,347 @@
+{
+  "account": "rehmanfx71@gmail.com",
+  "folder_id": "1ptGCgoIq7K-G2AbMNurEhy1EEAbUYj8G",
+  "files": [
+    {
+      "path": "efficientdet_d0/screening_results.csv",
+      "source_id": "1HXmwry3Ia7-0gCdjcy1BmzxSNJE1FLRW",
+      "destination_id": "1Fq71cPydmQiZlYUeXVcQpnKpyM2UNzQ8",
+      "bytes": 618
+    },
+    {
+      "path": "efficientdet_d0/preflight.json",
+      "source_id": "1DjO-eAHRWBESNNnPFVU_YeVgwHSAfOcI",
+      "destination_id": "1EX4ktVeo75lf9pKhjRxdkdhxccAgaB_r",
+      "bytes": 1412
+    },
+    {
+      "path": "efficientdet_d0/initial.pt",
+      "source_id": "1fuu9xc69C7BuyyhZTo__OHSJtqQIKPpS",
+      "destination_id": "1ICflU8-VHCRbGUhMGfeHycI6fPaoQYG-",
+      "bytes": 15799455
+    },
+    {
+      "path": "efficientdet_d0/configs/trial_05.json",
+      "source_id": "1aU2eCPfp-wQ28wF3hi9eq6u3CrqJUO2l",
+      "destination_id": "1EkI58naqNnvFwGFsDFb1Cd4IMBXAbpsp",
+      "bytes": 644
+    },
+    {
+      "path": "efficientdet_d0/configs/trial_04.json",
+      "source_id": "177Xsrc5uqIdJxW9S2OqbdircTHHemaq8",
+      "destination_id": "12lBFt_mY40XBiwRXcX-R54Vc3BYLbYxI",
+      "bytes": 644
+    },
+    {
+      "path": "efficientdet_d0/configs/trial_03.json",
+      "source_id": "1_l4jyefQftaWS7doIbX7V_ooYQdHCJeE",
+      "destination_id": "1WajJ2-oLGt1hRdK9In8KxUewGIWrn0Ft",
+      "bytes": 644
+    },
+    {
+      "path": "efficientdet_d0/configs/trial_02.json",
+      "source_id": "1li8CfYl0aGRdAzeCyfqNP0yyB98EyuGQ",
+      "destination_id": "1USHV0awvycdm36d6vYEbLE_q-poVLaJC",
+      "bytes": 644
+    },
+    {
+      "path": "efficientdet_d0/configs/trial_01.json",
+      "source_id": "1p0qixcAvGdnIlP8gGkjsaZI_gWvjfJ6D",
+      "destination_id": "1Ld47ORvsB7gEjJ9D4y-k14dM3RMOBMSs",
+      "bytes": 644
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_05/settings.json",
+      "source_id": "1MD2ssIwrtAzZong2QCdfqEL7z9l061SR",
+      "destination_id": "11xAsLDfWostTRLhmkPXQyStBUHEQ4cW4",
+      "bytes": 1490
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/latest.json",
+      "source_id": "1ofKcDBgdDzW0zzYn6pC0NcsRU3x7uR66",
+      "destination_id": "1Ftwb4_UyAgsEkhs-UPiWI-28yA5hf_6v",
+      "bytes": 239
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/status.json",
+      "source_id": "1r_C_Lx2mLrFhgx7t0Ck3wcbVEjHUqJ2b",
+      "destination_id": "13sGt_L44z_tSCq_I619WKcoofF3Bw5jY",
+      "bytes": 133
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/settings.json",
+      "source_id": "1wj35zcGfv-yaS48uANqKhVM5EwQc8Kau",
+      "destination_id": "1-5ic5H_XfiyXjSEt3fYn0DJ5Xl5kHoU4",
+      "bytes": 1490
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/latest.json",
+      "source_id": "10M85IbT8E5HN0axp40vJfmSnHYP6OIHO",
+      "destination_id": "1qnluOlP-6kuwlI5zuyuaEVZmsUXm7zcX",
+      "bytes": 239
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/status.json",
+      "source_id": "1IfAu0iZ8XcBfi9XjhDMgiM9srs_exmvy",
+      "destination_id": "120tD0NT0D64M5e_BJNhmF1NvKbSxRF9U",
+      "bytes": 133
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/settings.json",
+      "source_id": "1Af8yccUG56MH0r7lsX6Gg1PjaCYOCCMw",
+      "destination_id": "1xtg6kIIEFVayibkvUfTrgVnpCaky9mrK",
+      "bytes": 1490
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/latest.json",
+      "source_id": "1lyNmo1xqJ1iEo5tMGvZSevV67qj139ki",
+      "destination_id": "1nL5RcJNH5OPRAWO2FCAE9vp4fREwh72C",
+      "bytes": 238
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/status.json",
+      "source_id": "1KvhtM-_Wq1GtE_pipizZTFfKLB-Q7jxk",
+      "destination_id": "14kRJLakc_gB1Dz2EVSWIHRKCvl3ezE9-",
+      "bytes": 133
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/settings.json",
+      "source_id": "1amFOjELgkeZ3UpYXvLQiCo1Ovq6huDdT",
+      "destination_id": "1Yq7mCR2_n6CXikVggr2UQrEmfigVZKkA",
+      "bytes": 1490
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/latest.json",
+      "source_id": "14ykwynlLjQ8FN39GsMUx9A9bdkWynEgB",
+      "destination_id": "1NC_KQiMekck2hpJifxwSaWiTiAzZQm7P",
+      "bytes": 237
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/status.json",
+      "source_id": "1o_GCyRk0XC7iCvwNFNLIhwZiaoR63_dZ",
+      "destination_id": "1yEUSPduzx_bo6F2DBHxBUJ23r9sPZ-Mk",
+      "bytes": 133
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/settings.json",
+      "source_id": "1aas9ffABX8M2uEzUGsuYjkT5ErBtJzVP",
+      "destination_id": "1rA78riYknLBcq8Z6nQ2EGsDYCnnnm3ur",
+      "bytes": 1490
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/checkpoints/global_round_005.pt",
+      "source_id": "11VqO401hhGJcuiXm7CWQ7FCQglMGe342",
+      "destination_id": "10gizqUOerg-3OvDLjHezxkKg1zdqd-C0",
+      "bytes": 15807077
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/checkpoints/global_round_005.pt",
+      "source_id": "1XCAJYWfEhKeQWcEVTHEFFthPfZmUhKWE",
+      "destination_id": "14PrgxAuuFJX32pK2JYgzQSnosZ57XYNU",
+      "bytes": 15807077
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/checkpoints/global_round_005.pt",
+      "source_id": "1RJC7vdHZSwzd--oeboAyggI3hdMdgNmk",
+      "destination_id": "1717oF45MgMt7Awsr6XDzPV5-OzfTrOFn",
+      "bytes": 15807077
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/checkpoints/global_round_005.pt",
+      "source_id": "1wfPYezh-E8BHIDbXKpbfOSohnp5gvvrs",
+      "destination_id": "155W3N0SW54cv25WBSqdDfCeIfAYEbMAF",
+      "bytes": 15807077
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_05/results/metrics/global_validation_metrics.csv",
+      "source_id": "1jG6YhOr75YKAw_nyiaqa2CE6XACO5WdA",
+      "destination_id": "1YPpGXeXA5tWKdYfK7gjAkgpC0PRf6Pdd",
+      "bytes": 64
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/global_validation_metrics.csv",
+      "source_id": "1H6PsG4OOsUK1_tNedbL88mfwmQEMDSUz",
+      "destination_id": "1CSSn8ueRG2piKTsbTz4Dx3QlHoNIqcFZ",
+      "bytes": 659
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/round_005.json",
+      "source_id": "1AExlpSR3tJ0dxZ_2Nus8f3IwqJuUTiM4",
+      "destination_id": "1UJKkO8m2DEACcwmG596c4QH0BmbKKsGB",
+      "bytes": 43096
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/round_004.json",
+      "source_id": "1IcortVBCMqgOWpxLTFsQnuEiKi9QA54e",
+      "destination_id": "1IXd7AIorfsXdl55QX0c5IHQ7TRaFkuUY",
+      "bytes": 42922
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/round_003.json",
+      "source_id": "1C2RzJdjzRfJzt16C2CM6BKrRmv4mqywy",
+      "destination_id": "1U61lEHkGRBBT25BPGMTfjyUrA8s1_SIn",
+      "bytes": 43210
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/round_002.json",
+      "source_id": "1ZQzu545TboH1xq25-H_szG80vlwTepRb",
+      "destination_id": "1SKcL29nLCW6wXyi2QFotx2QW_Br7kkH3",
+      "bytes": 43360
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/results/metrics/round_001.json",
+      "source_id": "1Jhd8ZF3Coq7xZTR0x9ps8T-FtULvJviK",
+      "destination_id": "1M3R83ydD9BgjuA4iojxXSDEM5UnKoQ48",
+      "bytes": 41451
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/global_validation_metrics.csv",
+      "source_id": "1cBaRQj2riFqQy7y8tA-4ZWxwXUykch2f",
+      "destination_id": "1kaFLRfTYtTuLtq-gxINB3-uzQ-7VLozw",
+      "bytes": 672
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/round_005.json",
+      "source_id": "19YbB5bNZDxkvThrQbCba1hhgsXlOKVH_",
+      "destination_id": "1Ff3xQZiuSeduf3yLf2MKUamyCQiV1xjm",
+      "bytes": 43117
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/round_004.json",
+      "source_id": "1-WgU51teOCcdrGPyQlbAqhSKGul6o0AI",
+      "destination_id": "1XgTAyYT2fwN80Nm173ejVSdaNFV4aXO9",
+      "bytes": 43056
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/round_003.json",
+      "source_id": "1W43apJJvxcbzOaGhE_bXi7WEmIeCsFjG",
+      "destination_id": "1ah5KcBjmqt48HFl0rEl79vQplj_jyPM_",
+      "bytes": 43113
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/round_002.json",
+      "source_id": "1iqwh8P3UnKLWbWqrZEuTwZ_01B3SXVKv",
+      "destination_id": "14avytsDD_N90kCCxDtkMM4LsTc6YGAFc",
+      "bytes": 43233
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_03/results/metrics/round_001.json",
+      "source_id": "1x9HPrL_4FcmDJndSBfsf6y57YiEOd_AM",
+      "destination_id": "1HDTSTNfe6S4JuDLzWlhJMo_VxyuAK8OQ",
+      "bytes": 42199
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/global_validation_metrics.csv",
+      "source_id": "166PtW196Z5-mynd1aCLFno7MXhlKLTqa",
+      "destination_id": "1nXp2TficgEw9IUA0elPsDU-KDGPkxipj",
+      "bytes": 667
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/round_005.json",
+      "source_id": "1q69D0-vMt_n7niwsn91OjRj8o1T7c_yM",
+      "destination_id": "1jBoXWcwlxpR-LcGT8PVa8gnGFfMsubFW",
+      "bytes": 42906
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/round_004.json",
+      "source_id": "1fO-7YTSHyQ2oif0jX0kELXmPgnACwqR0",
+      "destination_id": "1TsoX1NG7PzS1RWgnkNwBh__-0rnDJSLI",
+      "bytes": 43071
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/round_003.json",
+      "source_id": "1GGNaARUOmQQ4-ta7jyBgWdU7qt9s9STU",
+      "destination_id": "1u_XBpCRs4Q4ITPQvQfK9cP1gVpy_UszY",
+      "bytes": 43020
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/round_002.json",
+      "source_id": "1Lj1wgJG_Yw1PazjxPxHwhiIip0nd7Phb",
+      "destination_id": "1aO3XQjzBUAu384Ln3Ew3UbhFNyFmziBp",
+      "bytes": 43191
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/results/metrics/round_001.json",
+      "source_id": "13AQ5W1wx4GwV-gC5WVSrKMyDgyteHhlN",
+      "destination_id": "1jgUAI4k7ZZvetCiyH36Gn0_AApqPuFm1",
+      "bytes": 40715
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/global_validation_metrics.csv",
+      "source_id": "1ti1NYauEZmimJDMKP7XwoCYH_1laDiuN",
+      "destination_id": "1iBg3pQFceezEr1GG4_3cSfFSMkbdnrap",
+      "bytes": 667
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/round_005.json",
+      "source_id": "15N81Bl425H8UR-hiuuBll91cxhtQ2JDR",
+      "destination_id": "17vYvweSL850WA9xEZ7J2D-17R3yWjs53",
+      "bytes": 42995
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/round_004.json",
+      "source_id": "1-kbQuXGz8ampVLZS_c8xvVNpBYPJyuJS",
+      "destination_id": "1g7q9tlBZv6r-PLjSdEJTCAiaZlk65mqP",
+      "bytes": 43148
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/round_003.json",
+      "source_id": "1BRIgagO296UebgwrY0nGkhuOJMuRfCR3",
+      "destination_id": "1sKFleAEFMWaG8XB7hjlJhLoelwilIGuW",
+      "bytes": 43127
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/round_002.json",
+      "source_id": "1V9FieWz3Tjk6GdBVPJRn3cSRJ47fM042",
+      "destination_id": "1j7ebwYhTaeuF_IhX-6ISMIRtfQGUXQ5y",
+      "bytes": 43102
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/results/metrics/round_001.json",
+      "source_id": "1_zQAgQQhkvn6g0k8Fu-UWBYXXNQjuGPd",
+      "destination_id": "1FQsqsF3ux8MF0vZKaI11Ivmdtyve8rYm",
+      "bytes": 41255
+    }
+  ],
+  "checkpoint_validation": [
+    {
+      "path": "efficientdet_d0/trials/trial_03/latest.json",
+      "round": 5,
+      "checkpoint": "checkpoints/global_round_005.pt",
+      "checkpoint_sha256": "013e942889badb4360b28b561f037594fd39cd598135ae47c55e25a7c732c037",
+      "best_map": 0.5669285835847733,
+      "best_round": 5,
+      "best_checkpoint": null
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_02/latest.json",
+      "round": 5,
+      "checkpoint": "checkpoints/global_round_005.pt",
+      "checkpoint_sha256": "046085d349ef6ac36897423d010f9b26e4d6ad95e5d62dfbdf6c84edf93b46c9",
+      "best_map": 0.561338091253125,
+      "best_round": 5,
+      "best_checkpoint": null
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_01/latest.json",
+      "round": 5,
+      "checkpoint": "checkpoints/global_round_005.pt",
+      "checkpoint_sha256": "ff04c6da5ea675e0f309836cffcab731008b9ba69b65fbe5aae584161605b4fd",
+      "best_map": 0.56163092417062,
+      "best_round": 5,
+      "best_checkpoint": null
+    },
+    {
+      "path": "efficientdet_d0/trials/trial_04/latest.json",
+      "round": 5,
+      "checkpoint": "checkpoints/global_round_005.pt",
+      "checkpoint_sha256": "fe4d1e70b9eced75544e64f1c0fc5433186b6616ab84ce3b60294bb1b952ba0a",
+      "best_map": 0.5647213437222234,
+      "best_round": 5,
+      "best_checkpoint": null
+    }
+  ],
+  "initial_sha256": "dd0a92a8261e15f8776deba607c6ef0b9bab4389f3705a656c4a8050b45c6fce",
+  "dataset_parts_and_manifest": 15,
+  "metadata_sizes_verified": true
+}

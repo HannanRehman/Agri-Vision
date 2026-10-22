@@ -1,0 +1,11 @@
+# EfficientDet FP32 execution continuation
+
+Use the existing `AgriVision_GridSearch_EfficientDet_71gmail.ipynb` in 71gmail, T4, Run all. Five completed screening trials remain intact. Trial 6 resumes its last committed round, or starts round 1 if no round is committed. The separate benchmark notebook is no longer needed for normal training.
+
+The original `comparison/` and `tuning/` source and original code ZIP are unchanged. A separately hashed extension removes the redundant per-parameter gradient scan, defers loss-component CPU conversion to logging, and accumulates loss statistics on GPU in float64. The norm-10 clip and nonfinite norm guard, loss guard, FP32, optimizer, schedule, seeds, data loader, batch/resolution grid, augmentation, initialization, validation and FedAvg remain as before. Drive write frequency is unchanged.
+
+The unchanged original controller checks original identities and preserves original settings/checkpoint config hashes. The extension has an additional strict `execution_profile.json`, hashing its files and completed GPU benchmark evidence; a changed extension/environment/evidence stops resume. New round metric JSONs record this profile's version/hash. Completed original trial metrics are untouched, and finalist extensions explicitly use the new execution version. This documents mixed execution provenance rather than pretending all screening rounds used identical code. The short benchmark achieved bitwise equality in 12 comparisons; that does not prove universal long-run bitwise equivalence.
+
+The benchmark measured 13.3-22.0% reduction in cached-batch step time. Full-round savings remain unmeasured. Compare the first new round's client training times, validation time and overall recorded `round_seconds`; do not attribute variation from input size or batch to the execution change. The first new round will be visible under the existing trial results; no full search restart is performed.
+
+No Drive trial/settings/checkpoint is modified by package preparation. The profile is established and new training begins only when the user runs Colab. Never run the old and new notebooks against the same search concurrently. On a later interruption, reopen this same updated notebook and Run all.

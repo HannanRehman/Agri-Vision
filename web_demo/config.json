@@ -1,0 +1,18 @@
+{
+  "model": "efficientdet_d0",
+  "display_name": "EfficientDet-D0",
+  "checkpoint": "saved_models/seminar_demo/efficientdet_d0_round011.pt",
+  "checkpoint_sha256": "86f4fc50bb5ad26d7e8c8791215a36a2d225b807c5f8b4d93b1cec0f29398db4",
+  "class_map": "manifests/non_chili_v1/class_map.json",
+  "class_map_sha256": "661bc8cfb03254b67c08102b67655efd710690b2d4eee38168e648f628caf090",
+  "input_size": 512,
+  "device": "cpu",
+  "threads": 4,
+  "display_threshold": 0.5,
+  "threshold_validated": false,
+  "provisional": true,
+  "source": "Existing 24-class federated baseline checkpoint; provisional integration model, not the final tuned selection",
+  "checkpoint_config_hash": "5bac396d04beaeab8c865b095b691522fcceba3f4e147d839142a1199be70089",
+  "max_upload_bytes": 10485760,
+  "max_pixels": 20000000
+}

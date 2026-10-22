@@ -1,0 +1,7 @@
+{
+  "bundle": "efficientdet_fp32_benchmark_v1.zip",
+  "sha256": "99036645a92f6a530b3953675fde7ded3c29016ebc6e1da4896a01715a770b12",
+  "notebook": "AgriVision_EfficientDet_FP32_Benchmark_71gmail.ipynb",
+  "gpu_benchmark_run": false,
+  "existing_search_bundle_unchanged": true
+}

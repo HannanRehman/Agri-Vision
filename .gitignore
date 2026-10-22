@@ -65,3 +65,8 @@ PENYAKIT PADA CABAI.v1i.yolov8/
 /reports/comparison/efficientdet_resume_*/drive_*.zip
 /reports/comparison/final_round_per_class_*/*.zip
 agrivision_grid_search_v1_code.zip
+/reports/comparison/efficientdet_fp32_benchmark_*/efficientdet_fp32_benchmark_v1.zip
+/reports/comparison/efficientdet_fp32_continuation_*/efficientdet_fp32_continuation_v1.zip
+/reports/comparison/efficientdet_parallel_*/efficientdet_parallel_screening_v1.zip
+/web_demo/artifacts/
+/web_demo/qa/

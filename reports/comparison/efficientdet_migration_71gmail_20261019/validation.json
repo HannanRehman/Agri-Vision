@@ -1,0 +1,10 @@
+{
+  "folder": "https://drive.google.com/drive/folders/1ptGCgoIq7K-G2AbMNurEhy1EEAbUYj8G",
+  "notebook": "https://drive.google.com/file/d/1kHj0rIYE5gXxYokuw-KNJcUfqpxMwOK_/view?usp=drivesdk",
+  "notebook_syntax_valid": true,
+  "notebook_remote_bytes_verified": true,
+  "code_bundle_remote_bytes_verified": true,
+  "completed_checkpoints_sha256_verified": 4,
+  "initial_checkpoint_sha256_verified": true,
+  "training_started": false
+}

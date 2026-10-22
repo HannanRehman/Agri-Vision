@@ -1,0 +1,16 @@
+{
+  "bundle": "efficientdet_fp32_continuation_v1.zip",
+  "sha256": "35e010acf0d7bfebd3ff585d7cc33bdabd9bc009371d9e01b2fcc4f27ca5820e",
+  "files": {
+    "continuation/efficientdet.py": "7c14b3683fd075573273409831909b9b57b59f4956f5d9820d96cfa2743cad6a",
+    "continuation/runner.py": "6f0eb115f2e42989037d826b911ab2f2a2698620212336a790a3c6cd669d0770",
+    "continuation/search.py": "de4a92be34ac276cfa63ecb2d3228732aac01cf982d97d575280331e795b3ab5",
+    "continuation/__init__.py": "638d92b86117eb3085a434ac3e11f4c0b2e6af37d260fd331103b8093a32fc8c",
+    "benchmarks/__init__.py": "9a6916d6cd785e3f4678fca940f25fa52485ace04ee448a597974701ecf954b0",
+    "benchmarks/efficientdet_fp32.py": "931db215189a38048e56b91147a0d13e9f872d2bd39c9ed1cc0d18b3b8930913",
+    "continuation/benchmark_evidence.json": "c5bf75f82db9bef361f5a0936609af33bc4756e16644f81615fac499f4020888"
+  },
+  "benchmark_evidence_sha256": "c5bf75f82db9bef361f5a0936609af33bc4756e16644f81615fac499f4020888",
+  "original_bundle_sha256": "5453a56a97c2aca78224cec346c259e5f8a0a5eda2a93eb17b3677f06689c049",
+  "gpu_training_started": false
+}

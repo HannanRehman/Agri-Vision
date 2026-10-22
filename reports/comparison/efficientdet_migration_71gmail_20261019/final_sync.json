@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-19",
+  "account": "rehmanfx71@gmail.com",
+  "completed_trials": 4,
+  "resume_trial": 5,
+  "resume_round": 1,
+  "last_source_activity_utc": "2026-10-19T11:42:51.183733+00:00",
+  "source_phase": "pooled_validation",
+  "source_trial5_checkpoint_count": 0,
+  "source_trial5_metrics_csv_header_only": true,
+  "completed_trial_commits_match_source": true,
+  "source_stop_confirmed_by_user": true,
+  "final_source_status_copied": true,
+  "training_started_by_agent": false
+}

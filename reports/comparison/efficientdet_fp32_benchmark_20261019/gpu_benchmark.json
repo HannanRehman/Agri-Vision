@@ -1,0 +1,361 @@
+{
+  "diagnostic_only": true,
+  "precision": "FP32",
+  "architecture": "efficientdet_d0",
+  "hardware": {
+    "gpu": "Tesla T4",
+    "torch": "2.11.0+cu130",
+    "packages": {
+      "torchvision": "0.26.0+cu130",
+      "ultralytics": "8.4.48",
+      "pycocotools": "2.0.11",
+      "effdet": "0.4.1",
+      "timm": "1.0.27",
+      "numpy": "2.1.3"
+    }
+  },
+  "dataset_hash": "157b48390ecad0ffeb4e5d70ae4018398156593d28a77b3b55beca8c9f94c1aa",
+  "steps": 30,
+  "warmup": 3,
+  "repeats": 3,
+  "scope": "Cached CPU training batches; includes transfer/forward/backward/optimizer/local logging. Excludes dataset decoding, Drive latency, validation and FedAvg. No full-round speedup claim.",
+  "cases": [
+    {
+      "resolution": 512,
+      "batch": 2,
+      "runs": [
+        {
+          "original": {
+            "seconds": 5.3704535809999925,
+            "images": 60,
+            "images_per_second": 11.172240686014428,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256123392
+          },
+          "optimized": {
+            "seconds": 4.334523615000023,
+            "images": 60,
+            "images_per_second": 13.842351623685797,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256124928
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2389951141147408
+        },
+        {
+          "original": {
+            "seconds": 5.987383671000032,
+            "images": 60,
+            "images_per_second": 10.021071522543437,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256123392
+          },
+          "optimized": {
+            "seconds": 4.3334814759999745,
+            "images": 60,
+            "images_per_second": 13.84568050706959,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256124928
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.3816566896985316
+        },
+        {
+          "original": {
+            "seconds": 5.654242320000037,
+            "images": 60,
+            "images_per_second": 10.611501347894055,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256123392
+          },
+          "optimized": {
+            "seconds": 4.412107947000038,
+            "images": 60,
+            "images_per_second": 13.598941984362895,
+            "mean_loss": 1.4774904370307922,
+            "peak_allocated_bytes": 1256124928
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2815285545868327
+        }
+      ],
+      "median_speedup": 1.2815285545868327,
+      "step_time_reduction_percent": 21.96818428892504
+    },
+    {
+      "resolution": 512,
+      "batch": 4,
+      "runs": [
+        {
+          "original": {
+            "seconds": 6.605925884000044,
+            "images": 120,
+            "images_per_second": 18.1655080767175,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467464192
+          },
+          "optimized": {
+            "seconds": 5.376894063999998,
+            "images": 120,
+            "images_per_second": 22.317716988965405,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467465728
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2285765360766174
+        },
+        {
+          "original": {
+            "seconds": 6.519828945999961,
+            "images": 120,
+            "images_per_second": 18.40539084597032,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467464192
+          },
+          "optimized": {
+            "seconds": 5.467675896000003,
+            "images": 120,
+            "images_per_second": 21.94716773314757,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467465728
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.1924314955774324
+        },
+        {
+          "original": {
+            "seconds": 6.59332182899999,
+            "images": 120,
+            "images_per_second": 18.20023398102507,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467464192
+          },
+          "optimized": {
+            "seconds": 5.4089582689999816,
+            "images": 120,
+            "images_per_second": 22.185417973687905,
+            "mean_loss": 1.4338497122128804,
+            "peak_allocated_bytes": 2467465728
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2189633384283765
+        }
+      ],
+      "median_speedup": 1.2189633384283765,
+      "step_time_reduction_percent": 17.96307825883332
+    },
+    {
+      "resolution": 640,
+      "batch": 2,
+      "runs": [
+        {
+          "original": {
+            "seconds": 6.1480171739999605,
+            "images": 60,
+            "images_per_second": 9.75924404598945,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942447616
+          },
+          "optimized": {
+            "seconds": 5.134505761000014,
+            "images": 60,
+            "images_per_second": 11.685642745936699,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942449152
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.1973922048541146
+        },
+        {
+          "original": {
+            "seconds": 6.215174504999993,
+            "images": 60,
+            "images_per_second": 9.653791691887509,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942447616
+          },
+          "optimized": {
+            "seconds": 5.111196738999979,
+            "images": 60,
+            "images_per_second": 11.738933769107698,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942449152
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2159920312940273
+        },
+        {
+          "original": {
+            "seconds": 6.2421420109999985,
+            "images": 60,
+            "images_per_second": 9.612085065393751,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942447616
+          },
+          "optimized": {
+            "seconds": 5.097345297999993,
+            "images": 60,
+            "images_per_second": 11.77083295172131,
+            "mean_loss": 1.500576643149058,
+            "peak_allocated_bytes": 1942449152
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.2245868478733783
+        }
+      ],
+      "median_speedup": 1.2159920312940273,
+      "step_time_reduction_percent": 17.762618975732448
+    },
+    {
+      "resolution": 640,
+      "batch": 4,
+      "runs": [
+        {
+          "original": {
+            "seconds": 8.991888199000016,
+            "images": 120,
+            "images_per_second": 13.345361657559883,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822636032
+          },
+          "optimized": {
+            "seconds": 7.726523016999977,
+            "images": 120,
+            "images_per_second": 15.53091859507501,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822637568
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.1637690302890407
+        },
+        {
+          "original": {
+            "seconds": 8.815311729999962,
+            "images": 120,
+            "images_per_second": 13.612677994315298,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822636032
+          },
+          "optimized": {
+            "seconds": 7.689950621999969,
+            "images": 120,
+            "images_per_second": 15.604781603758974,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822637568
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.1463417859642009
+        },
+        {
+          "original": {
+            "seconds": 8.78359393400001,
+            "images": 120,
+            "images_per_second": 13.661833743873053,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822636032
+          },
+          "optimized": {
+            "seconds": 7.617570655999998,
+            "images": 120,
+            "images_per_second": 15.753053751524012,
+            "mean_loss": 1.5149242083231609,
+            "peak_allocated_bytes": 3822637568
+          },
+          "equivalence": {
+            "passed": true,
+            "bitwise_equal": true,
+            "max_absolute_difference": 0.0,
+            "atol": 1e-07,
+            "rtol": 1e-06,
+            "losses_match": true
+          },
+          "speedup": 1.15307022811552
+        }
+      ],
+      "median_speedup": 1.15307022811552,
+      "step_time_reduction_percent": 13.275013471268359
+    }
+  ],
+  "training_search_modified": false,
+  "automatic_migration": false,
+  "phase": "complete",
+  "decision": "Review measured speed and equivalence; existing search is not migrated automatically.",
+  "training_search_unchanged_verified": true
+}
