@@ -1,0 +1,995 @@
+{
+  "account": "hannanre19@gmail.com",
+  "uploaded": [
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1fsmJ8XSwWqhQIrOwzR6j4qC4DPZ118h4",
+      "title": "AgriVision_EfficientDet_Combined_Resume_re19gmail.ipynb",
+      "file_name": "AgriVision_EfficientDet_Combined_Resume_re19gmail.ipynb",
+      "mime_type": "application/x-ipynb+json",
+      "url": "https://drive.google.com/file/d/1fsmJ8XSwWqhQIrOwzR6j4qC4DPZ118h4/view?usp=drivesdk",
+      "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1fsmJ8XSwWqhQIrOwzR6j4qC4DPZ118h4",
+        "title": "AgriVision_EfficientDet_Combined_Resume_re19gmail.ipynb",
+        "file_name": "AgriVision_EfficientDet_Combined_Resume_re19gmail.ipynb",
+        "mime_type": "application/x-ipynb+json",
+        "url": "https://drive.google.com/file/d/1fsmJ8XSwWqhQIrOwzR6j4qC4DPZ118h4/view?usp=drivesdk",
+        "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1Yw83ug_THpzY56As_edqhONGJP_IWklN",
+      "title": "combined_effdet_re19gmail.json",
+      "file_name": "combined_effdet_re19gmail.json",
+      "mime_type": "application/json",
+      "url": "https://drive.google.com/file/d/1Yw83ug_THpzY56As_edqhONGJP_IWklN/view?usp=drivesdk",
+      "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1Yw83ug_THpzY56As_edqhONGJP_IWklN",
+        "title": "combined_effdet_re19gmail.json",
+        "file_name": "combined_effdet_re19gmail.json",
+        "mime_type": "application/json",
+        "url": "https://drive.google.com/file/d/1Yw83ug_THpzY56As_edqhONGJP_IWklN/view?usp=drivesdk",
+        "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1F8REBJCLsqraxEMw6X4DcSG-tRU3tL-y",
+      "title": "START_HERE_EfficientDet_re19gmail.md",
+      "file_name": "START_HERE_EfficientDet_re19gmail.md",
+      "mime_type": "text/markdown",
+      "url": "https://drive.google.com/file/d/1F8REBJCLsqraxEMw6X4DcSG-tRU3tL-y/view?usp=drivesdk",
+      "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1F8REBJCLsqraxEMw6X4DcSG-tRU3tL-y",
+        "title": "START_HERE_EfficientDet_re19gmail.md",
+        "file_name": "START_HERE_EfficientDet_re19gmail.md",
+        "mime_type": "text/markdown",
+        "url": "https://drive.google.com/file/d/1F8REBJCLsqraxEMw6X4DcSG-tRU3tL-y/view?usp=drivesdk",
+        "parent_id": "1Kok-lAR-EhvSiasW_iHxhNinxSPQI2p1"
+      }
+    },
+    {
+      "accepted_input": "file_uri",
+      "success": true,
+      "id": "1ZthQZD0VKH5TYZ1LYNPpBKwbR3VBPRPx",
+      "title": "screening_results.csv",
+      "file_name": "screening_results.csv",
+      "mime_type": "text/csv",
+      "url": "https://drive.google.com/file/d/1ZthQZD0VKH5TYZ1LYNPpBKwbR3VBPRPx/view?usp=drivesdk",
+      "parent_id": "1NlmqbftuG7j1ij57vx4EP1H3IP_b3oK1",
+      "structuredContent": {
+        "accepted_input": "file_uri",
+        "success": true,
+        "id": "1ZthQZD0VKH5TYZ1LYNPpBKwbR3VBPRPx",
+        "title": "screening_results.csv",
+        "file_name": "screening_results.csv",
+        "mime_type": "text/csv",
+        "url": "https://drive.google.com/file/d/1ZthQZD0VKH5TYZ1LYNPpBKwbR3VBPRPx/view?usp=drivesdk",
+        "parent_id": "1NlmqbftuG7j1ij57vx4EP1H3IP_b3oK1"
+      }
+    }
+  ],
+  "metadata_files_verified": 195,
+  "downloaded_files": 181,
+  "files_sha256": [
+    {
+      "relative": "configs/trial_01.json",
+      "bytes": 644,
+      "sha256": "a1d0661b9fc8ae91830abb04bf84a518f7aacc3ac08b73c1a55960801493cc92"
+    },
+    {
+      "relative": "configs/trial_02.json",
+      "bytes": 644,
+      "sha256": "135df6c781d953c763f6d5dc31db0a2646c3c21a682a0614c8cac6a787bfd443"
+    },
+    {
+      "relative": "configs/trial_03.json",
+      "bytes": 644,
+      "sha256": "e42b4629ec299778c490a42b20dfcc1120cf9b90c5e6708f98cf90f011e85dc4"
+    },
+    {
+      "relative": "configs/trial_04.json",
+      "bytes": 644,
+      "sha256": "5fca7c1eb77f92c5d4677ccdf7428eeb69fe35b76a5bad173bc92a2fe83a850f"
+    },
+    {
+      "relative": "configs/trial_05.json",
+      "bytes": 644,
+      "sha256": "6ed1d9d71861650ad7121a9a0d6292ae3de8af3becd6e5730335c5835a7b5d55"
+    },
+    {
+      "relative": "configs/trial_06.json",
+      "bytes": 644,
+      "sha256": "d33dd78af323c2e6c7ecca5eb8f8a6a0deea4159f12264a8ddaa95b8da4a64f3"
+    },
+    {
+      "relative": "configs/trial_07.json",
+      "bytes": 644,
+      "sha256": "4370d74a3affbfd83c6791769bdd78daff8a5717ab39cdef4c753afcd489e0b1"
+    },
+    {
+      "relative": "configs/trial_08.json",
+      "bytes": 644,
+      "sha256": "6b193e6a0feb2018f8cb7d5fde2b2804c7501a946aea2184d934c111ba1f3526"
+    },
+    {
+      "relative": "configs/trial_09.json",
+      "bytes": 643,
+      "sha256": "a85fb6d2317cb0446ec1da4ca3a826494c2b2b36af4a50bb5ecade36158ab317"
+    },
+    {
+      "relative": "configs/trial_10.json",
+      "bytes": 643,
+      "sha256": "06573a839867a31b5b3bd5ffd9b34109d839d73b52ef7d992a070fc78af43ed9"
+    },
+    {
+      "relative": "configs/trial_11.json",
+      "bytes": 643,
+      "sha256": "834fd139988932ccf9a7e08322e2fb8c1ebaa4e2c2a57463e83aa3315a3a03e7"
+    },
+    {
+      "relative": "configs/trial_12.json",
+      "bytes": 643,
+      "sha256": "a332ef5ccbabd4e578106fe18f8b1ceaf2bbcb5136efa0d7efed1716b87f968e"
+    },
+    {
+      "relative": "configs/trial_13.json",
+      "bytes": 643,
+      "sha256": "c011cd7746d8d32ffd41b2a0ebb2fd79508fa755da19dfd924f92704377db5e3"
+    },
+    {
+      "relative": "configs/trial_14.json",
+      "bytes": 643,
+      "sha256": "07d6069761e34d5483ecb3eeed4722302071ebed920a584c07137d710f8b6c3a"
+    },
+    {
+      "relative": "configs/trial_15.json",
+      "bytes": 643,
+      "sha256": "16480fdf9d414ffc716c27a8876ce2cf60e86670b4ae099962170083d2afed12"
+    },
+    {
+      "relative": "configs/trial_16.json",
+      "bytes": 643,
+      "sha256": "54eb1b08620a226fdd204d09f41328eab741dc83528b1592820ae95d9e394b19"
+    },
+    {
+      "relative": "execution_profile.json",
+      "bytes": 1614,
+      "sha256": "e0edf887333994f0e03d73b6f49a55fbfc6270b5fbd735661f2a9be9a16b62ac"
+    },
+    {
+      "relative": "initial.pt",
+      "bytes": 15799455,
+      "sha256": "dd0a92a8261e15f8776deba607c6ef0b9bab4389f3705a656c4a8050b45c6fce"
+    },
+    {
+      "relative": "preflight.json",
+      "bytes": 1412,
+      "sha256": "9b7b4959181322996479d08cd120c4d76570d672fec01509192c8c7cd7b32566"
+    },
+    {
+      "relative": "trials/trial_01/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "ff04c6da5ea675e0f309836cffcab731008b9ba69b65fbe5aae584161605b4fd"
+    },
+    {
+      "relative": "trials/trial_01/latest.json",
+      "bytes": 237,
+      "sha256": "f82c6de2ba19945f0ec70d252a53e784c2831a940ca6225a1fb88eafaf3aa0ab"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "502d5f9d92293e44a39f2148d4ae8fdda8994a089e7e51215b1833a601549b8c"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/round_001.json",
+      "bytes": 41255,
+      "sha256": "ed352ff3d98160aa76fed14e7c470dc288707e3804de43683d0b8306e499bc37"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/round_002.json",
+      "bytes": 43102,
+      "sha256": "7f7b00eddc6339a7ea4d9e113e48d01fe43116e57dd76b4b121d1ddad70ff563"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/round_003.json",
+      "bytes": 43127,
+      "sha256": "daaf005fdcae4ece2417cdf89beadbb4ccd8f836156a3914be4a46ed10e72d9b"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/round_004.json",
+      "bytes": 43148,
+      "sha256": "2170cd16da2e3902825dc3077397adb1d4bf94023029cda5773c482355fffc25"
+    },
+    {
+      "relative": "trials/trial_01/results/metrics/round_005.json",
+      "bytes": 42995,
+      "sha256": "cf5983283c5d29856e5ec039bd56a08b97a65c5089f70fc3bd3032ef6758968e"
+    },
+    {
+      "relative": "trials/trial_01/settings.json",
+      "bytes": 1490,
+      "sha256": "1f3fc7099cfc0682418b42a366824dc01a1890e061ee3f2f81dc3c7e9f26c551"
+    },
+    {
+      "relative": "trials/trial_01/status.json",
+      "bytes": 133,
+      "sha256": "2ac66c2df3e117ae32b15bc607ac7075d06344a008fe80bfa0aa50048479231c"
+    },
+    {
+      "relative": "trials/trial_02/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "046085d349ef6ac36897423d010f9b26e4d6ad95e5d62dfbdf6c84edf93b46c9"
+    },
+    {
+      "relative": "trials/trial_02/latest.json",
+      "bytes": 238,
+      "sha256": "f96b7b7e1cec0a88eb6c65b68d7112879e469fc81db395e075627d87f7b1c413"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "38c6e1f88c64a1eb177823fecee1ff1967cd6cb9f0350754d2b8cb20cf4b7052"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/round_001.json",
+      "bytes": 40715,
+      "sha256": "64b4dc1b783b8a11cec0864cc990b3eb53d8beb4977d204f8481d09cd98995d4"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/round_002.json",
+      "bytes": 43191,
+      "sha256": "ff46351f65ce389e96d1b14d357db615813ba1813555d7a03f79d3ad4d54e72b"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/round_003.json",
+      "bytes": 43020,
+      "sha256": "f4c2c2ac5b068691f4bace04c637758188e942d6f274fa9e5b27e4bdaf74492e"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/round_004.json",
+      "bytes": 43071,
+      "sha256": "bb2f41f02dd9c20057720bbaaf90e72a9e72ddcbfc6421eceb377f6d6db1f1b5"
+    },
+    {
+      "relative": "trials/trial_02/results/metrics/round_005.json",
+      "bytes": 42906,
+      "sha256": "6e44df40dee713e74b6ea1fae3e8d79d1b2d0d2a77ef0a5d3e727b4644607c1f"
+    },
+    {
+      "relative": "trials/trial_02/settings.json",
+      "bytes": 1490,
+      "sha256": "73129d6eafa70d042010180b1077a72348f6b2021ed0a45a109b8d32805bce53"
+    },
+    {
+      "relative": "trials/trial_02/status.json",
+      "bytes": 133,
+      "sha256": "a192bd814ca99bdac4e3116c343dfee5cd8de1080435e5c4ab34b441860ed52c"
+    },
+    {
+      "relative": "trials/trial_03/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "013e942889badb4360b28b561f037594fd39cd598135ae47c55e25a7c732c037"
+    },
+    {
+      "relative": "trials/trial_03/latest.json",
+      "bytes": 239,
+      "sha256": "d7c3bdb8e5699c8cb6a3d2295821492f8fb73a384010a2d8988113ab7911812f"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/global_validation_metrics.csv",
+      "bytes": 672,
+      "sha256": "bbbcdec8c6a8cccc5fdc0979076abe06e328e4427ea751cf6c51840262a5e541"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/round_001.json",
+      "bytes": 42199,
+      "sha256": "f406806f1e4e5c568f70e94af18209e218727bc23ce90af49a612c667fd26b07"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/round_002.json",
+      "bytes": 43233,
+      "sha256": "7df6a079ee02d0b6eda41ae1d966b87ef94a6a07c65c303fe882f5645dd928ba"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/round_003.json",
+      "bytes": 43113,
+      "sha256": "2b3ff2c6d6f4fb9c03775994639ac0b82c42f5f17ba4fb35b89c559fc27bc78d"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/round_004.json",
+      "bytes": 43056,
+      "sha256": "437d37d58571cb81a47518f615d06a806c216969ad3f3f0783958c1c87c15e0a"
+    },
+    {
+      "relative": "trials/trial_03/results/metrics/round_005.json",
+      "bytes": 43117,
+      "sha256": "e92b0c72c501c0dd617cbcded725e37a85cead421c83d5b809e1ca976c47d439"
+    },
+    {
+      "relative": "trials/trial_03/settings.json",
+      "bytes": 1490,
+      "sha256": "0b0eb00a88114e9e818cfff2128bad73e3eac58b7ef13085e117786075a31a82"
+    },
+    {
+      "relative": "trials/trial_03/status.json",
+      "bytes": 133,
+      "sha256": "0eb77b9096f79c282cb0bf67bdf28445a7056b90a7c61bb4b076ff1919fe1d40"
+    },
+    {
+      "relative": "trials/trial_04/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "fe4d1e70b9eced75544e64f1c0fc5433186b6616ab84ce3b60294bb1b952ba0a"
+    },
+    {
+      "relative": "trials/trial_04/latest.json",
+      "bytes": 239,
+      "sha256": "08055c6dc09a36bdafb7ff8d89c0f5c252f003fd9da34ac5d14602af42fa0980"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/global_validation_metrics.csv",
+      "bytes": 659,
+      "sha256": "489dc8147c98d12bfc5cd2a98ded1a3f9046258fba6487f13b58b25ae14aa03d"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/round_001.json",
+      "bytes": 41451,
+      "sha256": "d53b5eb5836be40702b0f5197a89742b415d5888b6b46f58ed037dda6425f5a0"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/round_002.json",
+      "bytes": 43360,
+      "sha256": "b3fa9f27a20ae8a31d409c1f4699f9f2aa5aec1a2ae791afb20817be53942678"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/round_003.json",
+      "bytes": 43210,
+      "sha256": "eb0def68d3f9b39d832abdcc0eb499105eb194f3ada31dd6762c7d872932bd9d"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/round_004.json",
+      "bytes": 42922,
+      "sha256": "9c6c06c65480c8b73202a344e9adcadfdb89d8b7b8b2ff2d6e7898eb4c35131e"
+    },
+    {
+      "relative": "trials/trial_04/results/metrics/round_005.json",
+      "bytes": 43096,
+      "sha256": "9a44e1462a6de63d56650d91a0f3b7a7ec776e1b29c442fbafbccf1bc7c04c12"
+    },
+    {
+      "relative": "trials/trial_04/settings.json",
+      "bytes": 1490,
+      "sha256": "2da52993e4a5dde671ef6ebcbe2d4b6ebf658711d09603fe1d9585ca1a5efc5d"
+    },
+    {
+      "relative": "trials/trial_04/status.json",
+      "bytes": 133,
+      "sha256": "5ddd93387273a3c425c58625b83b4bd38c6e6a133c952172069c461c66223816"
+    },
+    {
+      "relative": "trials/trial_05/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "993d6bbf0847119531b4d08832ae9f82f1a906dac3ace8bccfd7f2ff741aa361"
+    },
+    {
+      "relative": "trials/trial_05/latest.json",
+      "bytes": 239,
+      "sha256": "0005ad3cba6b47dfa5e8d695a2681e327272c927c93471ff6f07c2582f43e5bc"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/global_validation_metrics.csv",
+      "bytes": 665,
+      "sha256": "9c49920c740dcdfd9d438a3826eabfc2ffb6e73db033e90a4a68eef47df5f712"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/round_001.json",
+      "bytes": 41486,
+      "sha256": "13996c49a057e09aee04a15908d9db50aa840c2002537b2e676cb4d7370d01e8"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/round_002.json",
+      "bytes": 43269,
+      "sha256": "bdb6c9e612474b37c3abb05dea67c677e76a62093ea6537635c9df1e520858fb"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/round_003.json",
+      "bytes": 43140,
+      "sha256": "f5751884ea7d1e5a5ad75e1c1f8e77fb34a7cfcd71791bfadef2b0765e7de3cd"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/round_004.json",
+      "bytes": 43161,
+      "sha256": "d55dfd266f0e0020e9f049a28d0687c6784de86b82fa0e35043ca40539555fc4"
+    },
+    {
+      "relative": "trials/trial_05/results/metrics/round_005.json",
+      "bytes": 43096,
+      "sha256": "684c6ab98cbd16a63086db14aa2013b1fa7bfea1993091d8a092915e82cb1bd2"
+    },
+    {
+      "relative": "trials/trial_05/settings.json",
+      "bytes": 1490,
+      "sha256": "1263afda6b89ee5a64ef5051e041188573e40492e739f9a076035c8ad2573220"
+    },
+    {
+      "relative": "trials/trial_05/status.json",
+      "bytes": 133,
+      "sha256": "1e9b7162b20e1a80e3d75f50be41f24980077b0af31a40db4a64a06d9f8a9a1a"
+    },
+    {
+      "relative": "trials/trial_06/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "5c287559d98424fb04f0f60ebbc9fa56bcec79d41923e686c12d2e043620f8c3"
+    },
+    {
+      "relative": "trials/trial_06/latest.json",
+      "bytes": 239,
+      "sha256": "830f7c5bdb72eda7987664cc19c490ee103b16726042938d4ee06f73e0b66c1c"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/global_validation_metrics.csv",
+      "bytes": 666,
+      "sha256": "d59e49818f74ee5ee9ad114f0cd5175ad0ebfaade4a7cbe92821f5252a02bdcc"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/round_001.json",
+      "bytes": 40860,
+      "sha256": "aaa1d6da47d7aae73e4eefca3230a7512e9d09a1b38bf364aeb458bada5197d3"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/round_002.json",
+      "bytes": 43386,
+      "sha256": "18a99157f03a251cd0ff80d1c87ebf20acc0b4e6853b294cf6cb77c58241813c"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/round_003.json",
+      "bytes": 43298,
+      "sha256": "bd6feec1911930bb1e78f31a28f0563fa3ff685291c494971905fdf25ea484a9"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/round_004.json",
+      "bytes": 43069,
+      "sha256": "1f251f3c90e53a2fea10c1fba0339b3add7d1b6a418257e3dad8d81396b24bf0"
+    },
+    {
+      "relative": "trials/trial_06/results/metrics/round_005.json",
+      "bytes": 43115,
+      "sha256": "c6a0577c8bbcac91d98761b454d94b3199528462d0027d8b6b057e0851027423"
+    },
+    {
+      "relative": "trials/trial_06/settings.json",
+      "bytes": 1490,
+      "sha256": "71aeb2986d0e52969b1c1d79421b09d0a0962cde8a479f0cb7581ba81e72ca14"
+    },
+    {
+      "relative": "trials/trial_06/status.json",
+      "bytes": 133,
+      "sha256": "64391f326ab0f051d3714db2538832264a8b25323c466b895ee2eb681966b551"
+    },
+    {
+      "relative": "trials/trial_07/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "886881369377458c51900a5e7e41704de9db60f8e871c485e39599a0257e5fca"
+    },
+    {
+      "relative": "trials/trial_07/latest.json",
+      "bytes": 239,
+      "sha256": "ef7ab432ada7ae7ae18c6490603878f680d804a53ef61cfcc573d1509bbb3371"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/global_validation_metrics.csv",
+      "bytes": 663,
+      "sha256": "9c769e0a0ffc089c6f95497e3848cf19456a14c9017817e0e80bcfea103c2c29"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/round_001.json",
+      "bytes": 42382,
+      "sha256": "9ed368725aef4ecb8380776505c78e45f29e2b27d30ba57ebdfbcc5f55df15fd"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/round_002.json",
+      "bytes": 43293,
+      "sha256": "fb20383ca528130ed8b23e546083029181880d5adc0dab4957c44499d0dcbdd7"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/round_003.json",
+      "bytes": 43222,
+      "sha256": "04ea501f6ccfc0b1205254d10656df3e2895fc0508fa55b5a3fb5570054548df"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/round_004.json",
+      "bytes": 43351,
+      "sha256": "86bb04fc0e293b9cd4ea5a19500b2bdddbe8a92907f91f9170b633c9b510b896"
+    },
+    {
+      "relative": "trials/trial_07/results/metrics/round_005.json",
+      "bytes": 43158,
+      "sha256": "617c73a44ae9b4cb6dcebea923743cfa5c75429313aef6160d1960d24ae1c872"
+    },
+    {
+      "relative": "trials/trial_07/settings.json",
+      "bytes": 1490,
+      "sha256": "25f6df74f5debc9328b409a65e9db6f7d74f46fb537440790846831a888eeb52"
+    },
+    {
+      "relative": "trials/trial_07/status.json",
+      "bytes": 133,
+      "sha256": "afed06ff868fe6760d3eec92e8f8b294d5bb0dab825968d99cf9e075607100cb"
+    },
+    {
+      "relative": "trials/trial_08/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "ada0bb7b57e35c7957c16b190b5dbec56b00c85b818aec1de0ea71dee3b42465"
+    },
+    {
+      "relative": "trials/trial_08/latest.json",
+      "bytes": 239,
+      "sha256": "aeec8b18c968198d06bd48c43ca36a5a732e1ca3655679468bd94b14b5d8d237"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/global_validation_metrics.csv",
+      "bytes": 671,
+      "sha256": "8023323eb779f0137f290bc9c0822f4594a6a64dabd91c587cd1dddcfed3fcdc"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/round_001.json",
+      "bytes": 41713,
+      "sha256": "160601f41bf8f7c2ee2945822f8974068c497436617aa8f895310a8e5c5df05b"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/round_002.json",
+      "bytes": 43364,
+      "sha256": "166b78d8092de11f3e2a1cb65a7f0e3d5273d64d0d13b73b74470825f362c912"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/round_003.json",
+      "bytes": 43344,
+      "sha256": "0b0786de53f54a6cd4d5ac1e01cc29f9b5e88872a6383c5e564d649668e288f9"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/round_004.json",
+      "bytes": 42956,
+      "sha256": "8ffef5347c8d7b44ba6b3fa48c0dfdb3b4cafb33049f3e3133b60cf6082b0ec6"
+    },
+    {
+      "relative": "trials/trial_08/results/metrics/round_005.json",
+      "bytes": 43223,
+      "sha256": "706235534f6be239d340f793854a484470347907a1c45e5280bf6131837c7df4"
+    },
+    {
+      "relative": "trials/trial_08/settings.json",
+      "bytes": 1490,
+      "sha256": "0420a9e38ce96e9c1b9869e86db8fa5b83e7cbfdca5b7fe0fc3edcddfad01234"
+    },
+    {
+      "relative": "trials/trial_08/status.json",
+      "bytes": 133,
+      "sha256": "5ef22f535ad6719196ff1f38fc304279b03982b7bfb67831642a051ab2377d28"
+    },
+    {
+      "relative": "trials/trial_09/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "abd2ae9ce14bf2e0f5d91d2648432ab548f79cc2c934a84827f7f1629e01408e"
+    },
+    {
+      "relative": "trials/trial_09/latest.json",
+      "bytes": 239,
+      "sha256": "33afd5c8358e5f289d76d125615dc59137a75404dc3548c2d10da4955323c9c6"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "c10a0793452565ad8beb812f418e859dbfe5ce5699d3b2a415b61e62e72e3deb"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/round_001.json",
+      "bytes": 42608,
+      "sha256": "8673cf69b7996c313742fa32dd5d553bc3c8fa76be0a016c72c31d89a80dab03"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/round_002.json",
+      "bytes": 43393,
+      "sha256": "ed1528a35e959f393fb5632370578512bd24d06c9681ee7a31808701f93d7667"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/round_003.json",
+      "bytes": 43306,
+      "sha256": "e69fc88fb52d1edae0ec7fccf4f4116bf88723eab36a4a7da1f8b7fe16c2956e"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/round_004.json",
+      "bytes": 43201,
+      "sha256": "a2c0e5a9a9fd586e9c6c52107313d7c88326dc5d556ee07314aa2a037d1ca615"
+    },
+    {
+      "relative": "trials/trial_09/results/metrics/round_005.json",
+      "bytes": 43143,
+      "sha256": "6960f34b11f1aa80df819981c277fc1222ee75308154b7ca3024d1fa94d50669"
+    },
+    {
+      "relative": "trials/trial_09/settings.json",
+      "bytes": 1489,
+      "sha256": "2495259a7c6fbb0b566e6483fc5ffec68b1af5ffadbada4a58e461e4c785ef5a"
+    },
+    {
+      "relative": "trials/trial_09/status.json",
+      "bytes": 133,
+      "sha256": "9ac0b1da314e3e06a883a2309003a2031192300e7546194e5546b2362b283a34"
+    },
+    {
+      "relative": "trials/trial_10/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "e346031d2b69580a0caf4f41f61a2f57f94c57fb905771208d93890313158ba3"
+    },
+    {
+      "relative": "trials/trial_10/latest.json",
+      "bytes": 239,
+      "sha256": "92ccca1aa512f8b71e28f52ab4f0c3270998b9222e0a6a47f3d3cb623d33c351"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "f7dfcee2f1d2f39e4c26e63dbce84ca4c0d4b59170e40b5c72553c475ff41a63"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/round_001.json",
+      "bytes": 42515,
+      "sha256": "139922b42161987d01a3189179a4fa163f2d563c26919eedeb565236aa060c1e"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/round_002.json",
+      "bytes": 43428,
+      "sha256": "d92086597a9d63d45baa256897d968c90a45ed4825efc81edece277bd21b150e"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/round_003.json",
+      "bytes": 43368,
+      "sha256": "f63df3294944b72c1c8729812ab78a6e77b8d51b473bb21e8e20c344e33e24eb"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/round_004.json",
+      "bytes": 43019,
+      "sha256": "64f7ec84fa4cdc0ce1ada6dc8659b40cb15f2915e46f46086cb276e4754c3fee"
+    },
+    {
+      "relative": "trials/trial_10/results/metrics/round_005.json",
+      "bytes": 43135,
+      "sha256": "ffb0e0fca329c0cbb9eb8b1682e1dac7cb1200c8a93a715aee85d144c9b04844"
+    },
+    {
+      "relative": "trials/trial_10/settings.json",
+      "bytes": 1489,
+      "sha256": "87e9e6acf4d373cb6e72a6d9e769063b8c52821b26c7051421de06145dfaddb7"
+    },
+    {
+      "relative": "trials/trial_10/status.json",
+      "bytes": 133,
+      "sha256": "80395d6fac5bc41b98e4d534b695cee325fb5d1f01e4f4305438f47ed277aeeb"
+    },
+    {
+      "relative": "trials/trial_11/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "1b17766b419216a1902ce91c8a8c88e25d45de3946c0042ef02a4d4daaaa743c"
+    },
+    {
+      "relative": "trials/trial_11/latest.json",
+      "bytes": 239,
+      "sha256": "edc17f26a567b4cfaddc975c2194557f3587bae8647ab0217960785274963075"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/global_validation_metrics.csv",
+      "bytes": 664,
+      "sha256": "4cb0ec542d65c6713060edcfd10f3a08a895147a1fb9696e0cb659ad4e146afe"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/round_001.json",
+      "bytes": 42668,
+      "sha256": "51ef274596964369b4a40870fc12cbe8c21bd002973e193c2adf4a79f7ec78f4"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/round_002.json",
+      "bytes": 43515,
+      "sha256": "c48c146a2a35e87ab8ffe5b91f8737ac511423a7f73d9bbbe752afff2a820e46"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/round_003.json",
+      "bytes": 43251,
+      "sha256": "a040fa903940a5d3cb0c05298288e9d68016827ad5ef4f2eeeb61cbeab1b19ee"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/round_004.json",
+      "bytes": 43055,
+      "sha256": "3ca5a55ac7f08db5034399ff1cacb02381a2aedd8b7392bde5f5dbfe4a6dbdfa"
+    },
+    {
+      "relative": "trials/trial_11/results/metrics/round_005.json",
+      "bytes": 43150,
+      "sha256": "5e305503979b0eb746b86b18152e54dbaadfc27c0cc64c3c071e14dcf7da5cfe"
+    },
+    {
+      "relative": "trials/trial_11/settings.json",
+      "bytes": 1489,
+      "sha256": "fcc407c36e96884cd04285fc1b9148da8347636c520ee9e169a8393e16e4501a"
+    },
+    {
+      "relative": "trials/trial_11/status.json",
+      "bytes": 133,
+      "sha256": "cf63304804784a7d31fe71407649073dae834bf98c73c1202b9a3b7b3e048f72"
+    },
+    {
+      "relative": "trials/trial_12/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "c6edb99ee34e22c19ea55926e74c6ee35b3545aa11ff05c5852d58b801eaee80"
+    },
+    {
+      "relative": "trials/trial_12/latest.json",
+      "bytes": 239,
+      "sha256": "d5bfc13767d2f6ce05684c8a949aaf7b4bea3dbd252a322b8cc1fb9ed53d9203"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/global_validation_metrics.csv",
+      "bytes": 665,
+      "sha256": "25cc6b79af5b4200809cc6e8a3329a49bd022c12631357509d816504ecf8212d"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/round_001.json",
+      "bytes": 42955,
+      "sha256": "5aa1f5c677509dff3389ae1bb0085b34572bb8d804446777bf41c63eeea31dca"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/round_002.json",
+      "bytes": 43581,
+      "sha256": "415ecb8f704d402694b8b61cf1cc2222f65d4da5046ab339291e871070e9d104"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/round_003.json",
+      "bytes": 43496,
+      "sha256": "27e7d1ea4933f12d56d8441b8ce686c0920a7f06fa14b3c1e19abbee521fd64c"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/round_004.json",
+      "bytes": 43196,
+      "sha256": "4acb91beea36756e70c297797b1e19c2d957a123fbd42bbb83bcabc94e7dce60"
+    },
+    {
+      "relative": "trials/trial_12/results/metrics/round_005.json",
+      "bytes": 43190,
+      "sha256": "bfbfb534e6ffcfd12d12d954cdb30f31be63b13aea686c4cecf6e7441a65a3c4"
+    },
+    {
+      "relative": "trials/trial_12/settings.json",
+      "bytes": 1489,
+      "sha256": "fd92fd5bea0e5b0647971bec1f51daa6183b0586b77699653e6f0864529a7639"
+    },
+    {
+      "relative": "trials/trial_12/status.json",
+      "bytes": 133,
+      "sha256": "da2b8919c58d93841e0743353d91c6258fa586ed8ccf6ba3c05326fbdaa3ac7b"
+    },
+    {
+      "relative": "trials/trial_13/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "cf02e9cee178c45ae66ba9fcb7c17f83835be44ba653371fc293dba69dea734f"
+    },
+    {
+      "relative": "trials/trial_13/latest.json",
+      "bytes": 239,
+      "sha256": "de409117a4fff7294f8b02c0914a63ee969aba2eb8cb90ad1ab2b205342d984b"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "cb5a7bc32ec348bf725d60423bda8282671e1e441640735c0dfe4bb7990e05ba"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/round_001.json",
+      "bytes": 42613,
+      "sha256": "ad84fa87e50a295123637a25183809ff549295659948055091f26c6c1dd85cb6"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/round_002.json",
+      "bytes": 43398,
+      "sha256": "91105be3aa42d145c815c63d7bbaa45c5094d24a92bcb2b3b4763266a8dc6b6f"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/round_003.json",
+      "bytes": 43304,
+      "sha256": "4285788a4ebf5a7302598db81cd114fc87bb7072d8a129681be83d7c2cdad4be"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/round_004.json",
+      "bytes": 43200,
+      "sha256": "99553db6277c9a571f29336f1b3989fe1e3491f2e01d359a69d8f1329e7e7f1b"
+    },
+    {
+      "relative": "trials/trial_13/results/metrics/round_005.json",
+      "bytes": 43140,
+      "sha256": "d837dd322891e9f062bdfb7ade323d604e5fb756a6958ca2519adc2629f03cd8"
+    },
+    {
+      "relative": "trials/trial_13/settings.json",
+      "bytes": 1489,
+      "sha256": "73d2b9ac2b98529923df22c5e6d91f0be409f6c6b7554709a413ca95f30fc624"
+    },
+    {
+      "relative": "trials/trial_13/status.json",
+      "bytes": 133,
+      "sha256": "dc88ebbf138c84384f2740b51f245d1a9274b90f25781d84d685528be9f6d346"
+    },
+    {
+      "relative": "trials/trial_14/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "6b8b4f7351f4c51dbced5fde06ac8a1f2cfeb88be765c191f2ac6236772f5eed"
+    },
+    {
+      "relative": "trials/trial_14/latest.json",
+      "bytes": 239,
+      "sha256": "c2d60a08b27f03a4ea334f8dd0f20f53cd122b081ea46e1a3f0944ba018af935"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/global_validation_metrics.csv",
+      "bytes": 667,
+      "sha256": "820ecd27456b9086afd86a9455a28243dce0a59f0be381bb2c1a883c4a9f69a9"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/round_001.json",
+      "bytes": 42523,
+      "sha256": "9df0691a6d6903a41be704d4560f1dc5f67ba705c4a90d2ab14b2d56a2990a17"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/round_002.json",
+      "bytes": 43435,
+      "sha256": "e5dda2e0db7542b41d3573f7e7370859965e6bcf0ea74c6515d78387e0b7fa57"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/round_003.json",
+      "bytes": 43369,
+      "sha256": "f71057fda88480978ea497d3073d3ef0be13d50ca8418a92806b180b1fd20be0"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/round_004.json",
+      "bytes": 43022,
+      "sha256": "efff9dbcbc53bbbd947fd08e8373327d0520bb97ad900af6f8e0af5be85cf0a0"
+    },
+    {
+      "relative": "trials/trial_14/results/metrics/round_005.json",
+      "bytes": 43133,
+      "sha256": "1003b90377afe8f716e3482ce45d27d62474494432adee74675357df9a2e9f13"
+    },
+    {
+      "relative": "trials/trial_14/settings.json",
+      "bytes": 1489,
+      "sha256": "18c333e1c0abe64008a474734ec48a5e1b515ef4855aba4d0f3586097eae7593"
+    },
+    {
+      "relative": "trials/trial_14/status.json",
+      "bytes": 133,
+      "sha256": "ceff02c822849821d9f3bfc6208c31de97399d3fce6ae0c74e1363dd5820a7ba"
+    },
+    {
+      "relative": "trials/trial_15/checkpoints/global_round_005.pt",
+      "bytes": 15807077,
+      "sha256": "0c26acf67e7b8875111397944b9ceb4a5d6be3cb4e3683eef5f8763c71f56b4e"
+    },
+    {
+      "relative": "trials/trial_15/latest.json",
+      "bytes": 239,
+      "sha256": "4e174abdd982131cb6b1e74f09692700edf4014652b6928474d6960f475e64e5"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/global_validation_metrics.csv",
+      "bytes": 665,
+      "sha256": "18f1619788023bbc540455a232a90ceb0a89d731ffe18999d66f2321cfc48306"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/round_001.json",
+      "bytes": 42665,
+      "sha256": "159fc0b55641b29446fb06d8cd00d667e133608e1f292559a14ce5338f64e30b"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/round_002.json",
+      "bytes": 43516,
+      "sha256": "1fff13dc0d08c2fa2c7ccc62f44e7569d5f14525ddf5770aa9aff5ffa580704c"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/round_003.json",
+      "bytes": 43256,
+      "sha256": "5a5d0ebcb3b5a5416ce668272823568b9901bfcccf2963a256edcb10d4edcc21"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/round_004.json",
+      "bytes": 43050,
+      "sha256": "191b460a1855a24f9df3b018f822f06655dcb276917bb34f5f099d64260d2894"
+    },
+    {
+      "relative": "trials/trial_15/results/metrics/round_005.json",
+      "bytes": 43148,
+      "sha256": "aac75d611d15d2ac5ead70c8b658f39ebc3c926155b94b1ad6aca0023aad226e"
+    },
+    {
+      "relative": "trials/trial_15/settings.json",
+      "bytes": 1489,
+      "sha256": "d230606e9fb9d29250b563386b7ed8b8ef34444193eec9b0da3b263792644cc0"
+    },
+    {
+      "relative": "trials/trial_15/status.json",
+      "bytes": 133,
+      "sha256": "c25eda0c37b0788ad624e423b543622681969d42a79fc49ae94cc4918231c672"
+    },
+    {
+      "relative": "trials/trial_16/checkpoints/global_round_003.pt",
+      "bytes": 15807077,
+      "sha256": "fd93ea4aba3f605db4dc03c8264afbdcdf5647eea5fc695c1a6d988fe58404c8"
+    },
+    {
+      "relative": "trials/trial_16/latest.json",
+      "bytes": 238,
+      "sha256": "7aa9a6ec8a31572b3930fe1730bbafa920b64e470e973b9b69bb078a8a9a7593"
+    },
+    {
+      "relative": "trials/trial_16/results/metrics/global_validation_metrics.csv",
+      "bytes": 433,
+      "sha256": "3787d68c001b6ce67d9dcbcb6e7b22ad62c7d8aa4223b723fbc868cb6f382b40"
+    },
+    {
+      "relative": "trials/trial_16/results/metrics/round_001.json",
+      "bytes": 42968,
+      "sha256": "2b445a4fb8c2d52154fd2a14264cbb338bbe52c90de7cb8a79b6e054b1819f05"
+    },
+    {
+      "relative": "trials/trial_16/results/metrics/round_002.json",
+      "bytes": 43585,
+      "sha256": "88501e7c2b889eff26e12d28cf6ae687949128f7ad6ab0b8ed961dd943180bca"
+    },
+    {
+      "relative": "trials/trial_16/results/metrics/round_003.json",
+      "bytes": 43500,
+      "sha256": "6443a7426b8468ef49414d0385f477a64c1806de8a5f4ff924e4e3d7a5ac401a"
+    },
+    {
+      "relative": "trials/trial_16/settings.json",
+      "bytes": 1489,
+      "sha256": "62e7ea00423d8115e338a37836193f6000d0b250c92db5415f7dc1257c98ba81"
+    },
+    {
+      "relative": "trials/trial_16/status.json",
+      "bytes": 278,
+      "sha256": "dfbaa06dd4568c173d6f81a274c0ff8ea29b614b5071a39cfe724fce650c44eb"
+    },
+    {
+      "relative": "DATASET/parts.json",
+      "bytes": 2674,
+      "sha256": "57426b88901b434567cee5a2cf8c13cd5ccc9d3d281a590975b86fd0404b6860"
+    },
+    {
+      "relative": "ROOT/agrivision_grid_search_v1_code.zip",
+      "bytes": 46660,
+      "sha256": "5453a56a97c2aca78224cec346c259e5f8a0a5eda2a93eb17b3677f06689c049"
+    },
+    {
+      "relative": "ROOT/efficientdet_fp32_continuation_v1.zip",
+      "bytes": 10042,
+      "sha256": "35e010acf0d7bfebd3ff585d7cc33bdabd9bc009371d9e01b2fcc4f27ca5820e"
+    },
+    {
+      "relative": "PLAN/plan.json",
+      "bytes": 2137,
+      "sha256": "2969a27f96ba7f3c7814ac913062871b19f13aec76d3c45cbc4a86d6601a0002"
+    }
+  ],
+  "gpu_training_started": false
+}

@@ -1,0 +1,10 @@
+{
+  "trials_verified": 16,
+  "completed_screening_trials": 15,
+  "trial_16_saved_round": 3,
+  "all_checkpoint_bytes_verified": true,
+  "all_settings_and_configs_verified": true,
+  "all_committed_round_metrics_verified": true,
+  "verified_model_file_count": 181,
+  "training_started": false
+}

@@ -36,6 +36,7 @@ def main():
             cell['metadata'] = {}
             if cell['cell_type'] == 'code':
                 source = ''.join(cell['source']).replace("MODELS = ['ssdlite', 'ssd_mobilenetv3']", "MODELS = ['efficientdet_d0']")
+                source = source.replace("MODELS = ['ssdlite']", "MODELS = ['efficientdet_d0']")
                 cell['source'] = source.splitlines(keepends=True)
                 cell['outputs'] = []
                 cell['execution_count'] = None

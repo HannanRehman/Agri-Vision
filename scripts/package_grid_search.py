@@ -34,7 +34,7 @@ def main():
     dataset = json.loads((ROOT/'reports/non_chili_v1/upload_package.json').read_text())
     jobs = [('19gmail', ['yolo_v8n'], 'AgriVision_GridSearch_YOLO.ipynb'),
             ('4gmail', ['efficientdet_d0'], 'AgriVision_GridSearch_EfficientDet.ipynb'),
-            ('40gmail', ['ssdlite', 'ssd_mobilenetv3'], 'AgriVision_GridSearch_SSD_Pair.ipynb')]
+            ('40gmail', ['ssdlite'], 'AgriVision_GridSearch_SSD_Pair.ipynb')]
     notebooks = []
     extraction = '''from google.colab import drive
 drive.mount("/content/drive")
@@ -102,7 +102,7 @@ subprocess.run([sys.executable, "-m", "unittest", "discover", "-s", "tests", "-p
     for account, models, name in jobs:
         intro = f'''# Agri Vision: hyperparameter grid search — {account}
 
-This notebook runs **{', '.join(models)}** only. Open using the assigned account, select **T4 GPU**, then **Run all**. The first execution checks actual batch/resolution compatibility on a few training images, then automatically runs the search and final training. No manual switching is needed; the SSD pair runs sequentially.
+This notebook runs **{', '.join(models)}** only. Open using the assigned account, select **T4 GPU**, then **Run all**. The first execution checks actual batch/resolution compatibility on a few training images, then automatically runs the search and final training. It stops after the assigned model completes; SSD-MobileNetV3 is assigned separately to 78gmail.
 
 Each model has **16 combinations**: two learning rates × two weight decays × two batch sizes × two resolutions. Every combination starts from the same cached COCO-transfer initialization for its architecture. Each trains five full federated rounds; the top two continue to ten for confirmation. The selected configuration then starts a **fresh 30-round run** from the original cached initialization. Selection uses pooled validation mAP50–95. Test images are not used.
 
@@ -125,7 +125,7 @@ Each model's `preflight.json` records batch/resolution compatibility. `screening
 print("Completed models:", MODELS)
 print("Results:", OUTPUT)
 ''', True), cell('''## Resume and result locations
-If the session stops, reopen this same notebook on the same account, select T4 and Run all. No changes to settings or model order are needed. The current phase is recorded in `grid_search/grid_v1_20261017/search_status.json`; each trial has its own status and committed `latest.json`. The second SSD model starts automatically after the first completes search and final training.
+If the session stops, reopen this same notebook on the same account, select T4 and Run all. No changes to settings or model order are needed. The current phase is recorded in `grid_search/grid_v1_20261017/search_status.json`; each trial has its own status and committed `latest.json`. Only the assigned model runs; there is no second model queued on 40gmail.
 
 Trial validation CSVs and per-class round JSONs are retained. Screening stores latest-only weights to conserve Drive space; final training retains best and latest. GPU preflight weights are discarded. No held-out testing is performed. The five-/ten-round selection is budgeted screening, not proof of the best possible thirty-round configuration.
 ''')]

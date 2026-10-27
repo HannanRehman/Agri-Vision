@@ -1,0 +1,233 @@
+{
+  "version": "combined_effdet_re19gmail_v1",
+  "account": "hannanre19@gmail.com",
+  "initial_checkpoint_sha256": "dd0a92a8261e15f8776deba607c6ef0b9bab4389f3705a656c4a8050b45c6fce",
+  "plan_sha256": "2969a27f96ba7f3c7814ac913062871b19f13aec76d3c45cbc4a86d6601a0002",
+  "execution_profile_sha256": "e0edf887333994f0e03d73b6f49a55fbfc6270b5fbd735661f2a9be9a16b62ac",
+  "trials": {
+    "trial_01": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "ff04c6da5ea675e0f309836cffcab731008b9ba69b65fbe5aae584161605b4fd",
+      "settings_sha256": "1f3fc7099cfc0682418b42a366824dc01a1890e061ee3f2f81dc3c7e9f26c551",
+      "config_sha256": "a1d0661b9fc8ae91830abb04bf84a518f7aacc3ac08b73c1a55960801493cc92",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "ed352ff3d98160aa76fed14e7c470dc288707e3804de43683d0b8306e499bc37",
+        "results/metrics/round_002.json": "7f7b00eddc6339a7ea4d9e113e48d01fe43116e57dd76b4b121d1ddad70ff563",
+        "results/metrics/round_003.json": "daaf005fdcae4ece2417cdf89beadbb4ccd8f836156a3914be4a46ed10e72d9b",
+        "results/metrics/round_004.json": "2170cd16da2e3902825dc3077397adb1d4bf94023029cda5773c482355fffc25",
+        "results/metrics/round_005.json": "cf5983283c5d29856e5ec039bd56a08b97a65c5089f70fc3bd3032ef6758968e"
+      }
+    },
+    "trial_02": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "046085d349ef6ac36897423d010f9b26e4d6ad95e5d62dfbdf6c84edf93b46c9",
+      "settings_sha256": "73129d6eafa70d042010180b1077a72348f6b2021ed0a45a109b8d32805bce53",
+      "config_sha256": "135df6c781d953c763f6d5dc31db0a2646c3c21a682a0614c8cac6a787bfd443",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "64b4dc1b783b8a11cec0864cc990b3eb53d8beb4977d204f8481d09cd98995d4",
+        "results/metrics/round_002.json": "ff46351f65ce389e96d1b14d357db615813ba1813555d7a03f79d3ad4d54e72b",
+        "results/metrics/round_003.json": "f4c2c2ac5b068691f4bace04c637758188e942d6f274fa9e5b27e4bdaf74492e",
+        "results/metrics/round_004.json": "bb2f41f02dd9c20057720bbaaf90e72a9e72ddcbfc6421eceb377f6d6db1f1b5",
+        "results/metrics/round_005.json": "6e44df40dee713e74b6ea1fae3e8d79d1b2d0d2a77ef0a5d3e727b4644607c1f"
+      }
+    },
+    "trial_03": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "013e942889badb4360b28b561f037594fd39cd598135ae47c55e25a7c732c037",
+      "settings_sha256": "0b0eb00a88114e9e818cfff2128bad73e3eac58b7ef13085e117786075a31a82",
+      "config_sha256": "e42b4629ec299778c490a42b20dfcc1120cf9b90c5e6708f98cf90f011e85dc4",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "f406806f1e4e5c568f70e94af18209e218727bc23ce90af49a612c667fd26b07",
+        "results/metrics/round_002.json": "7df6a079ee02d0b6eda41ae1d966b87ef94a6a07c65c303fe882f5645dd928ba",
+        "results/metrics/round_003.json": "2b3ff2c6d6f4fb9c03775994639ac0b82c42f5f17ba4fb35b89c559fc27bc78d",
+        "results/metrics/round_004.json": "437d37d58571cb81a47518f615d06a806c216969ad3f3f0783958c1c87c15e0a",
+        "results/metrics/round_005.json": "e92b0c72c501c0dd617cbcded725e37a85cead421c83d5b809e1ca976c47d439"
+      }
+    },
+    "trial_04": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "fe4d1e70b9eced75544e64f1c0fc5433186b6616ab84ce3b60294bb1b952ba0a",
+      "settings_sha256": "2da52993e4a5dde671ef6ebcbe2d4b6ebf658711d09603fe1d9585ca1a5efc5d",
+      "config_sha256": "5fca7c1eb77f92c5d4677ccdf7428eeb69fe35b76a5bad173bc92a2fe83a850f",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "d53b5eb5836be40702b0f5197a89742b415d5888b6b46f58ed037dda6425f5a0",
+        "results/metrics/round_002.json": "b3fa9f27a20ae8a31d409c1f4699f9f2aa5aec1a2ae791afb20817be53942678",
+        "results/metrics/round_003.json": "eb0def68d3f9b39d832abdcc0eb499105eb194f3ada31dd6762c7d872932bd9d",
+        "results/metrics/round_004.json": "9c6c06c65480c8b73202a344e9adcadfdb89d8b7b8b2ff2d6e7898eb4c35131e",
+        "results/metrics/round_005.json": "9a44e1462a6de63d56650d91a0f3b7a7ec776e1b29c442fbafbccf1bc7c04c12"
+      }
+    },
+    "trial_05": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "993d6bbf0847119531b4d08832ae9f82f1a906dac3ace8bccfd7f2ff741aa361",
+      "settings_sha256": "1263afda6b89ee5a64ef5051e041188573e40492e739f9a076035c8ad2573220",
+      "config_sha256": "6ed1d9d71861650ad7121a9a0d6292ae3de8af3becd6e5730335c5835a7b5d55",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "13996c49a057e09aee04a15908d9db50aa840c2002537b2e676cb4d7370d01e8",
+        "results/metrics/round_002.json": "bdb6c9e612474b37c3abb05dea67c677e76a62093ea6537635c9df1e520858fb",
+        "results/metrics/round_003.json": "f5751884ea7d1e5a5ad75e1c1f8e77fb34a7cfcd71791bfadef2b0765e7de3cd",
+        "results/metrics/round_004.json": "d55dfd266f0e0020e9f049a28d0687c6784de86b82fa0e35043ca40539555fc4",
+        "results/metrics/round_005.json": "684c6ab98cbd16a63086db14aa2013b1fa7bfea1993091d8a092915e82cb1bd2"
+      }
+    },
+    "trial_06": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "5c287559d98424fb04f0f60ebbc9fa56bcec79d41923e686c12d2e043620f8c3",
+      "settings_sha256": "71aeb2986d0e52969b1c1d79421b09d0a0962cde8a479f0cb7581ba81e72ca14",
+      "config_sha256": "d33dd78af323c2e6c7ecca5eb8f8a6a0deea4159f12264a8ddaa95b8da4a64f3",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "aaa1d6da47d7aae73e4eefca3230a7512e9d09a1b38bf364aeb458bada5197d3",
+        "results/metrics/round_002.json": "18a99157f03a251cd0ff80d1c87ebf20acc0b4e6853b294cf6cb77c58241813c",
+        "results/metrics/round_003.json": "bd6feec1911930bb1e78f31a28f0563fa3ff685291c494971905fdf25ea484a9",
+        "results/metrics/round_004.json": "1f251f3c90e53a2fea10c1fba0339b3add7d1b6a418257e3dad8d81396b24bf0",
+        "results/metrics/round_005.json": "c6a0577c8bbcac91d98761b454d94b3199528462d0027d8b6b057e0851027423"
+      }
+    },
+    "trial_07": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "886881369377458c51900a5e7e41704de9db60f8e871c485e39599a0257e5fca",
+      "settings_sha256": "25f6df74f5debc9328b409a65e9db6f7d74f46fb537440790846831a888eeb52",
+      "config_sha256": "4370d74a3affbfd83c6791769bdd78daff8a5717ab39cdef4c753afcd489e0b1",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "9ed368725aef4ecb8380776505c78e45f29e2b27d30ba57ebdfbcc5f55df15fd",
+        "results/metrics/round_002.json": "fb20383ca528130ed8b23e546083029181880d5adc0dab4957c44499d0dcbdd7",
+        "results/metrics/round_003.json": "04ea501f6ccfc0b1205254d10656df3e2895fc0508fa55b5a3fb5570054548df",
+        "results/metrics/round_004.json": "86bb04fc0e293b9cd4ea5a19500b2bdddbe8a92907f91f9170b633c9b510b896",
+        "results/metrics/round_005.json": "617c73a44ae9b4cb6dcebea923743cfa5c75429313aef6160d1960d24ae1c872"
+      }
+    },
+    "trial_08": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "ada0bb7b57e35c7957c16b190b5dbec56b00c85b818aec1de0ea71dee3b42465",
+      "settings_sha256": "0420a9e38ce96e9c1b9869e86db8fa5b83e7cbfdca5b7fe0fc3edcddfad01234",
+      "config_sha256": "6b193e6a0feb2018f8cb7d5fde2b2804c7501a946aea2184d934c111ba1f3526",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "160601f41bf8f7c2ee2945822f8974068c497436617aa8f895310a8e5c5df05b",
+        "results/metrics/round_002.json": "166b78d8092de11f3e2a1cb65a7f0e3d5273d64d0d13b73b74470825f362c912",
+        "results/metrics/round_003.json": "0b0786de53f54a6cd4d5ac1e01cc29f9b5e88872a6383c5e564d649668e288f9",
+        "results/metrics/round_004.json": "8ffef5347c8d7b44ba6b3fa48c0dfdb3b4cafb33049f3e3133b60cf6082b0ec6",
+        "results/metrics/round_005.json": "706235534f6be239d340f793854a484470347907a1c45e5280bf6131837c7df4"
+      }
+    },
+    "trial_09": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "abd2ae9ce14bf2e0f5d91d2648432ab548f79cc2c934a84827f7f1629e01408e",
+      "settings_sha256": "2495259a7c6fbb0b566e6483fc5ffec68b1af5ffadbada4a58e461e4c785ef5a",
+      "config_sha256": "a85fb6d2317cb0446ec1da4ca3a826494c2b2b36af4a50bb5ecade36158ab317",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "8673cf69b7996c313742fa32dd5d553bc3c8fa76be0a016c72c31d89a80dab03",
+        "results/metrics/round_002.json": "ed1528a35e959f393fb5632370578512bd24d06c9681ee7a31808701f93d7667",
+        "results/metrics/round_003.json": "e69fc88fb52d1edae0ec7fccf4f4116bf88723eab36a4a7da1f8b7fe16c2956e",
+        "results/metrics/round_004.json": "a2c0e5a9a9fd586e9c6c52107313d7c88326dc5d556ee07314aa2a037d1ca615",
+        "results/metrics/round_005.json": "6960f34b11f1aa80df819981c277fc1222ee75308154b7ca3024d1fa94d50669"
+      }
+    },
+    "trial_10": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "e346031d2b69580a0caf4f41f61a2f57f94c57fb905771208d93890313158ba3",
+      "settings_sha256": "87e9e6acf4d373cb6e72a6d9e769063b8c52821b26c7051421de06145dfaddb7",
+      "config_sha256": "06573a839867a31b5b3bd5ffd9b34109d839d73b52ef7d992a070fc78af43ed9",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "139922b42161987d01a3189179a4fa163f2d563c26919eedeb565236aa060c1e",
+        "results/metrics/round_002.json": "d92086597a9d63d45baa256897d968c90a45ed4825efc81edece277bd21b150e",
+        "results/metrics/round_003.json": "f63df3294944b72c1c8729812ab78a6e77b8d51b473bb21e8e20c344e33e24eb",
+        "results/metrics/round_004.json": "64f7ec84fa4cdc0ce1ada6dc8659b40cb15f2915e46f46086cb276e4754c3fee",
+        "results/metrics/round_005.json": "ffb0e0fca329c0cbb9eb8b1682e1dac7cb1200c8a93a715aee85d144c9b04844"
+      }
+    },
+    "trial_11": {
+      "source_account": "71gmail",
+      "round": 5,
+      "checkpoint_sha256": "1b17766b419216a1902ce91c8a8c88e25d45de3946c0042ef02a4d4daaaa743c",
+      "settings_sha256": "fcc407c36e96884cd04285fc1b9148da8347636c520ee9e169a8393e16e4501a",
+      "config_sha256": "834fd139988932ccf9a7e08322e2fb8c1ebaa4e2c2a57463e83aa3315a3a03e7",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "51ef274596964369b4a40870fc12cbe8c21bd002973e193c2adf4a79f7ec78f4",
+        "results/metrics/round_002.json": "c48c146a2a35e87ab8ffe5b91f8737ac511423a7f73d9bbbe752afff2a820e46",
+        "results/metrics/round_003.json": "a040fa903940a5d3cb0c05298288e9d68016827ad5ef4f2eeeb61cbeab1b19ee",
+        "results/metrics/round_004.json": "3ca5a55ac7f08db5034399ff1cacb02381a2aedd8b7392bde5f5dbfe4a6dbdfa",
+        "results/metrics/round_005.json": "5e305503979b0eb746b86b18152e54dbaadfc27c0cc64c3c071e14dcf7da5cfe"
+      }
+    },
+    "trial_12": {
+      "source_account": "4gmail",
+      "round": 5,
+      "checkpoint_sha256": "c6edb99ee34e22c19ea55926e74c6ee35b3545aa11ff05c5852d58b801eaee80",
+      "settings_sha256": "fd92fd5bea0e5b0647971bec1f51daa6183b0586b77699653e6f0864529a7639",
+      "config_sha256": "a332ef5ccbabd4e578106fe18f8b1ceaf2bbcb5136efa0d7efed1716b87f968e",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "5aa1f5c677509dff3389ae1bb0085b34572bb8d804446777bf41c63eeea31dca",
+        "results/metrics/round_002.json": "415ecb8f704d402694b8b61cf1cc2222f65d4da5046ab339291e871070e9d104",
+        "results/metrics/round_003.json": "27e7d1ea4933f12d56d8441b8ce686c0920a7f06fa14b3c1e19abbee521fd64c",
+        "results/metrics/round_004.json": "4acb91beea36756e70c297797b1e19c2d957a123fbd42bbb83bcabc94e7dce60",
+        "results/metrics/round_005.json": "bfbfb534e6ffcfd12d12d954cdb30f31be63b13aea686c4cecf6e7441a65a3c4"
+      }
+    },
+    "trial_13": {
+      "source_account": "4gmail",
+      "round": 5,
+      "checkpoint_sha256": "cf02e9cee178c45ae66ba9fcb7c17f83835be44ba653371fc293dba69dea734f",
+      "settings_sha256": "73d2b9ac2b98529923df22c5e6d91f0be409f6c6b7554709a413ca95f30fc624",
+      "config_sha256": "c011cd7746d8d32ffd41b2a0ebb2fd79508fa755da19dfd924f92704377db5e3",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "ad84fa87e50a295123637a25183809ff549295659948055091f26c6c1dd85cb6",
+        "results/metrics/round_002.json": "91105be3aa42d145c815c63d7bbaa45c5094d24a92bcb2b3b4763266a8dc6b6f",
+        "results/metrics/round_003.json": "4285788a4ebf5a7302598db81cd114fc87bb7072d8a129681be83d7c2cdad4be",
+        "results/metrics/round_004.json": "99553db6277c9a571f29336f1b3989fe1e3491f2e01d359a69d8f1329e7e7f1b",
+        "results/metrics/round_005.json": "d837dd322891e9f062bdfb7ade323d604e5fb756a6958ca2519adc2629f03cd8"
+      }
+    },
+    "trial_14": {
+      "source_account": "4gmail",
+      "round": 5,
+      "checkpoint_sha256": "6b8b4f7351f4c51dbced5fde06ac8a1f2cfeb88be765c191f2ac6236772f5eed",
+      "settings_sha256": "18c333e1c0abe64008a474734ec48a5e1b515ef4855aba4d0f3586097eae7593",
+      "config_sha256": "07d6069761e34d5483ecb3eeed4722302071ebed920a584c07137d710f8b6c3a",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "9df0691a6d6903a41be704d4560f1dc5f67ba705c4a90d2ab14b2d56a2990a17",
+        "results/metrics/round_002.json": "e5dda2e0db7542b41d3573f7e7370859965e6bcf0ea74c6515d78387e0b7fa57",
+        "results/metrics/round_003.json": "f71057fda88480978ea497d3073d3ef0be13d50ca8418a92806b180b1fd20be0",
+        "results/metrics/round_004.json": "efff9dbcbc53bbbd947fd08e8373327d0520bb97ad900af6f8e0af5be85cf0a0",
+        "results/metrics/round_005.json": "1003b90377afe8f716e3482ce45d27d62474494432adee74675357df9a2e9f13"
+      }
+    },
+    "trial_15": {
+      "source_account": "4gmail",
+      "round": 5,
+      "checkpoint_sha256": "0c26acf67e7b8875111397944b9ceb4a5d6be3cb4e3683eef5f8763c71f56b4e",
+      "settings_sha256": "d230606e9fb9d29250b563386b7ed8b8ef34444193eec9b0da3b263792644cc0",
+      "config_sha256": "16480fdf9d414ffc716c27a8876ce2cf60e86670b4ae099962170083d2afed12",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "159fc0b55641b29446fb06d8cd00d667e133608e1f292559a14ce5338f64e30b",
+        "results/metrics/round_002.json": "1fff13dc0d08c2fa2c7ccc62f44e7569d5f14525ddf5770aa9aff5ffa580704c",
+        "results/metrics/round_003.json": "5a5d0ebcb3b5a5416ce668272823568b9901bfcccf2963a256edcb10d4edcc21",
+        "results/metrics/round_004.json": "191b460a1855a24f9df3b018f822f06655dcb276917bb34f5f099d64260d2894",
+        "results/metrics/round_005.json": "aac75d611d15d2ac5ead70c8b658f39ebc3c926155b94b1ad6aca0023aad226e"
+      }
+    },
+    "trial_16": {
+      "source_account": "4gmail",
+      "round": 3,
+      "checkpoint_sha256": "fd93ea4aba3f605db4dc03c8264afbdcdf5647eea5fc695c1a6d988fe58404c8",
+      "settings_sha256": "62e7ea00423d8115e338a37836193f6000d0b250c92db5415f7dc1257c98ba81",
+      "config_sha256": "54eb1b08620a226fdd204d09f41328eab741dc83528b1592820ae95d9e394b19",
+      "metric_sha256": {
+        "results/metrics/round_001.json": "2b445a4fb8c2d52154fd2a14264cbb338bbe52c90de7cb8a79b6e054b1819f05",
+        "results/metrics/round_002.json": "88501e7c2b889eff26e12d28cf6ae687949128f7ad6ab0b8ed961dd943180bca",
+        "results/metrics/round_003.json": "6443a7426b8468ef49414d0385f477a64c1806de8a5f4ff924e4e3d7a5ac401a"
+      }
+    }
+  },
+  "completed_screening_trials": 15,
+  "gpu_training_started": false
+}

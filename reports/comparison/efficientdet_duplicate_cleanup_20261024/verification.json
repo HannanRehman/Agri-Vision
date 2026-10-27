@@ -1,0 +1,21 @@
+{
+  "account": "rehmanfx71@gmail.com",
+  "duplicate_trial": "trial_12",
+  "action": "Moved outside active experiment folders to recovery archive; no permanent deletion",
+  "archive": {
+    "success": true,
+    "id": "1kcIUHvJABIvPoHQA6RR3nc4JvsmPoREu",
+    "url": "https://drive.google.com/drive/folders/1kcIUHvJABIvPoHQA6RR3nc4JvsmPoREu",
+    "title": "archived_duplicate_trial12_20261024",
+    "parent_id": "1ptGCgoIq7K-G2AbMNurEhy1EEAbUYj8G"
+  },
+  "official_account": "hannanrehman4@gmail.com",
+  "official_trial_rounds": 5,
+  "official_checkpoint_sha256": "c6edb99ee34e22c19ea55926e74c6ee35b3545aa11ff05c5852d58b801eaee80",
+  "official_checkpoint_bytes_verified": true,
+  "all_five_round_records_present": true,
+  "trial_settings_identical": true,
+  "duplicate_committed_rounds": 1,
+  "retained_trials": "71gmail trial_01 through trial_11",
+  "active_duplicate_removed": true
+}

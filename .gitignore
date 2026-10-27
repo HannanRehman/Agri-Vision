@@ -70,3 +70,6 @@ agrivision_grid_search_v1_code.zip
 /reports/comparison/efficientdet_parallel_*/efficientdet_parallel_screening_v1.zip
 /web_demo/artifacts/
 /web_demo/qa/
+
+# Thesis drafts and supplied reference material stay local unless explicitly requested.
+/thesis/
